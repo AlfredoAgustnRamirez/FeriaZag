@@ -11,7 +11,7 @@ Public Class Login
         Dim User, pass As String
         User = tbUsuario.Text
         pass = tbContraseña.Text
-        If User = "Administrador" And pass = "1234" Then
+        If User = "Admin" And pass = "1234" Then
             MsgBox("Bienvenido Administrador al Sistema de Feria Zag")
             Administrador.Show()
             Me.Hide()

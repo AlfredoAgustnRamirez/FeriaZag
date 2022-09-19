@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Administrador
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,146 +20,160 @@ Partial Class Administrador
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.IBInicio = New FontAwesome.Sharp.IconButton()
-        Me.IBInventario = New FontAwesome.Sharp.IconButton()
-        Me.IBProveedores = New FontAwesome.Sharp.IconButton()
-        Me.IBClientes = New FontAwesome.Sharp.IconButton()
-        Me.IBVenta = New FontAwesome.Sharp.IconButton()
-        Me.IBSalir = New FontAwesome.Sharp.IconButton()
-        Me.IBReportes = New FontAwesome.Sharp.IconButton()
+        Me.InicioToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
+        Me.ProductosToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
+        Me.ClientesToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
+        Me.ProveedoresToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
+        Me.VentasToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
+        Me.ReportesToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
+        Me.SalirToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
+        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
+        Me.MenuStrip1.SuspendLayout()
+        Me.ToolStripContainer1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.VentasToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(830, 24)
-        Me.MenuStrip1.TabIndex = 0
+        Me.MenuStrip1.Size = New System.Drawing.Size(1264, 38)
+        Me.MenuStrip1.TabIndex = 9
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'IBInicio
+        'InicioToolStripMenuItem
         '
-        Me.IBInicio.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.IBInicio.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IBInicio.IconColor = System.Drawing.Color.Black
-        Me.IBInicio.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IBInicio.Location = New System.Drawing.Point(0, 0)
-        Me.IBInicio.Name = "IBInicio"
-        Me.IBInicio.Size = New System.Drawing.Size(75, 23)
-        Me.IBInicio.TabIndex = 1
-        Me.IBInicio.Text = "Inicio"
-        Me.IBInicio.UseVisualStyleBackColor = False
+        Me.InicioToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.InicioToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.HouseChimney
+        Me.InicioToolStripMenuItem.IconColor = System.Drawing.Color.Black
+        Me.InicioToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.InicioToolStripMenuItem.IconSize = 30
+        Me.InicioToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.InicioToolStripMenuItem.Name = "InicioToolStripMenuItem"
+        Me.InicioToolStripMenuItem.Size = New System.Drawing.Size(111, 34)
+        Me.InicioToolStripMenuItem.Text = "Inicio"
         '
-        'IBInventario
+        'ProductosToolStripMenuItem
         '
-        Me.IBInventario.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.IBInventario.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IBInventario.IconColor = System.Drawing.Color.Black
-        Me.IBInventario.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IBInventario.Location = New System.Drawing.Point(81, 1)
-        Me.IBInventario.Name = "IBInventario"
-        Me.IBInventario.Size = New System.Drawing.Size(75, 23)
-        Me.IBInventario.TabIndex = 2
-        Me.IBInventario.Text = "Productos"
-        Me.IBInventario.UseVisualStyleBackColor = False
+        Me.ProductosToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProductosToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.ShoppingBag
+        Me.ProductosToolStripMenuItem.IconColor = System.Drawing.Color.Black
+        Me.ProductosToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.ProductosToolStripMenuItem.IconSize = 30
+        Me.ProductosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(152, 34)
+        Me.ProductosToolStripMenuItem.Text = "Productos"
         '
-        'IBProveedores
+        'ClientesToolStripMenuItem
         '
-        Me.IBProveedores.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.IBProveedores.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IBProveedores.IconColor = System.Drawing.Color.Black
-        Me.IBProveedores.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IBProveedores.Location = New System.Drawing.Point(162, 1)
-        Me.IBProveedores.Name = "IBProveedores"
-        Me.IBProveedores.Size = New System.Drawing.Size(75, 23)
-        Me.IBProveedores.TabIndex = 3
-        Me.IBProveedores.Text = "Proveedores"
-        Me.IBProveedores.UseVisualStyleBackColor = False
+        Me.ClientesToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ClientesToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.Users
+        Me.ClientesToolStripMenuItem.IconColor = System.Drawing.Color.Black
+        Me.ClientesToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.ClientesToolStripMenuItem.IconSize = 30
+        Me.ClientesToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ClientesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(135, 34)
+        Me.ClientesToolStripMenuItem.Text = "Clientes"
+        Me.ClientesToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'IBClientes
+        'ProveedoresToolStripMenuItem
         '
-        Me.IBClientes.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.IBClientes.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IBClientes.IconColor = System.Drawing.Color.Black
-        Me.IBClientes.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IBClientes.Location = New System.Drawing.Point(243, 0)
-        Me.IBClientes.Name = "IBClientes"
-        Me.IBClientes.Size = New System.Drawing.Size(75, 24)
-        Me.IBClientes.TabIndex = 4
-        Me.IBClientes.Text = "Clientes"
-        Me.IBClientes.UseVisualStyleBackColor = False
+        Me.ProveedoresToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProveedoresToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.UserFriends
+        Me.ProveedoresToolStripMenuItem.IconColor = System.Drawing.Color.Black
+        Me.ProveedoresToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.ProveedoresToolStripMenuItem.IconSize = 30
+        Me.ProveedoresToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(176, 34)
+        Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
-        'IBVenta
+        'VentasToolStripMenuItem
         '
-        Me.IBVenta.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.IBVenta.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IBVenta.IconColor = System.Drawing.Color.Black
-        Me.IBVenta.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IBVenta.Location = New System.Drawing.Point(324, 1)
-        Me.IBVenta.Name = "IBVenta"
-        Me.IBVenta.Size = New System.Drawing.Size(75, 23)
-        Me.IBVenta.TabIndex = 5
-        Me.IBVenta.Text = "Venta"
-        Me.IBVenta.UseVisualStyleBackColor = False
+        Me.VentasToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VentasToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart
+        Me.VentasToolStripMenuItem.IconColor = System.Drawing.Color.Black
+        Me.VentasToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.VentasToolStripMenuItem.IconSize = 30
+        Me.VentasToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(124, 34)
+        Me.VentasToolStripMenuItem.Text = "Ventas"
         '
-        'IBSalir
+        'ReportesToolStripMenuItem
         '
-        Me.IBSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.IBSalir.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IBSalir.IconColor = System.Drawing.Color.Black
-        Me.IBSalir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IBSalir.Location = New System.Drawing.Point(755, 1)
-        Me.IBSalir.Name = "IBSalir"
-        Me.IBSalir.Size = New System.Drawing.Size(75, 23)
-        Me.IBSalir.TabIndex = 6
-        Me.IBSalir.Text = "Salir"
-        Me.IBSalir.UseVisualStyleBackColor = False
+        Me.ReportesToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ReportesToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.Readme
+        Me.ReportesToolStripMenuItem.IconColor = System.Drawing.Color.Black
+        Me.ReportesToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.ReportesToolStripMenuItem.IconSize = 30
+        Me.ReportesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(144, 34)
+        Me.ReportesToolStripMenuItem.Text = "Reportes"
         '
-        'IBReportes
+        'SalirToolStripMenuItem
         '
-        Me.IBReportes.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.IBReportes.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IBReportes.IconColor = System.Drawing.Color.Black
-        Me.IBReportes.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IBReportes.Location = New System.Drawing.Point(674, 0)
-        Me.IBReportes.Name = "IBReportes"
-        Me.IBReportes.Size = New System.Drawing.Size(75, 23)
-        Me.IBReportes.TabIndex = 7
-        Me.IBReportes.Text = "Reportes"
-        Me.IBReportes.UseVisualStyleBackColor = False
+        Me.SalirToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SalirToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.DoorClosed
+        Me.SalirToolStripMenuItem.IconColor = System.Drawing.Color.Black
+        Me.SalirToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.SalirToolStripMenuItem.IconSize = 30
+        Me.SalirToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(104, 34)
+        Me.SalirToolStripMenuItem.Text = "Salir"
+        '
+        'ToolStripContainer1
+        '
+        Me.ToolStripContainer1.BottomToolStripPanelVisible = False
+        '
+        'ToolStripContainer1.ContentPanel
+        '
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1264, 639)
+        Me.ToolStripContainer1.LeftToolStripPanelVisible = False
+        Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 41)
+        Me.ToolStripContainer1.Name = "ToolStripContainer1"
+        Me.ToolStripContainer1.Size = New System.Drawing.Size(1264, 639)
+        Me.ToolStripContainer1.TabIndex = 10
+        Me.ToolStripContainer1.Text = "ToolStripContainer1"
+        Me.ToolStripContainer1.TopToolStripPanelVisible = False
         '
         'Administrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(830, 394)
-        Me.Controls.Add(Me.IBReportes)
-        Me.Controls.Add(Me.IBSalir)
-        Me.Controls.Add(Me.IBVenta)
-        Me.Controls.Add(Me.IBClientes)
-        Me.Controls.Add(Me.IBProveedores)
-        Me.Controls.Add(Me.IBInventario)
-        Me.Controls.Add(Me.IBInicio)
+        Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.ToolStripContainer1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Administrador"
         Me.Text = "Administrador"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
+        Me.ToolStripContainer1.ResumeLayout(False)
+        Me.ToolStripContainer1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents IBInicio As FontAwesome.Sharp.IconButton
-    Friend WithEvents IBInventario As FontAwesome.Sharp.IconButton
-    Friend WithEvents IBProveedores As FontAwesome.Sharp.IconButton
-    Friend WithEvents IBClientes As FontAwesome.Sharp.IconButton
-    Friend WithEvents IBVenta As FontAwesome.Sharp.IconButton
-    Friend WithEvents IBSalir As FontAwesome.Sharp.IconButton
-    Friend WithEvents IBReportes As FontAwesome.Sharp.IconButton
+    Friend WithEvents InicioToolStripMenuItem As FontAwesome.Sharp.IconMenuItem
+    Friend WithEvents ProductosToolStripMenuItem As FontAwesome.Sharp.IconMenuItem
+    Friend WithEvents ClientesToolStripMenuItem As FontAwesome.Sharp.IconMenuItem
+    Friend WithEvents ProveedoresToolStripMenuItem As FontAwesome.Sharp.IconMenuItem
+    Friend WithEvents VentasToolStripMenuItem As FontAwesome.Sharp.IconMenuItem
+    Friend WithEvents ReportesToolStripMenuItem As FontAwesome.Sharp.IconMenuItem
+    Friend WithEvents SalirToolStripMenuItem As FontAwesome.Sharp.IconMenuItem
+    Friend WithEvents ToolStripContainer1 As ToolStripContainer
 End Class
