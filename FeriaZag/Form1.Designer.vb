@@ -22,121 +22,147 @@ Partial Class Login
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.pbFeriaZag = New System.Windows.Forms.PictureBox()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lUsuario = New System.Windows.Forms.Label()
         Me.lContraseña = New System.Windows.Forms.Label()
         Me.tbUsuario = New System.Windows.Forms.TextBox()
         Me.tbContraseña = New System.Windows.Forms.TextBox()
-        Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnIngresar = New System.Windows.Forms.Button()
-        CType(Me.pbFeriaZag, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'pbFeriaZag
-        '
-        Me.pbFeriaZag.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pbFeriaZag.Image = Global.FeriaZag.My.Resources.Resources.feriaZag
-        Me.pbFeriaZag.Location = New System.Drawing.Point(46, 55)
-        Me.pbFeriaZag.Name = "pbFeriaZag"
-        Me.pbFeriaZag.Size = New System.Drawing.Size(203, 209)
-        Me.pbFeriaZag.TabIndex = 0
-        Me.pbFeriaZag.TabStop = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(355, 55)
+        Me.Label1.Font = New System.Drawing.Font("Trebuchet MS", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Label1.Location = New System.Drawing.Point(146, 72)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(186, 30)
+        Me.Label1.Size = New System.Drawing.Size(219, 37)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Inicio de Session"
+        Me.Label1.Text = "Inicio de Sesión"
         '
         'lUsuario
         '
         Me.lUsuario.AutoSize = True
-        Me.lUsuario.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lUsuario.Location = New System.Drawing.Point(296, 127)
+        Me.lUsuario.BackColor = System.Drawing.Color.Transparent
+        Me.lUsuario.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.lUsuario.Location = New System.Drawing.Point(158, 173)
         Me.lUsuario.Name = "lUsuario"
-        Me.lUsuario.Size = New System.Drawing.Size(67, 23)
+        Me.lUsuario.Size = New System.Drawing.Size(91, 27)
         Me.lUsuario.TabIndex = 2
-        Me.lUsuario.Text = "Usuario"
+        Me.lUsuario.Text = "Usuario:"
         '
         'lContraseña
         '
         Me.lContraseña.AutoSize = True
-        Me.lContraseña.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lContraseña.Location = New System.Drawing.Point(297, 196)
+        Me.lContraseña.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lContraseña.Location = New System.Drawing.Point(148, 260)
         Me.lContraseña.Name = "lContraseña"
-        Me.lContraseña.Size = New System.Drawing.Size(95, 23)
+        Me.lContraseña.Size = New System.Drawing.Size(125, 27)
         Me.lContraseña.TabIndex = 3
-        Me.lContraseña.Text = "Contraseña"
+        Me.lContraseña.Text = "Contraseña:"
         '
         'tbUsuario
         '
-        Me.tbUsuario.Location = New System.Drawing.Point(441, 131)
+        Me.tbUsuario.Location = New System.Drawing.Point(79, 206)
         Me.tbUsuario.Name = "tbUsuario"
-        Me.tbUsuario.Size = New System.Drawing.Size(154, 20)
+        Me.tbUsuario.Size = New System.Drawing.Size(233, 20)
         Me.tbUsuario.TabIndex = 4
         '
         'tbContraseña
         '
-        Me.tbContraseña.Location = New System.Drawing.Point(441, 196)
+        Me.tbContraseña.Location = New System.Drawing.Point(79, 290)
         Me.tbContraseña.Name = "tbContraseña"
-        Me.tbContraseña.Size = New System.Drawing.Size(154, 20)
+        Me.tbContraseña.Size = New System.Drawing.Size(233, 20)
         Me.tbContraseña.TabIndex = 5
-        '
-        'btnSalir
-        '
-        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnSalir.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSalir.Location = New System.Drawing.Point(300, 268)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(92, 44)
-        Me.btnSalir.TabIndex = 6
-        Me.btnSalir.Text = "Salir"
-        Me.btnSalir.UseVisualStyleBackColor = False
+        Me.tbContraseña.UseSystemPasswordChar = True
         '
         'btnIngresar
         '
         Me.btnIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnIngresar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIngresar.Location = New System.Drawing.Point(483, 268)
+        Me.btnIngresar.Font = New System.Drawing.Font("Trebuchet MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnIngresar.Location = New System.Drawing.Point(79, 328)
         Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(93, 44)
+        Me.btnIngresar.Size = New System.Drawing.Size(233, 37)
         Me.btnIngresar.TabIndex = 7
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = False
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackgroundImage = Global.FeriaZag.My.Resources.Resources.key
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox3.Location = New System.Drawing.Point(117, 250)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(35, 37)
+        Me.PictureBox3.TabIndex = 10
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = Global.FeriaZag.My.Resources.Resources.user1
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox2.Location = New System.Drawing.Point(127, 173)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(35, 27)
+        Me.PictureBox2.TabIndex = 9
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.InitialImage = Nothing
+        Me.PictureBox1.Location = New System.Drawing.Point(15, 32)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(125, 114)
+        Me.PictureBox1.TabIndex = 8
+        Me.PictureBox1.TabStop = False
+        '
         'Login
         '
+        Me.AcceptButton = Me.btnIngresar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(693, 362)
+        Me.BackColor = System.Drawing.Color.AntiqueWhite
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(398, 439)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnIngresar)
-        Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.tbContraseña)
         Me.Controls.Add(Me.tbUsuario)
         Me.Controls.Add(Me.lContraseña)
         Me.Controls.Add(Me.lUsuario)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.pbFeriaZag)
+        Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Login"
         Me.Text = "Login"
-        CType(Me.pbFeriaZag, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents pbFeriaZag As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents lUsuario As Label
     Friend WithEvents lContraseña As Label
     Friend WithEvents tbUsuario As TextBox
     Friend WithEvents tbContraseña As TextBox
-    Friend WithEvents btnSalir As Button
     Friend WithEvents btnIngresar As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
 End Class
