@@ -1,7 +1,6 @@
-﻿Imports System.Data.Sql
-Imports System.Data.SqlClient
+﻿
 Public Class Login
-    Private conexion As New SqlConnection("Data Source=DESKTOP-2715FLN\SQLEXPRESS;Initial Catalog=FeriaZag;Integrated Security=True")
+
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Close()

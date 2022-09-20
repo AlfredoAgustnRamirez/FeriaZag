@@ -18,4 +18,16 @@
         Me.ToolStripContainer1.ContentPanel.Controls.Add(frmproducto)
         frmproducto.Show()
     End Sub
+
+    Private Sub ClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClientesToolStripMenuItem.Click
+        Me.ToolStripContainer1.ContentPanel.Controls.Clear()
+        Dim frmcliente As New Cliente
+        frmcliente.MdiParent = Me
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(frmcliente)
+        frmcliente.Show()
+    End Sub
+
+    Private Sub InicioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InicioToolStripMenuItem.Click
+        Me.ToolStripContainer1.ContentPanel.Controls.Clear()
+    End Sub
 End Class

@@ -23,6 +23,7 @@ Partial Class Administrador
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
         Me.InicioToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
         Me.ProductosToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
         Me.ClientesToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
@@ -30,7 +31,6 @@ Partial Class Administrador
         Me.VentasToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
         Me.ReportesToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
         Me.SalirToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
-        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStripContainer1.SuspendLayout()
         Me.SuspendLayout()
@@ -44,6 +44,23 @@ Partial Class Administrador
         Me.MenuStrip1.Size = New System.Drawing.Size(1264, 38)
         Me.MenuStrip1.TabIndex = 9
         Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ToolStripContainer1
+        '
+        Me.ToolStripContainer1.BottomToolStripPanelVisible = False
+        '
+        'ToolStripContainer1.ContentPanel
+        '
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1264, 643)
+        Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ToolStripContainer1.LeftToolStripPanelVisible = False
+        Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 38)
+        Me.ToolStripContainer1.Name = "ToolStripContainer1"
+        Me.ToolStripContainer1.RightToolStripPanelVisible = False
+        Me.ToolStripContainer1.Size = New System.Drawing.Size(1264, 643)
+        Me.ToolStripContainer1.TabIndex = 10
+        Me.ToolStripContainer1.Text = "ToolStripContainer1"
+        Me.ToolStripContainer1.TopToolStripPanelVisible = False
         '
         'InicioToolStripMenuItem
         '
@@ -121,6 +138,7 @@ Partial Class Administrador
         '
         'SalirToolStripMenuItem
         '
+        Me.SalirToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.SalirToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SalirToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.DoorClosed
         Me.SalirToolStripMenuItem.IconColor = System.Drawing.Color.Black
@@ -131,21 +149,6 @@ Partial Class Administrador
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(104, 34)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
-        'ToolStripContainer1
-        '
-        Me.ToolStripContainer1.BottomToolStripPanelVisible = False
-        '
-        'ToolStripContainer1.ContentPanel
-        '
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1264, 639)
-        Me.ToolStripContainer1.LeftToolStripPanelVisible = False
-        Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 41)
-        Me.ToolStripContainer1.Name = "ToolStripContainer1"
-        Me.ToolStripContainer1.Size = New System.Drawing.Size(1264, 639)
-        Me.ToolStripContainer1.TabIndex = 10
-        Me.ToolStripContainer1.Text = "ToolStripContainer1"
-        Me.ToolStripContainer1.TopToolStripPanelVisible = False
-        '
         'Administrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -155,9 +158,10 @@ Partial Class Administrador
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.Controls.Add(Me.ToolStripContainer1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Administrador"
-        Me.Text = "Administrador"
+        Me.Text = "Sistema de inventarios"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ToolStripContainer1.ResumeLayout(False)

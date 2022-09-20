@@ -86,6 +86,7 @@ Partial Class Login
         Me.tbContraseña.Name = "tbContraseña"
         Me.tbContraseña.Size = New System.Drawing.Size(154, 20)
         Me.tbContraseña.TabIndex = 5
+        Me.tbContraseña.UseSystemPasswordChar = True
         '
         'btnSalir
         '
