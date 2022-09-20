@@ -1,5 +1,5 @@
-﻿Public Class Cliente
-    Private Sub Cliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+﻿Public Class proveedor
+    Private Sub GBMantenimiento_Enter(sender As Object, e As EventArgs) Handles GBMantenimiento.Enter
 
     End Sub
 

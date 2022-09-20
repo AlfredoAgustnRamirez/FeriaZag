@@ -30,7 +30,6 @@ Partial Class Producto
         Me.TBPrecio = New System.Windows.Forms.TextBox()
         Me.TBCodigo = New System.Windows.Forms.TextBox()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.ICBRegistrar = New FontAwesome.Sharp.IconButton()
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.ICBNuevo = New FontAwesome.Sharp.IconButton()
         Me.IconButton4 = New FontAwesome.Sharp.IconButton()
@@ -60,79 +59,66 @@ Partial Class Producto
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(23, 237)
+        Me.Label1.Location = New System.Drawing.Point(27, 252)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(37, 13)
+        Me.Label1.Size = New System.Drawing.Size(55, 22)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Precio"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(24, 41)
+        Me.Label2.Location = New System.Drawing.Point(28, 56)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 13)
+        Me.Label2.Size = New System.Drawing.Size(66, 22)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Codigo:"
         '
         'LCategoria
         '
         Me.LCategoria.AutoSize = True
-        Me.LCategoria.Location = New System.Drawing.Point(24, 165)
+        Me.LCategoria.Location = New System.Drawing.Point(28, 180)
         Me.LCategoria.Name = "LCategoria"
-        Me.LCategoria.Size = New System.Drawing.Size(52, 13)
+        Me.LCategoria.Size = New System.Drawing.Size(79, 22)
         Me.LCategoria.TabIndex = 3
         Me.LCategoria.Text = "Categoria"
         '
         'LNombre
         '
         Me.LNombre.AutoSize = True
-        Me.LNombre.Location = New System.Drawing.Point(23, 101)
+        Me.LNombre.Location = New System.Drawing.Point(27, 116)
         Me.LNombre.Name = "LNombre"
-        Me.LNombre.Size = New System.Drawing.Size(44, 13)
+        Me.LNombre.Size = New System.Drawing.Size(66, 22)
         Me.LNombre.TabIndex = 4
         Me.LNombre.Text = "Nombre"
         '
         'TBNombre
         '
-        Me.TBNombre.Location = New System.Drawing.Point(118, 98)
+        Me.TBNombre.Location = New System.Drawing.Point(120, 112)
         Me.TBNombre.Name = "TBNombre"
-        Me.TBNombre.Size = New System.Drawing.Size(153, 20)
+        Me.TBNombre.Size = New System.Drawing.Size(216, 26)
         Me.TBNombre.TabIndex = 9
         '
         'TBPrecio
         '
-        Me.TBPrecio.Location = New System.Drawing.Point(118, 234)
+        Me.TBPrecio.Location = New System.Drawing.Point(120, 248)
         Me.TBPrecio.Name = "TBPrecio"
-        Me.TBPrecio.Size = New System.Drawing.Size(153, 20)
+        Me.TBPrecio.Size = New System.Drawing.Size(216, 26)
         Me.TBPrecio.TabIndex = 11
         '
         'TBCodigo
         '
-        Me.TBCodigo.Location = New System.Drawing.Point(118, 38)
+        Me.TBCodigo.Location = New System.Drawing.Point(120, 52)
         Me.TBCodigo.Name = "TBCodigo"
-        Me.TBCodigo.Size = New System.Drawing.Size(153, 20)
+        Me.TBCodigo.Size = New System.Drawing.Size(216, 26)
         Me.TBCodigo.TabIndex = 12
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(118, 305)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(120, 315)
         Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(153, 20)
+        Me.NumericUpDown1.Size = New System.Drawing.Size(216, 26)
         Me.NumericUpDown1.TabIndex = 13
-        '
-        'ICBRegistrar
-        '
-        Me.ICBRegistrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ICBRegistrar.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.ICBRegistrar.IconColor = System.Drawing.Color.Black
-        Me.ICBRegistrar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBRegistrar.Location = New System.Drawing.Point(182, 393)
-        Me.ICBRegistrar.Name = "ICBRegistrar"
-        Me.ICBRegistrar.Size = New System.Drawing.Size(118, 41)
-        Me.ICBRegistrar.TabIndex = 14
-        Me.ICBRegistrar.Text = "Registrar"
-        Me.ICBRegistrar.UseVisualStyleBackColor = False
         '
         'IconButton2
         '
@@ -155,9 +141,9 @@ Partial Class Producto
         Me.ICBNuevo.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBNuevo.Location = New System.Drawing.Point(40, 392)
         Me.ICBNuevo.Name = "ICBNuevo"
-        Me.ICBNuevo.Size = New System.Drawing.Size(118, 42)
+        Me.ICBNuevo.Size = New System.Drawing.Size(260, 42)
         Me.ICBNuevo.TabIndex = 16
-        Me.ICBNuevo.Text = "Nuevo"
+        Me.ICBNuevo.Text = "Guardar"
         Me.ICBNuevo.UseVisualStyleBackColor = False
         '
         'IconButton4
@@ -180,7 +166,6 @@ Partial Class Producto
         Me.GBMantenimiento.Controls.Add(Me.Label2)
         Me.GBMantenimiento.Controls.Add(Me.ICBNuevo)
         Me.GBMantenimiento.Controls.Add(Me.IconButton4)
-        Me.GBMantenimiento.Controls.Add(Me.ICBRegistrar)
         Me.GBMantenimiento.Controls.Add(Me.IconButton2)
         Me.GBMantenimiento.Controls.Add(Me.TBCodigo)
         Me.GBMantenimiento.Controls.Add(Me.LNombre)
@@ -189,6 +174,7 @@ Partial Class Producto
         Me.GBMantenimiento.Controls.Add(Me.NumericUpDown1)
         Me.GBMantenimiento.Controls.Add(Me.Label1)
         Me.GBMantenimiento.Controls.Add(Me.TBPrecio)
+        Me.GBMantenimiento.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBMantenimiento.Location = New System.Drawing.Point(12, 12)
         Me.GBMantenimiento.Name = "GBMantenimiento"
         Me.GBMantenimiento.Size = New System.Drawing.Size(376, 682)
@@ -199,18 +185,18 @@ Partial Class Producto
         'LStock
         '
         Me.LStock.AutoSize = True
-        Me.LStock.Location = New System.Drawing.Point(24, 312)
+        Me.LStock.Location = New System.Drawing.Point(27, 316)
         Me.LStock.Name = "LStock"
-        Me.LStock.Size = New System.Drawing.Size(35, 13)
+        Me.LStock.Size = New System.Drawing.Size(49, 22)
         Me.LStock.TabIndex = 14
         Me.LStock.Text = "Stock"
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(118, 162)
+        Me.ComboBox1.Location = New System.Drawing.Point(120, 176)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(153, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(216, 30)
         Me.ComboBox1.TabIndex = 13
         '
         'GBConsulta
@@ -220,6 +206,7 @@ Partial Class Producto
         Me.GBConsulta.Controls.Add(Me.Label4)
         Me.GBConsulta.Controls.Add(Me.Label3)
         Me.GBConsulta.Controls.Add(Me.TextBox1)
+        Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBConsulta.Location = New System.Drawing.Point(411, 12)
         Me.GBConsulta.Name = "GBConsulta"
         Me.GBConsulta.Size = New System.Drawing.Size(812, 115)
@@ -233,7 +220,7 @@ Partial Class Producto
         Me.ICBBuscar.IconChar = FontAwesome.Sharp.IconChar.None
         Me.ICBBuscar.IconColor = System.Drawing.Color.Black
         Me.ICBBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBBuscar.Location = New System.Drawing.Point(665, 13)
+        Me.ICBBuscar.Location = New System.Drawing.Point(659, 42)
         Me.ICBBuscar.Name = "ICBBuscar"
         Me.ICBBuscar.Size = New System.Drawing.Size(118, 41)
         Me.ICBBuscar.TabIndex = 18
@@ -243,39 +230,40 @@ Partial Class Producto
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(426, 24)
+        Me.ComboBox2.Location = New System.Drawing.Point(430, 48)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(153, 21)
+        Me.ComboBox2.Size = New System.Drawing.Size(153, 30)
         Me.ComboBox2.TabIndex = 18
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(324, 30)
+        Me.Label4.Location = New System.Drawing.Point(304, 55)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(52, 13)
+        Me.Label4.Size = New System.Drawing.Size(79, 22)
         Me.Label4.TabIndex = 18
         Me.Label4.Text = "Categoria"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(15, 30)
+        Me.Label3.Location = New System.Drawing.Point(16, 51)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(44, 13)
+        Me.Label3.Size = New System.Drawing.Size(66, 22)
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "Nombre"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(88, 25)
+        Me.TextBox1.Location = New System.Drawing.Point(106, 51)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(153, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(153, 26)
         Me.TextBox1.TabIndex = 18
         '
         'GBListar
         '
         Me.GBListar.Controls.Add(Me.DataGridView1)
+        Me.GBListar.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBListar.Location = New System.Drawing.Point(411, 133)
         Me.GBListar.Name = "GBListar"
         Me.GBListar.Size = New System.Drawing.Size(812, 561)
@@ -288,13 +276,14 @@ Partial Class Producto
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Nombre, Me.Categoria, Me.Precio, Me.Stock})
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 16)
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 22)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(806, 542)
+        Me.DataGridView1.Size = New System.Drawing.Size(806, 536)
         Me.DataGridView1.TabIndex = 0
         '
         'Codigo
@@ -357,7 +346,6 @@ Partial Class Producto
     Friend WithEvents TBPrecio As TextBox
     Friend WithEvents TBCodigo As TextBox
     Friend WithEvents NumericUpDown1 As NumericUpDown
-    Friend WithEvents ICBRegistrar As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
     Friend WithEvents ICBNuevo As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton

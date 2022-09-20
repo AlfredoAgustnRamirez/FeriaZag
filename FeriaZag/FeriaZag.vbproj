@@ -115,6 +115,12 @@
     <Compile Include="Producto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="proveedor.Designer.vb">
+      <DependentUpon>proveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="proveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vendedor.Designer.vb">
       <DependentUpon>Vendedor.vb</DependentUpon>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Producto.resx">
       <DependentUpon>Producto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="proveedor.resx">
+      <DependentUpon>proveedor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vendedor.resx">
       <DependentUpon>Vendedor.vb</DependentUpon>
