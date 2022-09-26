@@ -30,4 +30,12 @@
     Private Sub InicioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InicioToolStripMenuItem.Click
         Me.ToolStripContainer1.ContentPanel.Controls.Clear()
     End Sub
+
+    Private Sub ProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem.Click
+        Me.ToolStripContainer1.ContentPanel.Controls.Clear()
+        Dim frmproveedor As New proveedor
+        frmproveedor.MdiParent = Me
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(frmproveedor)
+        frmproveedor.Show()
+    End Sub
 End Class
