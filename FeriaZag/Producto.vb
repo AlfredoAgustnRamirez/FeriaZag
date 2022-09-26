@@ -15,6 +15,7 @@ Public Class Producto
         obj.Conectar()
         ComboBox1.DataSource = obj.ListarCategoria()
         ComboBox1.ValueMember = "IdCategoria"
+        ComboBox1.DisplayMember = "Nombre"
 
         ComboBox2.DataSource = obj.ListarCategoria()
         ComboBox2.ValueMember = "IdCategoria"
@@ -50,6 +51,8 @@ Public Class Producto
     End Sub
 
     Private Sub ICBBuscar_Click(sender As Object, e As EventArgs) Handles ICBBuscar.Click
-        obj.BuscarProductos(TBNombre.Text, ComboBox2.SelectedValue.ToString)
+        obj.BuscarProductos(TBNombre.Text)
+        obj.llenarDataGridview(DataGridView1)
+
     End Sub
 End Class

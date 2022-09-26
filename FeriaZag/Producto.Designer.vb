@@ -22,6 +22,7 @@ Partial Class Producto
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LCategoria = New System.Windows.Forms.Label()
@@ -33,6 +34,7 @@ Partial Class Producto
         Me.ICBAgregar = New FontAwesome.Sharp.IconButton()
         Me.IconButton4 = New FontAwesome.Sharp.IconButton()
         Me.GBMantenimiento = New System.Windows.Forms.GroupBox()
+        Me.TBStock = New System.Windows.Forms.TextBox()
         Me.LStock = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
@@ -43,7 +45,6 @@ Partial Class Producto
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TBStock = New System.Windows.Forms.TextBox()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBConsulta.SuspendLayout()
         Me.GBListar.SuspendLayout()
@@ -102,6 +103,7 @@ Partial Class Producto
         '
         'TBCodigo
         '
+        Me.TBCodigo.Enabled = False
         Me.TBCodigo.Location = New System.Drawing.Point(120, 52)
         Me.TBCodigo.Name = "TBCodigo"
         Me.TBCodigo.Size = New System.Drawing.Size(216, 26)
@@ -168,6 +170,13 @@ Partial Class Producto
         Me.GBMantenimiento.TabIndex = 20
         Me.GBMantenimiento.TabStop = False
         Me.GBMantenimiento.Text = "Mantenimiento"
+        '
+        'TBStock
+        '
+        Me.TBStock.Location = New System.Drawing.Point(120, 312)
+        Me.TBStock.Name = "TBStock"
+        Me.TBStock.Size = New System.Drawing.Size(216, 26)
+        Me.TBStock.TabIndex = 18
         '
         'LStock
         '
@@ -262,22 +271,19 @@ Partial Class Producto
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.GridColor = System.Drawing.Color.White
         Me.DataGridView1.Location = New System.Drawing.Point(3, 22)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(806, 536)
         Me.DataGridView1.TabIndex = 0
-        '
-        'TBStock
-        '
-        Me.TBStock.Location = New System.Drawing.Point(120, 312)
-        Me.TBStock.Name = "TBStock"
-        Me.TBStock.Size = New System.Drawing.Size(216, 26)
-        Me.TBStock.TabIndex = 18
         '
         'Producto
         '
