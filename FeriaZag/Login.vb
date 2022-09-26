@@ -132,11 +132,10 @@ Public Class Login
 #End Region
 
 #Region "BuscarProducto"
-    Public Function BuscarProductos(nombreproducto As String, idcategoria As String) As DataTable
-        Dim cmd As SqlCommand = New SqlCommand("select Productos.Producto,IdCategoria from Productos", cnx)
+    Public Function BuscarProductos(nombreproducto As String) As DataTable
+        Dim cmd As SqlCommand = New SqlCommand("BuscarProductos", cnx)
         cmd.CommandType = CommandType.StoredProcedure
         cmd.Parameters.AddWithValue("@Producto", nombreproducto)
-        cmd.Parameters.AddWithValue("@IdCategoria", idcategoria)
         Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
         Dim dtable1 As DataTable = New DataTable()
         da.Fill(dtable1)
