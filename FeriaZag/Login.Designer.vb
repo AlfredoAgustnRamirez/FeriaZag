@@ -1,6 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Login
-
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -86,11 +85,8 @@ Partial Class Login
         Me.tbContraseña.TabIndex = 5
         Me.tbContraseña.UseSystemPasswordChar = True
         '
-<<<<<<< HEAD:FeriaZag/Login.Designer.vb
-=======
 
         '
->>>>>>> 2b84a1cf5695d5432050c1792a0ffb5894bc707c:FeriaZag/Form1.Designer.vb
         'btnIngresar
         '
         Me.btnIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))

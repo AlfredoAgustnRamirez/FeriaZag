@@ -1,6 +1,6 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.Data.Sql
+Imports System.Data.SqlClient
 Public Class Login
-
     Private Sub btnSalir_Click(sender As Object, e As EventArgs)
         Close()
     End Sub
@@ -142,6 +142,7 @@ Public Class Login
         da.Fill(dtable1)
         Return dtable1
     End Function
-#End Region
 
+#End Region
 End Class
+
