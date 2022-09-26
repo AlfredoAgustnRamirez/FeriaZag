@@ -29,14 +29,12 @@ Partial Class Producto
         Me.TBNombre = New System.Windows.Forms.TextBox()
         Me.TBPrecio = New System.Windows.Forms.TextBox()
         Me.TBCodigo = New System.Windows.Forms.TextBox()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.ICBRegistrar = New FontAwesome.Sharp.IconButton()
+        Me.ICBAgregar = New FontAwesome.Sharp.IconButton()
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
-        Me.ICBNuevo = New FontAwesome.Sharp.IconButton()
         Me.IconButton4 = New FontAwesome.Sharp.IconButton()
         Me.GBMantenimiento = New System.Windows.Forms.GroupBox()
+        Me.TBStock = New System.Windows.Forms.TextBox()
         Me.LStock = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
         Me.ICBBuscar = New FontAwesome.Sharp.IconButton()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -45,12 +43,7 @@ Partial Class Producto
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Categoria = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Stock = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBConsulta.SuspendLayout()
         Me.GBListar.SuspendLayout()
@@ -109,30 +102,24 @@ Partial Class Producto
         '
         'TBCodigo
         '
+        Me.TBCodigo.Enabled = False
         Me.TBCodigo.Location = New System.Drawing.Point(118, 38)
         Me.TBCodigo.Name = "TBCodigo"
         Me.TBCodigo.Size = New System.Drawing.Size(153, 20)
         Me.TBCodigo.TabIndex = 12
         '
-        'NumericUpDown1
+        'ICBAgregar
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(118, 305)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(153, 20)
-        Me.NumericUpDown1.TabIndex = 13
-        '
-        'ICBRegistrar
-        '
-        Me.ICBRegistrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ICBRegistrar.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.ICBRegistrar.IconColor = System.Drawing.Color.Black
-        Me.ICBRegistrar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBRegistrar.Location = New System.Drawing.Point(182, 393)
-        Me.ICBRegistrar.Name = "ICBRegistrar"
-        Me.ICBRegistrar.Size = New System.Drawing.Size(118, 41)
-        Me.ICBRegistrar.TabIndex = 14
-        Me.ICBRegistrar.Text = "Registrar"
-        Me.ICBRegistrar.UseVisualStyleBackColor = False
+        Me.ICBAgregar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ICBAgregar.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.ICBAgregar.IconColor = System.Drawing.Color.Black
+        Me.ICBAgregar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.ICBAgregar.Location = New System.Drawing.Point(182, 393)
+        Me.ICBAgregar.Name = "ICBAgregar"
+        Me.ICBAgregar.Size = New System.Drawing.Size(118, 41)
+        Me.ICBAgregar.TabIndex = 14
+        Me.ICBAgregar.Text = "Agregar"
+        Me.ICBAgregar.UseVisualStyleBackColor = False
         '
         'IconButton2
         '
@@ -146,19 +133,6 @@ Partial Class Producto
         Me.IconButton2.TabIndex = 15
         Me.IconButton2.Text = "Modificar"
         Me.IconButton2.UseVisualStyleBackColor = False
-        '
-        'ICBNuevo
-        '
-        Me.ICBNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ICBNuevo.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.ICBNuevo.IconColor = System.Drawing.Color.Black
-        Me.ICBNuevo.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBNuevo.Location = New System.Drawing.Point(40, 392)
-        Me.ICBNuevo.Name = "ICBNuevo"
-        Me.ICBNuevo.Size = New System.Drawing.Size(118, 42)
-        Me.ICBNuevo.TabIndex = 16
-        Me.ICBNuevo.Text = "Nuevo"
-        Me.ICBNuevo.UseVisualStyleBackColor = False
         '
         'IconButton4
         '
@@ -175,18 +149,17 @@ Partial Class Producto
         '
         'GBMantenimiento
         '
-        Me.GBMantenimiento.Controls.Add(Me.LStock)
         Me.GBMantenimiento.Controls.Add(Me.ComboBox1)
+        Me.GBMantenimiento.Controls.Add(Me.TBStock)
+        Me.GBMantenimiento.Controls.Add(Me.LStock)
         Me.GBMantenimiento.Controls.Add(Me.Label2)
-        Me.GBMantenimiento.Controls.Add(Me.ICBNuevo)
         Me.GBMantenimiento.Controls.Add(Me.IconButton4)
-        Me.GBMantenimiento.Controls.Add(Me.ICBRegistrar)
+        Me.GBMantenimiento.Controls.Add(Me.ICBAgregar)
         Me.GBMantenimiento.Controls.Add(Me.IconButton2)
         Me.GBMantenimiento.Controls.Add(Me.TBCodigo)
         Me.GBMantenimiento.Controls.Add(Me.LNombre)
         Me.GBMantenimiento.Controls.Add(Me.TBNombre)
         Me.GBMantenimiento.Controls.Add(Me.LCategoria)
-        Me.GBMantenimiento.Controls.Add(Me.NumericUpDown1)
         Me.GBMantenimiento.Controls.Add(Me.Label1)
         Me.GBMantenimiento.Controls.Add(Me.TBPrecio)
         Me.GBMantenimiento.Location = New System.Drawing.Point(12, 12)
@@ -196,6 +169,13 @@ Partial Class Producto
         Me.GBMantenimiento.TabStop = False
         Me.GBMantenimiento.Text = "Mantenimiento"
         '
+        'TBStock
+        '
+        Me.TBStock.Location = New System.Drawing.Point(118, 309)
+        Me.TBStock.Name = "TBStock"
+        Me.TBStock.Size = New System.Drawing.Size(153, 20)
+        Me.TBStock.TabIndex = 18
+        '
         'LStock
         '
         Me.LStock.AutoSize = True
@@ -204,14 +184,6 @@ Partial Class Producto
         Me.LStock.Size = New System.Drawing.Size(35, 13)
         Me.LStock.TabIndex = 14
         Me.LStock.Text = "Stock"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(118, 162)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(153, 21)
-        Me.ComboBox1.TabIndex = 13
         '
         'GBConsulta
         '
@@ -289,7 +261,6 @@ Partial Class Producto
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Nombre, Me.Categoria, Me.Precio, Me.Stock})
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(3, 16)
         Me.DataGridView1.Name = "DataGridView1"
@@ -297,35 +268,13 @@ Partial Class Producto
         Me.DataGridView1.Size = New System.Drawing.Size(806, 542)
         Me.DataGridView1.TabIndex = 0
         '
-        'Codigo
+        'ComboBox1
         '
-        Me.Codigo.HeaderText = "Codigo"
-        Me.Codigo.Name = "Codigo"
-        Me.Codigo.ReadOnly = True
-        '
-        'Nombre
-        '
-        Me.Nombre.HeaderText = "Nombre"
-        Me.Nombre.Name = "Nombre"
-        Me.Nombre.ReadOnly = True
-        '
-        'Categoria
-        '
-        Me.Categoria.HeaderText = "Categoria"
-        Me.Categoria.Name = "Categoria"
-        Me.Categoria.ReadOnly = True
-        '
-        'Precio
-        '
-        Me.Precio.HeaderText = "Precio"
-        Me.Precio.Name = "Precio"
-        Me.Precio.ReadOnly = True
-        '
-        'Stock
-        '
-        Me.Stock.HeaderText = "Stock"
-        Me.Stock.Name = "Stock"
-        Me.Stock.ReadOnly = True
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(118, 157)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(153, 21)
+        Me.ComboBox1.TabIndex = 19
         '
         'Producto
         '
@@ -339,7 +288,6 @@ Partial Class Producto
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Producto"
         Me.Text = "Productos"
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBMantenimiento.ResumeLayout(False)
         Me.GBMantenimiento.PerformLayout()
         Me.GBConsulta.ResumeLayout(False)
@@ -356,14 +304,11 @@ Partial Class Producto
     Friend WithEvents TBNombre As TextBox
     Friend WithEvents TBPrecio As TextBox
     Friend WithEvents TBCodigo As TextBox
-    Friend WithEvents NumericUpDown1 As NumericUpDown
-    Friend WithEvents ICBRegistrar As FontAwesome.Sharp.IconButton
+    Friend WithEvents ICBAgregar As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
-    Friend WithEvents ICBNuevo As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
     Friend WithEvents GBMantenimiento As GroupBox
     Friend WithEvents LStock As Label
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents GBConsulta As GroupBox
     Friend WithEvents ICBBuscar As FontAwesome.Sharp.IconButton
     Friend WithEvents ComboBox2 As ComboBox
@@ -372,9 +317,6 @@ Partial Class Producto
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents GBListar As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Codigo As DataGridViewTextBoxColumn
-    Friend WithEvents Nombre As DataGridViewTextBoxColumn
-    Friend WithEvents Categoria As DataGridViewTextBoxColumn
-    Friend WithEvents Precio As DataGridViewTextBoxColumn
-    Friend WithEvents Stock As DataGridViewTextBoxColumn
+    Friend WithEvents TBStock As TextBox
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
