@@ -124,7 +124,7 @@ Partial Class Administrador
         '
         Me.ToolStripContainer1.BottomToolStripPanelVisible = False
         '
-        'ToolStripContainer1.ContentPanel
+        'ToolStripContainer1.CPAdministrador
         '
         Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1264, 643)
         Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
