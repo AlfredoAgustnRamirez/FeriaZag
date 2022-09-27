@@ -30,21 +30,21 @@ Partial Class Producto
         Me.TBNombre = New System.Windows.Forms.TextBox()
         Me.TBPrecio = New System.Windows.Forms.TextBox()
         Me.TBCodigo = New System.Windows.Forms.TextBox()
-        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
-        Me.ICBAgregar = New FontAwesome.Sharp.IconButton()
-        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
         Me.GBMantenimiento = New System.Windows.Forms.GroupBox()
         Me.TBStock = New System.Windows.Forms.TextBox()
         Me.LStock = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
-        Me.ICBBuscar = New FontAwesome.Sharp.IconButton()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ICBBuscar = New FontAwesome.Sharp.IconButton()
+        Me.ICBAgregar = New FontAwesome.Sharp.IconButton()
+        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBConsulta.SuspendLayout()
         Me.GBListar.SuspendLayout()
@@ -109,45 +109,6 @@ Partial Class Producto
         Me.TBCodigo.Size = New System.Drawing.Size(216, 26)
         Me.TBCodigo.TabIndex = 12
         '
-        'IconButton2
-        '
-        Me.IconButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IconButton2.IconColor = System.Drawing.Color.Black
-        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton2.Location = New System.Drawing.Point(40, 477)
-        Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(118, 42)
-        Me.IconButton2.TabIndex = 15
-        Me.IconButton2.Text = "Modificar"
-        Me.IconButton2.UseVisualStyleBackColor = False
-        '
-        'ICBAgregar
-        '
-        Me.ICBAgregar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ICBAgregar.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.ICBAgregar.IconColor = System.Drawing.Color.Black
-        Me.ICBAgregar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBAgregar.Location = New System.Drawing.Point(40, 392)
-        Me.ICBAgregar.Name = "ICBAgregar"
-        Me.ICBAgregar.Size = New System.Drawing.Size(260, 42)
-        Me.ICBAgregar.TabIndex = 16
-        Me.ICBAgregar.Text = "Guardar"
-        Me.ICBAgregar.UseVisualStyleBackColor = False
-        '
-        'IconButton4
-        '
-        Me.IconButton4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IconButton4.IconColor = System.Drawing.Color.Black
-        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton4.Location = New System.Drawing.Point(182, 478)
-        Me.IconButton4.Name = "IconButton4"
-        Me.IconButton4.Size = New System.Drawing.Size(118, 41)
-        Me.IconButton4.TabIndex = 17
-        Me.IconButton4.Text = "Eliminar"
-        Me.IconButton4.UseVisualStyleBackColor = False
-        '
         'GBMantenimiento
         '
         Me.GBMantenimiento.Controls.Add(Me.TBStock)
@@ -210,19 +171,6 @@ Partial Class Producto
         Me.GBConsulta.TabStop = False
         Me.GBConsulta.Text = "Consulta"
         '
-        'ICBBuscar
-        '
-        Me.ICBBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ICBBuscar.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.ICBBuscar.IconColor = System.Drawing.Color.Black
-        Me.ICBBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBBuscar.Location = New System.Drawing.Point(659, 42)
-        Me.ICBBuscar.Name = "ICBBuscar"
-        Me.ICBBuscar.Size = New System.Drawing.Size(118, 41)
-        Me.ICBBuscar.TabIndex = 18
-        Me.ICBBuscar.Text = "Buscar"
-        Me.ICBBuscar.UseVisualStyleBackColor = False
-        '
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
@@ -284,6 +232,58 @@ Partial Class Producto
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(806, 536)
         Me.DataGridView1.TabIndex = 0
+        '
+        'ICBBuscar
+        '
+        Me.ICBBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ICBBuscar.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.ICBBuscar.IconColor = System.Drawing.Color.Black
+        Me.ICBBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.ICBBuscar.Location = New System.Drawing.Point(659, 42)
+        Me.ICBBuscar.Name = "ICBBuscar"
+        Me.ICBBuscar.Size = New System.Drawing.Size(118, 41)
+        Me.ICBBuscar.TabIndex = 18
+        Me.ICBBuscar.Text = "Buscar"
+        Me.ICBBuscar.UseVisualStyleBackColor = False
+        '
+        'ICBAgregar
+        '
+        Me.ICBAgregar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ICBAgregar.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.ICBAgregar.IconColor = System.Drawing.Color.Black
+        Me.ICBAgregar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.ICBAgregar.Location = New System.Drawing.Point(40, 392)
+        Me.ICBAgregar.Name = "ICBAgregar"
+        Me.ICBAgregar.Size = New System.Drawing.Size(260, 42)
+        Me.ICBAgregar.TabIndex = 16
+        Me.ICBAgregar.Text = "Guardar"
+        Me.ICBAgregar.UseVisualStyleBackColor = False
+        '
+        'IconButton4
+        '
+        Me.IconButton4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.IconButton4.IconColor = System.Drawing.Color.Black
+        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton4.Location = New System.Drawing.Point(182, 478)
+        Me.IconButton4.Name = "IconButton4"
+        Me.IconButton4.Size = New System.Drawing.Size(118, 41)
+        Me.IconButton4.TabIndex = 17
+        Me.IconButton4.Text = "Eliminar"
+        Me.IconButton4.UseVisualStyleBackColor = False
+        '
+        'IconButton2
+        '
+        Me.IconButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.IconButton2.IconColor = System.Drawing.Color.Black
+        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton2.Location = New System.Drawing.Point(40, 477)
+        Me.IconButton2.Name = "IconButton2"
+        Me.IconButton2.Size = New System.Drawing.Size(118, 42)
+        Me.IconButton2.TabIndex = 15
+        Me.IconButton2.Text = "Modificar"
+        Me.IconButton2.UseVisualStyleBackColor = False
         '
         'Producto
         '

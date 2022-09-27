@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
-Imports FeriaZag
+
 Public Class Producto
-    Dim obj As New Login
+    Dim obj As New DProducto
 
     Private Sub limpiar()
         TBCodigo.Text = ""
@@ -55,4 +55,6 @@ Public Class Producto
         obj.llenarDataGridview(DataGridView1)
 
     End Sub
+
+
 End Class
