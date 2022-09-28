@@ -15,10 +15,11 @@ Public Class Producto
         obj.Conectar()
         ComboBox1.DataSource = obj.ListarCategoria()
         ComboBox1.ValueMember = "IdCategoria"
-        ComboBox1.DisplayMember = "Nombre"
+        ComboBox1.DisplayMember = "Categoria"
 
         ComboBox2.DataSource = obj.ListarCategoria()
         ComboBox2.ValueMember = "IdCategoria"
+        ComboBox2.DisplayMember = "Categoria"
 
         obj.llenarDataGridview(DataGridView1)
     End Sub
@@ -29,18 +30,6 @@ Public Class Producto
         ComboBox1.SelectedValue = DataGridView1.Item(2, e.RowIndex).Value
         TBPrecio.Text = DataGridView1.Item(3, e.RowIndex).Value
         TBStock.Text = DataGridView1.Item(4, e.RowIndex).Value
-    End Sub
-
-
-    Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
-        obj.EliminarProducto(TBCodigo.Text)
-        obj.llenarDataGridview(DataGridView1)
-    End Sub
-
-    Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
-        obj.ModificarProducto(TBCodigo.Text, TBNombre.Text, ComboBox1.SelectedValue, TBPrecio.Text, TBStock.Text)
-        obj.llenarDataGridview(DataGridView1)
-
     End Sub
 
     Private Sub ICBAgregar_Click(sender As Object, e As EventArgs) Handles ICBAgregar.Click
@@ -56,5 +45,17 @@ Public Class Producto
 
     End Sub
 
+    Private Sub ICBNuevo_Click(sender As Object, e As EventArgs) Handles ICBNuevo.Click
+        limpiar()
+    End Sub
 
+    Private Sub ICBModificar_Click(sender As Object, e As EventArgs) Handles ICBModificar.Click
+        obj.ModificarProducto(TBCodigo.Text, TBNombre.Text, ComboBox1.SelectedValue, TBPrecio.Text, TBStock.Text)
+        obj.llenarDataGridview(DataGridView1)
+    End Sub
+
+    Private Sub ICBEliminar_Click(sender As Object, e As EventArgs) Handles ICBEliminar.Click
+        obj.EliminarProducto(TBCodigo.Text)
+        obj.llenarDataGridview(DataGridView1)
+    End Sub
 End Class

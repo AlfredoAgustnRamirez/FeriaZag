@@ -1,13 +1,5 @@
 ﻿Public Class Administrador
 
-    Private Sub Fadministrador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub IconButton4_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         Application.Exit()
     End Sub
@@ -30,6 +22,10 @@
 
     Private Sub InicioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InicioToolStripMenuItem.Click
         Me.ToolStripContainer1.ContentPanel.Controls.Clear()
+        Dim frmhora As New Hora
+        frmhora.MdiParent = Me
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(frmhora)
+        frmhora.Show()
     End Sub
 
     Private Sub ProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem.Click
@@ -38,5 +34,10 @@
         frmproveedor.MdiParent = Me
         Me.ToolStripContainer1.ContentPanel.Controls.Add(frmproveedor)
         frmproveedor.Show()
+    End Sub
+
+    Private Sub HoraFecha_Tick(sender As Object, e As EventArgs) Handles HoraFecha.Tick
+        LblHora.Text = DateTime.Now.ToLongTimeString()
+        LblFecha.Text = DateTime.Now.ToLongDateString()
     End Sub
 End Class

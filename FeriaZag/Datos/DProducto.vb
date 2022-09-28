@@ -1,10 +1,12 @@
 ﻿Imports System.Data.Sql
 Imports System.Data.SqlClient
+
 Public Class DProducto
-    Inherits Conexion
+    Inherits DConexion
     Private cmb As SqlCommandBuilder
     Dim adaptador As New SqlDataAdapter
     Public dt As DataTable
+
 #Region "EliminarProducto"
     Public Function EliminarProducto(codigo As String)
         Dim eliminar As New SqlCommand("EliminarProductos", cnx)
@@ -20,6 +22,7 @@ Public Class DProducto
         Return resp
     End Function
 #End Region
+
 #Region "ModificarProducto"
     Public Function ModificarProducto(codigo As String, producto As String, idcategoria As String, precio As Decimal, stock As Integer)
         Dim modificar As New SqlCommand("ModificarProductos", cnx)
@@ -39,6 +42,7 @@ Public Class DProducto
         Return resp
     End Function
 #End Region
+
 #Region "RegistrarProducto"
     Public Function RegistrarProducto(nombreproducto As String, idcategoria As String, precio As Decimal, stock As Integer)
         Dim da As New SqlCommand("RegistrarProductos", cnx)
@@ -79,10 +83,11 @@ Public Class DProducto
         Return tbl
     End Function
 #End Region
+
 #Region "llenarDataGridView"
     Sub llenarDataGridview(ByVal dgv As DataGridView)
         Try
-            adaptador = New SqlDataAdapter("select Productos.Codigo,Producto,IdCategoria, Precio,Stock from Productos", cnx)
+            adaptador = New SqlDataAdapter("select Productos.Codigo,Producto,Categoria,Precio,Stock from Productos inner join Categoria on Productos.IdCategoria = Categoria.IdCategoria", cnx)
             dt = New DataTable
             adaptador.Fill(dt)
             dgv.DataSource = dt
