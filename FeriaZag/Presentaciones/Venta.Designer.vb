@@ -22,7 +22,7 @@ Partial Class Venta
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
         Me.ICBBuscar = New FontAwesome.Sharp.IconButton()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -46,11 +46,19 @@ Partial Class Venta
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.BAgregar = New System.Windows.Forms.Button()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Categoria = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SubTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Quitar = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GBConsulta.SuspendLayout()
         Me.GBVenta.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -179,12 +187,13 @@ Partial Class Venta
         '
         Me.DataGridView2.AllowUserToAddRows = False
         Me.DataGridView2.AllowUserToDeleteRows = False
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        Me.DataGridView2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        Me.DataGridView2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Producto, Me.Categoria, Me.Precio, Me.Cantidad, Me.SubTotal, Me.Total, Me.Quitar})
         Me.DataGridView2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView2.GridColor = System.Drawing.Color.White
         Me.DataGridView2.Location = New System.Drawing.Point(3, 22)
@@ -295,14 +304,14 @@ Partial Class Venta
         Me.Button1.Text = "R"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
+        'BAgregar
         '
-        Me.Button2.Location = New System.Drawing.Point(497, 173)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(51, 33)
-        Me.Button2.TabIndex = 29
-        Me.Button2.Text = "A"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BAgregar.Location = New System.Drawing.Point(497, 173)
+        Me.BAgregar.Name = "BAgregar"
+        Me.BAgregar.Size = New System.Drawing.Size(51, 33)
+        Me.BAgregar.TabIndex = 29
+        Me.BAgregar.Text = "A"
+        Me.BAgregar.UseVisualStyleBackColor = True
         '
         'GroupBox7
         '
@@ -342,6 +351,54 @@ Partial Class Venta
         Me.ComboBox6.Size = New System.Drawing.Size(173, 30)
         Me.ComboBox6.TabIndex = 0
         '
+        'Codigo
+        '
+        Me.Codigo.HeaderText = "Codigo"
+        Me.Codigo.Name = "Codigo"
+        Me.Codigo.ReadOnly = True
+        '
+        'Producto
+        '
+        Me.Producto.HeaderText = "Producto"
+        Me.Producto.Name = "Producto"
+        Me.Producto.ReadOnly = True
+        '
+        'Categoria
+        '
+        Me.Categoria.HeaderText = "Categoria"
+        Me.Categoria.Name = "Categoria"
+        Me.Categoria.ReadOnly = True
+        '
+        'Precio
+        '
+        Me.Precio.HeaderText = "Precio"
+        Me.Precio.Name = "Precio"
+        Me.Precio.ReadOnly = True
+        '
+        'Cantidad
+        '
+        Me.Cantidad.HeaderText = "Cantidad"
+        Me.Cantidad.Name = "Cantidad"
+        Me.Cantidad.ReadOnly = True
+        '
+        'SubTotal
+        '
+        Me.SubTotal.HeaderText = "SubTotal"
+        Me.SubTotal.Name = "SubTotal"
+        Me.SubTotal.ReadOnly = True
+        '
+        'Total
+        '
+        Me.Total.HeaderText = "Total"
+        Me.Total.Name = "Total"
+        Me.Total.ReadOnly = True
+        '
+        'Quitar
+        '
+        Me.Quitar.HeaderText = "Quitar"
+        Me.Quitar.Name = "Quitar"
+        Me.Quitar.ReadOnly = True
+        '
         'Venta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -350,7 +407,7 @@ Partial Class Venta
         Me.ClientSize = New System.Drawing.Size(1280, 720)
         Me.Controls.Add(Me.GroupBox8)
         Me.Controls.Add(Me.GroupBox7)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.BAgregar)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox6)
         Me.Controls.Add(Me.GroupBox5)
@@ -405,9 +462,17 @@ Partial Class Venta
     Friend WithEvents GroupBox6 As GroupBox
     Friend WithEvents ComboBox4 As ComboBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents BAgregar As Button
     Friend WithEvents GroupBox7 As GroupBox
     Friend WithEvents ComboBox5 As ComboBox
     Friend WithEvents GroupBox8 As GroupBox
     Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents Codigo As DataGridViewTextBoxColumn
+    Friend WithEvents Producto As DataGridViewTextBoxColumn
+    Friend WithEvents Categoria As DataGridViewTextBoxColumn
+    Friend WithEvents Precio As DataGridViewTextBoxColumn
+    Friend WithEvents Cantidad As DataGridViewTextBoxColumn
+    Friend WithEvents SubTotal As DataGridViewTextBoxColumn
+    Friend WithEvents Total As DataGridViewTextBoxColumn
+    Friend WithEvents Quitar As DataGridViewTextBoxColumn
 End Class
