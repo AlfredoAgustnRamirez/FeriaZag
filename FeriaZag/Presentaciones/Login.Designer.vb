@@ -85,8 +85,6 @@ Partial Class Login
         Me.tbContraseña.TabIndex = 5
         Me.tbContraseña.UseSystemPasswordChar = True
         '
-
-        '
         'btnIngresar
         '
         Me.btnIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))

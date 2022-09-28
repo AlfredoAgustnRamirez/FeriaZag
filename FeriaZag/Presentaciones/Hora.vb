@@ -3,4 +3,5 @@
         LblHora.Text = DateTime.Now.ToLongTimeString()
         LblFecha.Text = DateTime.Now.ToLongDateString()
     End Sub
+
 End Class
