@@ -88,83 +88,53 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FeriaZagDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Vendedor\ClienteVendor.Designer.vb">
-      <DependentUpon>ClienteVendor.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Vendedor\ClienteVendor.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gerente\Reportes.Designer.vb">
-      <DependentUpon>Reportes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Gerente\Reportes.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gerente\Backup.Designer.vb">
-      <DependentUpon>Backup.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Gerente\Backup.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gerente\Usuarios.Designer.vb">
-      <DependentUpon>Usuarios.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Gerente\Usuarios.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gerente\Gerente.Designer.vb">
-      <DependentUpon>Gerente.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Gerente\Gerente.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrador\Hora.Designer.vb">
+    <Compile Include="Presentaciones\Hora.Designer.vb">
       <DependentUpon>Hora.vb</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\Hora.vb">
+    <Compile Include="Presentaciones\Hora.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vendedor\Venta.Designer.vb">
+    <Compile Include="Presentaciones\Venta.Designer.vb">
       <DependentUpon>Venta.vb</DependentUpon>
     </Compile>
-    <Compile Include="Vendedor\Venta.vb">
+    <Compile Include="Presentaciones\Venta.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\Login.vb">
+    <Compile Include="Presentaciones\Login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\Login.Designer.vb">
+    <Compile Include="Presentaciones\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrador\Administrador.Designer.vb">
+    <Compile Include="Presentaciones\Administrador.Designer.vb">
       <DependentUpon>Administrador.vb</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\Administrador.vb">
+    <Compile Include="Presentaciones\Administrador.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrador\Cliente.Designer.vb">
+    <Compile Include="Presentaciones\Cliente.Designer.vb">
       <DependentUpon>Cliente.vb</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\Cliente.vb">
+    <Compile Include="Presentaciones\Cliente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrador\Producto.Designer.vb">
+    <Compile Include="Presentaciones\Producto.Designer.vb">
       <DependentUpon>Producto.vb</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\Producto.vb">
+    <Compile Include="Presentaciones\Producto.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrador\Proveedor.Designer.vb">
-      <DependentUpon>Proveedor.vb</DependentUpon>
+    <Compile Include="Presentaciones\proveedor.Designer.vb">
+      <DependentUpon>proveedor.vb</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\Proveedor.vb">
+    <Compile Include="Presentaciones\proveedor.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vendedor\Vendedor.Designer.vb">
+    <Compile Include="Presentaciones\Vendedor.Designer.vb">
       <DependentUpon>Vendedor.vb</DependentUpon>
     </Compile>
-    <Compile Include="Vendedor\Vendedor.vb">
+    <Compile Include="Presentaciones\Vendedor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -185,40 +155,28 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Gerente\Reportes.resx">
-      <DependentUpon>Reportes.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gerente\Backup.resx">
-      <DependentUpon>Backup.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\Cliente.resx">
+    <EmbeddedResource Include="Presentaciones\Cliente.resx">
       <DependentUpon>Cliente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gerente\Gerente.resx">
-      <DependentUpon>Gerente.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\Hora.resx">
+    <EmbeddedResource Include="Presentaciones\Hora.resx">
       <DependentUpon>Hora.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\Login.resx">
+    <EmbeddedResource Include="Presentaciones\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\Administrador.resx">
+    <EmbeddedResource Include="Presentaciones\Administrador.resx">
       <DependentUpon>Administrador.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\Producto.resx">
+    <EmbeddedResource Include="Presentaciones\Producto.resx">
       <DependentUpon>Producto.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vendedor\ClienteVendor.resx">
-      <DependentUpon>ClienteVendor.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vendedor\Venta.resx">
+    <EmbeddedResource Include="Presentaciones\Venta.resx">
       <DependentUpon>Venta.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrador\Proveedor.resx">
-      <DependentUpon>Proveedor.vb</DependentUpon>
+    <EmbeddedResource Include="Presentaciones\proveedor.resx">
+      <DependentUpon>proveedor.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vendedor\Vendedor.resx">
+    <EmbeddedResource Include="Presentaciones\Vendedor.resx">
       <DependentUpon>Vendedor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -226,9 +184,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gerente\Usuarios.resx">
-      <DependentUpon>Usuarios.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

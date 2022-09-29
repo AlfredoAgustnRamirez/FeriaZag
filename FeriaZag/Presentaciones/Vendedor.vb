@@ -14,12 +14,4 @@
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
         Application.Exit()
     End Sub
-
-    Private Sub ClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClientesToolStripMenuItem.Click
-        Me.ToolStripContainer1.ContentPanel.Controls.Clear()
-        Dim frmclientevendedor As New ClienteVendor
-        frmclientevendedor.MdiParent = Me
-        Me.ToolStripContainer1.ContentPanel.Controls.Add(frmclientevendedor)
-        frmclientevendedor.Show()
-    End Sub
 End Class
