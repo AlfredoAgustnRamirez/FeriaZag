@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class ClienteVendor
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class Cliente
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,24 +20,28 @@ Partial Class ClienteVendor
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.GBMantenimiento = New System.Windows.Forms.GroupBox()
         Me.TBDirección = New System.Windows.Forms.TextBox()
         Me.TBDni = New System.Windows.Forms.TextBox()
         Me.LDirección = New System.Windows.Forms.Label()
         Me.LNombre = New System.Windows.Forms.Label()
+        Me.ICBNuevo = New FontAwesome.Sharp.IconButton()
+        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.TBCodigo = New System.Windows.Forms.TextBox()
         Me.LApellido = New System.Windows.Forms.Label()
         Me.TBNombre = New System.Windows.Forms.TextBox()
         Me.LDni = New System.Windows.Forms.Label()
         Me.LTelefono = New System.Windows.Forms.Label()
         Me.TBPrecio = New System.Windows.Forms.TextBox()
-        Me.ICBNuevo = New FontAwesome.Sharp.IconButton()
-        Me.ICBAgregar = New FontAwesome.Sharp.IconButton()
-        Me.ICBEliminar = New FontAwesome.Sharp.IconButton()
-        Me.ICBModificar = New FontAwesome.Sharp.IconButton()
+        Me.GBConsulta = New System.Windows.Forms.GroupBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.ICBBuscar = New FontAwesome.Sharp.IconButton()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -45,39 +49,21 @@ Partial Class ClienteVendor
         Me.DNI = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Dirección = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GBConsulta = New System.Windows.Forms.GroupBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.ICBBuscar = New FontAwesome.Sharp.IconButton()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GBMantenimiento.SuspendLayout()
+        Me.GBConsulta.SuspendLayout()
         Me.GBListar.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GBConsulta.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Trebuchet MS", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(418, -1)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(369, 46)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Clientes Registrados"
         '
         'GBMantenimiento
         '
-        Me.GBMantenimiento.Controls.Add(Me.ICBNuevo)
-        Me.GBMantenimiento.Controls.Add(Me.ICBAgregar)
-        Me.GBMantenimiento.Controls.Add(Me.ICBEliminar)
-        Me.GBMantenimiento.Controls.Add(Me.ICBModificar)
         Me.GBMantenimiento.Controls.Add(Me.TBDirección)
         Me.GBMantenimiento.Controls.Add(Me.TBDni)
         Me.GBMantenimiento.Controls.Add(Me.LDirección)
         Me.GBMantenimiento.Controls.Add(Me.LNombre)
+        Me.GBMantenimiento.Controls.Add(Me.ICBNuevo)
+        Me.GBMantenimiento.Controls.Add(Me.IconButton4)
+        Me.GBMantenimiento.Controls.Add(Me.IconButton2)
         Me.GBMantenimiento.Controls.Add(Me.TBCodigo)
         Me.GBMantenimiento.Controls.Add(Me.LApellido)
         Me.GBMantenimiento.Controls.Add(Me.TBNombre)
@@ -85,12 +71,12 @@ Partial Class ClienteVendor
         Me.GBMantenimiento.Controls.Add(Me.LTelefono)
         Me.GBMantenimiento.Controls.Add(Me.TBPrecio)
         Me.GBMantenimiento.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBMantenimiento.Location = New System.Drawing.Point(12, 109)
+        Me.GBMantenimiento.Location = New System.Drawing.Point(22, 12)
         Me.GBMantenimiento.Name = "GBMantenimiento"
-        Me.GBMantenimiento.Size = New System.Drawing.Size(376, 560)
-        Me.GBMantenimiento.TabIndex = 22
+        Me.GBMantenimiento.Size = New System.Drawing.Size(376, 600)
+        Me.GBMantenimiento.TabIndex = 21
         Me.GBMantenimiento.TabStop = False
-        Me.GBMantenimiento.Text = "Datos Clientes"
+        Me.GBMantenimiento.Text = "Mantenimiento"
         '
         'TBDirección
         '
@@ -123,6 +109,45 @@ Partial Class ClienteVendor
         Me.LNombre.Size = New System.Drawing.Size(72, 22)
         Me.LNombre.TabIndex = 2
         Me.LNombre.Text = "Nombre:"
+        '
+        'ICBNuevo
+        '
+        Me.ICBNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ICBNuevo.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.ICBNuevo.IconColor = System.Drawing.Color.Black
+        Me.ICBNuevo.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.ICBNuevo.Location = New System.Drawing.Point(59, 395)
+        Me.ICBNuevo.Name = "ICBNuevo"
+        Me.ICBNuevo.Size = New System.Drawing.Size(260, 42)
+        Me.ICBNuevo.TabIndex = 16
+        Me.ICBNuevo.Text = "Guardar"
+        Me.ICBNuevo.UseVisualStyleBackColor = False
+        '
+        'IconButton4
+        '
+        Me.IconButton4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.IconButton4.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.IconButton4.IconColor = System.Drawing.Color.Black
+        Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton4.Location = New System.Drawing.Point(201, 481)
+        Me.IconButton4.Name = "IconButton4"
+        Me.IconButton4.Size = New System.Drawing.Size(118, 41)
+        Me.IconButton4.TabIndex = 17
+        Me.IconButton4.Text = "Eliminar"
+        Me.IconButton4.UseVisualStyleBackColor = False
+        '
+        'IconButton2
+        '
+        Me.IconButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.IconButton2.IconColor = System.Drawing.Color.Black
+        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton2.Location = New System.Drawing.Point(59, 480)
+        Me.IconButton2.Name = "IconButton2"
+        Me.IconButton2.Size = New System.Drawing.Size(118, 42)
+        Me.IconButton2.TabIndex = 15
+        Me.IconButton2.Text = "Modificar"
+        Me.IconButton2.UseVisualStyleBackColor = False
         '
         'TBCodigo
         '
@@ -172,74 +197,75 @@ Partial Class ClienteVendor
         Me.TBPrecio.Size = New System.Drawing.Size(181, 26)
         Me.TBPrecio.TabIndex = 11
         '
-        'ICBNuevo
+        'GBConsulta
         '
-        Me.ICBNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ICBNuevo.IconChar = FontAwesome.Sharp.IconChar.ExternalLink
-        Me.ICBNuevo.IconColor = System.Drawing.Color.Black
-        Me.ICBNuevo.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBNuevo.Location = New System.Drawing.Point(41, 393)
-        Me.ICBNuevo.Name = "ICBNuevo"
-        Me.ICBNuevo.Size = New System.Drawing.Size(126, 49)
-        Me.ICBNuevo.TabIndex = 23
-        Me.ICBNuevo.Text = "Nuevo"
-        Me.ICBNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ICBNuevo.UseVisualStyleBackColor = False
+        Me.GBConsulta.Controls.Add(Me.TextBox2)
+        Me.GBConsulta.Controls.Add(Me.ICBBuscar)
+        Me.GBConsulta.Controls.Add(Me.Label4)
+        Me.GBConsulta.Controls.Add(Me.Label3)
+        Me.GBConsulta.Controls.Add(Me.TextBox1)
+        Me.GBConsulta.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GBConsulta.Location = New System.Drawing.Point(416, 11)
+        Me.GBConsulta.Name = "GBConsulta"
+        Me.GBConsulta.Size = New System.Drawing.Size(812, 115)
+        Me.GBConsulta.TabIndex = 22
+        Me.GBConsulta.TabStop = False
+        Me.GBConsulta.Text = "Consulta"
         '
-        'ICBAgregar
+        'TextBox2
         '
-        Me.ICBAgregar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ICBAgregar.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk
-        Me.ICBAgregar.IconColor = System.Drawing.Color.Black
-        Me.ICBAgregar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBAgregar.Location = New System.Drawing.Point(191, 393)
-        Me.ICBAgregar.Name = "ICBAgregar"
-        Me.ICBAgregar.Size = New System.Drawing.Size(129, 49)
-        Me.ICBAgregar.TabIndex = 21
-        Me.ICBAgregar.Text = "Guardar"
-        Me.ICBAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ICBAgregar.UseVisualStyleBackColor = False
+        Me.TextBox2.Location = New System.Drawing.Point(384, 54)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(153, 26)
+        Me.TextBox2.TabIndex = 19
         '
-        'ICBEliminar
+        'ICBBuscar
         '
-        Me.ICBEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ICBEliminar.IconChar = FontAwesome.Sharp.IconChar.X
-        Me.ICBEliminar.IconColor = System.Drawing.Color.Black
-        Me.ICBEliminar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBEliminar.Location = New System.Drawing.Point(191, 477)
-        Me.ICBEliminar.Name = "ICBEliminar"
-        Me.ICBEliminar.Size = New System.Drawing.Size(129, 50)
-        Me.ICBEliminar.TabIndex = 22
-        Me.ICBEliminar.Text = "Eliminar"
-        Me.ICBEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ICBEliminar.UseVisualStyleBackColor = False
+        Me.ICBBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ICBBuscar.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.ICBBuscar.IconColor = System.Drawing.Color.Black
+        Me.ICBBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.ICBBuscar.Location = New System.Drawing.Point(673, 39)
+        Me.ICBBuscar.Name = "ICBBuscar"
+        Me.ICBBuscar.Size = New System.Drawing.Size(118, 41)
+        Me.ICBBuscar.TabIndex = 18
+        Me.ICBBuscar.Text = "Buscar"
+        Me.ICBBuscar.UseVisualStyleBackColor = False
         '
-        'ICBModificar
+        'Label4
         '
-        Me.ICBModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ICBModificar.IconChar = FontAwesome.Sharp.IconChar.CircleCheck
-        Me.ICBModificar.IconColor = System.Drawing.Color.Black
-        Me.ICBModificar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBModificar.Location = New System.Drawing.Point(41, 477)
-        Me.ICBModificar.Name = "ICBModificar"
-        Me.ICBModificar.Size = New System.Drawing.Size(126, 50)
-        Me.ICBModificar.TabIndex = 20
-        Me.ICBModificar.Text = "Modificar"
-        Me.ICBModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ICBModificar.UseVisualStyleBackColor = False
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(322, 54)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(40, 22)
+        Me.Label4.TabIndex = 18
+        Me.Label4.Text = "DNI:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(16, 54)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(72, 22)
+        Me.Label3.TabIndex = 18
+        Me.Label3.Text = "Nombre:"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(107, 50)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(153, 26)
+        Me.TextBox1.TabIndex = 18
         '
         'GBListar
         '
         Me.GBListar.Controls.Add(Me.DataGridView1)
         Me.GBListar.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBListar.Location = New System.Drawing.Point(394, 197)
+        Me.GBListar.Location = New System.Drawing.Point(416, 133)
         Me.GBListar.Name = "GBListar"
-        Me.GBListar.Size = New System.Drawing.Size(858, 479)
-        Me.GBListar.TabIndex = 24
+        Me.GBListar.Size = New System.Drawing.Size(812, 479)
+        Me.GBListar.TabIndex = 23
         Me.GBListar.TabStop = False
         Me.GBListar.Text = "Listar"
         '
@@ -255,7 +281,7 @@ Partial Class ClienteVendor
         Me.DataGridView1.Location = New System.Drawing.Point(3, 22)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(852, 454)
+        Me.DataGridView1.Size = New System.Drawing.Size(806, 454)
         Me.DataGridView1.TabIndex = 0
         '
         'Nombre
@@ -288,107 +314,48 @@ Partial Class ClienteVendor
         Me.Dirección.Name = "Dirección"
         Me.Dirección.ReadOnly = True
         '
-        'GBConsulta
-        '
-        Me.GBConsulta.Controls.Add(Me.TextBox2)
-        Me.GBConsulta.Controls.Add(Me.ICBBuscar)
-        Me.GBConsulta.Controls.Add(Me.Label4)
-        Me.GBConsulta.Controls.Add(Me.Label3)
-        Me.GBConsulta.Controls.Add(Me.TextBox1)
-        Me.GBConsulta.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBConsulta.Location = New System.Drawing.Point(397, 109)
-        Me.GBConsulta.Name = "GBConsulta"
-        Me.GBConsulta.Size = New System.Drawing.Size(852, 82)
-        Me.GBConsulta.TabIndex = 25
-        Me.GBConsulta.TabStop = False
-        Me.GBConsulta.Text = "Consulta"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(385, 40)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(153, 26)
-        Me.TextBox2.TabIndex = 19
-        '
-        'ICBBuscar
-        '
-        Me.ICBBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ICBBuscar.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.ICBBuscar.IconColor = System.Drawing.Color.Black
-        Me.ICBBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBBuscar.Location = New System.Drawing.Point(656, 33)
-        Me.ICBBuscar.Name = "ICBBuscar"
-        Me.ICBBuscar.Size = New System.Drawing.Size(118, 41)
-        Me.ICBBuscar.TabIndex = 18
-        Me.ICBBuscar.Text = "Buscar"
-        Me.ICBBuscar.UseVisualStyleBackColor = False
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(321, 42)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(40, 22)
-        Me.Label4.TabIndex = 18
-        Me.Label4.Text = "DNI:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 43)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 22)
-        Me.Label3.TabIndex = 18
-        Me.Label3.Text = "Nombre:"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(108, 39)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(153, 26)
-        Me.TextBox1.TabIndex = 18
-        '
-        'ClienteVendor
+        'Cliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1264, 681)
-        Me.Controls.Add(Me.GBConsulta)
+        Me.ClientSize = New System.Drawing.Size(1280, 644)
         Me.Controls.Add(Me.GBListar)
+        Me.Controls.Add(Me.GBConsulta)
         Me.Controls.Add(Me.GBMantenimiento)
-        Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "ClienteVendor"
-        Me.Text = "Form1"
+        Me.Name = "Cliente"
+        Me.Text = "Clientes"
         Me.GBMantenimiento.ResumeLayout(False)
         Me.GBMantenimiento.PerformLayout()
-        Me.GBListar.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBConsulta.ResumeLayout(False)
         Me.GBConsulta.PerformLayout()
+        Me.GBListar.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Label1 As Label
     Friend WithEvents GBMantenimiento As GroupBox
     Friend WithEvents TBDirección As TextBox
     Friend WithEvents TBDni As TextBox
     Friend WithEvents LDirección As Label
     Friend WithEvents LNombre As Label
+    Friend WithEvents ICBNuevo As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
     Friend WithEvents TBCodigo As TextBox
     Friend WithEvents LApellido As Label
     Friend WithEvents TBNombre As TextBox
     Friend WithEvents LDni As Label
     Friend WithEvents LTelefono As Label
     Friend WithEvents TBPrecio As TextBox
-    Friend WithEvents ICBNuevo As FontAwesome.Sharp.IconButton
-    Friend WithEvents ICBAgregar As FontAwesome.Sharp.IconButton
-    Friend WithEvents ICBEliminar As FontAwesome.Sharp.IconButton
-    Friend WithEvents ICBModificar As FontAwesome.Sharp.IconButton
+    Friend WithEvents GBConsulta As GroupBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents ICBBuscar As FontAwesome.Sharp.IconButton
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents GBListar As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Nombre As DataGridViewTextBoxColumn
@@ -396,10 +363,4 @@ Partial Class ClienteVendor
     Friend WithEvents DNI As DataGridViewTextBoxColumn
     Friend WithEvents Telefono As DataGridViewTextBoxColumn
     Friend WithEvents Dirección As DataGridViewTextBoxColumn
-    Friend WithEvents GBConsulta As GroupBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents ICBBuscar As FontAwesome.Sharp.IconButton
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
 End Class
