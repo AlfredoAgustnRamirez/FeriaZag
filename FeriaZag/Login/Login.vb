@@ -17,9 +17,15 @@ Public Class Login
         Dim User2, pass2 As String
         User2 = tbUsuario.Text
         pass2 = tbContraseña.Text
-        If User = "Vendedor" And pass = "56789" Then
+        If User = "Vendedor" And pass = "1234" Then
             MsgBox("Bienvenido Vendedor al Sistema de Feria Zag")
             Vendedor.Show()
+            Me.Hide()
+        End If
+
+        If User = "Gerente" And pass = "1234" Then
+            MsgBox("Bienvenido Vendedor al Sistema de Feria Zag")
+            Gerente.Show()
             Me.Hide()
         End If
         tbUsuario.Text = ""
