@@ -34,6 +34,7 @@ Partial Class Administrador
         Me.ClientesToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
         Me.ProveedoresToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
         Me.VentasToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
+        Me.IconMenuItem1 = New FontAwesome.Sharp.IconMenuItem()
         Me.SalirToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
@@ -44,7 +45,7 @@ Partial Class Administrador
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.VentasToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.VentasToolStripMenuItem, Me.IconMenuItem1, Me.SalirToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1264, 38)
@@ -163,14 +164,26 @@ Partial Class Administrador
         'VentasToolStripMenuItem
         '
         Me.VentasToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.VentasToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart
+        Me.VentasToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.SquarePollHorizontal
         Me.VentasToolStripMenuItem.IconColor = System.Drawing.Color.Black
         Me.VentasToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.VentasToolStripMenuItem.IconSize = 30
         Me.VentasToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(124, 34)
-        Me.VentasToolStripMenuItem.Text = "Ventas"
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(152, 34)
+        Me.VentasToolStripMenuItem.Text = "Categoria"
+        '
+        'IconMenuItem1
+        '
+        Me.IconMenuItem1.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.ChartSimple
+        Me.IconMenuItem1.IconColor = System.Drawing.Color.Black
+        Me.IconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconMenuItem1.IconSize = 30
+        Me.IconMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.IconMenuItem1.Name = "IconMenuItem1"
+        Me.IconMenuItem1.Size = New System.Drawing.Size(144, 34)
+        Me.IconMenuItem1.Text = "Reportes"
         '
         'SalirToolStripMenuItem
         '
@@ -224,4 +237,5 @@ Partial Class Administrador
     Friend WithEvents LblFecha As Label
     Friend WithEvents LblHora As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents IconMenuItem1 As FontAwesome.Sharp.IconMenuItem
 End Class

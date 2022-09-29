@@ -40,4 +40,20 @@
         LblHora.Text = DateTime.Now.ToLongTimeString()
         LblFecha.Text = DateTime.Now.ToLongDateString()
     End Sub
+
+    Private Sub VentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentasToolStripMenuItem.Click
+        Me.ToolStripContainer1.ContentPanel.Controls.Clear()
+        Dim frmcategoria As New Categoria
+        frmcategoria.MdiParent = Me
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(frmcategoria)
+        frmcategoria.Show()
+    End Sub
+
+    Private Sub IconMenuItem1_Click(sender As Object, e As EventArgs) Handles IconMenuItem1.Click
+        Me.ToolStripContainer1.ContentPanel.Controls.Clear()
+        Dim frmreporteadmin As New ReporteAdmin
+        frmreporteadmin.MdiParent = Me
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(frmreporteadmin)
+        frmreporteadmin.Show()
+    End Sub
 End Class

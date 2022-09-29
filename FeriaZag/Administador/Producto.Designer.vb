@@ -22,7 +22,7 @@ Partial Class Producto
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LCategoria = New System.Windows.Forms.Label()
@@ -31,21 +31,21 @@ Partial Class Producto
         Me.TBPrecio = New System.Windows.Forms.TextBox()
         Me.TBCodigo = New System.Windows.Forms.TextBox()
         Me.GBMantenimiento = New System.Windows.Forms.GroupBox()
-        Me.ICBNuevo = New FontAwesome.Sharp.IconButton()
         Me.TBStock = New System.Windows.Forms.TextBox()
         Me.LStock = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ICBAgregar = New FontAwesome.Sharp.IconButton()
-        Me.ICBEliminar = New FontAwesome.Sharp.IconButton()
-        Me.ICBModificar = New FontAwesome.Sharp.IconButton()
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
-        Me.ICBBuscar = New FontAwesome.Sharp.IconButton()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ICBBuscar = New FontAwesome.Sharp.IconButton()
+        Me.ICBNuevo = New FontAwesome.Sharp.IconButton()
+        Me.ICBAgregar = New FontAwesome.Sharp.IconButton()
+        Me.ICBEliminar = New FontAwesome.Sharp.IconButton()
+        Me.ICBModificar = New FontAwesome.Sharp.IconButton()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBConsulta.SuspendLayout()
         Me.GBListar.SuspendLayout()
@@ -132,22 +132,7 @@ Partial Class Producto
         Me.GBMantenimiento.Size = New System.Drawing.Size(376, 682)
         Me.GBMantenimiento.TabIndex = 20
         Me.GBMantenimiento.TabStop = False
-        Me.GBMantenimiento.Text = "Mantenimiento"
-        '
-        'ICBNuevo
-        '
-        Me.ICBNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ICBNuevo.IconChar = FontAwesome.Sharp.IconChar.ExternalLink
-        Me.ICBNuevo.IconColor = System.Drawing.Color.Black
-        Me.ICBNuevo.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBNuevo.Location = New System.Drawing.Point(32, 385)
-        Me.ICBNuevo.Name = "ICBNuevo"
-        Me.ICBNuevo.Size = New System.Drawing.Size(126, 49)
-        Me.ICBNuevo.TabIndex = 19
-        Me.ICBNuevo.Text = "Nuevo"
-        Me.ICBNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ICBNuevo.UseVisualStyleBackColor = False
+        Me.GBMantenimiento.Text = "Dato Productos"
         '
         'TBStock
         '
@@ -172,6 +157,111 @@ Partial Class Producto
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(216, 30)
         Me.ComboBox1.TabIndex = 13
+        '
+        'GBConsulta
+        '
+        Me.GBConsulta.Controls.Add(Me.ICBBuscar)
+        Me.GBConsulta.Controls.Add(Me.ComboBox2)
+        Me.GBConsulta.Controls.Add(Me.Label4)
+        Me.GBConsulta.Controls.Add(Me.Label3)
+        Me.GBConsulta.Controls.Add(Me.TextBox1)
+        Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GBConsulta.Location = New System.Drawing.Point(411, 12)
+        Me.GBConsulta.Name = "GBConsulta"
+        Me.GBConsulta.Size = New System.Drawing.Size(812, 115)
+        Me.GBConsulta.TabIndex = 21
+        Me.GBConsulta.TabStop = False
+        Me.GBConsulta.Text = "Consultar Producto"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(430, 48)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(153, 30)
+        Me.ComboBox2.TabIndex = 18
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(304, 55)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(79, 22)
+        Me.Label4.TabIndex = 18
+        Me.Label4.Text = "Categoria"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(16, 51)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(66, 22)
+        Me.Label3.TabIndex = 18
+        Me.Label3.Text = "Nombre"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(106, 51)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(153, 26)
+        Me.TextBox1.TabIndex = 18
+        '
+        'GBListar
+        '
+        Me.GBListar.Controls.Add(Me.DataGridView1)
+        Me.GBListar.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GBListar.Location = New System.Drawing.Point(411, 133)
+        Me.GBListar.Name = "GBListar"
+        Me.GBListar.Size = New System.Drawing.Size(812, 561)
+        Me.GBListar.TabIndex = 22
+        Me.GBListar.TabStop = False
+        Me.GBListar.Text = "Listar Productos"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.GridColor = System.Drawing.Color.White
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 22)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(806, 536)
+        Me.DataGridView1.TabIndex = 0
+        '
+        'ICBBuscar
+        '
+        Me.ICBBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ICBBuscar.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.ICBBuscar.IconColor = System.Drawing.Color.Black
+        Me.ICBBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.ICBBuscar.Location = New System.Drawing.Point(659, 42)
+        Me.ICBBuscar.Name = "ICBBuscar"
+        Me.ICBBuscar.Size = New System.Drawing.Size(118, 41)
+        Me.ICBBuscar.TabIndex = 18
+        Me.ICBBuscar.Text = "Buscar"
+        Me.ICBBuscar.UseVisualStyleBackColor = False
+        '
+        'ICBNuevo
+        '
+        Me.ICBNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ICBNuevo.IconChar = FontAwesome.Sharp.IconChar.ExternalLink
+        Me.ICBNuevo.IconColor = System.Drawing.Color.Black
+        Me.ICBNuevo.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.ICBNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ICBNuevo.Location = New System.Drawing.Point(32, 385)
+        Me.ICBNuevo.Name = "ICBNuevo"
+        Me.ICBNuevo.Size = New System.Drawing.Size(126, 49)
+        Me.ICBNuevo.TabIndex = 19
+        Me.ICBNuevo.Text = "Nuevo"
+        Me.ICBNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ICBNuevo.UseVisualStyleBackColor = False
         '
         'ICBAgregar
         '
@@ -217,96 +307,6 @@ Partial Class Producto
         Me.ICBModificar.Text = "Modificar"
         Me.ICBModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.ICBModificar.UseVisualStyleBackColor = False
-        '
-        'GBConsulta
-        '
-        Me.GBConsulta.Controls.Add(Me.ICBBuscar)
-        Me.GBConsulta.Controls.Add(Me.ComboBox2)
-        Me.GBConsulta.Controls.Add(Me.Label4)
-        Me.GBConsulta.Controls.Add(Me.Label3)
-        Me.GBConsulta.Controls.Add(Me.TextBox1)
-        Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBConsulta.Location = New System.Drawing.Point(411, 12)
-        Me.GBConsulta.Name = "GBConsulta"
-        Me.GBConsulta.Size = New System.Drawing.Size(812, 115)
-        Me.GBConsulta.TabIndex = 21
-        Me.GBConsulta.TabStop = False
-        Me.GBConsulta.Text = "Consulta"
-        '
-        'ICBBuscar
-        '
-        Me.ICBBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ICBBuscar.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.ICBBuscar.IconColor = System.Drawing.Color.Black
-        Me.ICBBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBBuscar.Location = New System.Drawing.Point(659, 42)
-        Me.ICBBuscar.Name = "ICBBuscar"
-        Me.ICBBuscar.Size = New System.Drawing.Size(118, 41)
-        Me.ICBBuscar.TabIndex = 18
-        Me.ICBBuscar.Text = "Buscar"
-        Me.ICBBuscar.UseVisualStyleBackColor = False
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(430, 48)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(153, 30)
-        Me.ComboBox2.TabIndex = 18
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(304, 55)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(79, 22)
-        Me.Label4.TabIndex = 18
-        Me.Label4.Text = "Categoria"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 51)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(66, 22)
-        Me.Label3.TabIndex = 18
-        Me.Label3.Text = "Nombre"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(106, 51)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(153, 26)
-        Me.TextBox1.TabIndex = 18
-        '
-        'GBListar
-        '
-        Me.GBListar.Controls.Add(Me.DataGridView1)
-        Me.GBListar.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBListar.Location = New System.Drawing.Point(411, 133)
-        Me.GBListar.Name = "GBListar"
-        Me.GBListar.Size = New System.Drawing.Size(812, 561)
-        Me.GBListar.TabIndex = 22
-        Me.GBListar.TabStop = False
-        Me.GBListar.Text = "Listar"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.GridColor = System.Drawing.Color.White
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 22)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(806, 536)
-        Me.DataGridView1.TabIndex = 0
         '
         'Producto
         '
