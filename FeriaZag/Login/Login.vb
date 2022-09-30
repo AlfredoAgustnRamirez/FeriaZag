@@ -3,10 +3,10 @@ Public Class Login
 
 #Region "Boton Ingresar"
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
-        Dim User, pass As String
-        User = tbUsuario.Text
+        Dim pass As String
+        varUsuario = tbUsuario.Text
         pass = tbContraseña.Text
-        If User = "Admin" And pass = "1234" Then
+        If varUsuario = "Admin" And pass = "1234" Then
             MsgBox("Bienvenido Administrador al Sistema de Feria Zag")
             Administrador.Show()
             Me.Hide()
@@ -14,7 +14,7 @@ Public Class Login
 
         End If
 
-        If User = "Vendedor" And pass = "1234" Then
+        If varUsuario = "Vendedor" And pass = "1234" Then
             MsgBox("Bienvenido Vendedor al Sistema de Feria Zag")
             Vendedor.Show()
             Me.Hide()
@@ -22,7 +22,7 @@ Public Class Login
         tbUsuario.Text = ""
         tbContraseña.Text = ""
 
-        If User = "Gerente" And pass = "1234" Then
+        If varUsuario = "Gerente" And pass = "1234" Then
             MsgBox("Bienvenido Vendedor al Sistema de Feria Zag")
             Gerente.Show()
             Me.Hide()

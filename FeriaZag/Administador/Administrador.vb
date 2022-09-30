@@ -22,7 +22,7 @@
 
     Private Sub InicioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InicioToolStripMenuItem.Click
         Me.ToolStripContainer1.ContentPanel.Controls.Clear()
-        Dim frmhora As New Hora
+        Dim frmhora As New InicioAdmin
         frmhora.MdiParent = Me
         Me.ToolStripContainer1.ContentPanel.Controls.Add(frmhora)
         frmhora.Show()
@@ -55,5 +55,9 @@
         frmreporteadmin.MdiParent = Me
         Me.ToolStripContainer1.ContentPanel.Controls.Add(frmreporteadmin)
         frmreporteadmin.Show()
+    End Sub
+
+    Private Sub ToolStripContainer1_ContentPanel_Load(sender As Object, e As EventArgs) Handles ToolStripContainer1.ContentPanel.Load
+        Label2.Text = varUsuario
     End Sub
 End Class

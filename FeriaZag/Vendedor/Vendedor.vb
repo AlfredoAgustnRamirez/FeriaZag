@@ -38,9 +38,13 @@
 
     Private Sub InicioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InicioToolStripMenuItem.Click
         Me.ToolStripContainer1.ContentPanel.Controls.Clear()
-        Dim frmhorafecha As New Hora
+        Dim frmhorafecha As New InicioVendedor
         frmhorafecha.MdiParent = Me
         Me.ToolStripContainer1.ContentPanel.Controls.Add(frmhorafecha)
         frmhorafecha.Show()
+    End Sub
+
+    Private Sub Vendedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Label2.Text = varUsuario
     End Sub
 End Class

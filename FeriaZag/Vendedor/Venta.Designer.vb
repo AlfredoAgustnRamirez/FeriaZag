@@ -34,6 +34,9 @@ Partial Class Venta
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.GBListar = New System.Windows.Forms.GroupBox()
+        Me.BVImprimir = New FontAwesome.Sharp.IconButton()
+        Me.BVCobrar = New FontAwesome.Sharp.IconButton()
+        Me.BVCancelar = New FontAwesome.Sharp.IconButton()
         Me.CBPago = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TBTotalVenta = New System.Windows.Forms.TextBox()
@@ -69,9 +72,6 @@ Partial Class Venta
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.BVCancelar = New FontAwesome.Sharp.IconButton()
-        Me.BVCobrar = New FontAwesome.Sharp.IconButton()
-        Me.BVImprimir = New FontAwesome.Sharp.IconButton()
         Me.GBConsulta.SuspendLayout()
         Me.GBVenta.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -194,16 +194,63 @@ Partial Class Venta
         Me.GBListar.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBListar.Location = New System.Drawing.Point(12, 292)
         Me.GBListar.Name = "GBListar"
-        Me.GBListar.Size = New System.Drawing.Size(1251, 341)
+        Me.GBListar.Size = New System.Drawing.Size(1242, 301)
         Me.GBListar.TabIndex = 27
         Me.GBListar.TabStop = False
         Me.GBListar.Text = "Articulos"
+        '
+        'BVImprimir
+        '
+        Me.BVImprimir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BVImprimir.IconChar = FontAwesome.Sharp.IconChar.Print
+        Me.BVImprimir.IconColor = System.Drawing.Color.Black
+        Me.BVImprimir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BVImprimir.IconSize = 25
+        Me.BVImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BVImprimir.Location = New System.Drawing.Point(1001, 240)
+        Me.BVImprimir.Name = "BVImprimir"
+        Me.BVImprimir.Size = New System.Drawing.Size(225, 37)
+        Me.BVImprimir.TabIndex = 45
+        Me.BVImprimir.Text = "Imprimir"
+        Me.BVImprimir.UseVisualStyleBackColor = False
+        '
+        'BVCobrar
+        '
+        Me.BVCobrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BVCobrar.IconChar = FontAwesome.Sharp.IconChar.DollarSign
+        Me.BVCobrar.IconColor = System.Drawing.Color.Black
+        Me.BVCobrar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BVCobrar.IconSize = 25
+        Me.BVCobrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BVCobrar.Location = New System.Drawing.Point(1122, 178)
+        Me.BVCobrar.Name = "BVCobrar"
+        Me.BVCobrar.Size = New System.Drawing.Size(103, 37)
+        Me.BVCobrar.TabIndex = 44
+        Me.BVCobrar.Text = "Cobrar  "
+        Me.BVCobrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BVCobrar.UseVisualStyleBackColor = False
+        '
+        'BVCancelar
+        '
+        Me.BVCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BVCancelar.IconChar = FontAwesome.Sharp.IconChar.Ban
+        Me.BVCancelar.IconColor = System.Drawing.Color.Black
+        Me.BVCancelar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BVCancelar.IconSize = 25
+        Me.BVCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BVCancelar.Location = New System.Drawing.Point(1001, 178)
+        Me.BVCancelar.Name = "BVCancelar"
+        Me.BVCancelar.Size = New System.Drawing.Size(103, 37)
+        Me.BVCancelar.TabIndex = 43
+        Me.BVCancelar.Text = "Cancelar"
+        Me.BVCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BVCancelar.UseVisualStyleBackColor = False
         '
         'CBPago
         '
         Me.CBPago.FormattingEnabled = True
         Me.CBPago.Items.AddRange(New Object() {"Efectivo", "Tarjeta", "Tranferencia", "Mercado Pago"})
-        Me.CBPago.Location = New System.Drawing.Point(1046, 143)
+        Me.CBPago.Location = New System.Drawing.Point(1047, 111)
         Me.CBPago.Name = "CBPago"
         Me.CBPago.Size = New System.Drawing.Size(142, 30)
         Me.CBPago.TabIndex = 42
@@ -211,7 +258,7 @@ Partial Class Venta
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(1063, 118)
+        Me.Label13.Location = New System.Drawing.Point(1064, 86)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(115, 22)
         Me.Label13.TabIndex = 41
@@ -219,7 +266,7 @@ Partial Class Venta
         '
         'TBTotalVenta
         '
-        Me.TBTotalVenta.Location = New System.Drawing.Point(1046, 64)
+        Me.TBTotalVenta.Location = New System.Drawing.Point(1047, 49)
         Me.TBTotalVenta.Name = "TBTotalVenta"
         Me.TBTotalVenta.Size = New System.Drawing.Size(142, 26)
         Me.TBTotalVenta.TabIndex = 40
@@ -228,7 +275,7 @@ Partial Class Venta
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(1087, 39)
+        Me.Label12.Location = New System.Drawing.Point(1088, 24)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(59, 22)
         Me.Label12.TabIndex = 39
@@ -249,7 +296,7 @@ Partial Class Venta
         Me.DataGridView2.Location = New System.Drawing.Point(6, 19)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
-        Me.DataGridView2.Size = New System.Drawing.Size(975, 308)
+        Me.DataGridView2.Size = New System.Drawing.Size(975, 276)
         Me.DataGridView2.TabIndex = 0
         '
         'Codigo
@@ -311,7 +358,7 @@ Partial Class Venta
         Me.GroupBox2.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(491, 69)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(769, 226)
+        Me.GroupBox2.Size = New System.Drawing.Size(763, 226)
         Me.GroupBox2.TabIndex = 26
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Productos"
@@ -526,59 +573,12 @@ Partial Class Venta
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Trebuchet MS", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(455, -4)
+        Me.Label1.Location = New System.Drawing.Point(529, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(238, 46)
         Me.Label1.TabIndex = 31
         Me.Label1.Text = "Nueva Venta"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'BVCancelar
-        '
-        Me.BVCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.BVCancelar.IconChar = FontAwesome.Sharp.IconChar.Ban
-        Me.BVCancelar.IconColor = System.Drawing.Color.Black
-        Me.BVCancelar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BVCancelar.IconSize = 25
-        Me.BVCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BVCancelar.Location = New System.Drawing.Point(1000, 210)
-        Me.BVCancelar.Name = "BVCancelar"
-        Me.BVCancelar.Size = New System.Drawing.Size(103, 37)
-        Me.BVCancelar.TabIndex = 43
-        Me.BVCancelar.Text = "Cancelar"
-        Me.BVCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BVCancelar.UseVisualStyleBackColor = False
-        '
-        'BVCobrar
-        '
-        Me.BVCobrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.BVCobrar.IconChar = FontAwesome.Sharp.IconChar.DollarSign
-        Me.BVCobrar.IconColor = System.Drawing.Color.Black
-        Me.BVCobrar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BVCobrar.IconSize = 25
-        Me.BVCobrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BVCobrar.Location = New System.Drawing.Point(1122, 210)
-        Me.BVCobrar.Name = "BVCobrar"
-        Me.BVCobrar.Size = New System.Drawing.Size(103, 37)
-        Me.BVCobrar.TabIndex = 44
-        Me.BVCobrar.Text = "Cobrar  "
-        Me.BVCobrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BVCobrar.UseVisualStyleBackColor = False
-        '
-        'BVImprimir
-        '
-        Me.BVImprimir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.BVImprimir.IconChar = FontAwesome.Sharp.IconChar.Print
-        Me.BVImprimir.IconColor = System.Drawing.Color.Black
-        Me.BVImprimir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BVImprimir.IconSize = 25
-        Me.BVImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BVImprimir.Location = New System.Drawing.Point(1000, 277)
-        Me.BVImprimir.Name = "BVImprimir"
-        Me.BVImprimir.Size = New System.Drawing.Size(225, 37)
-        Me.BVImprimir.TabIndex = 45
-        Me.BVImprimir.Text = "Imprimir"
-        Me.BVImprimir.UseVisualStyleBackColor = False
         '
         'Venta
         '

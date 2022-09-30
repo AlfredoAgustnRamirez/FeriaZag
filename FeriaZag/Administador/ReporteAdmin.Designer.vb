@@ -22,7 +22,7 @@ Partial Class ReporteAdmin
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -41,30 +41,32 @@ Partial Class ReporteAdmin
         'IconButton2
         '
         Me.IconButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.IconButton2.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.Calendar
         Me.IconButton2.IconColor = System.Drawing.Color.Black
         Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton2.IconSize = 25
         Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton2.Location = New System.Drawing.Point(755, 130)
+        Me.IconButton2.Location = New System.Drawing.Point(874, 125)
         Me.IconButton2.Name = "IconButton2"
         Me.IconButton2.Size = New System.Drawing.Size(103, 37)
         Me.IconButton2.TabIndex = 59
-        Me.IconButton2.Text = "Hoy"
+        Me.IconButton2.Text = "Hoy    "
         Me.IconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.IconButton2.UseVisualStyleBackColor = False
         '
         'IconButton1
         '
         Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.IconButton1.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Calendar
         Me.IconButton1.IconColor = System.Drawing.Color.Black
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.IconSize = 25
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton1.Location = New System.Drawing.Point(913, 130)
+        Me.IconButton1.Location = New System.Drawing.Point(1023, 125)
         Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(110, 37)
+        Me.IconButton1.Size = New System.Drawing.Size(149, 37)
         Me.IconButton1.TabIndex = 58
         Me.IconButton1.Text = "Ultimos 7 días"
         Me.IconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -74,7 +76,7 @@ Partial Class ReporteAdmin
         '
         Me.GroupBox2.Controls.Add(Me.DateTimePicker2)
         Me.GroupBox2.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(452, 116)
+        Me.GroupBox2.Location = New System.Drawing.Point(406, 106)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(254, 56)
         Me.GroupBox2.TabIndex = 56
@@ -91,10 +93,11 @@ Partial Class ReporteAdmin
         'LbBackup
         '
         Me.LbBackup.AutoSize = True
-        Me.LbBackup.Font = New System.Drawing.Font("Trebuchet MS", 45.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LbBackup.Location = New System.Drawing.Point(328, 9)
+        Me.LbBackup.Font = New System.Drawing.Font("Trebuchet MS", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbBackup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.LbBackup.Location = New System.Drawing.Point(529, 9)
         Me.LbBackup.Name = "LbBackup"
-        Me.LbBackup.Size = New System.Drawing.Size(555, 76)
+        Me.LbBackup.Size = New System.Drawing.Size(338, 46)
         Me.LbBackup.TabIndex = 57
         Me.LbBackup.Text = "Reporte de Ventas"
         '
@@ -102,9 +105,9 @@ Partial Class ReporteAdmin
         '
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox1.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(167, 116)
+        Me.GroupBox1.Location = New System.Drawing.Point(69, 106)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(254, 56)
+        Me.GroupBox1.Size = New System.Drawing.Size(257, 56)
         Me.GroupBox1.TabIndex = 55
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Fecha Desde"
@@ -120,9 +123,9 @@ Partial Class ReporteAdmin
         '
         Me.GBListar.Controls.Add(Me.DataGridView1)
         Me.GBListar.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBListar.Location = New System.Drawing.Point(33, 196)
+        Me.GBListar.Location = New System.Drawing.Point(66, 196)
         Me.GBListar.Name = "GBListar"
-        Me.GBListar.Size = New System.Drawing.Size(1214, 429)
+        Me.GBListar.Size = New System.Drawing.Size(1109, 391)
         Me.GBListar.TabIndex = 60
         Me.GBListar.TabStop = False
         Me.GBListar.Text = "Listado de Ventas"
@@ -131,9 +134,9 @@ Partial Class ReporteAdmin
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -142,7 +145,7 @@ Partial Class ReporteAdmin
         Me.DataGridView1.Location = New System.Drawing.Point(3, 22)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(1208, 404)
+        Me.DataGridView1.Size = New System.Drawing.Size(1103, 366)
         Me.DataGridView1.TabIndex = 0
         '
         'ReporteAdmin

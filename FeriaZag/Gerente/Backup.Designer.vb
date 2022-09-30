@@ -38,10 +38,11 @@ Partial Class Backup
         'LbBackup
         '
         Me.LbBackup.AutoSize = True
-        Me.LbBackup.Font = New System.Drawing.Font("Trebuchet MS", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LbBackup.Location = New System.Drawing.Point(368, 21)
+        Me.LbBackup.Font = New System.Drawing.Font("Trebuchet MS", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbBackup.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.LbBackup.Location = New System.Drawing.Point(529, 9)
         Me.LbBackup.Name = "LbBackup"
-        Me.LbBackup.Size = New System.Drawing.Size(512, 81)
+        Me.LbBackup.Size = New System.Drawing.Size(298, 46)
         Me.LbBackup.TabIndex = 19
         Me.LbBackup.Text = "Realizar Backup"
         '
@@ -51,9 +52,9 @@ Partial Class Backup
         Me.GBConsulta.Controls.Add(Me.Label3)
         Me.GBConsulta.Controls.Add(Me.TextBox1)
         Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBConsulta.Location = New System.Drawing.Point(47, 153)
+        Me.GBConsulta.Location = New System.Drawing.Point(251, 146)
         Me.GBConsulta.Name = "GBConsulta"
-        Me.GBConsulta.Size = New System.Drawing.Size(742, 73)
+        Me.GBConsulta.Size = New System.Drawing.Size(811, 83)
         Me.GBConsulta.TabIndex = 22
         Me.GBConsulta.TabStop = False
         Me.GBConsulta.Text = "Directorio"
@@ -65,9 +66,9 @@ Partial Class Backup
         Me.ICBBuscar.IconColor = System.Drawing.Color.Black
         Me.ICBBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBBuscar.Location = New System.Drawing.Point(545, 19)
+        Me.ICBBuscar.Location = New System.Drawing.Point(650, 19)
         Me.ICBBuscar.Name = "ICBBuscar"
-        Me.ICBBuscar.Size = New System.Drawing.Size(125, 41)
+        Me.ICBBuscar.Size = New System.Drawing.Size(133, 49)
         Me.ICBBuscar.TabIndex = 18
         Me.ICBBuscar.Text = "Examinar"
         Me.ICBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -83,9 +84,9 @@ Partial Class Backup
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(6, 25)
+        Me.TextBox1.Location = New System.Drawing.Point(33, 34)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(449, 26)
+        Me.TextBox1.Size = New System.Drawing.Size(518, 26)
         Me.TextBox1.TabIndex = 18
         '
         'GroupBox1
@@ -93,9 +94,9 @@ Partial Class Backup
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(47, 262)
+        Me.GroupBox1.Location = New System.Drawing.Point(440, 254)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(478, 73)
+        Me.GroupBox1.Size = New System.Drawing.Size(547, 71)
         Me.GroupBox1.TabIndex = 23
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Nombre del Backup"
@@ -123,9 +124,9 @@ Partial Class Backup
         Me.ICBBase.IconColor = System.Drawing.Color.Black
         Me.ICBBase.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBBase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBBase.Location = New System.Drawing.Point(566, 401)
+        Me.ICBBase.Location = New System.Drawing.Point(537, 368)
         Me.ICBBase.Name = "ICBBase"
-        Me.ICBBase.Size = New System.Drawing.Size(159, 87)
+        Me.ICBBase.Size = New System.Drawing.Size(159, 62)
         Me.ICBBase.TabIndex = 19
         Me.ICBBase.Text = "Crear Backup"
         Me.ICBBase.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -136,7 +137,7 @@ Partial Class Backup
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.ClientSize = New System.Drawing.Size(1364, 681)
         Me.Controls.Add(Me.ICBBase)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GBConsulta)

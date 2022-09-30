@@ -29,16 +29,18 @@ Partial Class Vendedor
         Me.LeftToolStripPanel = New System.Windows.Forms.ToolStripPanel()
         Me.ContentPanel = New System.Windows.Forms.ToolStripContentPanel()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
+        Me.LblHora = New System.Windows.Forms.Label()
+        Me.HoraFecha = New System.Windows.Forms.Timer(Me.components)
+        Me.LblFecha = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.InicioToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
         Me.ProductosToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
         Me.ClientesToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
         Me.SalirToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
         Me.ProductoVendedorToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
-        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
-        Me.LblFecha = New System.Windows.Forms.Label()
-        Me.LblHora = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.HoraFecha = New System.Windows.Forms.Timer(Me.components)
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
         Me.ToolStripContainer1.SuspendLayout()
@@ -89,13 +91,83 @@ Partial Class Vendedor
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.SalirToolStripMenuItem, Me.ProductoVendedorToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1264, 38)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(6, 12, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1264, 48)
         Me.MenuStrip1.TabIndex = 10
         Me.MenuStrip1.Text = "MenuStrip1"
         '
+        'ToolStripContainer1
+        '
+        Me.ToolStripContainer1.BottomToolStripPanelVisible = False
+        '
+        'ToolStripContainer1.ContentPanel
+        '
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.Label2)
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.Label1)
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.LblFecha)
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.LblHora)
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.PictureBox1)
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1264, 633)
+        Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ToolStripContainer1.LeftToolStripPanelVisible = False
+        Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 48)
+        Me.ToolStripContainer1.Name = "ToolStripContainer1"
+        Me.ToolStripContainer1.RightToolStripPanelVisible = False
+        Me.ToolStripContainer1.Size = New System.Drawing.Size(1264, 633)
+        Me.ToolStripContainer1.TabIndex = 11
+        Me.ToolStripContainer1.Text = "ToolStripContainer1"
+        Me.ToolStripContainer1.TopToolStripPanelVisible = False
+        '
+        'LblHora
+        '
+        Me.LblHora.AutoSize = True
+        Me.LblHora.Font = New System.Drawing.Font("Trebuchet MS", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblHora.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.LblHora.Location = New System.Drawing.Point(23, 422)
+        Me.LblHora.Name = "LblHora"
+        Me.LblHora.Size = New System.Drawing.Size(168, 61)
+        Me.LblHora.TabIndex = 6
+        Me.LblHora.Text = "Label1"
+        '
+        'HoraFecha
+        '
+        Me.HoraFecha.Enabled = True
+        '
+        'LblFecha
+        '
+        Me.LblFecha.AutoSize = True
+        Me.LblFecha.Font = New System.Drawing.Font("Trebuchet MS", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblFecha.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.LblFecha.Location = New System.Drawing.Point(25, 532)
+        Me.LblFecha.Name = "LblFecha"
+        Me.LblFecha.Size = New System.Drawing.Size(140, 49)
+        Me.LblFecha.TabIndex = 7
+        Me.LblFecha.Text = "Label2"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Trebuchet MS", 35.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(710, 422)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(273, 59)
+        Me.Label1.TabIndex = 13
+        Me.Label1.Text = "Bienvenido:"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.FeriaZag.My.Resources.Resources._5
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(1348, 392)
+        Me.PictureBox1.TabIndex = 5
+        Me.PictureBox1.TabStop = False
+        '
         'InicioToolStripMenuItem
         '
-        Me.InicioToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.InicioToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.InicioToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.InicioToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.HouseChimney
         Me.InicioToolStripMenuItem.IconColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -108,7 +180,7 @@ Partial Class Vendedor
         '
         'ProductosToolStripMenuItem
         '
-        Me.ProductosToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProductosToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ProductosToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ProductosToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.DollarSign
         Me.ProductosToolStripMenuItem.IconColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -116,12 +188,12 @@ Partial Class Vendedor
         Me.ProductosToolStripMenuItem.IconSize = 30
         Me.ProductosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(124, 34)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(122, 34)
         Me.ProductosToolStripMenuItem.Text = "Ventas"
         '
         'ClientesToolStripMenuItem
         '
-        Me.ClientesToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ClientesToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ClientesToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientesToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.Users
         Me.ClientesToolStripMenuItem.IconColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -130,14 +202,14 @@ Partial Class Vendedor
         Me.ClientesToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ClientesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(135, 34)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(133, 34)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         Me.ClientesToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.SalirToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SalirToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SalirToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.SalirToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.DoorClosed
         Me.SalirToolStripMenuItem.IconColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -146,76 +218,31 @@ Partial Class Vendedor
         Me.SalirToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
         Me.SalirToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(104, 34)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(103, 34)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'ProductoVendedorToolStripMenuItem
         '
-        Me.ProductoVendedorToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ProductoVendedorToolStripMenuItem.ForeColor = System.Drawing.Color.IndianRed
+        Me.ProductoVendedorToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProductoVendedorToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ProductoVendedorToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.ShoppingBag
-        Me.ProductoVendedorToolStripMenuItem.IconColor = System.Drawing.Color.IndianRed
+        Me.ProductoVendedorToolStripMenuItem.IconColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ProductoVendedorToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ProductoVendedorToolStripMenuItem.IconSize = 30
         Me.ProductoVendedorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ProductoVendedorToolStripMenuItem.Name = "ProductoVendedorToolStripMenuItem"
-        Me.ProductoVendedorToolStripMenuItem.Size = New System.Drawing.Size(152, 34)
+        Me.ProductoVendedorToolStripMenuItem.Size = New System.Drawing.Size(153, 34)
         Me.ProductoVendedorToolStripMenuItem.Text = "Productos"
         '
-        'ToolStripContainer1
+        'Label2
         '
-        Me.ToolStripContainer1.BottomToolStripPanelVisible = False
-        '
-        'ToolStripContainer1.ContentPanel
-        '
-        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.LblFecha)
-        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.LblHora)
-        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.PictureBox1)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1264, 643)
-        Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ToolStripContainer1.LeftToolStripPanelVisible = False
-        Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 38)
-        Me.ToolStripContainer1.Name = "ToolStripContainer1"
-        Me.ToolStripContainer1.RightToolStripPanelVisible = False
-        Me.ToolStripContainer1.Size = New System.Drawing.Size(1264, 643)
-        Me.ToolStripContainer1.TabIndex = 11
-        Me.ToolStripContainer1.Text = "ToolStripContainer1"
-        Me.ToolStripContainer1.TopToolStripPanelVisible = False
-        '
-        'LblFecha
-        '
-        Me.LblFecha.AutoSize = True
-        Me.LblFecha.Font = New System.Drawing.Font("Trebuchet MS", 45.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblFecha.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.LblFecha.Location = New System.Drawing.Point(94, 558)
-        Me.LblFecha.Name = "LblFecha"
-        Me.LblFecha.Size = New System.Drawing.Size(213, 76)
-        Me.LblFecha.TabIndex = 7
-        Me.LblFecha.Text = "Label2"
-        '
-        'LblHora
-        '
-        Me.LblHora.AutoSize = True
-        Me.LblHora.Font = New System.Drawing.Font("Trebuchet MS", 39.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblHora.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.LblHora.Location = New System.Drawing.Point(424, 433)
-        Me.LblHora.Name = "LblHora"
-        Me.LblHora.Size = New System.Drawing.Size(186, 66)
-        Me.LblHora.TabIndex = 6
-        Me.LblHora.Text = "Label1"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.FeriaZag.My.Resources.Resources._1_1_
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(1348, 392)
-        Me.PictureBox1.TabIndex = 5
-        Me.PictureBox1.TabStop = False
-        '
-        'HoraFecha
-        '
-        Me.HoraFecha.Enabled = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Trebuchet MS", 35.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(974, 422)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(0, 59)
+        Me.Label2.TabIndex = 14
         '
         'Vendedor
         '
@@ -253,7 +280,9 @@ Partial Class Vendedor
     Friend WithEvents ToolStripContainer1 As ToolStripContainer
     Friend WithEvents ProductoVendedorToolStripMenuItem As FontAwesome.Sharp.IconMenuItem
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents LblFecha As Label
     Friend WithEvents LblHora As Label
     Friend WithEvents HoraFecha As Timer
+    Friend WithEvents LblFecha As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class
