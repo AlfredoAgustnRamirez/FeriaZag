@@ -81,6 +81,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administador\InicioAdmin.Designer.vb">
+      <DependentUpon>InicioAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administador\InicioAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Datos\DProducto.vb" />
     <Compile Include="Datos\DConexion.vb" />
     <Compile Include="FeriaZagDataSet.Designer.vb">
@@ -98,6 +104,19 @@
       <DependentUpon>Categoria.vb</DependentUpon>
     </Compile>
     <Compile Include="Administador\Categoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerente\InicioGerente.Designer.vb">
+      <DependentUpon>InicioGerente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Gerente\InicioGerente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VariableGlobales.vb" />
+    <Compile Include="Vendedor\InicioVendedor.Designer.vb">
+      <DependentUpon>InicioVendedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\InicioVendedor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vendedor\ProductoVendedor.Designer.vb">
@@ -209,6 +228,9 @@
     <EmbeddedResource Include="Administador\Cliente.resx">
       <DependentUpon>Cliente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administador\InicioAdmin.resx">
+      <DependentUpon>InicioAdmin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administador\ReporteAdmin.resx">
       <DependentUpon>ReporteAdmin.vb</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gerente\Gerente.resx">
       <DependentUpon>Gerente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerente\InicioGerente.resx">
+      <DependentUpon>InicioGerente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gerente\Reporte.resx">
       <DependentUpon>Reporte.vb</DependentUpon>
@@ -238,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vendedor\ClienteVendedor.resx">
       <DependentUpon>ClienteVendedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\InicioVendedor.resx">
+      <DependentUpon>InicioVendedor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vendedor\ProductoVendedor.resx">
       <DependentUpon>ProductoVendedor.vb</DependentUpon>
@@ -294,6 +322,11 @@
   <ItemGroup>
     <None Include="Resources\1%281%29.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

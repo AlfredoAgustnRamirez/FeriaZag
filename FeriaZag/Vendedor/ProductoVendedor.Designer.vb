@@ -43,6 +43,11 @@ Partial Class ProductoVendedor
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.LbProductos = New System.Windows.Forms.Label()
+        Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.categoria = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Stock = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBListar.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,16 +67,16 @@ Partial Class ProductoVendedor
         Me.GBMantenimiento.Controls.Add(Me.Label1)
         Me.GBMantenimiento.Controls.Add(Me.TBPrecio)
         Me.GBMantenimiento.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBMantenimiento.Location = New System.Drawing.Point(12, 156)
+        Me.GBMantenimiento.Location = New System.Drawing.Point(27, 69)
         Me.GBMantenimiento.Name = "GBMantenimiento"
-        Me.GBMantenimiento.Size = New System.Drawing.Size(376, 424)
+        Me.GBMantenimiento.Size = New System.Drawing.Size(376, 451)
         Me.GBMantenimiento.TabIndex = 21
         Me.GBMantenimiento.TabStop = False
         Me.GBMantenimiento.Text = "Datos Productos"
         '
         'TBStock
         '
-        Me.TBStock.Location = New System.Drawing.Point(120, 312)
+        Me.TBStock.Location = New System.Drawing.Point(119, 348)
         Me.TBStock.Name = "TBStock"
         Me.TBStock.Size = New System.Drawing.Size(216, 26)
         Me.TBStock.TabIndex = 18
@@ -79,7 +84,7 @@ Partial Class ProductoVendedor
         'LStock
         '
         Me.LStock.AutoSize = True
-        Me.LStock.Location = New System.Drawing.Point(27, 316)
+        Me.LStock.Location = New System.Drawing.Point(26, 352)
         Me.LStock.Name = "LStock"
         Me.LStock.Size = New System.Drawing.Size(49, 22)
         Me.LStock.TabIndex = 14
@@ -88,7 +93,7 @@ Partial Class ProductoVendedor
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(120, 176)
+        Me.ComboBox1.Location = New System.Drawing.Point(119, 212)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(216, 30)
         Me.ComboBox1.TabIndex = 13
@@ -96,7 +101,7 @@ Partial Class ProductoVendedor
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(28, 56)
+        Me.Label2.Location = New System.Drawing.Point(27, 92)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(66, 22)
         Me.Label2.TabIndex = 2
@@ -105,7 +110,7 @@ Partial Class ProductoVendedor
         'TBCodigo
         '
         Me.TBCodigo.Enabled = False
-        Me.TBCodigo.Location = New System.Drawing.Point(120, 52)
+        Me.TBCodigo.Location = New System.Drawing.Point(119, 88)
         Me.TBCodigo.Name = "TBCodigo"
         Me.TBCodigo.Size = New System.Drawing.Size(216, 26)
         Me.TBCodigo.TabIndex = 12
@@ -113,7 +118,7 @@ Partial Class ProductoVendedor
         'LNombre
         '
         Me.LNombre.AutoSize = True
-        Me.LNombre.Location = New System.Drawing.Point(27, 116)
+        Me.LNombre.Location = New System.Drawing.Point(26, 152)
         Me.LNombre.Name = "LNombre"
         Me.LNombre.Size = New System.Drawing.Size(66, 22)
         Me.LNombre.TabIndex = 4
@@ -121,7 +126,7 @@ Partial Class ProductoVendedor
         '
         'TBNombre
         '
-        Me.TBNombre.Location = New System.Drawing.Point(120, 112)
+        Me.TBNombre.Location = New System.Drawing.Point(119, 148)
         Me.TBNombre.Name = "TBNombre"
         Me.TBNombre.Size = New System.Drawing.Size(216, 26)
         Me.TBNombre.TabIndex = 9
@@ -129,7 +134,7 @@ Partial Class ProductoVendedor
         'LCategoria
         '
         Me.LCategoria.AutoSize = True
-        Me.LCategoria.Location = New System.Drawing.Point(28, 180)
+        Me.LCategoria.Location = New System.Drawing.Point(27, 216)
         Me.LCategoria.Name = "LCategoria"
         Me.LCategoria.Size = New System.Drawing.Size(79, 22)
         Me.LCategoria.TabIndex = 3
@@ -138,7 +143,7 @@ Partial Class ProductoVendedor
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(27, 252)
+        Me.Label1.Location = New System.Drawing.Point(26, 288)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(55, 22)
         Me.Label1.TabIndex = 1
@@ -146,7 +151,7 @@ Partial Class ProductoVendedor
         '
         'TBPrecio
         '
-        Me.TBPrecio.Location = New System.Drawing.Point(120, 248)
+        Me.TBPrecio.Location = New System.Drawing.Point(119, 284)
         Me.TBPrecio.Name = "TBPrecio"
         Me.TBPrecio.Size = New System.Drawing.Size(216, 26)
         Me.TBPrecio.TabIndex = 11
@@ -155,9 +160,9 @@ Partial Class ProductoVendedor
         '
         Me.GBListar.Controls.Add(Me.DataGridView1)
         Me.GBListar.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBListar.Location = New System.Drawing.Point(414, 248)
+        Me.GBListar.Location = New System.Drawing.Point(418, 161)
         Me.GBListar.Name = "GBListar"
-        Me.GBListar.Size = New System.Drawing.Size(849, 362)
+        Me.GBListar.Size = New System.Drawing.Size(812, 362)
         Me.GBListar.TabIndex = 23
         Me.GBListar.TabStop = False
         Me.GBListar.Text = "Listar Productos"
@@ -172,12 +177,13 @@ Partial Class ProductoVendedor
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.codigo, Me.producto, Me.categoria, Me.precio, Me.Stock})
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.GridColor = System.Drawing.Color.White
         Me.DataGridView1.Location = New System.Drawing.Point(3, 22)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(843, 337)
+        Me.DataGridView1.Size = New System.Drawing.Size(806, 337)
         Me.DataGridView1.TabIndex = 0
         '
         'GBConsulta
@@ -188,7 +194,7 @@ Partial Class ProductoVendedor
         Me.GBConsulta.Controls.Add(Me.Label3)
         Me.GBConsulta.Controls.Add(Me.TextBox1)
         Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBConsulta.Location = New System.Drawing.Point(414, 156)
+        Me.GBConsulta.Location = New System.Drawing.Point(418, 69)
         Me.GBConsulta.Name = "GBConsulta"
         Me.GBConsulta.Size = New System.Drawing.Size(812, 78)
         Me.GBConsulta.TabIndex = 24
@@ -244,12 +250,43 @@ Partial Class ProductoVendedor
         'LbProductos
         '
         Me.LbProductos.AutoSize = True
-        Me.LbProductos.Font = New System.Drawing.Font("Trebuchet MS", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LbProductos.Location = New System.Drawing.Point(484, 9)
+        Me.LbProductos.Font = New System.Drawing.Font("Trebuchet MS", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbProductos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.LbProductos.Location = New System.Drawing.Point(529, 9)
         Me.LbProductos.Name = "LbProductos"
-        Me.LbProductos.Size = New System.Drawing.Size(352, 81)
+        Me.LbProductos.Size = New System.Drawing.Size(204, 46)
         Me.LbProductos.TabIndex = 19
         Me.LbProductos.Text = "Productos "
+        '
+        'codigo
+        '
+        Me.codigo.HeaderText = "Código"
+        Me.codigo.Name = "codigo"
+        Me.codigo.ReadOnly = True
+        '
+        'producto
+        '
+        Me.producto.HeaderText = "Producto"
+        Me.producto.Name = "producto"
+        Me.producto.ReadOnly = True
+        '
+        'categoria
+        '
+        Me.categoria.HeaderText = "Catrgoría"
+        Me.categoria.Name = "categoria"
+        Me.categoria.ReadOnly = True
+        '
+        'precio
+        '
+        Me.precio.HeaderText = "Precio"
+        Me.precio.Name = "precio"
+        Me.precio.ReadOnly = True
+        '
+        'Stock
+        '
+        Me.Stock.HeaderText = "Stock"
+        Me.Stock.Name = "Stock"
+        Me.Stock.ReadOnly = True
         '
         'ProductoVendedor
         '
@@ -295,4 +332,9 @@ Partial Class ProductoVendedor
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents LbProductos As Label
+    Friend WithEvents codigo As DataGridViewTextBoxColumn
+    Friend WithEvents producto As DataGridViewTextBoxColumn
+    Friend WithEvents categoria As DataGridViewTextBoxColumn
+    Friend WithEvents precio As DataGridViewTextBoxColumn
+    Friend WithEvents Stock As DataGridViewTextBoxColumn
 End Class
