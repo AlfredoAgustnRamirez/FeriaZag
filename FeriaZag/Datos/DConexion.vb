@@ -1,12 +1,6 @@
-﻿Imports System.Data.Sql
-Imports System.Data.SqlClient
-Public Class DConexion
-#Region "Variables"
+﻿Public Class DConexion
 
-    Public cnx As New SqlConnection("Data Source=DESKTOP-0RGS1RR\SQLEXPRESS01;Initial Catalog=FeriaZag;Integrated Security=True")
-
-#End Region
-#Region "Base de datos"
+#Region "Conectar"
     Public Sub Conectar()
         Try
             cnx.Open()
@@ -14,6 +8,18 @@ Public Class DConexion
             MsgBox("No conectado" + ex.ToString)
         End Try
     End Sub
-
 #End Region
+
+#Region "Desconectar"
+    Public Sub Desconectar()
+        Try
+            If cnx.State = ConnectionState.Open Then
+                cnx.Close()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+#End Region
+
 End Class

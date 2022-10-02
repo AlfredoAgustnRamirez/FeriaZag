@@ -28,10 +28,11 @@ Partial Class Login
         Me.lContraseña = New System.Windows.Forms.Label()
         Me.tbUsuario = New System.Windows.Forms.TextBox()
         Me.tbContraseña = New System.Windows.Forms.TextBox()
-        Me.btnIngresar = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnIngresar = New FontAwesome.Sharp.IconButton()
+        Me.ICBSalir = New FontAwesome.Sharp.IconButton()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,17 +86,6 @@ Partial Class Login
         Me.tbContraseña.TabIndex = 5
         Me.tbContraseña.UseSystemPasswordChar = True
         '
-        'btnIngresar
-        '
-        Me.btnIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnIngresar.Font = New System.Drawing.Font("Trebuchet MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIngresar.Location = New System.Drawing.Point(79, 328)
-        Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(233, 37)
-        Me.btnIngresar.TabIndex = 7
-        Me.btnIngresar.Text = "Ingresar"
-        Me.btnIngresar.UseVisualStyleBackColor = False
-        '
         'PictureBox3
         '
         Me.PictureBox3.BackgroundImage = Global.FeriaZag.My.Resources.Resources.key
@@ -127,6 +117,41 @@ Partial Class Login
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
         '
+        'btnIngresar
+        '
+        Me.btnIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnIngresar.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnIngresar.IconChar = FontAwesome.Sharp.IconChar.Lock
+        Me.btnIngresar.IconColor = System.Drawing.Color.Black
+        Me.btnIngresar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnIngresar.IconSize = 40
+        Me.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnIngresar.Location = New System.Drawing.Point(79, 332)
+        Me.btnIngresar.Name = "btnIngresar"
+        Me.btnIngresar.Size = New System.Drawing.Size(103, 48)
+        Me.btnIngresar.TabIndex = 11
+        Me.btnIngresar.Text = "Ingresar"
+        Me.btnIngresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnIngresar.UseVisualStyleBackColor = False
+        '
+        'ICBSalir
+        '
+        Me.ICBSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ICBSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.ICBSalir.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ICBSalir.IconChar = FontAwesome.Sharp.IconChar.LockOpen
+        Me.ICBSalir.IconColor = System.Drawing.Color.Black
+        Me.ICBSalir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.ICBSalir.IconSize = 40
+        Me.ICBSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ICBSalir.Location = New System.Drawing.Point(209, 332)
+        Me.ICBSalir.Name = "ICBSalir"
+        Me.ICBSalir.Size = New System.Drawing.Size(103, 48)
+        Me.ICBSalir.TabIndex = 11
+        Me.ICBSalir.Text = "Salir"
+        Me.ICBSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ICBSalir.UseVisualStyleBackColor = False
+        '
         'Login
         '
         Me.AcceptButton = Me.btnIngresar
@@ -134,11 +159,13 @@ Partial Class Login
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AntiqueWhite
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.CancelButton = Me.ICBSalir
         Me.ClientSize = New System.Drawing.Size(398, 439)
+        Me.Controls.Add(Me.ICBSalir)
+        Me.Controls.Add(Me.btnIngresar)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.btnIngresar)
         Me.Controls.Add(Me.tbContraseña)
         Me.Controls.Add(Me.tbUsuario)
         Me.Controls.Add(Me.lContraseña)
@@ -161,8 +188,9 @@ Partial Class Login
     Friend WithEvents lContraseña As Label
     Friend WithEvents tbUsuario As TextBox
     Friend WithEvents tbContraseña As TextBox
-    Friend WithEvents btnIngresar As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents btnIngresar As FontAwesome.Sharp.IconButton
+    Friend WithEvents ICBSalir As FontAwesome.Sharp.IconButton
 End Class

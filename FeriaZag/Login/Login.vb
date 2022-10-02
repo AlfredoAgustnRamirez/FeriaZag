@@ -2,38 +2,40 @@
 Public Class Login
 
 #Region "Boton Ingresar"
-    Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
+
+    Private Sub btnIngresar_Click_1(sender As Object, e As EventArgs) Handles btnIngresar.Click
         Dim pass As String
         varUsuario = tbUsuario.Text
         pass = tbContraseña.Text
+
         If varUsuario = "Admin" And pass = "1234" Then
-            MsgBox("Bienvenido Administrador al Sistema de Feria Zag")
+            MsgBox("Bienvenido " + varUsuario + " al Sistema de Feria Zag")
             Administrador.Show()
             Me.Hide()
-        Else
-
-        End If
-
-        If varUsuario = "Vendedor" And pass = "1234" Then
-            MsgBox("Bienvenido Vendedor al Sistema de Feria Zag")
+        ElseIf varUsuario = "Vendedor" And pass = "1234" Then
+            MsgBox("Bienvenido " + varUsuario + " al Sistema de Feria Zag")
             Vendedor.Show()
             Me.Hide()
-        End If
-        tbUsuario.Text = ""
-        tbContraseña.Text = ""
-
-        If varUsuario = "Gerente" And pass = "1234" Then
-            MsgBox("Bienvenido Vendedor al Sistema de Feria Zag")
+        ElseIf varUsuario = "Gerente" And pass = "1234" Then
+            MsgBox("Bienvenido " + varUsuario + " al Sistema de Feria Zag")
             Gerente.Show()
             Me.Hide()
+        ElseIf tbContraseña.Text = "" Or tbUsuario.Text = "" Then
+            MsgBox("Error debe Completar todos los campos", vbCritical, "Error")
+        ElseIf varUsuario <> "Admin" Or pass <> "1234" Then
+            MsgBox("Error al ingresar usuario o contraseña", vbCritical, "Error")
         End If
-        tbUsuario.Text = ""
         tbContraseña.Text = ""
     End Sub
+#End Region
 
-    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+#Region "Boton Salir"
+    Private Sub ICBSalir_Click(sender As Object, e As EventArgs) Handles ICBSalir.Click
+        If MsgBox("¿Esta Seguro de salir del Sistema?", MsgBoxStyle.Information + MsgBoxStyle.YesNo, "Mensaje del Sistema") = MsgBoxResult.Yes Then
+            End
+        End If
     End Sub
 #End Region
+
 End Class
 

@@ -26,10 +26,10 @@ Partial Class Backup
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
         Me.ICBBuscar = New FontAwesome.Sharp.IconButton()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TBDirectorio = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TBNombreBackup = New System.Windows.Forms.TextBox()
         Me.ICBBase = New FontAwesome.Sharp.IconButton()
         Me.GBConsulta.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -50,7 +50,7 @@ Partial Class Backup
         '
         Me.GBConsulta.Controls.Add(Me.ICBBuscar)
         Me.GBConsulta.Controls.Add(Me.Label3)
-        Me.GBConsulta.Controls.Add(Me.TextBox1)
+        Me.GBConsulta.Controls.Add(Me.TBDirectorio)
         Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBConsulta.Location = New System.Drawing.Point(251, 146)
         Me.GBConsulta.Name = "GBConsulta"
@@ -82,17 +82,17 @@ Partial Class Backup
         Me.Label3.Size = New System.Drawing.Size(0, 22)
         Me.Label3.TabIndex = 18
         '
-        'TextBox1
+        'TBDirectorio
         '
-        Me.TextBox1.Location = New System.Drawing.Point(33, 34)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(518, 26)
-        Me.TextBox1.TabIndex = 18
+        Me.TBDirectorio.Location = New System.Drawing.Point(33, 34)
+        Me.TBDirectorio.Name = "TBDirectorio"
+        Me.TBDirectorio.Size = New System.Drawing.Size(518, 26)
+        Me.TBDirectorio.TabIndex = 18
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.TBNombreBackup)
         Me.GroupBox1.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(440, 254)
         Me.GroupBox1.Name = "GroupBox1"
@@ -109,12 +109,12 @@ Partial Class Backup
         Me.Label1.Size = New System.Drawing.Size(0, 22)
         Me.Label1.TabIndex = 18
         '
-        'TextBox2
+        'TBNombreBackup
         '
-        Me.TextBox2.Location = New System.Drawing.Point(6, 25)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(449, 26)
-        Me.TextBox2.TabIndex = 18
+        Me.TBNombreBackup.Location = New System.Drawing.Point(6, 25)
+        Me.TBNombreBackup.Name = "TBNombreBackup"
+        Me.TBNombreBackup.Size = New System.Drawing.Size(449, 26)
+        Me.TBNombreBackup.TabIndex = 18
         '
         'ICBBase
         '
@@ -158,9 +158,9 @@ Partial Class Backup
     Friend WithEvents GBConsulta As GroupBox
     Friend WithEvents ICBBuscar As FontAwesome.Sharp.IconButton
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TBDirectorio As TextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TBNombreBackup As TextBox
     Friend WithEvents ICBBase As FontAwesome.Sharp.IconButton
 End Class

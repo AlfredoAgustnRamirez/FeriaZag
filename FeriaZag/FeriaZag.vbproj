@@ -87,13 +87,10 @@
     <Compile Include="Administador\InicioAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Datos\DCategoria.vb" />
+    <Compile Include="Datos\DCliente.vb" />
     <Compile Include="Datos\DProducto.vb" />
     <Compile Include="Datos\DConexion.vb" />
-    <Compile Include="FeriaZagDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FeriaZagDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Administador\ReporteAdmin.Designer.vb">
       <DependentUpon>ReporteAdmin.vb</DependentUpon>
     </Compile>
@@ -106,13 +103,19 @@
     <Compile Include="Administador\Categoria.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FeriaZagDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FeriaZagDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Gerente\InicioGerente.Designer.vb">
       <DependentUpon>InicioGerente.vb</DependentUpon>
     </Compile>
     <Compile Include="Gerente\InicioGerente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VariableGlobales.vb" />
+    <Compile Include="Generales\VariableGlobales.vb" />
+    <Compile Include="Generales\ValidacionCampos.vb" />
     <Compile Include="Vendedor\InicioVendedor.Designer.vb">
       <DependentUpon>InicioVendedor.vb</DependentUpon>
     </Compile>
@@ -153,12 +156,6 @@
       <DependentUpon>ClienteVendedor.vb</DependentUpon>
     </Compile>
     <Compile Include="Vendedor\ClienteVendedor.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Generales\Hora.Designer.vb">
-      <DependentUpon>Hora.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Generales\Hora.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vendedor\Venta.Designer.vb">
@@ -233,9 +230,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administador\ReporteAdmin.resx">
       <DependentUpon>ReporteAdmin.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Generales\Hora.resx">
-      <DependentUpon>Hora.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gerente\Backup.resx">
       <DependentUpon>Backup.vb</DependentUpon>
@@ -328,5 +322,6 @@
   <ItemGroup>
     <None Include="Resources\3.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

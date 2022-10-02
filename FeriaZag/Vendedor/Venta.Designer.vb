@@ -22,7 +22,7 @@ Partial Class Venta
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
         Me.ICBBuscar = New FontAwesome.Sharp.IconButton()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -34,9 +34,9 @@ Partial Class Venta
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.GBListar = New System.Windows.Forms.GroupBox()
-        Me.BVImprimir = New FontAwesome.Sharp.IconButton()
-        Me.BVCobrar = New FontAwesome.Sharp.IconButton()
-        Me.BVCancelar = New FontAwesome.Sharp.IconButton()
+        Me.BVImprimirVenta = New FontAwesome.Sharp.IconButton()
+        Me.BVCobrarVenta = New FontAwesome.Sharp.IconButton()
+        Me.BVCancelarVenta = New FontAwesome.Sharp.IconButton()
         Me.CBPago = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TBTotalVenta = New System.Windows.Forms.TextBox()
@@ -53,20 +53,20 @@ Partial Class Venta
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.BVAgregarP = New FontAwesome.Sharp.IconButton()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.CBCategoriaPventa = New System.Windows.Forms.ComboBox()
+        Me.TBOPrecioPventa = New System.Windows.Forms.TextBox()
         Me.BVBuscarP = New FontAwesome.Sharp.IconButton()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.TBCodigoPventa = New System.Windows.Forms.TextBox()
+        Me.TBNombrePventa = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.BVBuscar = New FontAwesome.Sharp.IconButton()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TBDniCventa = New System.Windows.Forms.TextBox()
+        Me.TBApellidoCventa = New System.Windows.Forms.TextBox()
+        Me.TBNombreCventa = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -183,9 +183,9 @@ Partial Class Venta
         '
         'GBListar
         '
-        Me.GBListar.Controls.Add(Me.BVImprimir)
-        Me.GBListar.Controls.Add(Me.BVCobrar)
-        Me.GBListar.Controls.Add(Me.BVCancelar)
+        Me.GBListar.Controls.Add(Me.BVImprimirVenta)
+        Me.GBListar.Controls.Add(Me.BVCobrarVenta)
+        Me.GBListar.Controls.Add(Me.BVCancelarVenta)
         Me.GBListar.Controls.Add(Me.CBPago)
         Me.GBListar.Controls.Add(Me.Label13)
         Me.GBListar.Controls.Add(Me.TBTotalVenta)
@@ -199,52 +199,52 @@ Partial Class Venta
         Me.GBListar.TabStop = False
         Me.GBListar.Text = "Articulos"
         '
-        'BVImprimir
+        'BVImprimirVenta
         '
-        Me.BVImprimir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.BVImprimir.IconChar = FontAwesome.Sharp.IconChar.Print
-        Me.BVImprimir.IconColor = System.Drawing.Color.Black
-        Me.BVImprimir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BVImprimir.IconSize = 25
-        Me.BVImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BVImprimir.Location = New System.Drawing.Point(1001, 240)
-        Me.BVImprimir.Name = "BVImprimir"
-        Me.BVImprimir.Size = New System.Drawing.Size(225, 37)
-        Me.BVImprimir.TabIndex = 45
-        Me.BVImprimir.Text = "Imprimir"
-        Me.BVImprimir.UseVisualStyleBackColor = False
+        Me.BVImprimirVenta.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BVImprimirVenta.IconChar = FontAwesome.Sharp.IconChar.Print
+        Me.BVImprimirVenta.IconColor = System.Drawing.Color.Black
+        Me.BVImprimirVenta.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BVImprimirVenta.IconSize = 25
+        Me.BVImprimirVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BVImprimirVenta.Location = New System.Drawing.Point(1001, 240)
+        Me.BVImprimirVenta.Name = "BVImprimirVenta"
+        Me.BVImprimirVenta.Size = New System.Drawing.Size(225, 37)
+        Me.BVImprimirVenta.TabIndex = 45
+        Me.BVImprimirVenta.Text = "Imprimir"
+        Me.BVImprimirVenta.UseVisualStyleBackColor = False
         '
-        'BVCobrar
+        'BVCobrarVenta
         '
-        Me.BVCobrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.BVCobrar.IconChar = FontAwesome.Sharp.IconChar.DollarSign
-        Me.BVCobrar.IconColor = System.Drawing.Color.Black
-        Me.BVCobrar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BVCobrar.IconSize = 25
-        Me.BVCobrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BVCobrar.Location = New System.Drawing.Point(1122, 178)
-        Me.BVCobrar.Name = "BVCobrar"
-        Me.BVCobrar.Size = New System.Drawing.Size(103, 37)
-        Me.BVCobrar.TabIndex = 44
-        Me.BVCobrar.Text = "Cobrar  "
-        Me.BVCobrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BVCobrar.UseVisualStyleBackColor = False
+        Me.BVCobrarVenta.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BVCobrarVenta.IconChar = FontAwesome.Sharp.IconChar.DollarSign
+        Me.BVCobrarVenta.IconColor = System.Drawing.Color.Black
+        Me.BVCobrarVenta.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BVCobrarVenta.IconSize = 25
+        Me.BVCobrarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BVCobrarVenta.Location = New System.Drawing.Point(1122, 178)
+        Me.BVCobrarVenta.Name = "BVCobrarVenta"
+        Me.BVCobrarVenta.Size = New System.Drawing.Size(103, 37)
+        Me.BVCobrarVenta.TabIndex = 44
+        Me.BVCobrarVenta.Text = "Cobrar  "
+        Me.BVCobrarVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BVCobrarVenta.UseVisualStyleBackColor = False
         '
-        'BVCancelar
+        'BVCancelarVenta
         '
-        Me.BVCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.BVCancelar.IconChar = FontAwesome.Sharp.IconChar.Ban
-        Me.BVCancelar.IconColor = System.Drawing.Color.Black
-        Me.BVCancelar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BVCancelar.IconSize = 25
-        Me.BVCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BVCancelar.Location = New System.Drawing.Point(1001, 178)
-        Me.BVCancelar.Name = "BVCancelar"
-        Me.BVCancelar.Size = New System.Drawing.Size(103, 37)
-        Me.BVCancelar.TabIndex = 43
-        Me.BVCancelar.Text = "Cancelar"
-        Me.BVCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BVCancelar.UseVisualStyleBackColor = False
+        Me.BVCancelarVenta.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BVCancelarVenta.IconChar = FontAwesome.Sharp.IconChar.Ban
+        Me.BVCancelarVenta.IconColor = System.Drawing.Color.Black
+        Me.BVCancelarVenta.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BVCancelarVenta.IconSize = 25
+        Me.BVCancelarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BVCancelarVenta.Location = New System.Drawing.Point(1001, 178)
+        Me.BVCancelarVenta.Name = "BVCancelarVenta"
+        Me.BVCancelarVenta.Size = New System.Drawing.Size(103, 37)
+        Me.BVCancelarVenta.TabIndex = 43
+        Me.BVCancelarVenta.Text = "Cancelar"
+        Me.BVCancelarVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BVCancelarVenta.UseVisualStyleBackColor = False
         '
         'CBPago
         '
@@ -285,9 +285,9 @@ Partial Class Venta
         '
         Me.DataGridView2.AllowUserToAddRows = False
         Me.DataGridView2.AllowUserToDeleteRows = False
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        Me.DataGridView2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
+        Me.DataGridView2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -346,11 +346,11 @@ Partial Class Venta
         Me.GroupBox2.Controls.Add(Me.NumericUpDown1)
         Me.GroupBox2.Controls.Add(Me.Label11)
         Me.GroupBox2.Controls.Add(Me.BVAgregarP)
-        Me.GroupBox2.Controls.Add(Me.ComboBox1)
-        Me.GroupBox2.Controls.Add(Me.TextBox6)
+        Me.GroupBox2.Controls.Add(Me.CBCategoriaPventa)
+        Me.GroupBox2.Controls.Add(Me.TBOPrecioPventa)
         Me.GroupBox2.Controls.Add(Me.BVBuscarP)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
-        Me.GroupBox2.Controls.Add(Me.TextBox8)
+        Me.GroupBox2.Controls.Add(Me.TBCodigoPventa)
+        Me.GroupBox2.Controls.Add(Me.TBNombrePventa)
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Label9)
@@ -395,20 +395,20 @@ Partial Class Venta
         Me.BVAgregarP.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BVAgregarP.UseVisualStyleBackColor = False
         '
-        'ComboBox1
+        'CBCategoriaPventa
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(121, 123)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(188, 30)
-        Me.ComboBox1.TabIndex = 39
+        Me.CBCategoriaPventa.FormattingEnabled = True
+        Me.CBCategoriaPventa.Location = New System.Drawing.Point(121, 123)
+        Me.CBCategoriaPventa.Name = "CBCategoriaPventa"
+        Me.CBCategoriaPventa.Size = New System.Drawing.Size(188, 30)
+        Me.CBCategoriaPventa.TabIndex = 39
         '
-        'TextBox6
+        'TBOPrecioPventa
         '
-        Me.TextBox6.Location = New System.Drawing.Point(396, 125)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(142, 26)
-        Me.TextBox6.TabIndex = 38
+        Me.TBOPrecioPventa.Location = New System.Drawing.Point(396, 125)
+        Me.TBOPrecioPventa.Name = "TBOPrecioPventa"
+        Me.TBOPrecioPventa.Size = New System.Drawing.Size(142, 26)
+        Me.TBOPrecioPventa.TabIndex = 38
         '
         'BVBuscarP
         '
@@ -426,19 +426,19 @@ Partial Class Venta
         Me.BVBuscarP.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BVBuscarP.UseVisualStyleBackColor = False
         '
-        'TextBox2
+        'TBCodigoPventa
         '
-        Me.TextBox2.Location = New System.Drawing.Point(274, 37)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(228, 26)
-        Me.TextBox2.TabIndex = 4
+        Me.TBCodigoPventa.Location = New System.Drawing.Point(274, 37)
+        Me.TBCodigoPventa.Name = "TBCodigoPventa"
+        Me.TBCodigoPventa.Size = New System.Drawing.Size(228, 26)
+        Me.TBCodigoPventa.TabIndex = 4
         '
-        'TextBox8
+        'TBNombrePventa
         '
-        Me.TextBox8.Location = New System.Drawing.Point(121, 83)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(608, 26)
-        Me.TextBox8.TabIndex = 36
+        Me.TBNombrePventa.Location = New System.Drawing.Point(121, 83)
+        Me.TBNombrePventa.Name = "TBNombrePventa"
+        Me.TBNombrePventa.Size = New System.Drawing.Size(608, 26)
+        Me.TBNombrePventa.TabIndex = 36
         '
         'Label8
         '
@@ -479,9 +479,9 @@ Partial Class Venta
         'GroupBox5
         '
         Me.GroupBox5.Controls.Add(Me.BVBuscar)
-        Me.GroupBox5.Controls.Add(Me.TextBox5)
-        Me.GroupBox5.Controls.Add(Me.TextBox4)
-        Me.GroupBox5.Controls.Add(Me.TextBox3)
+        Me.GroupBox5.Controls.Add(Me.TBDniCventa)
+        Me.GroupBox5.Controls.Add(Me.TBApellidoCventa)
+        Me.GroupBox5.Controls.Add(Me.TBNombreCventa)
         Me.GroupBox5.Controls.Add(Me.Label6)
         Me.GroupBox5.Controls.Add(Me.Label5)
         Me.GroupBox5.Controls.Add(Me.Label2)
@@ -509,26 +509,26 @@ Partial Class Venta
         Me.BVBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BVBuscar.UseVisualStyleBackColor = False
         '
-        'TextBox5
+        'TBDniCventa
         '
-        Me.TextBox5.Location = New System.Drawing.Point(133, 104)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(290, 26)
-        Me.TextBox5.TabIndex = 5
+        Me.TBDniCventa.Location = New System.Drawing.Point(133, 104)
+        Me.TBDniCventa.Name = "TBDniCventa"
+        Me.TBDniCventa.Size = New System.Drawing.Size(290, 26)
+        Me.TBDniCventa.TabIndex = 5
         '
-        'TextBox4
+        'TBApellidoCventa
         '
-        Me.TextBox4.Location = New System.Drawing.Point(133, 67)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(290, 26)
-        Me.TextBox4.TabIndex = 4
+        Me.TBApellidoCventa.Location = New System.Drawing.Point(133, 67)
+        Me.TBApellidoCventa.Name = "TBApellidoCventa"
+        Me.TBApellidoCventa.Size = New System.Drawing.Size(290, 26)
+        Me.TBApellidoCventa.TabIndex = 4
         '
-        'TextBox3
+        'TBNombreCventa
         '
-        Me.TextBox3.Location = New System.Drawing.Point(133, 35)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(290, 26)
-        Me.TextBox3.TabIndex = 3
+        Me.TBNombreCventa.Location = New System.Drawing.Point(133, 35)
+        Me.TBNombreCventa.Name = "TBNombreCventa"
+        Me.TBNombreCventa.Size = New System.Drawing.Size(290, 26)
+        Me.TBNombreCventa.TabIndex = 3
         '
         'Label6
         '
@@ -629,23 +629,23 @@ Partial Class Venta
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TBDniCventa As TextBox
+    Friend WithEvents TBApellidoCventa As TextBox
+    Friend WithEvents TBNombreCventa As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents BVBuscar As FontAwesome.Sharp.IconButton
     Friend WithEvents BVBuscarP As FontAwesome.Sharp.IconButton
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TBCodigoPventa As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents TBOPrecioPventa As TextBox
+    Friend WithEvents TBNombrePventa As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents BVAgregarP As FontAwesome.Sharp.IconButton
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents CBCategoriaPventa As ComboBox
     Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents Label11 As Label
     Friend WithEvents CBPago As ComboBox
@@ -659,7 +659,7 @@ Partial Class Venta
     Friend WithEvents Cantidad As DataGridViewTextBoxColumn
     Friend WithEvents SubTotal As DataGridViewTextBoxColumn
     Friend WithEvents Quitar As DataGridViewTextBoxColumn
-    Friend WithEvents BVImprimir As FontAwesome.Sharp.IconButton
-    Friend WithEvents BVCobrar As FontAwesome.Sharp.IconButton
-    Friend WithEvents BVCancelar As FontAwesome.Sharp.IconButton
+    Friend WithEvents BVImprimirVenta As FontAwesome.Sharp.IconButton
+    Friend WithEvents BVCobrarVenta As FontAwesome.Sharp.IconButton
+    Friend WithEvents BVCancelarVenta As FontAwesome.Sharp.IconButton
 End Class

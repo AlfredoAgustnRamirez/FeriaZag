@@ -32,12 +32,12 @@ Partial Class Administrador
         Me.IconMenuItem1 = New FontAwesome.Sharp.IconMenuItem()
         Me.SalirToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
         Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.LblFecha = New System.Windows.Forms.Label()
         Me.LblHora = New System.Windows.Forms.Label()
         Me.HoraFecha = New System.Windows.Forms.Timer(Me.components)
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
         Me.ToolStripContainer1.SuspendLayout()
@@ -173,6 +173,17 @@ Partial Class Administrador
         Me.ToolStripContainer1.Text = "ToolStripContainer1"
         Me.ToolStripContainer1.TopToolStripPanelVisible = False
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Trebuchet MS", 35.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(1022, 429)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(273, 59)
+        Me.Label2.TabIndex = 15
+        Me.Label2.Text = "Bienvenido:"
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -219,17 +230,6 @@ Partial Class Administrador
         'HoraFecha
         '
         Me.HoraFecha.Enabled = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Trebuchet MS", 35.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(1022, 429)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(273, 59)
-        Me.Label2.TabIndex = 15
-        Me.Label2.Text = "Bienvenido:"
         '
         'Administrador
         '

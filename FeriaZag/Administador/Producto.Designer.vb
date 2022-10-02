@@ -38,25 +38,25 @@ Partial Class Producto
         Me.ICBAgregar = New FontAwesome.Sharp.IconButton()
         Me.ICBEliminar = New FontAwesome.Sharp.IconButton()
         Me.ICBModificar = New FontAwesome.Sharp.IconButton()
-        Me.GBConsulta = New System.Windows.Forms.GroupBox()
-        Me.ICBBuscar = New FontAwesome.Sharp.IconButton()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TBNombre2 = New System.Windows.Forms.TextBox()
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.LBCliente = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.GBConsulta = New System.Windows.Forms.GroupBox()
+        Me.ICBBuscar = New FontAwesome.Sharp.IconButton()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.LBCategoria = New System.Windows.Forms.Label()
         Me.GBMantenimiento.SuspendLayout()
-        Me.GBConsulta.SuspendLayout()
         Me.GBListar.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GBConsulta.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(27, 252)
+        Me.Label1.Location = New System.Drawing.Point(28, 252)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(55, 22)
         Me.Label1.TabIndex = 1
@@ -74,7 +74,7 @@ Partial Class Producto
         'LCategoria
         '
         Me.LCategoria.AutoSize = True
-        Me.LCategoria.Location = New System.Drawing.Point(28, 180)
+        Me.LCategoria.Location = New System.Drawing.Point(28, 124)
         Me.LCategoria.Name = "LCategoria"
         Me.LCategoria.Size = New System.Drawing.Size(79, 22)
         Me.LCategoria.TabIndex = 3
@@ -83,7 +83,7 @@ Partial Class Producto
         'LNombre
         '
         Me.LNombre.AutoSize = True
-        Me.LNombre.Location = New System.Drawing.Point(27, 116)
+        Me.LNombre.Location = New System.Drawing.Point(28, 190)
         Me.LNombre.Name = "LNombre"
         Me.LNombre.Size = New System.Drawing.Size(66, 22)
         Me.LNombre.TabIndex = 4
@@ -91,7 +91,7 @@ Partial Class Producto
         '
         'TBNombre
         '
-        Me.TBNombre.Location = New System.Drawing.Point(120, 112)
+        Me.TBNombre.Location = New System.Drawing.Point(121, 186)
         Me.TBNombre.Name = "TBNombre"
         Me.TBNombre.Size = New System.Drawing.Size(216, 26)
         Me.TBNombre.TabIndex = 9
@@ -161,7 +161,7 @@ Partial Class Producto
         'LStock
         '
         Me.LStock.AutoSize = True
-        Me.LStock.Location = New System.Drawing.Point(27, 316)
+        Me.LStock.Location = New System.Drawing.Point(28, 316)
         Me.LStock.Name = "LStock"
         Me.LStock.Size = New System.Drawing.Size(49, 22)
         Me.LStock.TabIndex = 14
@@ -170,7 +170,7 @@ Partial Class Producto
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(120, 176)
+        Me.ComboBox1.Location = New System.Drawing.Point(120, 120)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(216, 30)
         Me.ComboBox1.TabIndex = 13
@@ -223,69 +223,12 @@ Partial Class Producto
         Me.ICBModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.ICBModificar.UseVisualStyleBackColor = False
         '
-        'GBConsulta
+        'TBNombre2
         '
-        Me.GBConsulta.Controls.Add(Me.ICBBuscar)
-        Me.GBConsulta.Controls.Add(Me.ComboBox2)
-        Me.GBConsulta.Controls.Add(Me.Label4)
-        Me.GBConsulta.Controls.Add(Me.Label3)
-        Me.GBConsulta.Controls.Add(Me.TextBox1)
-        Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBConsulta.Location = New System.Drawing.Point(406, 58)
-        Me.GBConsulta.Name = "GBConsulta"
-        Me.GBConsulta.Size = New System.Drawing.Size(812, 115)
-        Me.GBConsulta.TabIndex = 21
-        Me.GBConsulta.TabStop = False
-        Me.GBConsulta.Text = "Consultar Producto"
-        '
-        'ICBBuscar
-        '
-        Me.ICBBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ICBBuscar.IconChar = FontAwesome.Sharp.IconChar.Search
-        Me.ICBBuscar.IconColor = System.Drawing.Color.Black
-        Me.ICBBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBBuscar.IconSize = 40
-        Me.ICBBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBBuscar.Location = New System.Drawing.Point(659, 42)
-        Me.ICBBuscar.Name = "ICBBuscar"
-        Me.ICBBuscar.Size = New System.Drawing.Size(118, 41)
-        Me.ICBBuscar.TabIndex = 18
-        Me.ICBBuscar.Text = "Buscar  "
-        Me.ICBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ICBBuscar.UseVisualStyleBackColor = False
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(430, 48)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(153, 30)
-        Me.ComboBox2.TabIndex = 18
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(304, 55)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(79, 22)
-        Me.Label4.TabIndex = 18
-        Me.Label4.Text = "Categoria"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 51)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(66, 22)
-        Me.Label3.TabIndex = 18
-        Me.Label3.Text = "Nombre"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(106, 51)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(153, 26)
-        Me.TextBox1.TabIndex = 18
+        Me.TBNombre2.Location = New System.Drawing.Point(98, 48)
+        Me.TBNombre2.Name = "TBNombre2"
+        Me.TBNombre2.Size = New System.Drawing.Size(180, 26)
+        Me.TBNombre2.TabIndex = 18
         '
         'GBListar
         '
@@ -327,6 +270,63 @@ Partial Class Producto
         Me.LBCliente.TabIndex = 25
         Me.LBCliente.Text = "Productos"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(16, 51)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(66, 22)
+        Me.Label3.TabIndex = 18
+        Me.Label3.Text = "Nombre"
+        '
+        'GBConsulta
+        '
+        Me.GBConsulta.Controls.Add(Me.ICBBuscar)
+        Me.GBConsulta.Controls.Add(Me.ComboBox2)
+        Me.GBConsulta.Controls.Add(Me.LBCategoria)
+        Me.GBConsulta.Controls.Add(Me.Label3)
+        Me.GBConsulta.Controls.Add(Me.TBNombre2)
+        Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GBConsulta.Location = New System.Drawing.Point(406, 58)
+        Me.GBConsulta.Name = "GBConsulta"
+        Me.GBConsulta.Size = New System.Drawing.Size(812, 115)
+        Me.GBConsulta.TabIndex = 21
+        Me.GBConsulta.TabStop = False
+        Me.GBConsulta.Text = "Consultar Producto"
+        '
+        'ICBBuscar
+        '
+        Me.ICBBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ICBBuscar.IconChar = FontAwesome.Sharp.IconChar.Search
+        Me.ICBBuscar.IconColor = System.Drawing.Color.Black
+        Me.ICBBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.ICBBuscar.IconSize = 40
+        Me.ICBBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ICBBuscar.Location = New System.Drawing.Point(669, 34)
+        Me.ICBBuscar.Name = "ICBBuscar"
+        Me.ICBBuscar.Size = New System.Drawing.Size(118, 46)
+        Me.ICBBuscar.TabIndex = 21
+        Me.ICBBuscar.Text = "Buscar  "
+        Me.ICBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ICBBuscar.UseVisualStyleBackColor = False
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(418, 43)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(216, 30)
+        Me.ComboBox2.TabIndex = 20
+        '
+        'LBCategoria
+        '
+        Me.LBCategoria.AutoSize = True
+        Me.LBCategoria.Location = New System.Drawing.Point(326, 47)
+        Me.LBCategoria.Name = "LBCategoria"
+        Me.LBCategoria.Size = New System.Drawing.Size(79, 22)
+        Me.LBCategoria.TabIndex = 19
+        Me.LBCategoria.Text = "Categoria"
+        '
         'Producto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -342,10 +342,10 @@ Partial Class Producto
         Me.Text = "Productos"
         Me.GBMantenimiento.ResumeLayout(False)
         Me.GBMantenimiento.PerformLayout()
-        Me.GBConsulta.ResumeLayout(False)
-        Me.GBConsulta.PerformLayout()
         Me.GBListar.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GBConsulta.ResumeLayout(False)
+        Me.GBConsulta.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -363,15 +363,15 @@ Partial Class Producto
     Friend WithEvents GBMantenimiento As GroupBox
     Friend WithEvents LStock As Label
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents GBConsulta As GroupBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TBNombre2 As TextBox
     Friend WithEvents GBListar As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TBStock As TextBox
     Friend WithEvents ICBNuevo As FontAwesome.Sharp.IconButton
     Friend WithEvents LBCliente As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents GBConsulta As GroupBox
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents LBCategoria As Label
     Friend WithEvents ICBBuscar As FontAwesome.Sharp.IconButton
 End Class
