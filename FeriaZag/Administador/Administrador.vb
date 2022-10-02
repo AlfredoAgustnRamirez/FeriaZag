@@ -1,10 +1,13 @@
 ﻿Public Class Administrador
 
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
-        Application.Exit()
+        If MsgBox("¿Esta Seguro de salir del Sistema?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Mensaje del Sistema") = MsgBoxResult.Yes Then
+            End
+        End If
     End Sub
 
     Private Sub ProductosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosToolStripMenuItem.Click
+        'muestra el formulario producto en el evento
         Me.ToolStripContainer1.ContentPanel.Controls.Clear()
         Dim frmproducto As New Producto
         frmproducto.MdiParent = Me
@@ -37,6 +40,7 @@
     End Sub
 
     Private Sub HoraFecha_Tick(sender As Object, e As EventArgs) Handles HoraFecha.Tick
+        'Asigna fecha y hora a los labels
         LblHora.Text = DateTime.Now.ToLongTimeString()
         LblFecha.Text = DateTime.Now.ToLongDateString()
     End Sub
@@ -58,6 +62,7 @@
     End Sub
 
     Private Sub ToolStripContainer1_ContentPanel_Load(sender As Object, e As EventArgs) Handles ToolStripContainer1.ContentPanel.Load
+        'muestra y asigna el nombre del usuario 
         Label2.Text = varUsuario
     End Sub
 

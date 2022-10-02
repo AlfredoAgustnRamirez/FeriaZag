@@ -14,18 +14,21 @@ Public Class DProducto
         Dim eliminar As New SqlCommand("EliminarProductos", cnx)
         eliminar.CommandType = CommandType.StoredProcedure
         eliminar.Parameters.AddWithValue("@Codigo", codigo)
+        Conectar()
         Dim resp As Integer
         Dim respuesta As MsgBoxResult
         respuesta = MsgBox("Seguro que desea eliminar el Producto?", 32 + 4, "Eliminar")
         If respuesta = 6 Then
             Try
                 resp = eliminar.ExecuteNonQuery
-                MsgBox("Eliminado con exito " + codigo)
+                MsgBox("Eliminado con exito " + codigo, MsgBoxStyle.Information)
+                Desconectar()
             Catch ex As Exception
-                MsgBox("Error al eliminar producto")
+                MsgBox("Error al eliminar producto", MsgBoxStyle.Critical)
             End Try
-            Return resp
+
         End If
+        Return resp
     End Function
 #End Region
 
@@ -38,13 +41,19 @@ Public Class DProducto
         modificar.Parameters.AddWithValue("@Producto", producto)
         modificar.Parameters.AddWithValue("@Precio", precio)
         modificar.Parameters.AddWithValue("@Stock", stock)
+        Conectar()
         Dim resp As Integer
-        Try
-            resp = modificar.ExecuteNonQuery
-            MsgBox("Modificado con exito " + codigo)
-        Catch ex As Exception
-            MsgBox("Error al modificar producto")
-        End Try
+        Dim respuesta As MsgBoxResult
+        respuesta = MsgBox("Seguro que desea modificar el Producto?", 32 + 4, "Eliminar")
+        If respuesta = 6 Then
+            Try
+                resp = modificar.ExecuteNonQuery
+                MsgBox("Modificado con exito " + codigo, MsgBoxStyle.Information)
+                Desconectar()
+            Catch ex As Exception
+                MsgBox("Error al modificar producto", MsgBoxStyle.Critical)
+            End Try
+        End If
         Return resp
     End Function
 #End Region
@@ -57,10 +66,12 @@ Public Class DProducto
         da.Parameters.AddWithValue("@IdCategoria", idcategoria)
         da.Parameters.AddWithValue("@Precio", precio)
         da.Parameters.AddWithValue("@Stock", stock)
+        Conectar()
         Dim resp As Integer
         Try
             resp = da.ExecuteNonQuery
-            MsgBox("Registrador con exito " + nombreproducto)
+            MsgBox("Registrado con exito " + nombreproducto, MsgBoxStyle.Information)
+            Desconectar()
         Catch ex As Exception
             MsgBox("Error al registrar producto")
         End Try
@@ -83,7 +94,7 @@ Public Class DProducto
 
 #Region "listarProductos"
     Public Function ListarProductos() As DataTable
-        Dim da As New SqlDataAdapter("select Productos.Codigo,Producto,IdCategoria,Precio,Stock from Productos", cnx)
+        Dim da As New SqlDataAdapter("select * from Productos", cnx)
         Dim tbl As New DataTable
         da.Fill(tbl)
         Return tbl
@@ -105,7 +116,7 @@ Public Class DProducto
 
 #Region "listarCategoria"
     Public Function ListarCategoria() As DataTable
-        Dim da As New SqlDataAdapter("select Categoria.IdCategoria,Categoria from Categoria", cnx)
+        Dim da As New SqlDataAdapter("select * from Categoria", cnx)
         Dim tbl As New DataTable
         da.Fill(tbl)
         Return tbl

@@ -3,8 +3,7 @@
 Public Class Producto
 
 #Region "Variables"
-    Dim obj As New DProducto
-    Dim obj3 As New DProducto
+    Dim obj, obj3 As New DProducto
 #End Region
 
 #Region "Limpiar"
@@ -19,7 +18,6 @@ Public Class Producto
 
 #Region "Carga de Producto"
     Private Sub Producto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        obj.Conectar()
 
         ComboBox1.DataSource = obj.ListarCategoria()
         ComboBox1.ValueMember = "IdCategoria"
@@ -30,11 +28,10 @@ Public Class Producto
         ComboBox2.DisplayMember = "Categoria"
 
         obj.llenarDataGridview(DataGridView1)
-        obj.Desconectar()
     End Sub
 #End Region
 
-#Region "DataGridView Contenido"
+#Region "DataGridView Contenido por fila"
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         TBCodigo.Text = DataGridView1.Item(0, e.RowIndex).Value
         ComboBox1.Text = DataGridView1.Item(1, e.RowIndex).Value
@@ -59,8 +56,9 @@ Public Class Producto
     End Sub
 #End Region
 
-#Region "Boton Agregar"
+#Region "Boton Nuevo"
     Private Sub ICBNuevo_Click(sender As Object, e As EventArgs) Handles ICBNuevo.Click
+        'limpia los campos para ingresar un nuevo producto y desabilita los botones correspondientes
         ICBAgregar.Enabled = True
         ICBEliminar.Enabled = False
         ICBModificar.Enabled = False
@@ -106,7 +104,7 @@ Public Class Producto
     End Sub
 #End Region
 
-#Region "Buscar Producato por TextBox"
+#Region "Buscar Producto por TextBox"
     Private Sub TBNombre2_TextChanged(sender As Object, e As EventArgs) Handles TBNombre2.TextChanged
         Dim dtpro = obj.BuscarProductos(TBNombre2.Text)
         DataGridView1.DataSource = dtpro

@@ -65,7 +65,7 @@ Partial Class Login
         '
         Me.lContraseña.AutoSize = True
         Me.lContraseña.Font = New System.Drawing.Font("Trebuchet MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lContraseña.Location = New System.Drawing.Point(148, 260)
+        Me.lContraseña.Location = New System.Drawing.Point(148, 261)
         Me.lContraseña.Name = "lContraseña"
         Me.lContraseña.Size = New System.Drawing.Size(125, 27)
         Me.lContraseña.TabIndex = 3
@@ -80,7 +80,7 @@ Partial Class Login
         '
         'tbContraseña
         '
-        Me.tbContraseña.Location = New System.Drawing.Point(79, 290)
+        Me.tbContraseña.Location = New System.Drawing.Point(79, 291)
         Me.tbContraseña.Name = "tbContraseña"
         Me.tbContraseña.Size = New System.Drawing.Size(233, 20)
         Me.tbContraseña.TabIndex = 5
@@ -90,7 +90,7 @@ Partial Class Login
         '
         Me.PictureBox3.BackgroundImage = Global.FeriaZag.My.Resources.Resources.key
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox3.Location = New System.Drawing.Point(117, 250)
+        Me.PictureBox3.Location = New System.Drawing.Point(117, 251)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(35, 37)
         Me.PictureBox3.TabIndex = 10
@@ -120,15 +120,15 @@ Partial Class Login
         'btnIngresar
         '
         Me.btnIngresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnIngresar.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIngresar.IconChar = FontAwesome.Sharp.IconChar.Lock
+        Me.btnIngresar.Font = New System.Drawing.Font("Trebuchet MS", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnIngresar.IconChar = FontAwesome.Sharp.IconChar.User
         Me.btnIngresar.IconColor = System.Drawing.Color.Black
         Me.btnIngresar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnIngresar.IconSize = 40
+        Me.btnIngresar.IconSize = 32
         Me.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnIngresar.Location = New System.Drawing.Point(79, 332)
+        Me.btnIngresar.Location = New System.Drawing.Point(207, 340)
         Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(103, 48)
+        Me.btnIngresar.Size = New System.Drawing.Size(113, 48)
         Me.btnIngresar.TabIndex = 11
         Me.btnIngresar.Text = "Ingresar"
         Me.btnIngresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -138,17 +138,17 @@ Partial Class Login
         '
         Me.ICBSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ICBSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.ICBSalir.Font = New System.Drawing.Font("Trebuchet MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ICBSalir.IconChar = FontAwesome.Sharp.IconChar.LockOpen
+        Me.ICBSalir.Font = New System.Drawing.Font("Trebuchet MS", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ICBSalir.IconChar = FontAwesome.Sharp.IconChar.Ban
         Me.ICBSalir.IconColor = System.Drawing.Color.Black
         Me.ICBSalir.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBSalir.IconSize = 40
+        Me.ICBSalir.IconSize = 32
         Me.ICBSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBSalir.Location = New System.Drawing.Point(209, 332)
+        Me.ICBSalir.Location = New System.Drawing.Point(66, 340)
         Me.ICBSalir.Name = "ICBSalir"
-        Me.ICBSalir.Size = New System.Drawing.Size(103, 48)
+        Me.ICBSalir.Size = New System.Drawing.Size(113, 48)
         Me.ICBSalir.TabIndex = 11
-        Me.ICBSalir.Text = "Salir"
+        Me.ICBSalir.Text = "Cancelar"
         Me.ICBSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.ICBSalir.UseVisualStyleBackColor = False
         '

@@ -22,11 +22,14 @@ Partial Class Usuarios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LbBackup = New System.Windows.Forms.Label()
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GBMantenimiento = New System.Windows.Forms.GroupBox()
+        Me.CBPrefilUsuario = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TBCodigoUsuario = New System.Windows.Forms.TextBox()
         Me.LBPerfil = New System.Windows.Forms.Label()
         Me.ICBNuevo = New FontAwesome.Sharp.IconButton()
         Me.ICBAgregar = New FontAwesome.Sharp.IconButton()
@@ -42,9 +45,6 @@ Partial Class Usuarios
         Me.LDni = New System.Windows.Forms.Label()
         Me.LTelefono = New System.Windows.Forms.Label()
         Me.TBTelefonoUsuario = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TBCodigoUsuario = New System.Windows.Forms.TextBox()
-        Me.CBPrefilUsuario = New System.Windows.Forms.ComboBox()
         Me.GBListar.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBMantenimiento.SuspendLayout()
@@ -76,9 +76,9 @@ Partial Class Usuarios
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -117,6 +117,32 @@ Partial Class Usuarios
         Me.GBMantenimiento.TabIndex = 22
         Me.GBMantenimiento.TabStop = False
         Me.GBMantenimiento.Text = "Datos Usuarios"
+        '
+        'CBPrefilUsuario
+        '
+        Me.CBPrefilUsuario.FormattingEnabled = True
+        Me.CBPrefilUsuario.Items.AddRange(New Object() {"Gerente", "Administrador", "Vendedor"})
+        Me.CBPrefilUsuario.Location = New System.Drawing.Point(151, 333)
+        Me.CBPrefilUsuario.Name = "CBPrefilUsuario"
+        Me.CBPrefilUsuario.Size = New System.Drawing.Size(181, 30)
+        Me.CBPrefilUsuario.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(51, 29)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(66, 22)
+        Me.Label1.TabIndex = 26
+        Me.Label1.Text = "Codigo:"
+        '
+        'TBCodigoUsuario
+        '
+        Me.TBCodigoUsuario.Enabled = False
+        Me.TBCodigoUsuario.Location = New System.Drawing.Point(151, 25)
+        Me.TBCodigoUsuario.Name = "TBCodigoUsuario"
+        Me.TBCodigoUsuario.Size = New System.Drawing.Size(181, 26)
+        Me.TBCodigoUsuario.TabIndex = 27
         '
         'LBPerfil
         '
@@ -270,31 +296,6 @@ Partial Class Usuarios
         Me.TBTelefonoUsuario.Name = "TBTelefonoUsuario"
         Me.TBTelefonoUsuario.Size = New System.Drawing.Size(181, 26)
         Me.TBTelefonoUsuario.TabIndex = 11
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(51, 29)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(66, 22)
-        Me.Label1.TabIndex = 26
-        Me.Label1.Text = "Codigo:"
-        '
-        'TBCodigoUsuario
-        '
-        Me.TBCodigoUsuario.Enabled = False
-        Me.TBCodigoUsuario.Location = New System.Drawing.Point(151, 25)
-        Me.TBCodigoUsuario.Name = "TBCodigoUsuario"
-        Me.TBCodigoUsuario.Size = New System.Drawing.Size(181, 26)
-        Me.TBCodigoUsuario.TabIndex = 27
-        '
-        'CBPrefilUsuario
-        '
-        Me.CBPrefilUsuario.FormattingEnabled = True
-        Me.CBPrefilUsuario.Location = New System.Drawing.Point(151, 333)
-        Me.CBPrefilUsuario.Name = "CBPrefilUsuario"
-        Me.CBPrefilUsuario.Size = New System.Drawing.Size(181, 30)
-        Me.CBPrefilUsuario.TabIndex = 1
         '
         'Usuarios
         '

@@ -5,7 +5,9 @@
     End Sub
 
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
-        Application.Exit()
+        If MsgBox("¿Esta Seguro de salir del Sistema?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Mensaje del Sistema") = MsgBoxResult.Yes Then
+            End
+        End If
     End Sub
 
     Private Sub InicioVendedorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InicioVendedorToolStripMenuItem.Click
