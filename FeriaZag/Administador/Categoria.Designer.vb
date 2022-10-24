@@ -22,10 +22,10 @@ Partial Class Categoria
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GBMantenimiento = New System.Windows.Forms.GroupBox()
+        Me.TBCategoria = New System.Windows.Forms.TextBox()
         Me.ICBNuevoCategoria = New FontAwesome.Sharp.IconButton()
-        Me.CBCategoria = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ICBAgregarCategoria = New FontAwesome.Sharp.IconButton()
         Me.ICBEliminarCategoria = New FontAwesome.Sharp.IconButton()
@@ -49,8 +49,8 @@ Partial Class Categoria
         '
         'GBMantenimiento
         '
+        Me.GBMantenimiento.Controls.Add(Me.TBCategoria)
         Me.GBMantenimiento.Controls.Add(Me.ICBNuevoCategoria)
-        Me.GBMantenimiento.Controls.Add(Me.CBCategoria)
         Me.GBMantenimiento.Controls.Add(Me.Label2)
         Me.GBMantenimiento.Controls.Add(Me.ICBAgregarCategoria)
         Me.GBMantenimiento.Controls.Add(Me.ICBEliminarCategoria)
@@ -64,6 +64,13 @@ Partial Class Categoria
         Me.GBMantenimiento.TabIndex = 21
         Me.GBMantenimiento.TabStop = False
         Me.GBMantenimiento.Text = "Datos Categoria"
+        '
+        'TBCategoria
+        '
+        Me.TBCategoria.Location = New System.Drawing.Point(120, 137)
+        Me.TBCategoria.Name = "TBCategoria"
+        Me.TBCategoria.Size = New System.Drawing.Size(216, 26)
+        Me.TBCategoria.TabIndex = 20
         '
         'ICBNuevoCategoria
         '
@@ -81,18 +88,10 @@ Partial Class Categoria
         Me.ICBNuevoCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.ICBNuevoCategoria.UseVisualStyleBackColor = False
         '
-        'CBCategoria
-        '
-        Me.CBCategoria.FormattingEnabled = True
-        Me.CBCategoria.Location = New System.Drawing.Point(120, 118)
-        Me.CBCategoria.Name = "CBCategoria"
-        Me.CBCategoria.Size = New System.Drawing.Size(216, 30)
-        Me.CBCategoria.TabIndex = 13
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(28, 56)
+        Me.Label2.Location = New System.Drawing.Point(28, 70)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(66, 22)
         Me.Label2.TabIndex = 2
@@ -149,7 +148,7 @@ Partial Class Categoria
         'TBCodigoCategoria
         '
         Me.TBCodigoCategoria.Enabled = False
-        Me.TBCodigoCategoria.Location = New System.Drawing.Point(120, 52)
+        Me.TBCodigoCategoria.Location = New System.Drawing.Point(120, 66)
         Me.TBCodigoCategoria.Name = "TBCodigoCategoria"
         Me.TBCodigoCategoria.Size = New System.Drawing.Size(216, 26)
         Me.TBCodigoCategoria.TabIndex = 12
@@ -157,11 +156,11 @@ Partial Class Categoria
         'LCategoria
         '
         Me.LCategoria.AutoSize = True
-        Me.LCategoria.Location = New System.Drawing.Point(28, 122)
+        Me.LCategoria.Location = New System.Drawing.Point(28, 140)
         Me.LCategoria.Name = "LCategoria"
-        Me.LCategoria.Size = New System.Drawing.Size(79, 22)
+        Me.LCategoria.Size = New System.Drawing.Size(85, 22)
         Me.LCategoria.TabIndex = 3
-        Me.LCategoria.Text = "Categoria"
+        Me.LCategoria.Text = "Categoria:"
         '
         'GBListar
         '
@@ -178,9 +177,9 @@ Partial Class Categoria
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -293,7 +292,6 @@ Partial Class Categoria
 
     Friend WithEvents GBMantenimiento As GroupBox
     Friend WithEvents ICBNuevoCategoria As FontAwesome.Sharp.IconButton
-    Friend WithEvents CBCategoria As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents ICBAgregarCategoria As FontAwesome.Sharp.IconButton
     Friend WithEvents ICBEliminarCategoria As FontAwesome.Sharp.IconButton
@@ -309,4 +307,5 @@ Partial Class Categoria
     Friend WithEvents Label3 As Label
     Friend WithEvents TBNombreCategoria As TextBox
     Friend WithEvents LBCategoria As Label
+    Friend WithEvents TBCategoria As TextBox
 End Class

@@ -23,6 +23,10 @@ Partial Class ClienteVendedor
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GBMantenimiento = New System.Windows.Forms.GroupBox()
+        Me.TBEmail = New System.Windows.Forms.TextBox()
+        Me.LBEmail = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TBCodigoCvendedor = New System.Windows.Forms.TextBox()
         Me.ICBNuevoCvendedor = New FontAwesome.Sharp.IconButton()
         Me.ICBAgregarCvendedor = New FontAwesome.Sharp.IconButton()
         Me.ICBEliminarCvendedor = New FontAwesome.Sharp.IconButton()
@@ -38,12 +42,7 @@ Partial Class ClienteVendedor
         Me.LTelefono = New System.Windows.Forms.Label()
         Me.TBTelefonoCvendedor = New System.Windows.Forms.TextBox()
         Me.GBListar = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DNI = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Dirección = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
         Me.TBDni2Cvendedor = New System.Windows.Forms.TextBox()
         Me.ICBBuscarCvendedor = New FontAwesome.Sharp.IconButton()
@@ -51,16 +50,16 @@ Partial Class ClienteVendedor
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TBNombre2Cvendedor = New System.Windows.Forms.TextBox()
         Me.LBCliente = New System.Windows.Forms.Label()
-        Me.TBCodigoCvendedor = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBListar.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBConsulta.SuspendLayout()
         Me.SuspendLayout()
         '
         'GBMantenimiento
         '
+        Me.GBMantenimiento.Controls.Add(Me.TBEmail)
+        Me.GBMantenimiento.Controls.Add(Me.LBEmail)
         Me.GBMantenimiento.Controls.Add(Me.Label1)
         Me.GBMantenimiento.Controls.Add(Me.TBCodigoCvendedor)
         Me.GBMantenimiento.Controls.Add(Me.ICBNuevoCvendedor)
@@ -85,6 +84,39 @@ Partial Class ClienteVendedor
         Me.GBMantenimiento.TabStop = False
         Me.GBMantenimiento.Text = "Datos Cliente"
         '
+        'TBEmail
+        '
+        Me.TBEmail.Location = New System.Drawing.Point(137, 295)
+        Me.TBEmail.Name = "TBEmail"
+        Me.TBEmail.Size = New System.Drawing.Size(183, 26)
+        Me.TBEmail.TabIndex = 28
+        '
+        'LBEmail
+        '
+        Me.LBEmail.AutoSize = True
+        Me.LBEmail.Location = New System.Drawing.Point(43, 298)
+        Me.LBEmail.Name = "LBEmail"
+        Me.LBEmail.Size = New System.Drawing.Size(55, 22)
+        Me.LBEmail.TabIndex = 27
+        Me.LBEmail.Text = "Email:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(36, 42)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(66, 22)
+        Me.Label1.TabIndex = 25
+        Me.Label1.Text = "Codigo:"
+        '
+        'TBCodigoCvendedor
+        '
+        Me.TBCodigoCvendedor.Enabled = False
+        Me.TBCodigoCvendedor.Location = New System.Drawing.Point(138, 39)
+        Me.TBCodigoCvendedor.Name = "TBCodigoCvendedor"
+        Me.TBCodigoCvendedor.Size = New System.Drawing.Size(181, 26)
+        Me.TBCodigoCvendedor.TabIndex = 24
+        '
         'ICBNuevoCvendedor
         '
         Me.ICBNuevoCvendedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
@@ -93,7 +125,7 @@ Partial Class ClienteVendedor
         Me.ICBNuevoCvendedor.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBNuevoCvendedor.IconSize = 40
         Me.ICBNuevoCvendedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBNuevoCvendedor.Location = New System.Drawing.Point(40, 385)
+        Me.ICBNuevoCvendedor.Location = New System.Drawing.Point(41, 397)
         Me.ICBNuevoCvendedor.Name = "ICBNuevoCvendedor"
         Me.ICBNuevoCvendedor.Size = New System.Drawing.Size(126, 49)
         Me.ICBNuevoCvendedor.TabIndex = 23
@@ -109,7 +141,7 @@ Partial Class ClienteVendedor
         Me.ICBAgregarCvendedor.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBAgregarCvendedor.IconSize = 40
         Me.ICBAgregarCvendedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBAgregarCvendedor.Location = New System.Drawing.Point(190, 385)
+        Me.ICBAgregarCvendedor.Location = New System.Drawing.Point(191, 397)
         Me.ICBAgregarCvendedor.Name = "ICBAgregarCvendedor"
         Me.ICBAgregarCvendedor.Size = New System.Drawing.Size(129, 49)
         Me.ICBAgregarCvendedor.TabIndex = 21
@@ -151,14 +183,14 @@ Partial Class ClienteVendedor
         '
         'TBDirecciónCvendedor
         '
-        Me.TBDirecciónCvendedor.Location = New System.Drawing.Point(138, 340)
+        Me.TBDirecciónCvendedor.Location = New System.Drawing.Point(139, 346)
         Me.TBDirecciónCvendedor.Name = "TBDirecciónCvendedor"
         Me.TBDirecciónCvendedor.Size = New System.Drawing.Size(181, 26)
         Me.TBDirecciónCvendedor.TabIndex = 19
         '
         'TBDniCvendedor
         '
-        Me.TBDniCvendedor.Location = New System.Drawing.Point(138, 219)
+        Me.TBDniCvendedor.Location = New System.Drawing.Point(138, 194)
         Me.TBDniCvendedor.Name = "TBDniCvendedor"
         Me.TBDniCvendedor.Size = New System.Drawing.Size(181, 26)
         Me.TBDniCvendedor.TabIndex = 18
@@ -166,7 +198,7 @@ Partial Class ClienteVendedor
         'LDirección
         '
         Me.LDirección.AutoSize = True
-        Me.LDirección.Location = New System.Drawing.Point(42, 345)
+        Me.LDirección.Location = New System.Drawing.Point(43, 351)
         Me.LDirección.Name = "LDirección"
         Me.LDirección.Size = New System.Drawing.Size(84, 22)
         Me.LDirección.TabIndex = 14
@@ -175,7 +207,7 @@ Partial Class ClienteVendedor
         'LNombre
         '
         Me.LNombre.AutoSize = True
-        Me.LNombre.Location = New System.Drawing.Point(38, 100)
+        Me.LNombre.Location = New System.Drawing.Point(38, 94)
         Me.LNombre.Name = "LNombre"
         Me.LNombre.Size = New System.Drawing.Size(72, 22)
         Me.LNombre.TabIndex = 2
@@ -183,7 +215,7 @@ Partial Class ClienteVendedor
         '
         'TBNombreCvendedor
         '
-        Me.TBNombreCvendedor.Location = New System.Drawing.Point(138, 96)
+        Me.TBNombreCvendedor.Location = New System.Drawing.Point(138, 90)
         Me.TBNombreCvendedor.Name = "TBNombreCvendedor"
         Me.TBNombreCvendedor.Size = New System.Drawing.Size(181, 26)
         Me.TBNombreCvendedor.TabIndex = 12
@@ -191,7 +223,7 @@ Partial Class ClienteVendedor
         'LApellido
         '
         Me.LApellido.AutoSize = True
-        Me.LApellido.Location = New System.Drawing.Point(37, 160)
+        Me.LApellido.Location = New System.Drawing.Point(38, 144)
         Me.LApellido.Name = "LApellido"
         Me.LApellido.Size = New System.Drawing.Size(74, 22)
         Me.LApellido.TabIndex = 4
@@ -199,7 +231,7 @@ Partial Class ClienteVendedor
         '
         'TBApellidoCvendedor
         '
-        Me.TBApellidoCvendedor.Location = New System.Drawing.Point(138, 156)
+        Me.TBApellidoCvendedor.Location = New System.Drawing.Point(139, 140)
         Me.TBApellidoCvendedor.Name = "TBApellidoCvendedor"
         Me.TBApellidoCvendedor.Size = New System.Drawing.Size(181, 26)
         Me.TBApellidoCvendedor.TabIndex = 9
@@ -207,7 +239,7 @@ Partial Class ClienteVendedor
         'LDni
         '
         Me.LDni.AutoSize = True
-        Me.LDni.Location = New System.Drawing.Point(38, 223)
+        Me.LDni.Location = New System.Drawing.Point(43, 198)
         Me.LDni.Name = "LDni"
         Me.LDni.Size = New System.Drawing.Size(40, 22)
         Me.LDni.TabIndex = 3
@@ -216,7 +248,7 @@ Partial Class ClienteVendedor
         'LTelefono
         '
         Me.LTelefono.AutoSize = True
-        Me.LTelefono.Location = New System.Drawing.Point(38, 285)
+        Me.LTelefono.Location = New System.Drawing.Point(39, 251)
         Me.LTelefono.Name = "LTelefono"
         Me.LTelefono.Size = New System.Drawing.Size(77, 22)
         Me.LTelefono.TabIndex = 1
@@ -224,14 +256,14 @@ Partial Class ClienteVendedor
         '
         'TBTelefonoCvendedor
         '
-        Me.TBTelefonoCvendedor.Location = New System.Drawing.Point(138, 280)
+        Me.TBTelefonoCvendedor.Location = New System.Drawing.Point(139, 246)
         Me.TBTelefonoCvendedor.Name = "TBTelefonoCvendedor"
         Me.TBTelefonoCvendedor.Size = New System.Drawing.Size(181, 26)
         Me.TBTelefonoCvendedor.TabIndex = 11
         '
         'GBListar
         '
-        Me.GBListar.Controls.Add(Me.DataGridView1)
+        Me.GBListar.Controls.Add(Me.DataGridView2)
         Me.GBListar.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBListar.Location = New System.Drawing.Point(396, 157)
         Me.GBListar.Name = "GBListar"
@@ -240,50 +272,19 @@ Partial Class ClienteVendedor
         Me.GBListar.TabStop = False
         Me.GBListar.Text = "Listar Clientes"
         '
-        'DataGridView1
+        'DataGridView2
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Nombre, Me.Apellido, Me.DNI, Me.Telefono, Me.Dirección})
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 22)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(806, 405)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'Nombre
-        '
-        Me.Nombre.HeaderText = "Nombre"
-        Me.Nombre.Name = "Nombre"
-        Me.Nombre.ReadOnly = True
-        '
-        'Apellido
-        '
-        Me.Apellido.HeaderText = "Apellido"
-        Me.Apellido.Name = "Apellido"
-        Me.Apellido.ReadOnly = True
-        '
-        'DNI
-        '
-        Me.DNI.HeaderText = "DNI"
-        Me.DNI.Name = "DNI"
-        Me.DNI.ReadOnly = True
-        '
-        'Telefono
-        '
-        Me.Telefono.HeaderText = "Telefono"
-        Me.Telefono.Name = "Telefono"
-        Me.Telefono.ReadOnly = True
-        '
-        'Dirección
-        '
-        Me.Dirección.HeaderText = "Dirección"
-        Me.Dirección.Name = "Dirección"
-        Me.Dirección.ReadOnly = True
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView2.Location = New System.Drawing.Point(3, 22)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.Size = New System.Drawing.Size(806, 405)
+        Me.DataGridView2.TabIndex = 0
         '
         'GBConsulta
         '
@@ -359,23 +360,6 @@ Partial Class ClienteVendedor
         Me.LBCliente.TabIndex = 20
         Me.LBCliente.Text = "Clientes"
         '
-        'TBCodigoCvendedor
-        '
-        Me.TBCodigoCvendedor.Enabled = False
-        Me.TBCodigoCvendedor.Location = New System.Drawing.Point(138, 39)
-        Me.TBCodigoCvendedor.Name = "TBCodigoCvendedor"
-        Me.TBCodigoCvendedor.Size = New System.Drawing.Size(181, 26)
-        Me.TBCodigoCvendedor.TabIndex = 24
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(36, 42)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(66, 22)
-        Me.Label1.TabIndex = 25
-        Me.Label1.Text = "Codigo:"
-        '
         'ClienteVendedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -392,7 +376,7 @@ Partial Class ClienteVendedor
         Me.GBMantenimiento.ResumeLayout(False)
         Me.GBMantenimiento.PerformLayout()
         Me.GBListar.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBConsulta.ResumeLayout(False)
         Me.GBConsulta.PerformLayout()
         Me.ResumeLayout(False)
@@ -416,12 +400,7 @@ Partial Class ClienteVendedor
     Friend WithEvents ICBEliminarCvendedor As FontAwesome.Sharp.IconButton
     Friend WithEvents ICBModificarCvendedor As FontAwesome.Sharp.IconButton
     Friend WithEvents GBListar As GroupBox
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Nombre As DataGridViewTextBoxColumn
-    Friend WithEvents Apellido As DataGridViewTextBoxColumn
-    Friend WithEvents DNI As DataGridViewTextBoxColumn
-    Friend WithEvents Telefono As DataGridViewTextBoxColumn
-    Friend WithEvents Dirección As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents GBConsulta As GroupBox
     Friend WithEvents TBDni2Cvendedor As TextBox
     Friend WithEvents ICBBuscarCvendedor As FontAwesome.Sharp.IconButton
@@ -431,4 +410,6 @@ Partial Class ClienteVendedor
     Friend WithEvents LBCliente As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents TBCodigoCvendedor As TextBox
+    Friend WithEvents TBEmail As TextBox
+    Friend WithEvents LBEmail As Label
 End Class

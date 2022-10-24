@@ -38,7 +38,6 @@ Partial Class Producto
         Me.ICBAgregar = New FontAwesome.Sharp.IconButton()
         Me.ICBEliminar = New FontAwesome.Sharp.IconButton()
         Me.ICBModificar = New FontAwesome.Sharp.IconButton()
-        Me.TBNombre2 = New System.Windows.Forms.TextBox()
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.LBCliente = New System.Windows.Forms.Label()
@@ -47,6 +46,7 @@ Partial Class Producto
         Me.ICBBuscar = New FontAwesome.Sharp.IconButton()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.LBCategoria = New System.Windows.Forms.Label()
+        Me.TBCodigo2 = New System.Windows.Forms.TextBox()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBListar.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -223,13 +223,6 @@ Partial Class Producto
         Me.ICBModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.ICBModificar.UseVisualStyleBackColor = False
         '
-        'TBNombre2
-        '
-        Me.TBNombre2.Location = New System.Drawing.Point(98, 48)
-        Me.TBNombre2.Name = "TBNombre2"
-        Me.TBNombre2.Size = New System.Drawing.Size(180, 26)
-        Me.TBNombre2.TabIndex = 18
-        '
         'GBListar
         '
         Me.GBListar.Controls.Add(Me.DataGridView1)
@@ -273,11 +266,11 @@ Partial Class Producto
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 51)
+        Me.Label3.Location = New System.Drawing.Point(17, 51)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 22)
         Me.Label3.TabIndex = 18
-        Me.Label3.Text = "Nombre"
+        Me.Label3.Text = "Codigo:"
         '
         'GBConsulta
         '
@@ -285,7 +278,7 @@ Partial Class Producto
         Me.GBConsulta.Controls.Add(Me.ComboBox2)
         Me.GBConsulta.Controls.Add(Me.LBCategoria)
         Me.GBConsulta.Controls.Add(Me.Label3)
-        Me.GBConsulta.Controls.Add(Me.TBNombre2)
+        Me.GBConsulta.Controls.Add(Me.TBCodigo2)
         Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBConsulta.Location = New System.Drawing.Point(406, 58)
         Me.GBConsulta.Name = "GBConsulta"
@@ -313,7 +306,7 @@ Partial Class Producto
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(418, 43)
+        Me.ComboBox2.Location = New System.Drawing.Point(420, 46)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(216, 30)
         Me.ComboBox2.TabIndex = 20
@@ -321,11 +314,18 @@ Partial Class Producto
         'LBCategoria
         '
         Me.LBCategoria.AutoSize = True
-        Me.LBCategoria.Location = New System.Drawing.Point(326, 47)
+        Me.LBCategoria.Location = New System.Drawing.Point(328, 50)
         Me.LBCategoria.Name = "LBCategoria"
         Me.LBCategoria.Size = New System.Drawing.Size(79, 22)
         Me.LBCategoria.TabIndex = 19
         Me.LBCategoria.Text = "Categoria"
+        '
+        'TBCodigo2
+        '
+        Me.TBCodigo2.Location = New System.Drawing.Point(100, 51)
+        Me.TBCodigo2.Name = "TBCodigo2"
+        Me.TBCodigo2.Size = New System.Drawing.Size(180, 26)
+        Me.TBCodigo2.TabIndex = 18
         '
         'Producto
         '
@@ -363,7 +363,6 @@ Partial Class Producto
     Friend WithEvents GBMantenimiento As GroupBox
     Friend WithEvents LStock As Label
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TBNombre2 As TextBox
     Friend WithEvents GBListar As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TBStock As TextBox
@@ -374,4 +373,5 @@ Partial Class Producto
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents LBCategoria As Label
     Friend WithEvents ICBBuscar As FontAwesome.Sharp.IconButton
+    Friend WithEvents TBCodigo2 As TextBox
 End Class

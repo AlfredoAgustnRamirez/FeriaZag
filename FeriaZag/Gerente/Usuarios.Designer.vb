@@ -25,8 +25,14 @@ Partial Class Usuarios
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LbBackup = New System.Windows.Forms.Label()
         Me.GBListar = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DGUsuario = New System.Windows.Forms.DataGridView()
         Me.GBMantenimiento = New System.Windows.Forms.GroupBox()
+        Me.TBContraseña = New System.Windows.Forms.TextBox()
+        Me.LBContraseña = New System.Windows.Forms.Label()
+        Me.TBUsuario = New System.Windows.Forms.TextBox()
+        Me.LBUsuario = New System.Windows.Forms.Label()
+        Me.TBEmail = New System.Windows.Forms.TextBox()
+        Me.LblCorreo = New System.Windows.Forms.Label()
         Me.CBPrefilUsuario = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TBCodigoUsuario = New System.Windows.Forms.TextBox()
@@ -46,7 +52,7 @@ Partial Class Usuarios
         Me.LTelefono = New System.Windows.Forms.Label()
         Me.TBTelefonoUsuario = New System.Windows.Forms.TextBox()
         Me.GBListar.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBMantenimiento.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -63,7 +69,7 @@ Partial Class Usuarios
         '
         'GBListar
         '
-        Me.GBListar.Controls.Add(Me.DataGridView1)
+        Me.GBListar.Controls.Add(Me.DGUsuario)
         Me.GBListar.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBListar.Location = New System.Drawing.Point(408, 58)
         Me.GBListar.Name = "GBListar"
@@ -72,26 +78,32 @@ Partial Class Usuarios
         Me.GBListar.TabStop = False
         Me.GBListar.Text = "Listar Usuarios"
         '
-        'DataGridView1
+        'DGUsuario
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DGUsuario.AllowUserToAddRows = False
+        Me.DGUsuario.AllowUserToDeleteRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.GridColor = System.Drawing.Color.White
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 22)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(836, 496)
-        Me.DataGridView1.TabIndex = 0
+        Me.DGUsuario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DGUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGUsuario.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.DGUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGUsuario.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DGUsuario.GridColor = System.Drawing.Color.White
+        Me.DGUsuario.Location = New System.Drawing.Point(3, 22)
+        Me.DGUsuario.Name = "DGUsuario"
+        Me.DGUsuario.ReadOnly = True
+        Me.DGUsuario.Size = New System.Drawing.Size(836, 496)
+        Me.DGUsuario.TabIndex = 0
         '
         'GBMantenimiento
         '
+        Me.GBMantenimiento.Controls.Add(Me.TBContraseña)
+        Me.GBMantenimiento.Controls.Add(Me.LBContraseña)
+        Me.GBMantenimiento.Controls.Add(Me.TBUsuario)
+        Me.GBMantenimiento.Controls.Add(Me.LBUsuario)
+        Me.GBMantenimiento.Controls.Add(Me.TBEmail)
+        Me.GBMantenimiento.Controls.Add(Me.LblCorreo)
         Me.GBMantenimiento.Controls.Add(Me.CBPrefilUsuario)
         Me.GBMantenimiento.Controls.Add(Me.Label1)
         Me.GBMantenimiento.Controls.Add(Me.TBCodigoUsuario)
@@ -118,11 +130,59 @@ Partial Class Usuarios
         Me.GBMantenimiento.TabStop = False
         Me.GBMantenimiento.Text = "Datos Usuarios"
         '
+        'TBContraseña
+        '
+        Me.TBContraseña.Location = New System.Drawing.Point(151, 358)
+        Me.TBContraseña.Name = "TBContraseña"
+        Me.TBContraseña.Size = New System.Drawing.Size(181, 26)
+        Me.TBContraseña.TabIndex = 33
+        '
+        'LBContraseña
+        '
+        Me.LBContraseña.AutoSize = True
+        Me.LBContraseña.Location = New System.Drawing.Point(55, 363)
+        Me.LBContraseña.Name = "LBContraseña"
+        Me.LBContraseña.Size = New System.Drawing.Size(94, 22)
+        Me.LBContraseña.TabIndex = 32
+        Me.LBContraseña.Text = "Contraseña:"
+        '
+        'TBUsuario
+        '
+        Me.TBUsuario.Location = New System.Drawing.Point(152, 321)
+        Me.TBUsuario.Name = "TBUsuario"
+        Me.TBUsuario.Size = New System.Drawing.Size(181, 26)
+        Me.TBUsuario.TabIndex = 31
+        '
+        'LBUsuario
+        '
+        Me.LBUsuario.AutoSize = True
+        Me.LBUsuario.Location = New System.Drawing.Point(56, 326)
+        Me.LBUsuario.Name = "LBUsuario"
+        Me.LBUsuario.Size = New System.Drawing.Size(68, 22)
+        Me.LBUsuario.TabIndex = 30
+        Me.LBUsuario.Text = "Usuario:"
+        '
+        'TBEmail
+        '
+        Me.TBEmail.Location = New System.Drawing.Point(151, 244)
+        Me.TBEmail.Name = "TBEmail"
+        Me.TBEmail.Size = New System.Drawing.Size(181, 26)
+        Me.TBEmail.TabIndex = 29
+        '
+        'LblCorreo
+        '
+        Me.LblCorreo.AutoSize = True
+        Me.LblCorreo.Location = New System.Drawing.Point(56, 248)
+        Me.LblCorreo.Name = "LblCorreo"
+        Me.LblCorreo.Size = New System.Drawing.Size(55, 22)
+        Me.LblCorreo.TabIndex = 28
+        Me.LblCorreo.Text = "Email:"
+        '
         'CBPrefilUsuario
         '
         Me.CBPrefilUsuario.FormattingEnabled = True
         Me.CBPrefilUsuario.Items.AddRange(New Object() {"Gerente", "Administrador", "Vendedor"})
-        Me.CBPrefilUsuario.Location = New System.Drawing.Point(151, 333)
+        Me.CBPrefilUsuario.Location = New System.Drawing.Point(152, 279)
         Me.CBPrefilUsuario.Name = "CBPrefilUsuario"
         Me.CBPrefilUsuario.Size = New System.Drawing.Size(181, 30)
         Me.CBPrefilUsuario.TabIndex = 1
@@ -147,7 +207,7 @@ Partial Class Usuarios
         'LBPerfil
         '
         Me.LBPerfil.AutoSize = True
-        Me.LBPerfil.Location = New System.Drawing.Point(55, 341)
+        Me.LBPerfil.Location = New System.Drawing.Point(56, 287)
         Me.LBPerfil.Name = "LBPerfil"
         Me.LBPerfil.Size = New System.Drawing.Size(54, 22)
         Me.LBPerfil.TabIndex = 25
@@ -161,7 +221,7 @@ Partial Class Usuarios
         Me.ICBNuevo.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBNuevo.IconSize = 40
         Me.ICBNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBNuevo.Location = New System.Drawing.Point(59, 393)
+        Me.ICBNuevo.Location = New System.Drawing.Point(59, 405)
         Me.ICBNuevo.Name = "ICBNuevo"
         Me.ICBNuevo.Size = New System.Drawing.Size(126, 49)
         Me.ICBNuevo.TabIndex = 23
@@ -177,7 +237,7 @@ Partial Class Usuarios
         Me.ICBAgregar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBAgregar.IconSize = 40
         Me.ICBAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBAgregar.Location = New System.Drawing.Point(209, 393)
+        Me.ICBAgregar.Location = New System.Drawing.Point(209, 405)
         Me.ICBAgregar.Name = "ICBAgregar"
         Me.ICBAgregar.Size = New System.Drawing.Size(129, 49)
         Me.ICBAgregar.TabIndex = 21
@@ -193,7 +253,7 @@ Partial Class Usuarios
         Me.ICBEliminar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBEliminar.IconSize = 40
         Me.ICBEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBEliminar.Location = New System.Drawing.Point(209, 448)
+        Me.ICBEliminar.Location = New System.Drawing.Point(209, 460)
         Me.ICBEliminar.Name = "ICBEliminar"
         Me.ICBEliminar.Size = New System.Drawing.Size(129, 50)
         Me.ICBEliminar.TabIndex = 22
@@ -209,7 +269,7 @@ Partial Class Usuarios
         Me.ICBModificar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBModificar.IconSize = 40
         Me.ICBModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBModificar.Location = New System.Drawing.Point(59, 448)
+        Me.ICBModificar.Location = New System.Drawing.Point(59, 460)
         Me.ICBModificar.Name = "ICBModificar"
         Me.ICBModificar.Size = New System.Drawing.Size(126, 50)
         Me.ICBModificar.TabIndex = 20
@@ -219,14 +279,14 @@ Partial Class Usuarios
         '
         'TBDirecciónUsuario
         '
-        Me.TBDirecciónUsuario.Location = New System.Drawing.Point(151, 281)
+        Me.TBDirecciónUsuario.Location = New System.Drawing.Point(151, 207)
         Me.TBDirecciónUsuario.Name = "TBDirecciónUsuario"
         Me.TBDirecciónUsuario.Size = New System.Drawing.Size(181, 26)
         Me.TBDirecciónUsuario.TabIndex = 19
         '
         'TBDniUsuario
         '
-        Me.TBDniUsuario.Location = New System.Drawing.Point(151, 169)
+        Me.TBDniUsuario.Location = New System.Drawing.Point(151, 132)
         Me.TBDniUsuario.Name = "TBDniUsuario"
         Me.TBDniUsuario.Size = New System.Drawing.Size(181, 26)
         Me.TBDniUsuario.TabIndex = 18
@@ -234,7 +294,7 @@ Partial Class Usuarios
         'LDirección
         '
         Me.LDirección.AutoSize = True
-        Me.LDirección.Location = New System.Drawing.Point(55, 286)
+        Me.LDirección.Location = New System.Drawing.Point(55, 212)
         Me.LDirección.Name = "LDirección"
         Me.LDirección.Size = New System.Drawing.Size(84, 22)
         Me.LDirección.TabIndex = 14
@@ -243,7 +303,7 @@ Partial Class Usuarios
         'LNombre
         '
         Me.LNombre.AutoSize = True
-        Me.LNombre.Location = New System.Drawing.Point(51, 76)
+        Me.LNombre.Location = New System.Drawing.Point(51, 63)
         Me.LNombre.Name = "LNombre"
         Me.LNombre.Size = New System.Drawing.Size(72, 22)
         Me.LNombre.TabIndex = 2
@@ -251,7 +311,7 @@ Partial Class Usuarios
         '
         'TBNombreUsuario
         '
-        Me.TBNombreUsuario.Location = New System.Drawing.Point(151, 72)
+        Me.TBNombreUsuario.Location = New System.Drawing.Point(151, 59)
         Me.TBNombreUsuario.Name = "TBNombreUsuario"
         Me.TBNombreUsuario.Size = New System.Drawing.Size(181, 26)
         Me.TBNombreUsuario.TabIndex = 12
@@ -259,7 +319,7 @@ Partial Class Usuarios
         'LApellido
         '
         Me.LApellido.AutoSize = True
-        Me.LApellido.Location = New System.Drawing.Point(50, 123)
+        Me.LApellido.Location = New System.Drawing.Point(51, 100)
         Me.LApellido.Name = "LApellido"
         Me.LApellido.Size = New System.Drawing.Size(74, 22)
         Me.LApellido.TabIndex = 4
@@ -267,7 +327,7 @@ Partial Class Usuarios
         '
         'TBApellidoUsuario
         '
-        Me.TBApellidoUsuario.Location = New System.Drawing.Point(151, 119)
+        Me.TBApellidoUsuario.Location = New System.Drawing.Point(152, 96)
         Me.TBApellidoUsuario.Name = "TBApellidoUsuario"
         Me.TBApellidoUsuario.Size = New System.Drawing.Size(181, 26)
         Me.TBApellidoUsuario.TabIndex = 9
@@ -275,7 +335,7 @@ Partial Class Usuarios
         'LDni
         '
         Me.LDni.AutoSize = True
-        Me.LDni.Location = New System.Drawing.Point(51, 173)
+        Me.LDni.Location = New System.Drawing.Point(51, 136)
         Me.LDni.Name = "LDni"
         Me.LDni.Size = New System.Drawing.Size(40, 22)
         Me.LDni.TabIndex = 3
@@ -284,7 +344,7 @@ Partial Class Usuarios
         'LTelefono
         '
         Me.LTelefono.AutoSize = True
-        Me.LTelefono.Location = New System.Drawing.Point(51, 226)
+        Me.LTelefono.Location = New System.Drawing.Point(51, 174)
         Me.LTelefono.Name = "LTelefono"
         Me.LTelefono.Size = New System.Drawing.Size(77, 22)
         Me.LTelefono.TabIndex = 1
@@ -292,7 +352,7 @@ Partial Class Usuarios
         '
         'TBTelefonoUsuario
         '
-        Me.TBTelefonoUsuario.Location = New System.Drawing.Point(151, 221)
+        Me.TBTelefonoUsuario.Location = New System.Drawing.Point(151, 169)
         Me.TBTelefonoUsuario.Name = "TBTelefonoUsuario"
         Me.TBTelefonoUsuario.Size = New System.Drawing.Size(181, 26)
         Me.TBTelefonoUsuario.TabIndex = 11
@@ -310,7 +370,7 @@ Partial Class Usuarios
         Me.Name = "Usuarios"
         Me.Text = "Usuarios"
         Me.GBListar.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBMantenimiento.ResumeLayout(False)
         Me.GBMantenimiento.PerformLayout()
         Me.ResumeLayout(False)
@@ -320,7 +380,7 @@ Partial Class Usuarios
 
     Friend WithEvents LbBackup As Label
     Friend WithEvents GBListar As GroupBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DGUsuario As DataGridView
     Friend WithEvents GBMantenimiento As GroupBox
     Friend WithEvents TBDirecciónUsuario As TextBox
     Friend WithEvents TBDniUsuario As TextBox
@@ -340,4 +400,10 @@ Partial Class Usuarios
     Friend WithEvents Label1 As Label
     Friend WithEvents TBCodigoUsuario As TextBox
     Friend WithEvents CBPrefilUsuario As ComboBox
+    Friend WithEvents TBEmail As TextBox
+    Friend WithEvents TBContraseña As TextBox
+    Friend WithEvents LBContraseña As Label
+    Friend WithEvents TBUsuario As TextBox
+    Friend WithEvents LBUsuario As Label
+    Friend WithEvents LblCorreo As Label
 End Class

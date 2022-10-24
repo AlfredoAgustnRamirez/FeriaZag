@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class proveedor
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class Proveedor
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class proveedor
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GBMantenimiento = New System.Windows.Forms.GroupBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -49,13 +49,6 @@ Partial Class proveedor
         Me.TBNombre2Proveedor = New System.Windows.Forms.TextBox()
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Dirección = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CBU = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.observaciones = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LBCliente = New System.Windows.Forms.Label()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBConsulta.SuspendLayout()
@@ -351,54 +344,11 @@ Partial Class proveedor
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Nombre, Me.Apellido, Me.Telefono, Me.Dirección, Me.CBU, Me.observaciones})
         Me.DataGridView1.Location = New System.Drawing.Point(3, 22)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(746, 381)
         Me.DataGridView1.TabIndex = 0
-        '
-        'Codigo
-        '
-        Me.Codigo.HeaderText = "Código"
-        Me.Codigo.Name = "Codigo"
-        Me.Codigo.ReadOnly = True
-        '
-        'Nombre
-        '
-        Me.Nombre.HeaderText = "Nombre"
-        Me.Nombre.Name = "Nombre"
-        Me.Nombre.ReadOnly = True
-        '
-        'Apellido
-        '
-        Me.Apellido.HeaderText = "Apellido"
-        Me.Apellido.Name = "Apellido"
-        Me.Apellido.ReadOnly = True
-        '
-        'Telefono
-        '
-        Me.Telefono.HeaderText = "Tel"
-        Me.Telefono.Name = "Telefono"
-        Me.Telefono.ReadOnly = True
-        '
-        'Dirección
-        '
-        Me.Dirección.HeaderText = "Dirección"
-        Me.Dirección.Name = "Dirección"
-        Me.Dirección.ReadOnly = True
-        '
-        'CBU
-        '
-        Me.CBU.HeaderText = "Cbu/Alias"
-        Me.CBU.Name = "CBU"
-        Me.CBU.ReadOnly = True
-        '
-        'observaciones
-        '
-        Me.observaciones.HeaderText = "Observaciones"
-        Me.observaciones.Name = "observaciones"
-        Me.observaciones.ReadOnly = True
         '
         'LBCliente
         '
@@ -411,7 +361,7 @@ Partial Class proveedor
         Me.LBCliente.TabIndex = 25
         Me.LBCliente.Text = "Proveedores"
         '
-        'proveedor
+        'Proveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -424,7 +374,7 @@ Partial Class proveedor
         Me.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.Name = "proveedor"
+        Me.Name = "Proveedor"
         Me.Text = "proveedor"
         Me.GBMantenimiento.ResumeLayout(False)
         Me.GBMantenimiento.PerformLayout()
@@ -464,12 +414,5 @@ Partial Class proveedor
     Friend WithEvents Label2 As Label
     Friend WithEvents TBCodigo2Proveedor As TextBox
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
-    Friend WithEvents Codigo As DataGridViewTextBoxColumn
-    Friend WithEvents Nombre As DataGridViewTextBoxColumn
-    Friend WithEvents Apellido As DataGridViewTextBoxColumn
-    Friend WithEvents Telefono As DataGridViewTextBoxColumn
-    Friend WithEvents Dirección As DataGridViewTextBoxColumn
-    Friend WithEvents CBU As DataGridViewTextBoxColumn
-    Friend WithEvents observaciones As DataGridViewTextBoxColumn
     Friend WithEvents LBCliente As Label
 End Class

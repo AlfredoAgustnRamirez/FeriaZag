@@ -7,7 +7,6 @@
     End Sub
 
     Private Sub ProductosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosToolStripMenuItem.Click
-        'muestra el formulario producto en el evento
         Me.ToolStripContainer1.ContentPanel.Controls.Clear()
         Dim frmproducto As New Producto
         frmproducto.MdiParent = Me
@@ -62,9 +61,7 @@
     End Sub
 
     Private Sub ToolStripContainer1_ContentPanel_Load(sender As Object, e As EventArgs) Handles ToolStripContainer1.ContentPanel.Load
-        'muestra y asigna el nombre del usuario 
-        Label2.Text = varUsuario
+        Label2.Text = VarUsuario
     End Sub
-
 
 End Class

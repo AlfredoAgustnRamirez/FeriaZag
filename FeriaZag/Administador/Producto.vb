@@ -1,9 +1,8 @@
 ﻿Imports System.Data.SqlClient
-
 Public Class Producto
 
 #Region "Variables"
-    Dim obj, obj3 As New DProducto
+    Dim obj As New DProducto
 #End Region
 
 #Region "Limpiar"
@@ -77,6 +76,7 @@ Public Class Producto
     Private Sub ICBEliminar_Click(sender As Object, e As EventArgs) Handles ICBEliminar.Click
         obj.EliminarProducto(TBCodigo.Text)
         obj.llenarDataGridview(DataGridView1)
+        limpiar()
     End Sub
 #End Region
 
@@ -98,16 +98,11 @@ Public Class Producto
     End Sub
 #End Region
 
-#Region "TextBox Nombre2 Solo Letras"
-    Private Sub TBNombre2_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombre2.KeyPress
-        SoloLetras(e)
-    End Sub
-#End Region
-
-#Region "Buscar Producto por TextBox"
-    Private Sub TBNombre2_TextChanged(sender As Object, e As EventArgs) Handles TBNombre2.TextChanged
-        Dim dtpro = obj.BuscarProductos(TBNombre2.Text)
-        DataGridView1.DataSource = dtpro
+#Region "Buscar Productos por Categoria"
+    Private Sub ICBBuscar_Click(sender As Object, e As EventArgs) Handles ICBBuscar.Click
+        Dim dtpro1 = obj.BuscarProductosPorCategoria(ComboBox2.Text)
+        TBCodigo2.Text = dtpro1.Rows(0).Item("Codigo")
+        DataGridView1.DataSource = dtpro1
     End Sub
 #End Region
 

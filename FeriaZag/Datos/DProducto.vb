@@ -1,9 +1,7 @@
-﻿Imports System.Data.Sql
-Imports System.Data.SqlClient
-
+﻿Imports System.Data.SqlClient
 Public Class DProducto
+
 #Region "Variables"
-    Inherits DConexion
     Private cmb As SqlCommandBuilder
     Dim adaptador As New SqlDataAdapter
     Public dt As DataTable
@@ -79,17 +77,28 @@ Public Class DProducto
     End Function
 #End Region
 
-#Region "BuscarProducto"
-    Public Function BuscarProductos(nombreproducto As String) As DataTable
-        Dim cmd As SqlCommand = New SqlCommand("BuscarProducto", cnx)
+#Region "Buscar Producto por Categoria"
+    Public Function BuscarProductosPorCodigo(codigo As String) As DataTable
+        Dim cmd As SqlCommand = New SqlCommand("BuscarProductoPorCodigo", cnx)
         cmd.CommandType = CommandType.StoredProcedure
-        cmd.Parameters.AddWithValue("@Producto", nombreproducto)
+        cmd.Parameters.AddWithValue("@Codigo", codigo)
         Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
         Dim dtable1 As DataTable = New DataTable()
         da.Fill(dtable1)
         Return dtable1
     End Function
+#End Region
 
+#Region "Buscar Producto por Categoria"
+    Public Function BuscarProductosPorCategoria(categoria As String) As DataTable
+        Dim cmd As SqlCommand = New SqlCommand("BuscarProductoPorCategoria", cnx)
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.Parameters.AddWithValue("@Categoria", categoria)
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
+        Dim dtable1 As DataTable = New DataTable()
+        da.Fill(dtable1)
+        Return dtable1
+    End Function
 #End Region
 
 #Region "listarProductos"
@@ -122,4 +131,24 @@ Public Class DProducto
         Return tbl
     End Function
 #End Region
+
+#Region "Sumar Precio Venta"
+    Public Function Sumar(ByVal nombre_Columna As String, ByVal Dgv As DataGridView) As Double
+        Dim Total As Double = 0
+        Try
+            If Dgv.RowCount > 0 Then
+                For i As Integer = 0 To Dgv.RowCount - 1
+                    Total = Total + CDbl(Dgv.Item(nombre_Columna.ToLower, i).Value)
+                Next
+                Return Total
+            Else
+                Return Nothing
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
+            Return Nothing
+        End Try
+    End Function
+#End Region
+
 End Class

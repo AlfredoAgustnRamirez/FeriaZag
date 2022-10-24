@@ -3,28 +3,36 @@ Public Class Login
 
 #Region "Boton Ingresar"
     Private Sub btnIngresar_Click_1(sender As Object, e As EventArgs) Handles btnIngresar.Click
-        Dim pass As String
-        varUsuario = tbUsuario.Text
-        pass = tbContraseña.Text
-
-        If varUsuario = "Admin" And pass = "1234" Then
-            MsgBox("Bienvenido " + varUsuario + " al Sistema de Feria Zag", MsgBoxStyle.Information)
-            Administrador.Show()
-            Me.Hide()
-        ElseIf varUsuario = "Vendedor" And pass = "1234" Then
-            MsgBox("Bienvenido " + varUsuario + " al Sistema de Feria Zag", MsgBoxStyle.Information)
-            Vendedor.Show()
-            Me.Hide()
-        ElseIf varUsuario = "Gerente" And pass = "1234" Then
-            MsgBox("Bienvenido " + varUsuario + " al Sistema de Feria Zag", MsgBoxStyle.Information)
-            Gerente.Show()
-            Me.Hide()
-        ElseIf tbContraseña.Text = "" Or tbUsuario.Text = "" Then
-            MsgBox("Error debe Completar todos los campos", vbCritical, "Error")
-        ElseIf varUsuario <> "Admin" Or pass <> "1234" Then
-            MsgBox("Error al ingresar usuario o contraseña", vbCritical, "Error")
-        End If
-        tbContraseña.Text = ""
+        VarUsuario = tbUsuario.Text
+        VarContraseña = tbContraseña.Text
+        Conectar()
+        Try
+            If usuarioRegistrado(VarUsuario) = True Then
+                Dim contra As String = Clave(VarContraseña)
+                If contra.Equals(VarContraseña) = True Then
+                    Me.Hide()
+                    If ConsultarTipoUsuario(VarUsuario) = 1 Then
+                        MsgBox("Bienvenido " + VarUsuario + " al Sistema de Feria Zag", MsgBoxStyle.Information)
+                        Administrador.Show()
+                    ElseIf ConsultarTipoUsuario(VarUsuario) = 2 Then
+                        MsgBox("Bienvenido " + VarUsuario + " al Sistema de Feria Zag", MsgBoxStyle.Information)
+                        Vendedor.Show()
+                    ElseIf ConsultarTipoUsuario(VarUsuario) = 3 Then
+                        MsgBox("Bienvenido " + VarUsuario + " al Sistema de Feria Zag", MsgBoxStyle.Information)
+                        Gerente.Show()
+                    End If
+                Else
+                    MsgBox("Contraseña Invalida", MsgBoxStyle.Critical)
+                End If
+            ElseIf VarUsuario = "" Or VarContraseña = "" Then
+                MsgBox("Debe Completar todos los campos", MsgBoxStyle.Critical)
+            Else
+                MsgBox("El Usuario: " + VarUsuario + " no se encuentra registrado")
+            End If
+            Desconectar()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
     End Sub
 #End Region
 

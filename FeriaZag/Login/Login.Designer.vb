@@ -73,17 +73,26 @@ Partial Class Login
         '
         'tbUsuario
         '
+        Me.tbUsuario.BackColor = System.Drawing.Color.AntiqueWhite
+        Me.tbUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tbUsuario.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbUsuario.Location = New System.Drawing.Point(79, 206)
+        Me.tbUsuario.Multiline = True
         Me.tbUsuario.Name = "tbUsuario"
         Me.tbUsuario.Size = New System.Drawing.Size(233, 20)
         Me.tbUsuario.TabIndex = 4
+        Me.tbUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'tbContraseña
         '
-        Me.tbContraseña.Location = New System.Drawing.Point(79, 291)
+        Me.tbContraseña.BackColor = System.Drawing.Color.AntiqueWhite
+        Me.tbContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tbContraseña.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbContraseña.Location = New System.Drawing.Point(79, 294)
         Me.tbContraseña.Name = "tbContraseña"
-        Me.tbContraseña.Size = New System.Drawing.Size(233, 20)
+        Me.tbContraseña.Size = New System.Drawing.Size(233, 22)
         Me.tbContraseña.TabIndex = 5
+        Me.tbContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.tbContraseña.UseSystemPasswordChar = True
         '
         'PictureBox3

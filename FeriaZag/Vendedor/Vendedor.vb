@@ -47,6 +47,6 @@
     End Sub
 
     Private Sub Vendedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Label2.Text = varUsuario
+        Label2.Text = VarUsuario
     End Sub
 End Class
