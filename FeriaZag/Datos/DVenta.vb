@@ -8,12 +8,13 @@ Public Class DVenta
 #End Region
 
 #Region "Registrar Venta"
-    Public Function RegistrarVenta(idcliente As String, fecha As Date, totalventa As Decimal)
+    Public Function RegistrarVenta(id_cliente As String, id_usuario As Integer, fecha As Date, total As Decimal)
         Dim da As New SqlCommand("RegistrarVenta", cnx)
         da.CommandType = CommandType.StoredProcedure
-        da.Parameters.AddWithValue("@Id_Cliente", idcliente)
+        da.Parameters.AddWithValue("@Id_Cliente", id_cliente)
+        da.Parameters.AddWithValue("@Id_Usuario", id_usuario)
         da.Parameters.AddWithValue("@Fecha", fecha)
-        da.Parameters.AddWithValue("@TotalVenta", totalventa)
+        da.Parameters.AddWithValue("@Total", total)
         Conectar()
         Dim resp As Integer
         Try
@@ -39,7 +40,6 @@ Public Class DVenta
         Dim resp As Integer
         Try
             resp = da.ExecuteNonQuery
-            MsgBox("Registrado con exito ", MsgBoxStyle.Information)
             Desconectar()
         Catch ex As Exception
             MsgBox("Error al registrar producto")

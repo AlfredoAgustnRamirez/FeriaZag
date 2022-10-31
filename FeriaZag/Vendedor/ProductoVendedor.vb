@@ -19,6 +19,7 @@
         CBcategoriaPvendedor.Text = DataGridView1.Item(1, e.RowIndex).Value
         TBPrecioPvendedor.Text = DataGridView1.Item(3, e.RowIndex).Value
         TBStockPvendedor.Text = DataGridView1.Item(4, e.RowIndex).Value
+        TBActivo.Text = DataGridView1.Item(4, e.RowIndex).Value
     End Sub
 #End Region
 

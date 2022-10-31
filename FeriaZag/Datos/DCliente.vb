@@ -11,7 +11,7 @@ Public Class DCliente
 #Region "llenarDataGridView Cliente"
     Sub llenarDataGridview(ByVal dgv As DataGridView)
         Try
-            adaptador = New SqlDataAdapter("select * from Clientes", cnx)
+            adaptador = New SqlDataAdapter("SelectClientes", cnx)
             dt = New DataTable
             adaptador.Fill(dt)
             dgv.DataSource = dt
@@ -22,7 +22,7 @@ Public Class DCliente
 #End Region
 
 #Region "Registrar Cliente"
-    Public Function RegistrarCliente(nombre As String, apellido As String, dni As Integer, telefono As Long, email As String, domicilio As String)
+    Public Function RegistrarCliente(nombre As String, apellido As String, dni As Integer, telefono As Long, email As String, domicilio As String, activo As String)
         Dim da As New SqlCommand("RegistrarCliente", cnx)
         da.CommandType = CommandType.StoredProcedure
         da.Parameters.AddWithValue("@Nombre", nombre)
@@ -31,6 +31,7 @@ Public Class DCliente
         da.Parameters.AddWithValue("@Telefono", telefono)
         da.Parameters.AddWithValue("@Email", email)
         da.Parameters.AddWithValue("@Domicilio", domicilio)
+        da.Parameters.AddWithValue("@Activo", activo)
         Conectar()
         Dim resp As Integer
         Try
@@ -46,7 +47,7 @@ Public Class DCliente
 
 #Region "Eliminar Cliente"
     Public Function EliminarCliente(Id_Cliente As String)
-        Dim eliminar As New SqlCommand("EliminarCliente", cnx)
+        Dim eliminar As New SqlCommand("BajaCliente", cnx)
         eliminar.CommandType = CommandType.StoredProcedure
         eliminar.Parameters.AddWithValue("@Id_Cliente", Id_Cliente)
         Conectar()
@@ -68,16 +69,17 @@ Public Class DCliente
 #End Region
 
 #Region "Modificar Cliente"
-    Public Function ModificarCliente(Id_Cliente As String, Nombre As String, Apellido As String, Dni As Integer, Telefono As Long, Email As String, Domicilio As String)
+    Public Function ModificarCliente(Id_Cliente As String, Nombre As String, Apellido As String, Dni As Integer, Telefono As Long, Email As String, Domicilio As String, activo As String)
         Dim modificar As New SqlCommand("ModificarCliente", cnx)
         modificar.CommandType = CommandType.StoredProcedure
         modificar.Parameters.AddWithValue("@Id_Cliente", Id_Cliente)
         modificar.Parameters.AddWithValue("@Nombre", Nombre)
         modificar.Parameters.AddWithValue("@Apellido", Apellido)
         modificar.Parameters.AddWithValue("@Dni", Dni)
-        modificar.Parameters.AddWithValue("@Telefono", Telefono)
-        modificar.Parameters.AddWithValue("@Email", Email)
         modificar.Parameters.AddWithValue("@Domicilio", Domicilio)
+        modificar.Parameters.AddWithValue("@Email", Email)
+        modificar.Parameters.AddWithValue("@Telefono", Telefono)
+        modificar.Parameters.AddWithValue("@Activo", activo)
         Conectar()
         Dim resp As Integer
         Dim respuesta As MsgBoxResult

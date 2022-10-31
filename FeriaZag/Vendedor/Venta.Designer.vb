@@ -22,10 +22,10 @@ Partial Class Venta
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
         Me.ICBBuscar = New FontAwesome.Sharp.IconButton()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -67,8 +67,8 @@ Partial Class Venta
         Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.TBCodigo = New System.Windows.Forms.TextBox()
-        Me.LBCodigo = New System.Windows.Forms.Label()
         Me.BVBuscar = New FontAwesome.Sharp.IconButton()
+        Me.LBCodigo = New System.Windows.Forms.Label()
         Me.TBDniCventa = New System.Windows.Forms.TextBox()
         Me.TBApellidoCventa = New System.Windows.Forms.TextBox()
         Me.TBNombreCventa = New System.Windows.Forms.TextBox()
@@ -77,8 +77,9 @@ Partial Class Venta
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TbIdventa = New System.Windows.Forms.TextBox()
-        Me.TBIdCabecera = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.LbUsuario = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.GBConsulta.SuspendLayout()
         Me.GBVenta.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -293,19 +294,19 @@ Partial Class Venta
         '
         Me.DataGridView2.AllowUserToAddRows = False
         Me.DataGridView2.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        Me.DataGridView2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
+        Me.DataGridView2.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView2.ColumnHeadersHeight = 35
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Producto, Me.Categoria, Me.Precio, Me.Cantidad, Me.SubTotal, Me.Remover})
@@ -314,19 +315,19 @@ Partial Class Venta
         Me.DataGridView2.Location = New System.Drawing.Point(20, 19)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
+        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridView2.Size = New System.Drawing.Size(975, 276)
         Me.DataGridView2.TabIndex = 0
         '
@@ -517,8 +518,8 @@ Partial Class Venta
         'GroupBox5
         '
         Me.GroupBox5.Controls.Add(Me.TBCodigo)
-        Me.GroupBox5.Controls.Add(Me.LBCodigo)
         Me.GroupBox5.Controls.Add(Me.BVBuscar)
+        Me.GroupBox5.Controls.Add(Me.LBCodigo)
         Me.GroupBox5.Controls.Add(Me.TBDniCventa)
         Me.GroupBox5.Controls.Add(Me.TBApellidoCventa)
         Me.GroupBox5.Controls.Add(Me.TBNombreCventa)
@@ -536,20 +537,12 @@ Partial Class Venta
         'TBCodigo
         '
         Me.TBCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBCodigo.Location = New System.Drawing.Point(133, 105)
+        Me.TBCodigo.Location = New System.Drawing.Point(346, 104)
         Me.TBCodigo.Name = "TBCodigo"
-        Me.TBCodigo.Size = New System.Drawing.Size(82, 26)
+        Me.TBCodigo.Size = New System.Drawing.Size(77, 26)
         Me.TBCodigo.TabIndex = 36
-        '
-        'LBCodigo
-        '
-        Me.LBCodigo.AutoSize = True
-        Me.LBCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBCodigo.Location = New System.Drawing.Point(46, 108)
-        Me.LBCodigo.Name = "LBCodigo"
-        Me.LBCodigo.Size = New System.Drawing.Size(59, 20)
-        Me.LBCodigo.TabIndex = 35
-        Me.LBCodigo.Text = "Codigo"
+        Me.TBCodigo.UseWaitCursor = True
+        Me.TBCodigo.Visible = False
         '
         'BVBuscar
         '
@@ -567,9 +560,20 @@ Partial Class Venta
         Me.BVBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BVBuscar.UseVisualStyleBackColor = False
         '
+        'LBCodigo
+        '
+        Me.LBCodigo.AutoSize = True
+        Me.LBCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBCodigo.Location = New System.Drawing.Point(281, 106)
+        Me.LBCodigo.Name = "LBCodigo"
+        Me.LBCodigo.Size = New System.Drawing.Size(59, 20)
+        Me.LBCodigo.TabIndex = 35
+        Me.LBCodigo.Text = "Codigo"
+        Me.LBCodigo.Visible = False
+        '
         'TBDniCventa
         '
-        Me.TBDniCventa.Location = New System.Drawing.Point(285, 104)
+        Me.TBDniCventa.Location = New System.Drawing.Point(133, 104)
         Me.TBDniCventa.Name = "TBDniCventa"
         Me.TBDniCventa.Size = New System.Drawing.Size(138, 26)
         Me.TBDniCventa.TabIndex = 5
@@ -591,7 +595,7 @@ Partial Class Venta
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(221, 104)
+        Me.Label6.Location = New System.Drawing.Point(46, 104)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(40, 22)
         Me.Label6.TabIndex = 2
@@ -638,21 +642,33 @@ Partial Class Venta
         Me.Label1.Text = "Nueva Venta"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'TbIdventa
+        'Label14
         '
-        Me.TbIdventa.Location = New System.Drawing.Point(1013, 36)
-        Me.TbIdventa.Name = "TbIdventa"
-        Me.TbIdventa.Size = New System.Drawing.Size(83, 20)
-        Me.TbIdventa.TabIndex = 44
-        Me.TbIdventa.Visible = False
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Trebuchet MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(868, 12)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(79, 24)
+        Me.Label14.TabIndex = 46
+        Me.Label14.Text = "Usuario:"
         '
-        'TBIdCabecera
+        'LbUsuario
         '
-        Me.TBIdCabecera.Location = New System.Drawing.Point(910, 35)
-        Me.TBIdCabecera.Name = "TBIdCabecera"
-        Me.TBIdCabecera.Size = New System.Drawing.Size(83, 20)
-        Me.TBIdCabecera.TabIndex = 45
-        Me.TBIdCabecera.Visible = False
+        Me.LbUsuario.AutoSize = True
+        Me.LbUsuario.Font = New System.Drawing.Font("Trebuchet MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbUsuario.Location = New System.Drawing.Point(988, 12)
+        Me.LbUsuario.Name = "LbUsuario"
+        Me.LbUsuario.Size = New System.Drawing.Size(0, 24)
+        Me.LbUsuario.TabIndex = 47
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Trebuchet MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(640, 310)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(0, 24)
+        Me.Label15.TabIndex = 48
         '
         'Venta
         '
@@ -660,8 +676,9 @@ Partial Class Venta
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1280, 645)
-        Me.Controls.Add(Me.TBIdCabecera)
-        Me.Controls.Add(Me.TbIdventa)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.LbUsuario)
+        Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.GroupBox5)
@@ -739,6 +756,7 @@ Partial Class Venta
     Friend WithEvents Remover As DataGridViewButtonColumn
     Friend WithEvents TBCodigo As TextBox
     Friend WithEvents LBCodigo As Label
-    Friend WithEvents TbIdventa As TextBox
-    Friend WithEvents TBIdCabecera As TextBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents LbUsuario As Label
+    Friend WithEvents Label15 As Label
 End Class
