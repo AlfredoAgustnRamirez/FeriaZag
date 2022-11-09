@@ -120,6 +120,25 @@
     <Compile Include="Administador\InicioAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BuscarClientePorDni_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarProductoPorCategoria_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarProductoPorCodigo_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarUsuarioPorDni_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Categoria.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Datos\DUsuario.vb" />
     <Compile Include="Datos\DVenta.vb" />
     <Compile Include="Datos\DProveedor.vb" />
@@ -143,6 +162,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FeriaZagDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GenerarComprobante_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Gerente\InicioGerente.Designer.vb">
       <DependentUpon>InicioGerente.vb</DependentUpon>
     </Compile>
@@ -157,6 +179,57 @@
     </Compile>
     <Compile Include="ImprimirFactura.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model1.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FeriaZag.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FeriaZag.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarVenta_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Productos.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedores.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SelectCategorias_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SelectClientes_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SelectProductos_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SelectUsuarios_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Vendedor\InicioVendedor.Designer.vb">
       <DependentUpon>InicioVendedor.vb</DependentUpon>
@@ -259,6 +332,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Venta_Cabecera.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Venta_Detalle.vb">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Administador\Categoria.resx">
@@ -337,6 +416,13 @@
     <None Include="FeriaZagDataSet.xss">
       <DependentUpon>FeriaZagDataSet.xsd</DependentUpon>
     </None>
+    <EntityDeploy Include="FeriaZag.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FeriaZag.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="FeriaZag.edmx.diagram">
+      <DependentUpon>FeriaZag.edmx</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -382,7 +468,18 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FeriaZag.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FeriaZag.edmx</DependentUpon>
+      <LastGenOutput>Model1.vb</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <ItemGroup Condition="$(VisualStudioVersion) == '16.0'">
     <Reference Include="Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>$(SSDTPath)\Microsoft.Data.Tools.Schema.Sql.dll</HintPath>
