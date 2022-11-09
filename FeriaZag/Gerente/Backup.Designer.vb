@@ -31,6 +31,7 @@ Partial Class Backup
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TBNombreBackup = New System.Windows.Forms.TextBox()
         Me.ICBBase = New FontAwesome.Sharp.IconButton()
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.GBConsulta.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -163,4 +164,5 @@ Partial Class Backup
     Friend WithEvents Label1 As Label
     Friend WithEvents TBNombreBackup As TextBox
     Friend WithEvents ICBBase As FontAwesome.Sharp.IconButton
+    Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
 End Class
