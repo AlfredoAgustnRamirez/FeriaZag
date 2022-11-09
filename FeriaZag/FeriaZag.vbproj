@@ -152,6 +152,12 @@
     <Compile Include="Generales\VariableGlobales.vb" />
     <Compile Include="Generales\ValidacionCampos.vb" />
     <Compile Include="Datos\DConexion.vb" />
+    <Compile Include="ImprimirFactura.Designer.vb">
+      <DependentUpon>ImprimirFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImprimirFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vendedor\InicioVendedor.Designer.vb">
       <DependentUpon>InicioVendedor.vb</DependentUpon>
     </Compile>
@@ -281,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gerente\Usuarios.resx">
       <DependentUpon>Usuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImprimirFactura.resx">
+      <DependentUpon>ImprimirFactura.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
