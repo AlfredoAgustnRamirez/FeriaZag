@@ -141,7 +141,9 @@
             TBOPrecioPventa.Text = Convert.ToDecimal(Fila.Cells("Precio").Value)
             NumericUpDown1.Value = Convert.ToInt32(Fila.Cells("Cantidad").Value)
             SubTotal = Convert.ToDecimal(Fila.Cells("SubTotal").Value)
-            ven.RegistrarVentaDetalle(TBCodigo.Text, idcabecera, TBOPrecioPventa.Text, NumericUpDown1.Value, SubTotal)
+            ven.RegistrarVentaDetalle(TBCodigo.Text, idcabecera, TBOPrecioPventa.Text, NumericUpDown1.Value, subtotal)
+            ven.Disminuirstock(TBCodigo.Text, NumericUpDown1.Value)
+            ven.GenerarComprobante(idcabecera)
         Next
         MsgBox("Registrado con exito ", MsgBoxStyle.Information)
         limpiar()

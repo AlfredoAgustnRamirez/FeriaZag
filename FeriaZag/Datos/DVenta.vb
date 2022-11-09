@@ -99,4 +99,77 @@ Public Class DVenta
     End Function
 #End Region
 
+#Region "Disminuir Stock"
+    Public Function Disminuirstock(codigo As String, cantidad As Integer)
+
+        Try
+            Conectar()
+            Dim cmd As New SqlCommand("Disminuirstock", cnx)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            With cmd.Parameters
+                .AddWithValue("@Codigo", codigo)
+                .AddWithValue("@Cantidad", cantidad)
+            End With
+
+            If cmd.ExecuteNonQuery Then
+                Return True
+            Else
+                Return False
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            Desconectar()
+        End Try
+    End Function
+#End Region
+
+#Region "Aumentar Stock"
+    Public Function Aumentarstock(codigo As String, cantidad As Integer)
+
+        Try
+            Conectar()
+            Dim cmd As New SqlCommand("Aumentarstock", cnx)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            With cmd.Parameters
+                .AddWithValue("@Codigo", codigo)
+                .AddWithValue("@Cantidad", cantidad)
+            End With
+
+            If cmd.ExecuteNonQuery Then
+                Return True
+            Else
+                Return False
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            Desconectar()
+        End Try
+    End Function
+#End Region
+
+#Region "Generar comprobante Venta"
+    Public Function GenerarComprobante(id_cabecera As Integer)
+        Dim da As New SqlCommand("GenerarComprobante", cnx)
+        da.CommandType = CommandType.StoredProcedure
+        da.Parameters.AddWithValue("@Id_Cabecera", id_cabecera)
+        Conectar()
+        Dim resp As Integer
+        Try
+            resp = da.ExecuteNonQuery
+            Desconectar()
+        Catch ex As Exception
+            MsgBox("Error al registrar producto")
+        End Try
+        Return resp
+    End Function
+#End Region
+
 End Class
