@@ -4,10 +4,12 @@
     Dim obj As New DProducto
     Dim cli As New DCliente
     Dim ven As New DVenta
+    Dim usu As New DUsuario
 #End Region
 
 #Region "Carga de Ventas"
     Private Sub Venta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LbUsuario.Text = VarUsuario
     End Sub
 #End Region
 
@@ -18,8 +20,11 @@
         TBDniCventa.Text = ""
         TBCodigoPventa.Text = ""
         TBNombreCventa.Text = ""
-        CBCategoriaPventa.SelectedIndex = 0
+        TBNombreProducto.Text = ""
+        CBCategoriaPventa.Text = ""
         TBOPrecioPventa.Text = ""
+        TBTotalVenta.Text = ""
+        DataGridView2.Rows.Clear()
     End Sub
 #End Region
 
@@ -123,16 +128,23 @@
 #Region "Boton Cobrar"
     Private Sub BVCobrarVenta_Click(sender As Object, e As EventArgs) Handles BVCobrarVenta.Click
         Dim fechaActual As Date = Date.Now
-        Dim precio As Decimal
-        Dim cantidad As Integer
         Dim idcabecera As Integer
-        ven.RegistrarVenta(TBCodigo.Text, fechaActual, TBTotalVenta.Text)
+        Dim subtotal As Decimal
+
+        idusuario = usu.ObtenerIdUsuario(VarUsuario)
+
+        ven.RegistrarVenta(TBCodigo.Text, idusuario, fechaActual, TBTotalVenta.Text)
         idcabecera = ven.ObtenerIdCabecera()
-        Dim dtpro2 = obj.BuscarProductosPorCodigo(TBCodigoPventa.Text)
-        TBCodigo.Text = dtpro2.Rows(0).Item("Codigo")
-        precio = Convert.ToDecimal(dtpro2.Rows(0)("Precio"))
-        cantidad = Convert.ToInt32(dtpro2.Rows(0)("Stock"))
-        ven.RegistrarVentaDetalle(TBCodigo.Text, idcabecera, precio, cantidad, TBTotalVenta.Text)
+
+        For Each Fila As DataGridViewRow In DataGridView2.Rows
+            TBCodigo.Text = Convert.ToString(Fila.Cells("Codigo").Value)
+            TBOPrecioPventa.Text = Convert.ToDecimal(Fila.Cells("Precio").Value)
+            NumericUpDown1.Value = Convert.ToInt32(Fila.Cells("Cantidad").Value)
+            SubTotal = Convert.ToDecimal(Fila.Cells("SubTotal").Value)
+            ven.RegistrarVentaDetalle(TBCodigo.Text, idcabecera, TBOPrecioPventa.Text, NumericUpDown1.Value, SubTotal)
+        Next
+        MsgBox("Registrado con exito ", MsgBoxStyle.Information)
+        limpiar()
     End Sub
 #End Region
 

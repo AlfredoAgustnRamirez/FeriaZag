@@ -13,6 +13,7 @@
         TBDniCliente.Text = ""
         TBTelefonoCliente.Text = ""
         TBEmail.Text = ""
+        TBActivo.Text = ""
     End Sub
 #End Region
 
@@ -67,6 +68,7 @@
         TBTelefonoCliente.Text = DataGridView1.Item(4, e.RowIndex).Value
         TBEmail.Text = DataGridView1.Item(5, e.RowIndex).Value
         TBDirecciónCliente.Text = DataGridView1.Item(6, e.RowIndex).Value
+        TBActivo.Text = DataGridView1.Item(7, e.RowIndex).Value
         ICBAgregarCliente.Enabled = False
         ICBModificarCliente.Enabled = True
         ICBEliminarCliente.Enabled = True
@@ -75,10 +77,10 @@
 
 #Region "Agregar Cliente"
     Private Sub ICBAgregarCliente_Click(sender As Object, e As EventArgs) Handles ICBAgregarCliente.Click
-        If TBNombreCliente.Text = "" Or TBApellidoCliente.Text = "" Or TBDniCliente.Text = "" Or TBDirecciónCliente.Text = "" Or TBEmail.Text = "" Or TBTelefonoCliente.Text = "" Then
+        If TBNombreCliente.Text = "" Or TBApellidoCliente.Text = "" Or TBDniCliente.Text = "" Or TBDirecciónCliente.Text = "" Or TBEmail.Text = "" Or TBTelefonoCliente.Text = "" Or TBActivo.Text = "" Then
             MsgBox("Error debe Completar todos los campos", vbCritical, "Error")
         Else
-            cli.RegistrarCliente(TBNombreCliente.Text, TBApellidoCliente.Text, TBDniCliente.Text, TBTelefonoCliente.Text, TBEmail.Text, TBDirecciónCliente.Text)
+            cli.RegistrarCliente(TBNombreCliente.Text, TBApellidoCliente.Text, TBDniCliente.Text, TBTelefonoCliente.Text, TBEmail.Text, TBDirecciónCliente.Text, TBActivo.Text)
             cli.llenarDataGridview(DataGridView1)
         End If
         limpiar()
@@ -95,7 +97,7 @@
 
 #Region "Modificar Cliente"
     Private Sub ICBModificarCliente_Click(sender As Object, e As EventArgs) Handles ICBModificarCliente.Click
-        cli.ModificarCliente(TBCodigoCliente.Text, TBNombreCliente.Text, TBApellidoCliente.Text, TBDniCliente.Text, TBTelefonoCliente.Text, TBEmail.Text, TBDirecciónCliente.Text)
+        cli.ModificarCliente(TBCodigoCliente.Text, TBNombreCliente.Text, TBApellidoCliente.Text, TBDniCliente.Text, TBTelefonoCliente.Text, TBEmail.Text, TBDirecciónCliente.Text, TBActivo.Text)
         cli.llenarDataGridview(DataGridView1)
     End Sub
 #End Region

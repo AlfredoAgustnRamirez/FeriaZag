@@ -50,6 +50,8 @@ Partial Class Cliente
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.LBCliente = New System.Windows.Forms.Label()
+        Me.TBActivo = New System.Windows.Forms.TextBox()
+        Me.LBActivo = New System.Windows.Forms.Label()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBConsulta.SuspendLayout()
         Me.GBListar.SuspendLayout()
@@ -58,6 +60,8 @@ Partial Class Cliente
         '
         'GBMantenimiento
         '
+        Me.GBMantenimiento.Controls.Add(Me.TBActivo)
+        Me.GBMantenimiento.Controls.Add(Me.LBActivo)
         Me.GBMantenimiento.Controls.Add(Me.TBEmail)
         Me.GBMantenimiento.Controls.Add(Me.LBEmail)
         Me.GBMantenimiento.Controls.Add(Me.LBCodigoCliente)
@@ -86,7 +90,7 @@ Partial Class Cliente
         '
         'TBEmail
         '
-        Me.TBEmail.Location = New System.Drawing.Point(138, 297)
+        Me.TBEmail.Location = New System.Drawing.Point(138, 268)
         Me.TBEmail.Name = "TBEmail"
         Me.TBEmail.Size = New System.Drawing.Size(183, 26)
         Me.TBEmail.TabIndex = 26
@@ -94,7 +98,7 @@ Partial Class Cliente
         'LBEmail
         '
         Me.LBEmail.AutoSize = True
-        Me.LBEmail.Location = New System.Drawing.Point(38, 301)
+        Me.LBEmail.Location = New System.Drawing.Point(38, 272)
         Me.LBEmail.Name = "LBEmail"
         Me.LBEmail.Size = New System.Drawing.Size(55, 22)
         Me.LBEmail.TabIndex = 25
@@ -157,9 +161,9 @@ Partial Class Cliente
         Me.ICBAgregarCliente.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBAgregarCliente.IconSize = 40
         Me.ICBAgregarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBAgregarCliente.Location = New System.Drawing.Point(188, 395)
+        Me.ICBAgregarCliente.Location = New System.Drawing.Point(190, 422)
         Me.ICBAgregarCliente.Name = "ICBAgregarCliente"
-        Me.ICBAgregarCliente.Size = New System.Drawing.Size(129, 52)
+        Me.ICBAgregarCliente.Size = New System.Drawing.Size(129, 44)
         Me.ICBAgregarCliente.TabIndex = 20
         Me.ICBAgregarCliente.Text = "Guardar  "
         Me.ICBAgregarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -167,14 +171,14 @@ Partial Class Cliente
         '
         'TBDirecciónCliente
         '
-        Me.TBDirecciónCliente.Location = New System.Drawing.Point(138, 348)
+        Me.TBDirecciónCliente.Location = New System.Drawing.Point(138, 319)
         Me.TBDirecciónCliente.Name = "TBDirecciónCliente"
         Me.TBDirecciónCliente.Size = New System.Drawing.Size(183, 26)
         Me.TBDirecciónCliente.TabIndex = 19
         '
         'TBDniCliente
         '
-        Me.TBDniCliente.Location = New System.Drawing.Point(138, 196)
+        Me.TBDniCliente.Location = New System.Drawing.Point(139, 168)
         Me.TBDniCliente.Name = "TBDniCliente"
         Me.TBDniCliente.Size = New System.Drawing.Size(181, 26)
         Me.TBDniCliente.TabIndex = 18
@@ -182,7 +186,7 @@ Partial Class Cliente
         'LDirección
         '
         Me.LDirección.AutoSize = True
-        Me.LDirección.Location = New System.Drawing.Point(37, 352)
+        Me.LDirección.Location = New System.Drawing.Point(37, 323)
         Me.LDirección.Name = "LDirección"
         Me.LDirección.Size = New System.Drawing.Size(84, 22)
         Me.LDirección.TabIndex = 14
@@ -191,7 +195,7 @@ Partial Class Cliente
         'LNombre
         '
         Me.LNombre.AutoSize = True
-        Me.LNombre.Location = New System.Drawing.Point(38, 92)
+        Me.LNombre.Location = New System.Drawing.Point(39, 79)
         Me.LNombre.Name = "LNombre"
         Me.LNombre.Size = New System.Drawing.Size(72, 22)
         Me.LNombre.TabIndex = 2
@@ -205,9 +209,9 @@ Partial Class Cliente
         Me.ICBNuevoCliente.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBNuevoCliente.IconSize = 40
         Me.ICBNuevoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBNuevoCliente.Location = New System.Drawing.Point(46, 395)
+        Me.ICBNuevoCliente.Location = New System.Drawing.Point(48, 422)
         Me.ICBNuevoCliente.Name = "ICBNuevoCliente"
-        Me.ICBNuevoCliente.Size = New System.Drawing.Size(126, 52)
+        Me.ICBNuevoCliente.Size = New System.Drawing.Size(126, 44)
         Me.ICBNuevoCliente.TabIndex = 16
         Me.ICBNuevoCliente.Text = "Nuevo  "
         Me.ICBNuevoCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -215,7 +219,7 @@ Partial Class Cliente
         '
         'TBNombreCliente
         '
-        Me.TBNombreCliente.Location = New System.Drawing.Point(138, 88)
+        Me.TBNombreCliente.Location = New System.Drawing.Point(139, 75)
         Me.TBNombreCliente.Name = "TBNombreCliente"
         Me.TBNombreCliente.Size = New System.Drawing.Size(181, 26)
         Me.TBNombreCliente.TabIndex = 12
@@ -223,7 +227,7 @@ Partial Class Cliente
         'LApellido
         '
         Me.LApellido.AutoSize = True
-        Me.LApellido.Location = New System.Drawing.Point(37, 147)
+        Me.LApellido.Location = New System.Drawing.Point(37, 124)
         Me.LApellido.Name = "LApellido"
         Me.LApellido.Size = New System.Drawing.Size(74, 22)
         Me.LApellido.TabIndex = 4
@@ -231,7 +235,7 @@ Partial Class Cliente
         '
         'TBApellidoCliente
         '
-        Me.TBApellidoCliente.Location = New System.Drawing.Point(138, 144)
+        Me.TBApellidoCliente.Location = New System.Drawing.Point(138, 121)
         Me.TBApellidoCliente.Name = "TBApellidoCliente"
         Me.TBApellidoCliente.Size = New System.Drawing.Size(181, 26)
         Me.TBApellidoCliente.TabIndex = 9
@@ -239,7 +243,7 @@ Partial Class Cliente
         'LDni
         '
         Me.LDni.AutoSize = True
-        Me.LDni.Location = New System.Drawing.Point(38, 200)
+        Me.LDni.Location = New System.Drawing.Point(39, 172)
         Me.LDni.Name = "LDni"
         Me.LDni.Size = New System.Drawing.Size(40, 22)
         Me.LDni.TabIndex = 3
@@ -248,7 +252,7 @@ Partial Class Cliente
         'LTelefono
         '
         Me.LTelefono.AutoSize = True
-        Me.LTelefono.Location = New System.Drawing.Point(37, 251)
+        Me.LTelefono.Location = New System.Drawing.Point(37, 223)
         Me.LTelefono.Name = "LTelefono"
         Me.LTelefono.Size = New System.Drawing.Size(77, 22)
         Me.LTelefono.TabIndex = 1
@@ -256,7 +260,7 @@ Partial Class Cliente
         '
         'TBTelefonoCliente
         '
-        Me.TBTelefonoCliente.Location = New System.Drawing.Point(138, 247)
+        Me.TBTelefonoCliente.Location = New System.Drawing.Point(138, 219)
         Me.TBTelefonoCliente.Name = "TBTelefonoCliente"
         Me.TBTelefonoCliente.Size = New System.Drawing.Size(181, 26)
         Me.TBTelefonoCliente.TabIndex = 11
@@ -361,6 +365,22 @@ Partial Class Cliente
         Me.LBCliente.TabIndex = 24
         Me.LBCliente.Text = "Cliente"
         '
+        'TBActivo
+        '
+        Me.TBActivo.Location = New System.Drawing.Point(139, 365)
+        Me.TBActivo.Name = "TBActivo"
+        Me.TBActivo.Size = New System.Drawing.Size(181, 26)
+        Me.TBActivo.TabIndex = 28
+        '
+        'LBActivo
+        '
+        Me.LBActivo.AutoSize = True
+        Me.LBActivo.Location = New System.Drawing.Point(39, 369)
+        Me.LBActivo.Name = "LBActivo"
+        Me.LBActivo.Size = New System.Drawing.Size(62, 22)
+        Me.LBActivo.TabIndex = 27
+        Me.LBActivo.Text = "Activo:"
+        '
         'Cliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -413,4 +433,6 @@ Partial Class Cliente
     Friend WithEvents TBCodigoCliente As TextBox
     Friend WithEvents TBEmail As TextBox
     Friend WithEvents LBEmail As Label
+    Friend WithEvents TBActivo As TextBox
+    Friend WithEvents LBActivo As Label
 End Class

@@ -22,7 +22,7 @@ Partial Class Producto
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LCategoria = New System.Windows.Forms.Label()
@@ -31,6 +31,8 @@ Partial Class Producto
         Me.TBPrecio = New System.Windows.Forms.TextBox()
         Me.TBCodigo = New System.Windows.Forms.TextBox()
         Me.GBMantenimiento = New System.Windows.Forms.GroupBox()
+        Me.TBActivo = New System.Windows.Forms.TextBox()
+        Me.LBActivo = New System.Windows.Forms.Label()
         Me.ICBNuevo = New FontAwesome.Sharp.IconButton()
         Me.TBStock = New System.Windows.Forms.TextBox()
         Me.LStock = New System.Windows.Forms.Label()
@@ -56,7 +58,7 @@ Partial Class Producto
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(28, 252)
+        Me.Label1.Location = New System.Drawing.Point(28, 240)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(55, 22)
         Me.Label1.TabIndex = 1
@@ -83,7 +85,7 @@ Partial Class Producto
         'LNombre
         '
         Me.LNombre.AutoSize = True
-        Me.LNombre.Location = New System.Drawing.Point(28, 190)
+        Me.LNombre.Location = New System.Drawing.Point(27, 183)
         Me.LNombre.Name = "LNombre"
         Me.LNombre.Size = New System.Drawing.Size(66, 22)
         Me.LNombre.TabIndex = 4
@@ -91,14 +93,14 @@ Partial Class Producto
         '
         'TBNombre
         '
-        Me.TBNombre.Location = New System.Drawing.Point(121, 186)
+        Me.TBNombre.Location = New System.Drawing.Point(120, 179)
         Me.TBNombre.Name = "TBNombre"
         Me.TBNombre.Size = New System.Drawing.Size(216, 26)
         Me.TBNombre.TabIndex = 9
         '
         'TBPrecio
         '
-        Me.TBPrecio.Location = New System.Drawing.Point(120, 248)
+        Me.TBPrecio.Location = New System.Drawing.Point(120, 236)
         Me.TBPrecio.Name = "TBPrecio"
         Me.TBPrecio.Size = New System.Drawing.Size(216, 26)
         Me.TBPrecio.TabIndex = 11
@@ -113,6 +115,8 @@ Partial Class Producto
         '
         'GBMantenimiento
         '
+        Me.GBMantenimiento.Controls.Add(Me.TBActivo)
+        Me.GBMantenimiento.Controls.Add(Me.LBActivo)
         Me.GBMantenimiento.Controls.Add(Me.ICBNuevo)
         Me.GBMantenimiento.Controls.Add(Me.TBStock)
         Me.GBMantenimiento.Controls.Add(Me.LStock)
@@ -135,6 +139,22 @@ Partial Class Producto
         Me.GBMantenimiento.TabStop = False
         Me.GBMantenimiento.Text = "Dato Productos"
         '
+        'TBActivo
+        '
+        Me.TBActivo.Location = New System.Drawing.Point(120, 348)
+        Me.TBActivo.Name = "TBActivo"
+        Me.TBActivo.Size = New System.Drawing.Size(216, 26)
+        Me.TBActivo.TabIndex = 32
+        '
+        'LBActivo
+        '
+        Me.LBActivo.AutoSize = True
+        Me.LBActivo.Location = New System.Drawing.Point(29, 351)
+        Me.LBActivo.Name = "LBActivo"
+        Me.LBActivo.Size = New System.Drawing.Size(62, 22)
+        Me.LBActivo.TabIndex = 31
+        Me.LBActivo.Text = "Activo:"
+        '
         'ICBNuevo
         '
         Me.ICBNuevo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
@@ -143,7 +163,7 @@ Partial Class Producto
         Me.ICBNuevo.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBNuevo.IconSize = 40
         Me.ICBNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBNuevo.Location = New System.Drawing.Point(32, 385)
+        Me.ICBNuevo.Location = New System.Drawing.Point(32, 402)
         Me.ICBNuevo.Name = "ICBNuevo"
         Me.ICBNuevo.Size = New System.Drawing.Size(126, 49)
         Me.ICBNuevo.TabIndex = 19
@@ -153,7 +173,7 @@ Partial Class Producto
         '
         'TBStock
         '
-        Me.TBStock.Location = New System.Drawing.Point(120, 312)
+        Me.TBStock.Location = New System.Drawing.Point(120, 295)
         Me.TBStock.Name = "TBStock"
         Me.TBStock.Size = New System.Drawing.Size(216, 26)
         Me.TBStock.TabIndex = 18
@@ -161,7 +181,7 @@ Partial Class Producto
         'LStock
         '
         Me.LStock.AutoSize = True
-        Me.LStock.Location = New System.Drawing.Point(28, 316)
+        Me.LStock.Location = New System.Drawing.Point(28, 299)
         Me.LStock.Name = "LStock"
         Me.LStock.Size = New System.Drawing.Size(49, 22)
         Me.LStock.TabIndex = 14
@@ -183,7 +203,7 @@ Partial Class Producto
         Me.ICBAgregar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBAgregar.IconSize = 40
         Me.ICBAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBAgregar.Location = New System.Drawing.Point(182, 385)
+        Me.ICBAgregar.Location = New System.Drawing.Point(182, 402)
         Me.ICBAgregar.Name = "ICBAgregar"
         Me.ICBAgregar.Size = New System.Drawing.Size(129, 49)
         Me.ICBAgregar.TabIndex = 16
@@ -238,9 +258,9 @@ Partial Class Producto
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -374,4 +394,6 @@ Partial Class Producto
     Friend WithEvents LBCategoria As Label
     Friend WithEvents ICBBuscar As FontAwesome.Sharp.IconButton
     Friend WithEvents TBCodigo2 As TextBox
+    Friend WithEvents TBActivo As TextBox
+    Friend WithEvents LBActivo As Label
 End Class

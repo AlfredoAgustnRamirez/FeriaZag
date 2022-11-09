@@ -120,7 +120,7 @@
     <Compile Include="Administador\InicioAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Datos\DGerente.vb" />
+    <Compile Include="Datos\DUsuario.vb" />
     <Compile Include="Datos\DVenta.vb" />
     <Compile Include="Datos\DProveedor.vb" />
     <Compile Include="Datos\DCategoria.vb" />

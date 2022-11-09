@@ -46,6 +46,8 @@ Partial Class ProductoVendedor
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TBNombre2Pvendedor = New System.Windows.Forms.TextBox()
         Me.LbProductos = New System.Windows.Forms.Label()
+        Me.TBActivo = New System.Windows.Forms.TextBox()
+        Me.LBActivo = New System.Windows.Forms.Label()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBListar.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,6 +56,8 @@ Partial Class ProductoVendedor
         '
         'GBMantenimiento
         '
+        Me.GBMantenimiento.Controls.Add(Me.TBActivo)
+        Me.GBMantenimiento.Controls.Add(Me.LBActivo)
         Me.GBMantenimiento.Controls.Add(Me.TBStockPvendedor)
         Me.GBMantenimiento.Controls.Add(Me.LStock)
         Me.GBMantenimiento.Controls.Add(Me.CBcategoriaPvendedor)
@@ -280,6 +284,22 @@ Partial Class ProductoVendedor
         Me.LbProductos.TabIndex = 19
         Me.LbProductos.Text = "Productos "
         '
+        'TBActivo
+        '
+        Me.TBActivo.Location = New System.Drawing.Point(119, 400)
+        Me.TBActivo.Name = "TBActivo"
+        Me.TBActivo.Size = New System.Drawing.Size(216, 26)
+        Me.TBActivo.TabIndex = 32
+        '
+        'LBActivo
+        '
+        Me.LBActivo.AutoSize = True
+        Me.LBActivo.Location = New System.Drawing.Point(28, 403)
+        Me.LBActivo.Name = "LBActivo"
+        Me.LBActivo.Size = New System.Drawing.Size(62, 22)
+        Me.LBActivo.TabIndex = 31
+        Me.LBActivo.Text = "Activo:"
+        '
         'ProductoVendedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -324,4 +344,6 @@ Partial Class ProductoVendedor
     Friend WithEvents Label3 As Label
     Friend WithEvents TBNombre2Pvendedor As TextBox
     Friend WithEvents LbProductos As Label
+    Friend WithEvents TBActivo As TextBox
+    Friend WithEvents LBActivo As Label
 End Class
