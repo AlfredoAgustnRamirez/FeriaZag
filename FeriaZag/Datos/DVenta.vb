@@ -8,12 +8,13 @@ Public Class DVenta
 #End Region
 
 #Region "Registrar Venta"
-    Public Function RegistrarVenta(idcliente As String, fecha As Date, totalventa As Decimal)
+    Public Function RegistrarVenta(id_cliente As String, id_usuario As Integer, fecha As Date, total As Decimal)
         Dim da As New SqlCommand("RegistrarVenta", cnx)
         da.CommandType = CommandType.StoredProcedure
-        da.Parameters.AddWithValue("@Id_Cliente", idcliente)
+        da.Parameters.AddWithValue("@Id_Cliente", id_cliente)
+        da.Parameters.AddWithValue("@Id_Usuario", id_usuario)
         da.Parameters.AddWithValue("@Fecha", fecha)
-        da.Parameters.AddWithValue("@TotalVenta", totalventa)
+        da.Parameters.AddWithValue("@Total", total)
         Conectar()
         Dim resp As Integer
         Try
@@ -39,7 +40,6 @@ Public Class DVenta
         Dim resp As Integer
         Try
             resp = da.ExecuteNonQuery
-            MsgBox("Registrado con exito ", MsgBoxStyle.Information)
             Desconectar()
         Catch ex As Exception
             MsgBox("Error al registrar producto")
@@ -96,6 +96,79 @@ Public Class DVenta
             MsgBox(ex.Message)
         End Try
         Return Nothing
+    End Function
+#End Region
+
+#Region "Disminuir Stock"
+    Public Function Disminuirstock(codigo As String, cantidad As Integer)
+
+        Try
+            Conectar()
+            Dim cmd As New SqlCommand("Disminuirstock", cnx)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            With cmd.Parameters
+                .AddWithValue("@Codigo", codigo)
+                .AddWithValue("@Cantidad", cantidad)
+            End With
+
+            If cmd.ExecuteNonQuery Then
+                Return True
+            Else
+                Return False
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            Desconectar()
+        End Try
+    End Function
+#End Region
+
+#Region "Aumentar Stock"
+    Public Function Aumentarstock(codigo As String, cantidad As Integer)
+
+        Try
+            Conectar()
+            Dim cmd As New SqlCommand("Aumentarstock", cnx)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            With cmd.Parameters
+                .AddWithValue("@Codigo", codigo)
+                .AddWithValue("@Cantidad", cantidad)
+            End With
+
+            If cmd.ExecuteNonQuery Then
+                Return True
+            Else
+                Return False
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            Desconectar()
+        End Try
+    End Function
+#End Region
+
+#Region "Generar comprobante Venta"
+    Public Function GenerarComprobante(id_cabecera As Integer)
+        Dim da As New SqlCommand("GenerarComprobante", cnx)
+        da.CommandType = CommandType.StoredProcedure
+        da.Parameters.AddWithValue("@Id_Cabecera", id_cabecera)
+        Conectar()
+        Dim resp As Integer
+        Try
+            resp = da.ExecuteNonQuery
+            Desconectar()
+        Catch ex As Exception
+            MsgBox("Error al registrar producto")
+        End Try
+        Return resp
     End Function
 #End Region
 

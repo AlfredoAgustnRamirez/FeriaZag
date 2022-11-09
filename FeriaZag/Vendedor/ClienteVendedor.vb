@@ -1,4 +1,5 @@
 ﻿Public Class ClienteVendedor
+
 #Region "Carga de Cliente Vendedor"
     Dim cli As New DCliente
 
@@ -28,9 +29,9 @@
         TBTelefonoCvendedor.Text = DataGridView2.Item(4, e.RowIndex).Value
         TBEmail.Text = DataGridView2.Item(5, e.RowIndex).Value
         TBDirecciónCvendedor.Text = DataGridView2.Item(6, e.RowIndex).Value
+        TBActivo.Text = DataGridView2.Item(7, e.RowIndex).Value
         ICBAgregarCvendedor.Enabled = False
         ICBModificarCvendedor.Enabled = True
-        ICBEliminarCvendedor.Enabled = True
     End Sub
 #End Region
 
@@ -75,7 +76,7 @@
         If TBNombreCvendedor.Text = "" Or TBApellidoCvendedor.Text = "" Or TBDniCvendedor.Text = "" Or TBDirecciónCvendedor.Text = "" Or TBEmail.Text = "" Or TBTelefonoCvendedor.Text = "" Then
             MsgBox("Error debe Completar todos los campos", vbCritical, "Error")
         Else
-            cli.RegistrarCliente(TBNombreCvendedor.Text, TBApellidoCvendedor.Text, TBDniCvendedor.Text, TBTelefonoCvendedor.Text, TBEmail.Text, TBDirecciónCvendedor.Text)
+            cli.RegistrarCliente(TBNombreCvendedor.Text, TBApellidoCvendedor.Text, TBDniCvendedor.Text, TBTelefonoCvendedor.Text, TBEmail.Text, TBDirecciónCvendedor.Text, TBActivo.Text)
             cli.llenarDataGridview(DataGridView2)
         End If
         limpiar()
@@ -86,7 +87,6 @@
     Private Sub ICBNuevoCvendedor_Click(sender As Object, e As EventArgs) Handles ICBNuevoCvendedor.Click
         'limpia los campos para ingresar un nuevo producto y desabilita los botones correspondientes
         ICBAgregarCvendedor.Enabled = True
-        ICBEliminarCvendedor.Enabled = False
         ICBModificarCvendedor.Enabled = False
         limpiar()
     End Sub
@@ -94,16 +94,8 @@
 
 #Region "Modificar Cliente Vendedor"
     Private Sub ICBModificarCvendedor_Click(sender As Object, e As EventArgs) Handles ICBModificarCvendedor.Click
-        cli.ModificarCliente(TBCodigoCvendedor.Text, TBNombreCvendedor.Text, TBApellidoCvendedor.Text, TBDniCvendedor.Text, TBTelefonoCvendedor.Text, TBEmail.Text, TBDirecciónCvendedor.Text)
+        cli.ModificarCliente(TBCodigoCvendedor.Text, TBNombreCvendedor.Text, TBApellidoCvendedor.Text, TBDniCvendedor.Text, TBTelefonoCvendedor.Text, TBEmail.Text, TBDirecciónCvendedor.Text, TBActivo.Text)
         cli.llenarDataGridview(DataGridView2)
-    End Sub
-#End Region
-
-#Region "Eliminar Cliente Vendedor"
-    Private Sub ICBEliminarCvendedor_Click(sender As Object, e As EventArgs) Handles ICBEliminarCvendedor.Click
-        cli.EliminarCliente(TBCodigoCvendedor.Text)
-        cli.llenarDataGridview(DataGridView2)
-        limpiar()
     End Sub
 #End Region
 

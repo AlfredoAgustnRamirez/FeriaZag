@@ -9,10 +9,11 @@ Public Class DCategoria
 #End Region
 
 #Region "RegistrarCategorias"
-    Public Function RegistrarCategoria(Categoria As String)
+    Public Function RegistrarCategoria(Categoria As String, activo As String)
         Dim da As New SqlCommand("RegistrarCategoria", cnx)
         da.CommandType = CommandType.StoredProcedure
         da.Parameters.AddWithValue("@Categoria", Categoria)
+        da.Parameters.AddWithValue("@Activos", activo)
         Conectar()
         Dim resp As Integer
         Try
@@ -28,7 +29,7 @@ Public Class DCategoria
 
 #Region "EliminarCategoria"
     Public Function EliminarCategoria(IdCategoria As String)
-        Dim eliminar As New SqlCommand("EliminarCategoria", cnx)
+        Dim eliminar As New SqlCommand("BajaCategoria", cnx)
         eliminar.CommandType = CommandType.StoredProcedure
         eliminar.Parameters.AddWithValue("@IdCategoria", IdCategoria)
         Conectar()
@@ -52,7 +53,7 @@ Public Class DCategoria
 #Region "llenarDataGridView Categoria"
     Sub llenarDataGridview(ByVal dgv As DataGridView)
         Try
-            adaptador = New SqlDataAdapter("select * from Categoria", cnx)
+            adaptador = New SqlDataAdapter("SelectCategorias", cnx)
             dt = New DataTable
             adaptador.Fill(dt)
             dgv.DataSource = dt
@@ -63,11 +64,12 @@ Public Class DCategoria
 #End Region
 
 #Region "Modificar Categoria"
-    Public Function ModificarCategoria(idcategoria As String, categoria As String)
-        Dim modificar As New SqlCommand("ModificarProductos", cnx)
+    Public Function ModificarCategoria(idcategoria As String, categoria As String, activo As String)
+        Dim modificar As New SqlCommand("ModificarCategoria", cnx)
         modificar.CommandType = CommandType.StoredProcedure
         modificar.Parameters.AddWithValue("@IdCategoria", idcategoria)
         modificar.Parameters.AddWithValue("@Categoria", categoria)
+        modificar.Parameters.AddWithValue("@Activos", activo)
         Conectar()
         Dim resp As Integer
         Dim respuesta As MsgBoxResult

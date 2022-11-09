@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Venta
+Partial Class Fecha
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -34,8 +34,6 @@ Partial Class Venta
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GBVenta = New System.Windows.Forms.GroupBox()
         Me.CBTipoDocumento = New System.Windows.Forms.ComboBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.BVImprimirVenta = New FontAwesome.Sharp.IconButton()
         Me.BVCobrarVenta = New FontAwesome.Sharp.IconButton()
@@ -67,8 +65,8 @@ Partial Class Venta
         Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.TBCodigo = New System.Windows.Forms.TextBox()
-        Me.LBCodigo = New System.Windows.Forms.Label()
         Me.BVBuscar = New FontAwesome.Sharp.IconButton()
+        Me.LBCodigo = New System.Windows.Forms.Label()
         Me.TBDniCventa = New System.Windows.Forms.TextBox()
         Me.TBApellidoCventa = New System.Windows.Forms.TextBox()
         Me.TBNombreCventa = New System.Windows.Forms.TextBox()
@@ -77,16 +75,19 @@ Partial Class Venta
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TbIdventa = New System.Windows.Forms.TextBox()
-        Me.TBIdCabecera = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.LbUsuario = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.LbFecha = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GBConsulta.SuspendLayout()
         Me.GBVenta.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         Me.GBListar.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GBConsulta
@@ -169,25 +170,6 @@ Partial Class Venta
         Me.CBTipoDocumento.Name = "CBTipoDocumento"
         Me.CBTipoDocumento.Size = New System.Drawing.Size(145, 30)
         Me.CBTipoDocumento.TabIndex = 0
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox1.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(1113, 12)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(141, 56)
-        Me.GroupBox1.TabIndex = 26
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Fecha de Venta"
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(7, 24)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(126, 26)
-        Me.DateTimePicker1.TabIndex = 27
         '
         'GBListar
         '
@@ -517,8 +499,8 @@ Partial Class Venta
         'GroupBox5
         '
         Me.GroupBox5.Controls.Add(Me.TBCodigo)
-        Me.GroupBox5.Controls.Add(Me.LBCodigo)
         Me.GroupBox5.Controls.Add(Me.BVBuscar)
+        Me.GroupBox5.Controls.Add(Me.LBCodigo)
         Me.GroupBox5.Controls.Add(Me.TBDniCventa)
         Me.GroupBox5.Controls.Add(Me.TBApellidoCventa)
         Me.GroupBox5.Controls.Add(Me.TBNombreCventa)
@@ -536,20 +518,12 @@ Partial Class Venta
         'TBCodigo
         '
         Me.TBCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TBCodigo.Location = New System.Drawing.Point(133, 105)
+        Me.TBCodigo.Location = New System.Drawing.Point(346, 104)
         Me.TBCodigo.Name = "TBCodigo"
-        Me.TBCodigo.Size = New System.Drawing.Size(82, 26)
+        Me.TBCodigo.Size = New System.Drawing.Size(77, 26)
         Me.TBCodigo.TabIndex = 36
-        '
-        'LBCodigo
-        '
-        Me.LBCodigo.AutoSize = True
-        Me.LBCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBCodigo.Location = New System.Drawing.Point(46, 108)
-        Me.LBCodigo.Name = "LBCodigo"
-        Me.LBCodigo.Size = New System.Drawing.Size(59, 20)
-        Me.LBCodigo.TabIndex = 35
-        Me.LBCodigo.Text = "Codigo"
+        Me.TBCodigo.UseWaitCursor = True
+        Me.TBCodigo.Visible = False
         '
         'BVBuscar
         '
@@ -567,9 +541,20 @@ Partial Class Venta
         Me.BVBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BVBuscar.UseVisualStyleBackColor = False
         '
+        'LBCodigo
+        '
+        Me.LBCodigo.AutoSize = True
+        Me.LBCodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBCodigo.Location = New System.Drawing.Point(281, 106)
+        Me.LBCodigo.Name = "LBCodigo"
+        Me.LBCodigo.Size = New System.Drawing.Size(59, 20)
+        Me.LBCodigo.TabIndex = 35
+        Me.LBCodigo.Text = "Codigo"
+        Me.LBCodigo.Visible = False
+        '
         'TBDniCventa
         '
-        Me.TBDniCventa.Location = New System.Drawing.Point(285, 104)
+        Me.TBDniCventa.Location = New System.Drawing.Point(133, 104)
         Me.TBDniCventa.Name = "TBDniCventa"
         Me.TBDniCventa.Size = New System.Drawing.Size(138, 26)
         Me.TBDniCventa.TabIndex = 5
@@ -591,7 +576,7 @@ Partial Class Venta
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(221, 104)
+        Me.Label6.Location = New System.Drawing.Point(46, 104)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(40, 22)
         Me.Label6.TabIndex = 2
@@ -638,30 +623,63 @@ Partial Class Venta
         Me.Label1.Text = "Nueva Venta"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'TbIdventa
+        'Label14
         '
-        Me.TbIdventa.Location = New System.Drawing.Point(1013, 36)
-        Me.TbIdventa.Name = "TbIdventa"
-        Me.TbIdventa.Size = New System.Drawing.Size(83, 20)
-        Me.TbIdventa.TabIndex = 44
-        Me.TbIdventa.Visible = False
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Trebuchet MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(868, 12)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(79, 24)
+        Me.Label14.TabIndex = 46
+        Me.Label14.Text = "Usuario:"
         '
-        'TBIdCabecera
+        'LbUsuario
         '
-        Me.TBIdCabecera.Location = New System.Drawing.Point(910, 35)
-        Me.TBIdCabecera.Name = "TBIdCabecera"
-        Me.TBIdCabecera.Size = New System.Drawing.Size(83, 20)
-        Me.TBIdCabecera.TabIndex = 45
-        Me.TBIdCabecera.Visible = False
+        Me.LbUsuario.AutoSize = True
+        Me.LbUsuario.Font = New System.Drawing.Font("Trebuchet MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbUsuario.Location = New System.Drawing.Point(988, 12)
+        Me.LbUsuario.Name = "LbUsuario"
+        Me.LbUsuario.Size = New System.Drawing.Size(0, 24)
+        Me.LbUsuario.TabIndex = 47
         '
-        'Venta
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Trebuchet MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(640, 310)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(0, 24)
+        Me.Label15.TabIndex = 48
+        '
+        'LbFecha
+        '
+        Me.LbFecha.AutoSize = True
+        Me.LbFecha.Font = New System.Drawing.Font("Trebuchet MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbFecha.Location = New System.Drawing.Point(26, 29)
+        Me.LbFecha.Name = "LbFecha"
+        Me.LbFecha.Size = New System.Drawing.Size(0, 24)
+        Me.LbFecha.TabIndex = 44
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.LbFecha)
+        Me.GroupBox1.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(1104, 9)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(150, 56)
+        Me.GroupBox1.TabIndex = 26
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Fecha de Venta"
+        '
+        'Fecha
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1280, 645)
-        Me.Controls.Add(Me.TBIdCabecera)
-        Me.Controls.Add(Me.TbIdventa)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.LbUsuario)
+        Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.GroupBox5)
@@ -671,11 +689,10 @@ Partial Class Venta
         Me.Controls.Add(Me.GBVenta)
         Me.Controls.Add(Me.GBConsulta)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Venta"
+        Me.Name = "Fecha"
         Me.GBConsulta.ResumeLayout(False)
         Me.GBConsulta.PerformLayout()
         Me.GBVenta.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
         Me.GBListar.ResumeLayout(False)
         Me.GBListar.PerformLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -684,6 +701,8 @@ Partial Class Venta
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -696,8 +715,6 @@ Partial Class Venta
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents GBVenta As GroupBox
     Friend WithEvents CBTipoDocumento As ComboBox
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents GBListar As GroupBox
     Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents GroupBox2 As GroupBox
@@ -739,6 +756,9 @@ Partial Class Venta
     Friend WithEvents Remover As DataGridViewButtonColumn
     Friend WithEvents TBCodigo As TextBox
     Friend WithEvents LBCodigo As Label
-    Friend WithEvents TbIdventa As TextBox
-    Friend WithEvents TBIdCabecera As TextBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents LbUsuario As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents LbFecha As Label
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

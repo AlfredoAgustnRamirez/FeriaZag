@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1ccb221871784af7a2f82f7dd6e12c4e" Name="Diagram1">
+        <EntityTypeShape EntityType="FeriaZagModel.Categoria" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaZagModel.Clientes" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaZagModel.Perfil" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaZagModel.Productos" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaZagModel.Proveedores" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaZagModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaZagModel.Usuario" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaZagModel.Venta_Cabecera" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FeriaZagModel.Venta_Detalle" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
+        <AssociationConnector Association="FeriaZagModel.FK_Productos_Categoria" ManuallyRouted="false" />
+        <AssociationConnector Association="FeriaZagModel.FK_Venta_Cabecera_Clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="FeriaZagModel.FK_Usuario_Perfil" ManuallyRouted="false" />
+        <AssociationConnector Association="FeriaZagModel.FK_Producto" ManuallyRouted="false" />
+        <AssociationConnector Association="FeriaZagModel.FK_Cabecera_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="FeriaZagModel.FK_Venta_Detalle_Venta_Cabecera" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

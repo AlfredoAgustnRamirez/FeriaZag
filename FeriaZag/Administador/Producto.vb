@@ -27,6 +27,7 @@ Public Class Producto
         ComboBox2.DisplayMember = "Categoria"
 
         obj.llenarDataGridview(DataGridView1)
+
     End Sub
 #End Region
 
@@ -37,6 +38,7 @@ Public Class Producto
         TBNombre.Text = DataGridView1.Item(2, e.RowIndex).Value
         TBPrecio.Text = DataGridView1.Item(3, e.RowIndex).Value
         TBStock.Text = DataGridView1.Item(4, e.RowIndex).Value
+        TBActivo.Text = DataGridView1.Item(5, e.RowIndex).Value
         ICBAgregar.Enabled = False
         ICBModificar.Enabled = True
         ICBEliminar.Enabled = True
@@ -48,7 +50,7 @@ Public Class Producto
         If TBNombre.Text = "" Or TBPrecio.Text = "" Or TBStock.Text = "" Then
             MsgBox("Error debe Completar todos los campos", vbCritical, "Error")
         Else
-            obj.RegistrarProducto(TBNombre.Text, ComboBox1.SelectedValue, TBPrecio.Text, TBStock.Text)
+            obj.RegistrarProducto(TBNombre.Text, ComboBox1.SelectedValue, TBPrecio.Text, TBStock.Text, TBActivo.Text)
             obj.llenarDataGridview(DataGridView1)
         End If
         limpiar()
@@ -67,7 +69,7 @@ Public Class Producto
 
 #Region "Boton Modificar"
     Private Sub ICBModificar_Click(sender As Object, e As EventArgs) Handles ICBModificar.Click
-        obj.ModificarProducto(TBCodigo.Text, ComboBox1.SelectedValue, TBNombre.Text, TBPrecio.Text, TBStock.Text)
+        obj.ModificarProducto(TBCodigo.Text, ComboBox1.SelectedValue, TBNombre.Text, TBPrecio.Text, TBStock.Text, TBActivo.Text)
         obj.llenarDataGridview(DataGridView1)
     End Sub
 #End Region
