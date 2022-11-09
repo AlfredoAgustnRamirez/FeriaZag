@@ -31,7 +31,6 @@ Partial Class Backup
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TBNombreBackup = New System.Windows.Forms.TextBox()
         Me.ICBBase = New FontAwesome.Sharp.IconButton()
-        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.GBConsulta.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -55,7 +54,7 @@ Partial Class Backup
         Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBConsulta.Location = New System.Drawing.Point(251, 146)
         Me.GBConsulta.Name = "GBConsulta"
-        Me.GBConsulta.Size = New System.Drawing.Size(727, 83)
+        Me.GBConsulta.Size = New System.Drawing.Size(811, 83)
         Me.GBConsulta.TabIndex = 22
         Me.GBConsulta.TabStop = False
         Me.GBConsulta.Text = "Directorio"
@@ -67,9 +66,9 @@ Partial Class Backup
         Me.ICBBuscar.IconColor = System.Drawing.Color.Black
         Me.ICBBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBBuscar.Location = New System.Drawing.Point(582, 24)
+        Me.ICBBuscar.Location = New System.Drawing.Point(650, 19)
         Me.ICBBuscar.Name = "ICBBuscar"
-        Me.ICBBuscar.Size = New System.Drawing.Size(128, 49)
+        Me.ICBBuscar.Size = New System.Drawing.Size(133, 49)
         Me.ICBBuscar.TabIndex = 18
         Me.ICBBuscar.Text = "Examinar"
         Me.ICBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -97,7 +96,7 @@ Partial Class Backup
         Me.GroupBox1.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(440, 254)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(476, 71)
+        Me.GroupBox1.Size = New System.Drawing.Size(547, 71)
         Me.GroupBox1.TabIndex = 23
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Nombre del Backup"
@@ -164,5 +163,4 @@ Partial Class Backup
     Friend WithEvents Label1 As Label
     Friend WithEvents TBNombreBackup As TextBox
     Friend WithEvents ICBBase As FontAwesome.Sharp.IconButton
-    Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
 End Class

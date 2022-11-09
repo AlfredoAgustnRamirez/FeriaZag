@@ -9,7 +9,7 @@ Public Class DProducto
 
 #Region "EliminarProducto"
     Public Function EliminarProducto(codigo As String)
-        Dim eliminar As New SqlCommand("BajaProducto", cnx)
+        Dim eliminar As New SqlCommand("EliminarProductos", cnx)
         eliminar.CommandType = CommandType.StoredProcedure
         eliminar.Parameters.AddWithValue("@Codigo", codigo)
         Conectar()
@@ -31,7 +31,7 @@ Public Class DProducto
 #End Region
 
 #Region "ModificarProducto"
-    Public Function ModificarProducto(codigo As String, idcategoria As String, producto As String, precio As Decimal, stock As Integer, activo As String)
+    Public Function ModificarProducto(codigo As String, idcategoria As String, producto As String, precio As Decimal, stock As Integer)
         Dim modificar As New SqlCommand("ModificarProductos", cnx)
         modificar.CommandType = CommandType.StoredProcedure
         modificar.Parameters.AddWithValue("@Codigo", codigo)
@@ -39,7 +39,6 @@ Public Class DProducto
         modificar.Parameters.AddWithValue("@Producto", producto)
         modificar.Parameters.AddWithValue("@Precio", precio)
         modificar.Parameters.AddWithValue("@Stock", stock)
-        modificar.Parameters.AddWithValue("@Activo", activo)
         Conectar()
         Dim resp As Integer
         Dim respuesta As MsgBoxResult
@@ -58,14 +57,13 @@ Public Class DProducto
 #End Region
 
 #Region "RegistrarProducto"
-    Public Function RegistrarProducto(nombreproducto As String, idcategoria As String, precio As Decimal, stock As Integer, activo As String)
+    Public Function RegistrarProducto(nombreproducto As String, idcategoria As String, precio As Decimal, stock As Integer)
         Dim da As New SqlCommand("RegistrarProductos", cnx)
         da.CommandType = CommandType.StoredProcedure
         da.Parameters.AddWithValue("@Producto", nombreproducto)
         da.Parameters.AddWithValue("@IdCategoria", idcategoria)
         da.Parameters.AddWithValue("@Precio", precio)
         da.Parameters.AddWithValue("@Stock", stock)
-        da.Parameters.AddWithValue("@Activo", activo)
         Conectar()
         Dim resp As Integer
         Try
@@ -115,7 +113,7 @@ Public Class DProducto
 #Region "llenarDataGridView"
     Sub llenarDataGridview(ByVal dgv As DataGridView)
         Try
-            adaptador = New SqlDataAdapter("SelectProductos", cnx)
+            adaptador = New SqlDataAdapter("select Productos.Codigo,Categoria,Producto,Precio,Stock from Productos inner join Categoria on Productos.IdCategoria = Categoria.IdCategoria", cnx)
             dt = New DataTable
             adaptador.Fill(dt)
             dgv.DataSource = dt

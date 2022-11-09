@@ -23,14 +23,13 @@ Partial Class ClienteVendedor
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GBMantenimiento = New System.Windows.Forms.GroupBox()
-        Me.TBActivo = New System.Windows.Forms.TextBox()
-        Me.LBActivo = New System.Windows.Forms.Label()
         Me.TBEmail = New System.Windows.Forms.TextBox()
         Me.LBEmail = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TBCodigoCvendedor = New System.Windows.Forms.TextBox()
         Me.ICBNuevoCvendedor = New FontAwesome.Sharp.IconButton()
         Me.ICBAgregarCvendedor = New FontAwesome.Sharp.IconButton()
+        Me.ICBEliminarCvendedor = New FontAwesome.Sharp.IconButton()
         Me.ICBModificarCvendedor = New FontAwesome.Sharp.IconButton()
         Me.TBDirecciónCvendedor = New System.Windows.Forms.TextBox()
         Me.TBDniCvendedor = New System.Windows.Forms.TextBox()
@@ -59,14 +58,13 @@ Partial Class ClienteVendedor
         '
         'GBMantenimiento
         '
-        Me.GBMantenimiento.Controls.Add(Me.TBActivo)
-        Me.GBMantenimiento.Controls.Add(Me.LBActivo)
         Me.GBMantenimiento.Controls.Add(Me.TBEmail)
         Me.GBMantenimiento.Controls.Add(Me.LBEmail)
         Me.GBMantenimiento.Controls.Add(Me.Label1)
         Me.GBMantenimiento.Controls.Add(Me.TBCodigoCvendedor)
         Me.GBMantenimiento.Controls.Add(Me.ICBNuevoCvendedor)
         Me.GBMantenimiento.Controls.Add(Me.ICBAgregarCvendedor)
+        Me.GBMantenimiento.Controls.Add(Me.ICBEliminarCvendedor)
         Me.GBMantenimiento.Controls.Add(Me.ICBModificarCvendedor)
         Me.GBMantenimiento.Controls.Add(Me.TBDirecciónCvendedor)
         Me.GBMantenimiento.Controls.Add(Me.TBDniCvendedor)
@@ -86,25 +84,9 @@ Partial Class ClienteVendedor
         Me.GBMantenimiento.TabStop = False
         Me.GBMantenimiento.Text = "Datos Cliente"
         '
-        'TBActivo
-        '
-        Me.TBActivo.Location = New System.Drawing.Point(135, 353)
-        Me.TBActivo.Name = "TBActivo"
-        Me.TBActivo.Size = New System.Drawing.Size(181, 26)
-        Me.TBActivo.TabIndex = 30
-        '
-        'LBActivo
-        '
-        Me.LBActivo.AutoSize = True
-        Me.LBActivo.Location = New System.Drawing.Point(44, 356)
-        Me.LBActivo.Name = "LBActivo"
-        Me.LBActivo.Size = New System.Drawing.Size(62, 22)
-        Me.LBActivo.TabIndex = 29
-        Me.LBActivo.Text = "Activo:"
-        '
         'TBEmail
         '
-        Me.TBEmail.Location = New System.Drawing.Point(138, 251)
+        Me.TBEmail.Location = New System.Drawing.Point(137, 295)
         Me.TBEmail.Name = "TBEmail"
         Me.TBEmail.Size = New System.Drawing.Size(183, 26)
         Me.TBEmail.TabIndex = 28
@@ -112,7 +94,7 @@ Partial Class ClienteVendedor
         'LBEmail
         '
         Me.LBEmail.AutoSize = True
-        Me.LBEmail.Location = New System.Drawing.Point(41, 255)
+        Me.LBEmail.Location = New System.Drawing.Point(43, 298)
         Me.LBEmail.Name = "LBEmail"
         Me.LBEmail.Size = New System.Drawing.Size(55, 22)
         Me.LBEmail.TabIndex = 27
@@ -143,7 +125,7 @@ Partial Class ClienteVendedor
         Me.ICBNuevoCvendedor.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBNuevoCvendedor.IconSize = 40
         Me.ICBNuevoCvendedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBNuevoCvendedor.Location = New System.Drawing.Point(40, 403)
+        Me.ICBNuevoCvendedor.Location = New System.Drawing.Point(41, 397)
         Me.ICBNuevoCvendedor.Name = "ICBNuevoCvendedor"
         Me.ICBNuevoCvendedor.Size = New System.Drawing.Size(126, 49)
         Me.ICBNuevoCvendedor.TabIndex = 23
@@ -159,13 +141,29 @@ Partial Class ClienteVendedor
         Me.ICBAgregarCvendedor.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBAgregarCvendedor.IconSize = 40
         Me.ICBAgregarCvendedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBAgregarCvendedor.Location = New System.Drawing.Point(190, 403)
+        Me.ICBAgregarCvendedor.Location = New System.Drawing.Point(191, 397)
         Me.ICBAgregarCvendedor.Name = "ICBAgregarCvendedor"
         Me.ICBAgregarCvendedor.Size = New System.Drawing.Size(129, 49)
         Me.ICBAgregarCvendedor.TabIndex = 21
         Me.ICBAgregarCvendedor.Text = "Guardar  "
         Me.ICBAgregarCvendedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.ICBAgregarCvendedor.UseVisualStyleBackColor = False
+        '
+        'ICBEliminarCvendedor
+        '
+        Me.ICBEliminarCvendedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ICBEliminarCvendedor.IconChar = FontAwesome.Sharp.IconChar.TrashAlt
+        Me.ICBEliminarCvendedor.IconColor = System.Drawing.Color.Black
+        Me.ICBEliminarCvendedor.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.ICBEliminarCvendedor.IconSize = 40
+        Me.ICBEliminarCvendedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ICBEliminarCvendedor.Location = New System.Drawing.Point(190, 469)
+        Me.ICBEliminarCvendedor.Name = "ICBEliminarCvendedor"
+        Me.ICBEliminarCvendedor.Size = New System.Drawing.Size(129, 50)
+        Me.ICBEliminarCvendedor.TabIndex = 22
+        Me.ICBEliminarCvendedor.Text = "Eliminar  "
+        Me.ICBEliminarCvendedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ICBEliminarCvendedor.UseVisualStyleBackColor = False
         '
         'ICBModificarCvendedor
         '
@@ -175,7 +173,7 @@ Partial Class ClienteVendedor
         Me.ICBModificarCvendedor.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBModificarCvendedor.IconSize = 40
         Me.ICBModificarCvendedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBModificarCvendedor.Location = New System.Drawing.Point(114, 467)
+        Me.ICBModificarCvendedor.Location = New System.Drawing.Point(40, 469)
         Me.ICBModificarCvendedor.Name = "ICBModificarCvendedor"
         Me.ICBModificarCvendedor.Size = New System.Drawing.Size(126, 50)
         Me.ICBModificarCvendedor.TabIndex = 20
@@ -185,14 +183,14 @@ Partial Class ClienteVendedor
         '
         'TBDirecciónCvendedor
         '
-        Me.TBDirecciónCvendedor.Location = New System.Drawing.Point(138, 303)
+        Me.TBDirecciónCvendedor.Location = New System.Drawing.Point(139, 346)
         Me.TBDirecciónCvendedor.Name = "TBDirecciónCvendedor"
         Me.TBDirecciónCvendedor.Size = New System.Drawing.Size(181, 26)
         Me.TBDirecciónCvendedor.TabIndex = 19
         '
         'TBDniCvendedor
         '
-        Me.TBDniCvendedor.Location = New System.Drawing.Point(137, 164)
+        Me.TBDniCvendedor.Location = New System.Drawing.Point(138, 194)
         Me.TBDniCvendedor.Name = "TBDniCvendedor"
         Me.TBDniCvendedor.Size = New System.Drawing.Size(181, 26)
         Me.TBDniCvendedor.TabIndex = 18
@@ -200,7 +198,7 @@ Partial Class ClienteVendedor
         'LDirección
         '
         Me.LDirección.AutoSize = True
-        Me.LDirección.Location = New System.Drawing.Point(39, 307)
+        Me.LDirección.Location = New System.Drawing.Point(43, 351)
         Me.LDirección.Name = "LDirección"
         Me.LDirección.Size = New System.Drawing.Size(84, 22)
         Me.LDirección.TabIndex = 14
@@ -209,7 +207,7 @@ Partial Class ClienteVendedor
         'LNombre
         '
         Me.LNombre.AutoSize = True
-        Me.LNombre.Location = New System.Drawing.Point(40, 81)
+        Me.LNombre.Location = New System.Drawing.Point(38, 94)
         Me.LNombre.Name = "LNombre"
         Me.LNombre.Size = New System.Drawing.Size(72, 22)
         Me.LNombre.TabIndex = 2
@@ -217,7 +215,7 @@ Partial Class ClienteVendedor
         '
         'TBNombreCvendedor
         '
-        Me.TBNombreCvendedor.Location = New System.Drawing.Point(140, 77)
+        Me.TBNombreCvendedor.Location = New System.Drawing.Point(138, 90)
         Me.TBNombreCvendedor.Name = "TBNombreCvendedor"
         Me.TBNombreCvendedor.Size = New System.Drawing.Size(181, 26)
         Me.TBNombreCvendedor.TabIndex = 12
@@ -225,7 +223,7 @@ Partial Class ClienteVendedor
         'LApellido
         '
         Me.LApellido.AutoSize = True
-        Me.LApellido.Location = New System.Drawing.Point(37, 124)
+        Me.LApellido.Location = New System.Drawing.Point(38, 144)
         Me.LApellido.Name = "LApellido"
         Me.LApellido.Size = New System.Drawing.Size(74, 22)
         Me.LApellido.TabIndex = 4
@@ -233,7 +231,7 @@ Partial Class ClienteVendedor
         '
         'TBApellidoCvendedor
         '
-        Me.TBApellidoCvendedor.Location = New System.Drawing.Point(138, 120)
+        Me.TBApellidoCvendedor.Location = New System.Drawing.Point(139, 140)
         Me.TBApellidoCvendedor.Name = "TBApellidoCvendedor"
         Me.TBApellidoCvendedor.Size = New System.Drawing.Size(181, 26)
         Me.TBApellidoCvendedor.TabIndex = 9
@@ -241,7 +239,7 @@ Partial Class ClienteVendedor
         'LDni
         '
         Me.LDni.AutoSize = True
-        Me.LDni.Location = New System.Drawing.Point(42, 168)
+        Me.LDni.Location = New System.Drawing.Point(43, 198)
         Me.LDni.Name = "LDni"
         Me.LDni.Size = New System.Drawing.Size(40, 22)
         Me.LDni.TabIndex = 3
@@ -250,7 +248,7 @@ Partial Class ClienteVendedor
         'LTelefono
         '
         Me.LTelefono.AutoSize = True
-        Me.LTelefono.Location = New System.Drawing.Point(41, 212)
+        Me.LTelefono.Location = New System.Drawing.Point(39, 251)
         Me.LTelefono.Name = "LTelefono"
         Me.LTelefono.Size = New System.Drawing.Size(77, 22)
         Me.LTelefono.TabIndex = 1
@@ -258,7 +256,7 @@ Partial Class ClienteVendedor
         '
         'TBTelefonoCvendedor
         '
-        Me.TBTelefonoCvendedor.Location = New System.Drawing.Point(137, 209)
+        Me.TBTelefonoCvendedor.Location = New System.Drawing.Point(139, 246)
         Me.TBTelefonoCvendedor.Name = "TBTelefonoCvendedor"
         Me.TBTelefonoCvendedor.Size = New System.Drawing.Size(181, 26)
         Me.TBTelefonoCvendedor.TabIndex = 11
@@ -399,6 +397,7 @@ Partial Class ClienteVendedor
     Friend WithEvents TBTelefonoCvendedor As TextBox
     Friend WithEvents ICBNuevoCvendedor As FontAwesome.Sharp.IconButton
     Friend WithEvents ICBAgregarCvendedor As FontAwesome.Sharp.IconButton
+    Friend WithEvents ICBEliminarCvendedor As FontAwesome.Sharp.IconButton
     Friend WithEvents ICBModificarCvendedor As FontAwesome.Sharp.IconButton
     Friend WithEvents GBListar As GroupBox
     Friend WithEvents DataGridView2 As DataGridView
@@ -413,6 +412,4 @@ Partial Class ClienteVendedor
     Friend WithEvents TBCodigoCvendedor As TextBox
     Friend WithEvents TBEmail As TextBox
     Friend WithEvents LBEmail As Label
-    Friend WithEvents TBActivo As TextBox
-    Friend WithEvents LBActivo As Label
 End Class

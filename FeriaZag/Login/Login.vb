@@ -5,7 +5,6 @@ Public Class Login
     Private Sub btnIngresar_Click_1(sender As Object, e As EventArgs) Handles btnIngresar.Click
         VarUsuario = tbUsuario.Text
         VarContraseña = tbContraseña.Text
-
         Conectar()
         Try
             If usuarioRegistrado(VarUsuario) = True Then
@@ -42,12 +41,6 @@ Public Class Login
         If MsgBox("¿Esta Seguro de salir del Sistema?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Mensaje del Sistema") = MsgBoxResult.Yes Then
             End
         End If
-    End Sub
-#End Region
-
-#Region "Carga de datos"
-    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 #End Region
 

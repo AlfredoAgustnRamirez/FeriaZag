@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-Public Class DUsuario
+Public Class DGerente
 
 #Region "Variables"
     Private cmb As SqlCommandBuilder
@@ -8,19 +8,18 @@ Public Class DUsuario
 #End Region
 
 #Region "Registrar Usuario"
-    Public Function RegistrarUsuario(id_perfil As Integer, nombre As String, apellido As String, dni As Integer, telefono As Long, direccion As String, email As String, usuario As String, contraseña As String, activo As String)
+    Public Function RegistrarUsuario(nombre As String, apellido As String, dni As Integer, telefono As Long, direccion As String, email As String, id_perfil As Integer, usuario As String, contraseña As String)
         Dim da As New SqlCommand("RegistrarUsuario", cnx)
         da.CommandType = CommandType.StoredProcedure
-        da.Parameters.AddWithValue("@Id_Perfil", id_perfil)
         da.Parameters.AddWithValue("@Nombre", nombre)
         da.Parameters.AddWithValue("@Apellido", apellido)
         da.Parameters.AddWithValue("@Dni", dni)
         da.Parameters.AddWithValue("@Telefono", telefono)
         da.Parameters.AddWithValue("@Direccion", direccion)
         da.Parameters.AddWithValue("@Email", email)
+        da.Parameters.AddWithValue("@Id_Perfil", id_perfil)
         da.Parameters.AddWithValue("@Usuario", usuario)
         da.Parameters.AddWithValue("@Contraseña", contraseña)
-        da.Parameters.AddWithValue("@Activo", activo)
         Conectar()
         Dim resp As Integer
         Try
@@ -37,7 +36,7 @@ Public Class DUsuario
 #Region "llenarDataGridView Usuario"
     Sub llenarDataGridview(ByVal dgv As DataGridView)
         Try
-            adaptador = New SqlDataAdapter("SelectUsuarios", cnx)
+            adaptador = New SqlDataAdapter("select Usuario.Codigo,nombre,Apellido,Dni,Telefono,Direccion,Email,Perfil,Usuario,Contraseña from Usuario inner join Perfil on Usuario.Id_Perfil = Perfil.Id_Perfil", cnx)
             dt = New DataTable
             adaptador.Fill(dt)
             dgv.DataSource = dt
@@ -48,20 +47,19 @@ Public Class DUsuario
 #End Region
 
 #Region "Modificar Usuario"
-    Public Function ModificarUsuario(id_usuario As Integer, IdPerfil As Integer, Nombre As String, Apellido As String, Dni As Integer, Telefono As Long, Direccion As String, Email As String, Usuario As String, Contraseña As String, activo As String)
+    Public Function ModificarUsuario(Codigo As String, Nombre As String, Apellido As String, Dni As Integer, Telefono As Long, Direccion As String, Email As String, Id_Perfil As Integer, Usuario As String, Contraseña As String)
         Dim modificar As New SqlCommand("ModificarUsuario", cnx)
         modificar.CommandType = CommandType.StoredProcedure
-        modificar.Parameters.AddWithValue("@Id_Usuario", id_usuario)
-        modificar.Parameters.AddWithValue("@Id_Perfil", IdPerfil)
+        modificar.Parameters.AddWithValue("@Codigo", Codigo)
         modificar.Parameters.AddWithValue("@Nombre", Nombre)
         modificar.Parameters.AddWithValue("@Apellido", Apellido)
         modificar.Parameters.AddWithValue("@Dni", Dni)
         modificar.Parameters.AddWithValue("@Telefono", Telefono)
         modificar.Parameters.AddWithValue("@Direccion", Direccion)
         modificar.Parameters.AddWithValue("@Email", Email)
+        modificar.Parameters.AddWithValue("@Id_Perfil", Id_Perfil)
         modificar.Parameters.AddWithValue("@Usuario", Usuario)
         modificar.Parameters.AddWithValue("@Contraseña", Contraseña)
-        modificar.Parameters.AddWithValue("@Activo", activo)
         Conectar()
         Dim resp As Integer
         Dim respuesta As MsgBoxResult
@@ -69,7 +67,7 @@ Public Class DUsuario
         If respuesta = 6 Then
             Try
                 resp = modificar.ExecuteNonQuery
-                MsgBox("Modificado con exito " + idusuario, MsgBoxStyle.Information)
+                MsgBox("Modificado con exito " + Codigo, MsgBoxStyle.Information)
                 Desconectar()
             Catch ex As Exception
                 MsgBox("Error al modificar producto", MsgBoxStyle.Critical)
@@ -80,10 +78,10 @@ Public Class DUsuario
 #End Region
 
 #Region "Eliminar Usuario"
-    Public Function EliminarUsuario(idusuario As String)
-        Dim eliminar As New SqlCommand("BajaUsuario", cnx)
+    Public Function EliminarUsuario(Codigo As String)
+        Dim eliminar As New SqlCommand("EliminarUsuario", cnx)
         eliminar.CommandType = CommandType.StoredProcedure
-        eliminar.Parameters.AddWithValue("@Id_Usuario", idusuario)
+        eliminar.Parameters.AddWithValue("@Codigo", Codigo)
         Conectar()
         Dim resp As Integer
         Dim respuesta As MsgBoxResult
@@ -91,7 +89,7 @@ Public Class DUsuario
         If respuesta = 6 Then
             Try
                 resp = eliminar.ExecuteNonQuery
-                MsgBox("Eliminado con exito " + idusuario, MsgBoxStyle.Information)
+                MsgBox("Eliminado con exito " + Codigo, MsgBoxStyle.Information)
                 Desconectar()
             Catch ex As Exception
                 MsgBox("Error al eliminar producto", MsgBoxStyle.Critical)
@@ -99,42 +97,6 @@ Public Class DUsuario
 
         End If
         Return resp
-    End Function
-#End Region
-
-#Region "Buscar Usuario por Dni"
-    Public Function BuscarUsuarioPorDni(Dni As Integer) As DataTable
-        Dim cmd As SqlCommand = New SqlCommand("BuscarUsuarioPorDni", cnx)
-        cmd.CommandType = CommandType.StoredProcedure
-        cmd.Parameters.AddWithValue("@Dni", Dni)
-        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
-        Dim dtable1 As DataTable = New DataTable()
-        da.Fill(dtable1)
-        Return dtable1
-    End Function
-#End Region
-
-#Region "Obtener id del Usuario"
-    Public Function ObtenerIdUsuario(Usuario As String)
-        Dim id As Integer
-        Conectar()
-        Try
-            Dim cmd As New SqlCommand("ObtenerIdUsuario", cnx)
-            cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("@Usuario", Usuario)
-            Dim lector As SqlDataReader
-            lector = cmd.ExecuteReader
-
-            If lector.HasRows Then
-                lector.Read()
-                id = Convert.ToInt32(lector(0).ToString)
-                lector.Close()
-            End If
-            Desconectar()
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-        Return id
     End Function
 #End Region
 

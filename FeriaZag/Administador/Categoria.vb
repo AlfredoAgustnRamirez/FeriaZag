@@ -22,7 +22,7 @@
         If TBCategoria.Text = "" Then
             MsgBox("Error debe Completar todos los campos", vbCritical, "Error")
         Else
-            cat.RegistrarCategoria(TBCategoria.Text, TBActivo.Text)
+            cat.RegistrarCategoria(TBCategoria.Text)
             cat.llenarDataGridview(DataGridView1)
         End If
         limpiar()
@@ -34,7 +34,6 @@
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         TBCodigoCategoria.Text = DataGridView1.Item(0, e.RowIndex).Value
         TBCategoria.Text = DataGridView1.Item(1, e.RowIndex).Value
-        TBActivo.Text = DataGridView1.Item(2, e.RowIndex).Value
         ICBAgregarCategoria.Enabled = False
         ICBModificarCategoria.Enabled = True
         ICBEliminarCategoria.Enabled = True
@@ -59,7 +58,7 @@
 
 #Region "Boton Modificar Categoria"
     Private Sub ICBModificarCategoria_Click(sender As Object, e As EventArgs) Handles ICBModificarCategoria.Click
-        cat.ModificarCategoria(TBCodigoCategoria.Text, TBCategoria.Text, TBActivo.Text)
+        cat.ModificarCategoria(TBCodigoCategoria.Text, TBCategoria.Text)
         cat.llenarDataGridview(DataGridView1)
     End Sub
 #End Region
