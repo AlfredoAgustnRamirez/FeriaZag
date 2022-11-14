@@ -8,13 +8,15 @@ Public Class DVenta
 #End Region
 
 #Region "Registrar Venta"
-    Public Function RegistrarVenta(id_cliente As String, id_usuario As Integer, fecha As Date, total As Decimal)
+    Public Function RegistrarVenta(id_cliente As String, id_usuario As Integer, fecha As Date, total As Decimal, comprobante As String, mediopago As String)
         Dim da As New SqlCommand("RegistrarVenta", cnx)
         da.CommandType = CommandType.StoredProcedure
         da.Parameters.AddWithValue("@Id_Cliente", id_cliente)
         da.Parameters.AddWithValue("@Id_Usuario", id_usuario)
         da.Parameters.AddWithValue("@Fecha", fecha)
         da.Parameters.AddWithValue("@Total", total)
+        da.Parameters.AddWithValue("@Comprobante", comprobante)
+        da.Parameters.AddWithValue("@MedioPago", mediopago)
         Conectar()
         Dim resp As Integer
         Try

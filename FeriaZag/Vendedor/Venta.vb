@@ -141,11 +141,16 @@ Public Class Venta
     Private Sub BVCobrarVenta_Click(sender As Object, e As EventArgs) Handles BVCobrarVenta.Click
         Dim fechaActual As Date = Date.Now
         Dim subtotal As Decimal
+        Dim comprobante As String
+        Dim mediopago As String
+
+        comprobante = CBTipoDocumento.Text
+        mediopago = CBPago.Text
 
         idusuario = usu.ObtenerIdUsuario(VarUsuario)
 
         If DataGridView2.Rows.Count > 0 Then
-            ven.RegistrarVenta(TBCodigo.Text, idusuario, fechaActual, TBTotalVenta.Text)
+            ven.RegistrarVenta(TBCodigo.Text, idusuario, fechaActual, TBTotalVenta.Text, comprobante, mediopago)
             idcabecera = ven.ObtenerIdCabecera()
 
             For Each Fila As DataGridViewRow In DataGridView2.Rows
