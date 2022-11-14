@@ -27,9 +27,10 @@ Partial Class ProductoVendedor
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GBMantenimiento = New System.Windows.Forms.GroupBox()
+        Me.TBActivo = New System.Windows.Forms.TextBox()
+        Me.LBActivo = New System.Windows.Forms.Label()
         Me.TBStockPvendedor = New System.Windows.Forms.TextBox()
         Me.LStock = New System.Windows.Forms.Label()
-        Me.CBcategoriaPvendedor = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TBCodigo = New System.Windows.Forms.TextBox()
         Me.LNombre = New System.Windows.Forms.Label()
@@ -46,8 +47,7 @@ Partial Class ProductoVendedor
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TBNombre2Pvendedor = New System.Windows.Forms.TextBox()
         Me.LbProductos = New System.Windows.Forms.Label()
-        Me.TBActivo = New System.Windows.Forms.TextBox()
-        Me.LBActivo = New System.Windows.Forms.Label()
+        Me.TbCategoria = New System.Windows.Forms.TextBox()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBListar.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,11 +56,11 @@ Partial Class ProductoVendedor
         '
         'GBMantenimiento
         '
+        Me.GBMantenimiento.Controls.Add(Me.TbCategoria)
         Me.GBMantenimiento.Controls.Add(Me.TBActivo)
         Me.GBMantenimiento.Controls.Add(Me.LBActivo)
         Me.GBMantenimiento.Controls.Add(Me.TBStockPvendedor)
         Me.GBMantenimiento.Controls.Add(Me.LStock)
-        Me.GBMantenimiento.Controls.Add(Me.CBcategoriaPvendedor)
         Me.GBMantenimiento.Controls.Add(Me.Label2)
         Me.GBMantenimiento.Controls.Add(Me.TBCodigo)
         Me.GBMantenimiento.Controls.Add(Me.LNombre)
@@ -75,6 +75,22 @@ Partial Class ProductoVendedor
         Me.GBMantenimiento.TabIndex = 21
         Me.GBMantenimiento.TabStop = False
         Me.GBMantenimiento.Text = "Datos Productos"
+        '
+        'TBActivo
+        '
+        Me.TBActivo.Location = New System.Drawing.Point(119, 400)
+        Me.TBActivo.Name = "TBActivo"
+        Me.TBActivo.Size = New System.Drawing.Size(216, 26)
+        Me.TBActivo.TabIndex = 32
+        '
+        'LBActivo
+        '
+        Me.LBActivo.AutoSize = True
+        Me.LBActivo.Location = New System.Drawing.Point(28, 403)
+        Me.LBActivo.Name = "LBActivo"
+        Me.LBActivo.Size = New System.Drawing.Size(62, 22)
+        Me.LBActivo.TabIndex = 31
+        Me.LBActivo.Text = "Activo:"
         '
         'TBStockPvendedor
         '
@@ -91,14 +107,6 @@ Partial Class ProductoVendedor
         Me.LStock.Size = New System.Drawing.Size(49, 22)
         Me.LStock.TabIndex = 14
         Me.LStock.Text = "Stock"
-        '
-        'CBcategoriaPvendedor
-        '
-        Me.CBcategoriaPvendedor.FormattingEnabled = True
-        Me.CBcategoriaPvendedor.Location = New System.Drawing.Point(119, 212)
-        Me.CBcategoriaPvendedor.Name = "CBcategoriaPvendedor"
-        Me.CBcategoriaPvendedor.Size = New System.Drawing.Size(216, 30)
-        Me.CBcategoriaPvendedor.TabIndex = 13
         '
         'Label2
         '
@@ -284,21 +292,12 @@ Partial Class ProductoVendedor
         Me.LbProductos.TabIndex = 19
         Me.LbProductos.Text = "Productos "
         '
-        'TBActivo
+        'TbCategoria
         '
-        Me.TBActivo.Location = New System.Drawing.Point(119, 400)
-        Me.TBActivo.Name = "TBActivo"
-        Me.TBActivo.Size = New System.Drawing.Size(216, 26)
-        Me.TBActivo.TabIndex = 32
-        '
-        'LBActivo
-        '
-        Me.LBActivo.AutoSize = True
-        Me.LBActivo.Location = New System.Drawing.Point(28, 403)
-        Me.LBActivo.Name = "LBActivo"
-        Me.LBActivo.Size = New System.Drawing.Size(62, 22)
-        Me.LBActivo.TabIndex = 31
-        Me.LBActivo.Text = "Activo:"
+        Me.TbCategoria.Location = New System.Drawing.Point(119, 213)
+        Me.TbCategoria.Name = "TbCategoria"
+        Me.TbCategoria.Size = New System.Drawing.Size(216, 26)
+        Me.TbCategoria.TabIndex = 33
         '
         'ProductoVendedor
         '
@@ -327,7 +326,6 @@ Partial Class ProductoVendedor
     Friend WithEvents GBMantenimiento As GroupBox
     Friend WithEvents TBStockPvendedor As TextBox
     Friend WithEvents LStock As Label
-    Friend WithEvents CBcategoriaPvendedor As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents TBCodigo As TextBox
     Friend WithEvents LNombre As Label
@@ -346,4 +344,5 @@ Partial Class ProductoVendedor
     Friend WithEvents LbProductos As Label
     Friend WithEvents TBActivo As TextBox
     Friend WithEvents LBActivo As Label
+    Friend WithEvents TbCategoria As TextBox
 End Class

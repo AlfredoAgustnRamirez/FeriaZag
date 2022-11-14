@@ -11,6 +11,7 @@ Public Class Venta
 #Region "Carga de Ventas"
     Private Sub Venta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LbUsuario.Text = VarUsuario
+        LbFecha.Text = Format(Date.Now, "dd/MM/yyyy")
         TBId.Text = ven.ObtenerIdVenta()
         Desconectar()
     End Sub
@@ -82,13 +83,16 @@ Public Class Venta
 
 #Region "Boton Agregar"
     Private Sub BVAgregarP_Click(sender As Object, e As EventArgs) Handles BVAgregarP.Click
-        If TbStock.Text >= NumericUpDown1.Value Then
+        If NumericUpDown1.Value = 0 Then
+            MsgBox("Cantidad minima es 1", MsgBoxStyle.Critical)
+        ElseIf TbStock.Text >= NumericUpDown1.Value Then
             DataGridView2.Rows.Add(TBCodigoPventa.Text, TBNombreProducto.Text, CBCategoriaPventa.Text,
             TBOPrecioPventa.Text, NumericUpDown1.Value, (TBOPrecioPventa.Text * NumericUpDown1.Value), "Quitar")
             TBTotalVenta.Text = " $ " & FormatNumber(obj.Sumar("SubTotal", DataGridView2), 2).ToString
         Else
             MsgBox("Stock insuficiente", MsgBoxStyle.Critical)
         End If
+
     End Sub
 #End Region
 
@@ -140,20 +144,25 @@ Public Class Venta
 
         idusuario = usu.ObtenerIdUsuario(VarUsuario)
 
-        ven.RegistrarVenta(TBCodigo.Text, idusuario, fechaActual, TBTotalVenta.Text)
-        idcabecera = ven.ObtenerIdCabecera()
+        If DataGridView2.Rows.Count > 0 Then
+            ven.RegistrarVenta(TBCodigo.Text, idusuario, fechaActual, TBTotalVenta.Text)
+            idcabecera = ven.ObtenerIdCabecera()
 
-        For Each Fila As DataGridViewRow In DataGridView2.Rows
-            TBCodigo.Text = Convert.ToString(Fila.Cells("Codigo").Value)
-            TBOPrecioPventa.Text = Convert.ToDecimal(Fila.Cells("Precio").Value)
-            NumericUpDown1.Value = Convert.ToInt32(Fila.Cells("Cantidad").Value)
-            subtotal = Convert.ToDecimal(Fila.Cells("SubTotal").Value)
-            ven.RegistrarVentaDetalle(TBCodigo.Text, idcabecera, TBOPrecioPventa.Text, NumericUpDown1.Value, subtotal)
-            ven.Disminuirstock(TBCodigo.Text, NumericUpDown1.Value)
-            ven.GenerarComprobante(idcabecera)
-        Next
-        MsgBox("Registrado con exito ", MsgBoxStyle.Information)
+            For Each Fila As DataGridViewRow In DataGridView2.Rows
+                TBCodigo.Text = Convert.ToString(Fila.Cells("Codigo").Value)
+                TBOPrecioPventa.Text = Convert.ToDecimal(Fila.Cells("Precio").Value)
+                NumericUpDown1.Value = Convert.ToInt32(Fila.Cells("Cantidad").Value)
+                subtotal = Convert.ToDecimal(Fila.Cells("SubTotal").Value)
+                ven.RegistrarVentaDetalle(TBCodigo.Text, idcabecera, TBOPrecioPventa.Text, NumericUpDown1.Value, subtotal)
+                ven.Disminuirstock(TBCodigo.Text, NumericUpDown1.Value)
+                ven.GenerarComprobante(idcabecera)
+            Next
+            MsgBox("Registrado con exito ", MsgBoxStyle.Information)
+        Else
+            MsgBox("Aun no hay productos", MsgBoxStyle.Critical)
+        End If
     End Sub
+
 #End Region
 
 #Region "Imprimir factura"
