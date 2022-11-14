@@ -80,6 +80,9 @@ Partial Class Venta
         Me.Label14 = New System.Windows.Forms.Label()
         Me.LbUsuario = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.TBId = New System.Windows.Forms.TextBox()
+        Me.TbStock = New System.Windows.Forms.TextBox()
+        Me.LbStock = New System.Windows.Forms.Label()
         Me.GBConsulta.SuspendLayout()
         Me.GBVenta.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -382,6 +385,8 @@ Partial Class Venta
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.TbStock)
+        Me.GroupBox2.Controls.Add(Me.LbStock)
         Me.GroupBox2.Controls.Add(Me.TBNombreProducto)
         Me.GroupBox2.Controls.Add(Me.NumericUpDown1)
         Me.GroupBox2.Controls.Add(Me.Label11)
@@ -406,12 +411,12 @@ Partial Class Venta
         '
         Me.TBNombreProducto.Location = New System.Drawing.Point(121, 84)
         Me.TBNombreProducto.Name = "TBNombreProducto"
-        Me.TBNombreProducto.Size = New System.Drawing.Size(381, 26)
+        Me.TBNombreProducto.Size = New System.Drawing.Size(569, 26)
         Me.TBNombreProducto.TabIndex = 43
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(662, 125)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(255, 175)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(67, 26)
         Me.NumericUpDown1.TabIndex = 42
@@ -419,7 +424,7 @@ Partial Class Venta
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(577, 128)
+        Me.Label11.Location = New System.Drawing.Point(170, 178)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(79, 22)
         Me.Label11.TabIndex = 41
@@ -433,7 +438,7 @@ Partial Class Venta
         Me.BVAgregarP.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.BVAgregarP.IconSize = 25
         Me.BVAgregarP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BVAgregarP.Location = New System.Drawing.Point(353, 170)
+        Me.BVAgregarP.Location = New System.Drawing.Point(435, 170)
         Me.BVAgregarP.Name = "BVAgregarP"
         Me.BVAgregarP.Size = New System.Drawing.Size(103, 37)
         Me.BVAgregarP.TabIndex = 40
@@ -670,12 +675,37 @@ Partial Class Venta
         Me.Label15.Size = New System.Drawing.Size(0, 24)
         Me.Label15.TabIndex = 48
         '
+        'TBId
+        '
+        Me.TBId.Location = New System.Drawing.Point(32, 12)
+        Me.TBId.Name = "TBId"
+        Me.TBId.Size = New System.Drawing.Size(100, 20)
+        Me.TBId.TabIndex = 49
+        Me.TBId.Visible = False
+        '
+        'TbStock
+        '
+        Me.TbStock.Location = New System.Drawing.Point(631, 127)
+        Me.TbStock.Name = "TbStock"
+        Me.TbStock.Size = New System.Drawing.Size(57, 26)
+        Me.TbStock.TabIndex = 45
+        '
+        'LbStock
+        '
+        Me.LbStock.AutoSize = True
+        Me.LbStock.Location = New System.Drawing.Point(564, 128)
+        Me.LbStock.Name = "LbStock"
+        Me.LbStock.Size = New System.Drawing.Size(55, 22)
+        Me.LbStock.TabIndex = 44
+        Me.LbStock.Text = "Stock:"
+        '
         'Venta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1280, 645)
+        Me.Controls.Add(Me.TBId)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.LbUsuario)
         Me.Controls.Add(Me.Label14)
@@ -759,4 +789,7 @@ Partial Class Venta
     Friend WithEvents Label14 As Label
     Friend WithEvents LbUsuario As Label
     Friend WithEvents Label15 As Label
+    Friend WithEvents TBId As TextBox
+    Friend WithEvents TbStock As TextBox
+    Friend WithEvents LbStock As Label
 End Class

@@ -1,5 +1,4 @@
 ﻿Imports System.Data.SqlClient
-
 Public Class DCategoria
 
 #Region "Variables"

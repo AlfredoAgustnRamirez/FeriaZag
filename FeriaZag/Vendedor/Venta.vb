@@ -1,4 +1,5 @@
-﻿Public Class Venta
+﻿Imports System.Drawing.Printing
+Public Class Venta
 
 #Region "Variables"
     Dim obj As New DProducto
@@ -10,6 +11,8 @@
 #Region "Carga de Ventas"
     Private Sub Venta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LbUsuario.Text = VarUsuario
+        TBId.Text = ven.ObtenerIdVenta()
+        Desconectar()
     End Sub
 #End Region
 
@@ -79,9 +82,13 @@
 
 #Region "Boton Agregar"
     Private Sub BVAgregarP_Click(sender As Object, e As EventArgs) Handles BVAgregarP.Click
-        DataGridView2.Rows.Add(TBCodigoPventa.Text, TBNombreProducto.Text, CBCategoriaPventa.Text,
-        TBOPrecioPventa.Text, NumericUpDown1.Value, (TBOPrecioPventa.Text * NumericUpDown1.Value), "Quitar")
-        TBTotalVenta.Text = " $ " & FormatNumber(obj.Sumar("SubTotal", DataGridView2), 2).ToString
+        If TbStock.Text >= NumericUpDown1.Value Then
+            DataGridView2.Rows.Add(TBCodigoPventa.Text, TBNombreProducto.Text, CBCategoriaPventa.Text,
+            TBOPrecioPventa.Text, NumericUpDown1.Value, (TBOPrecioPventa.Text * NumericUpDown1.Value), "Quitar")
+            TBTotalVenta.Text = " $ " & FormatNumber(obj.Sumar("SubTotal", DataGridView2), 2).ToString
+        Else
+            MsgBox("Stock insuficiente", MsgBoxStyle.Critical)
+        End If
     End Sub
 #End Region
 
@@ -90,6 +97,7 @@
         Dim respuesta As MsgBoxResult
         Dim cell As DataGridViewButtonCell = TryCast(DataGridView2.CurrentCell, DataGridViewButtonCell)
         Dim bc As DataGridViewButtonColumn = TryCast(DataGridView2.Columns(e.ColumnIndex), DataGridViewButtonColumn) 'Genero una variable que contiene el boton en el datagrid
+
 
         Dim FilaSeleccionada As Integer
         FilaSeleccionada = DataGridView2.CurrentRow.Index
@@ -112,7 +120,7 @@
         TBNombreProducto.Text = Convert.ToString(dtpro2.Rows(0)("Producto"))
         CBCategoriaPventa.Text = Convert.ToString(dtpro2.Rows(0)("Categoria"))
         TBOPrecioPventa.Text = Convert.ToString(dtpro2.Rows(0)("Precio"))
-        NumericUpDown1.Value = Convert.ToString(dtpro2.Rows(0)("Stock"))
+        TbStock.Text = Convert.ToString(dtpro2.Rows(0)("Stock"))
     End Sub
 #End Region
 
@@ -128,7 +136,6 @@
 #Region "Boton Cobrar"
     Private Sub BVCobrarVenta_Click(sender As Object, e As EventArgs) Handles BVCobrarVenta.Click
         Dim fechaActual As Date = Date.Now
-        Dim idcabecera As Integer
         Dim subtotal As Decimal
 
         idusuario = usu.ObtenerIdUsuario(VarUsuario)
@@ -140,12 +147,18 @@
             TBCodigo.Text = Convert.ToString(Fila.Cells("Codigo").Value)
             TBOPrecioPventa.Text = Convert.ToDecimal(Fila.Cells("Precio").Value)
             NumericUpDown1.Value = Convert.ToInt32(Fila.Cells("Cantidad").Value)
-            SubTotal = Convert.ToDecimal(Fila.Cells("SubTotal").Value)
+            subtotal = Convert.ToDecimal(Fila.Cells("SubTotal").Value)
             ven.RegistrarVentaDetalle(TBCodigo.Text, idcabecera, TBOPrecioPventa.Text, NumericUpDown1.Value, subtotal)
             ven.Disminuirstock(TBCodigo.Text, NumericUpDown1.Value)
             ven.GenerarComprobante(idcabecera)
         Next
         MsgBox("Registrado con exito ", MsgBoxStyle.Information)
+    End Sub
+#End Region
+
+#Region "Imprimir factura"
+    Private Sub BVImprimirVenta_Click(sender As Object, e As EventArgs) Handles BVImprimirVenta.Click
+        FrmFactura.ShowDialog()
         limpiar()
     End Sub
 #End Region

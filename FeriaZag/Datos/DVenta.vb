@@ -172,4 +172,63 @@ Public Class DVenta
     End Function
 #End Region
 
+#Region "Mostrar Ventas"
+    Sub llenarDataGridview(ByVal dgv As DataGridView)
+        Try
+            adaptador = New SqlDataAdapter("MostrarVenta", cnx)
+            dt = New DataTable
+            adaptador.Fill(dt)
+            dgv.DataSource = dt
+        Catch ex As Exception
+            MsgBox("No se lleno el DataGridView debido a: " + ex.ToString)
+        End Try
+    End Sub
+#End Region
+
+#Region "Reporte de Ventas fecha desda fecha hasta "
+    Public Function ReporteVenta(fechadesde As String, fechahasta As String) As DataTable
+        Dim cmd As New SqlCommand("ReporteVenta", cnx)
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.Parameters.AddWithValue("@fechaDesde", fechadesde)
+        cmd.Parameters.AddWithValue("@fechaHasta", fechahasta)
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
+        Dim dtable1 As DataTable = New DataTable()
+        da.Fill(dtable1)
+        Return dtable1
+    End Function
+#End Region
+
+#Region "Reporte de Ventas hoy"
+    Public Function ReporteVentaHoy() As DataTable
+        Dim cmd As New SqlCommand("ReporteVentaHoy", cnx)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
+        Dim dtable1 As DataTable = New DataTable()
+        da.Fill(dtable1)
+        Return dtable1
+    End Function
+#End Region
+
+#Region "Reporte de Ventas ultimos 7 dias "
+    Public Function ReporteVentaUltimos7dias() As DataTable
+        Dim cmd As New SqlCommand("ReporteVentaUltimos7dias", cnx)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
+        Dim dtable1 As DataTable = New DataTable()
+        da.Fill(dtable1)
+        Return dtable1
+    End Function
+#End Region
+
+#Region "Reporte de Ventas ultimos 30 dias "
+    Public Function ReporteVentaUltimos30dias() As DataTable
+        Dim cmd As New SqlCommand("ReporteVentaUltimos30dias", cnx)
+        cmd.CommandType = CommandType.StoredProcedure
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
+        Dim dtable1 As DataTable = New DataTable()
+        da.Fill(dtable1)
+        Return dtable1
+    End Function
+#End Region
+
 End Class

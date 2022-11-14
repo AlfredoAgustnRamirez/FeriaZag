@@ -24,6 +24,8 @@ Partial Class Categoria
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GBMantenimiento = New System.Windows.Forms.GroupBox()
+        Me.TBActivo = New System.Windows.Forms.TextBox()
+        Me.LBActivo = New System.Windows.Forms.Label()
         Me.TBCategoria = New System.Windows.Forms.TextBox()
         Me.ICBNuevoCategoria = New FontAwesome.Sharp.IconButton()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -41,8 +43,6 @@ Partial Class Categoria
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TBNombreCategoria = New System.Windows.Forms.TextBox()
         Me.LBCategoria = New System.Windows.Forms.Label()
-        Me.TBActivo = New System.Windows.Forms.TextBox()
-        Me.LBActivo = New System.Windows.Forms.Label()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBListar.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,6 +68,22 @@ Partial Class Categoria
         Me.GBMantenimiento.TabIndex = 21
         Me.GBMantenimiento.TabStop = False
         Me.GBMantenimiento.Text = "Datos Categoria"
+        '
+        'TBActivo
+        '
+        Me.TBActivo.Location = New System.Drawing.Point(120, 189)
+        Me.TBActivo.Name = "TBActivo"
+        Me.TBActivo.Size = New System.Drawing.Size(216, 26)
+        Me.TBActivo.TabIndex = 34
+        '
+        'LBActivo
+        '
+        Me.LBActivo.AutoSize = True
+        Me.LBActivo.Location = New System.Drawing.Point(29, 192)
+        Me.LBActivo.Name = "LBActivo"
+        Me.LBActivo.Size = New System.Drawing.Size(62, 22)
+        Me.LBActivo.TabIndex = 33
+        Me.LBActivo.Text = "Activo:"
         '
         'TBCategoria
         '
@@ -269,22 +285,6 @@ Partial Class Categoria
         Me.LBCategoria.Size = New System.Drawing.Size(186, 46)
         Me.LBCategoria.TabIndex = 19
         Me.LBCategoria.Text = "Categoria"
-        '
-        'TBActivo
-        '
-        Me.TBActivo.Location = New System.Drawing.Point(120, 189)
-        Me.TBActivo.Name = "TBActivo"
-        Me.TBActivo.Size = New System.Drawing.Size(216, 26)
-        Me.TBActivo.TabIndex = 34
-        '
-        'LBActivo
-        '
-        Me.LBActivo.AutoSize = True
-        Me.LBActivo.Location = New System.Drawing.Point(29, 192)
-        Me.LBActivo.Name = "LBActivo"
-        Me.LBActivo.Size = New System.Drawing.Size(62, 22)
-        Me.LBActivo.TabIndex = 33
-        Me.LBActivo.Text = "Activo:"
         '
         'Categoria
         '

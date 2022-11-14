@@ -94,7 +94,7 @@
 #Region "Buscar Usuario por Dni"
     Private Sub ICBBuscar_Click(sender As Object, e As EventArgs) Handles ICBBuscar.Click
         Dim dtpro1 = usu.BuscarUsuarioPorDni(TbDni.Text)
-        TBCodigo2.Text = dtpro1.Rows(0).Item("Dni")
+        TBCodigo2.Text = dtpro1.Rows(0).Item("Nombre")
         DGUsuario.DataSource = dtpro1
     End Sub
 #End Region
