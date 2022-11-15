@@ -36,7 +36,12 @@
     End Sub
 
     Private Sub BVImprimirVenta_Click(sender As Object, e As EventArgs) Handles BVImprimirVenta.Click
-        FrmReporteAdmin.ShowDialog()
+        If DataGridView1.Rows.Count = 0 Then
+            MsgBox("Debe ingresar las fechas para generar el informe ", MsgBoxStyle.Information)
+        Else
+            FrmReporteAdmin.ShowDialog()
+        End If
+
     End Sub
 
 

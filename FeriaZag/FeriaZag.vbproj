@@ -235,6 +235,12 @@
     <Compile Include="Proveedores.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\FrmReporteGerente.Designer.vb">
+      <DependentUpon>FrmReporteGerente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FrmReporteGerente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SelectCategorias_Result.vb">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -377,6 +383,10 @@
     <EmbeddedResource Include="Reportes\FrmReporteAdmin.resx">
       <DependentUpon>FrmReporteAdmin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmReporteGerente.resx">
+      <DependentUpon>FrmReporteGerente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RGerente.rdlc" />
     <EmbeddedResource Include="Reportes\RVentas.rdlc" />
     <EmbeddedResource Include="Gerente\Backup.resx">
       <DependentUpon>Backup.vb</DependentUpon>

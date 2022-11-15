@@ -48,7 +48,7 @@ Partial Class ReporteAdmin
         '
         Me.GroupBox2.Controls.Add(Me.DateTimePicker2)
         Me.GroupBox2.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(406, 106)
+        Me.GroupBox2.Location = New System.Drawing.Point(250, 106)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(163, 56)
         Me.GroupBox2.TabIndex = 56
@@ -101,7 +101,7 @@ Partial Class ReporteAdmin
         Me.GBListar.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBListar.Location = New System.Drawing.Point(63, 168)
         Me.GBListar.Name = "GBListar"
-        Me.GBListar.Size = New System.Drawing.Size(1109, 391)
+        Me.GBListar.Size = New System.Drawing.Size(1109, 343)
         Me.GBListar.TabIndex = 60
         Me.GBListar.TabStop = False
         Me.GBListar.Text = "Listado de Ventas"
@@ -148,7 +148,7 @@ Partial Class ReporteAdmin
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle5
-        Me.DataGridView1.Size = New System.Drawing.Size(1103, 366)
+        Me.DataGridView1.Size = New System.Drawing.Size(1103, 318)
         Me.DataGridView1.TabIndex = 0
         '
         'BVImprimirVenta
@@ -160,7 +160,7 @@ Partial Class ReporteAdmin
         Me.BVImprimirVenta.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.BVImprimirVenta.IconSize = 25
         Me.BVImprimirVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BVImprimirVenta.Location = New System.Drawing.Point(537, 574)
+        Me.BVImprimirVenta.Location = New System.Drawing.Point(532, 532)
         Me.BVImprimirVenta.Name = "BVImprimirVenta"
         Me.BVImprimirVenta.Size = New System.Drawing.Size(225, 37)
         Me.BVImprimirVenta.TabIndex = 46
@@ -176,7 +176,7 @@ Partial Class ReporteAdmin
         Me.BVBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.BVBuscar.IconSize = 25
         Me.BVBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BVBuscar.Location = New System.Drawing.Point(625, 125)
+        Me.BVBuscar.Location = New System.Drawing.Point(448, 121)
         Me.BVBuscar.Name = "BVBuscar"
         Me.BVBuscar.Size = New System.Drawing.Size(137, 36)
         Me.BVBuscar.TabIndex = 61
