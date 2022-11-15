@@ -33,6 +33,8 @@
     Private Sub BVImprimirVenta_Click(sender As Object, e As EventArgs) Handles BVImprimirVenta.Click
         FrmVenta.ShowDialog()
     End Sub
+
+
 #End Region
 
 End Class
