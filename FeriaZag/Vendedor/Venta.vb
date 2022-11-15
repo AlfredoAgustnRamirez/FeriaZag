@@ -88,11 +88,10 @@ Public Class Venta
         ElseIf TbStock.Text >= NumericUpDown1.Value Then
             DataGridView2.Rows.Add(TBCodigoPventa.Text, TBNombreProducto.Text, CBCategoriaPventa.Text,
             TBOPrecioPventa.Text, NumericUpDown1.Value, (TBOPrecioPventa.Text * NumericUpDown1.Value), "Quitar")
-            TBTotalVenta.Text = " $ " & FormatNumber(obj.Sumar("SubTotal", DataGridView2), 2).ToString
+            TBTotalVenta.Text = FormatNumber(obj.Sumar("SubTotal", DataGridView2), 2).ToString
         Else
             MsgBox("Stock insuficiente", MsgBoxStyle.Critical)
         End If
-
     End Sub
 #End Region
 
@@ -110,7 +109,7 @@ Public Class Venta
                 respuesta = MsgBox("Seguro que desea eliminar el registro?", 32 + 4, "Eliminar")
                 If respuesta = 6 Then
                     DataGridView2.Rows.Remove(DataGridView2.Rows(FilaSeleccionada))
-                    TBTotalVenta.Text = " $ " & FormatNumber(obj.Sumar("SubTotal", DataGridView2), 2).ToString
+                    TBTotalVenta.Text = FormatNumber(obj.Sumar("SubTotal", DataGridView2), 2).ToString
                 End If
             End If
         End If
@@ -167,7 +166,6 @@ Public Class Venta
             MsgBox("Aun no hay productos", MsgBoxStyle.Critical)
         End If
     End Sub
-
 #End Region
 
 #Region "Imprimir factura"

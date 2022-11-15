@@ -16,10 +16,10 @@
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         TBCodigo.Text = DataGridView1.Item(0, e.RowIndex).Value
         TBNombrePvendedor.Text = DataGridView1.Item(2, e.RowIndex).Value
-        TbCategoria.Text = DataGridView1.Item(1, e.RowIndex).Value
+        CBcategoriaPvendedor.Text = DataGridView1.Item(1, e.RowIndex).Value
         TBPrecioPvendedor.Text = DataGridView1.Item(3, e.RowIndex).Value
         TBStockPvendedor.Text = DataGridView1.Item(4, e.RowIndex).Value
-        TBActivo.Text = DataGridView1.Item(5, e.RowIndex).Value
+        TBActivo.Text = DataGridView1.Item(4, e.RowIndex).Value
     End Sub
 #End Region
 

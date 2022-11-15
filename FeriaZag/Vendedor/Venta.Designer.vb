@@ -694,10 +694,11 @@ Partial Class Venta
         'LbFecha
         '
         Me.LbFecha.AutoSize = True
+        Me.LbFecha.Font = New System.Drawing.Font("Trebuchet MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LbFecha.Location = New System.Drawing.Point(27, 22)
         Me.LbFecha.Name = "LbFecha"
-        Me.LbFecha.Size = New System.Drawing.Size(0, 22)
-        Me.LbFecha.TabIndex = 46
+        Me.LbFecha.Size = New System.Drawing.Size(0, 24)
+        Me.LbFecha.TabIndex = 50
         '
         'Venta
         '

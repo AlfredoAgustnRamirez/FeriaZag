@@ -28,27 +28,29 @@ Partial Class FrmFactura
         Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.FeriaZagDataSet = New FeriaZag.FeriaZagDataSet()
-        Me.GenerarComprobanteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.GenerarComprobanteTableAdapter = New FeriaZag.FeriaZagDataSetTableAdapters.GenerarComprobanteTableAdapter()
         Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClientesTableAdapter = New FeriaZag.FeriaZagDataSetTableAdapters.ClientesTableAdapter()
-        Me.UsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.UsuarioTableAdapter = New FeriaZag.FeriaZagDataSetTableAdapters.UsuarioTableAdapter()
+        Me.GenerarComprobanteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GenerarComprobanteTableAdapter = New FeriaZag.FeriaZagDataSetTableAdapters.GenerarComprobanteTableAdapter()
+        Me.FeriaZagDataSet2 = New FeriaZag.FeriaZagDataSet2()
+        Me.MostrarVentaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MostrarVentaTableAdapter = New FeriaZag.FeriaZagDataSet2TableAdapters.MostrarVentaTableAdapter()
         CType(Me.FeriaZagDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GenerarComprobanteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GenerarComprobanteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FeriaZagDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MostrarVentaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ReportViewer1
         '
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        ReportDataSource1.Name = "DGenerarComprobante"
-        ReportDataSource1.Value = Me.GenerarComprobanteBindingSource
-        ReportDataSource2.Name = "DClientes"
-        ReportDataSource2.Value = Me.ClientesBindingSource
-        ReportDataSource3.Name = "DUsuario"
-        ReportDataSource3.Value = Me.UsuarioBindingSource
+        ReportDataSource1.Name = "DClientes"
+        ReportDataSource1.Value = Me.ClientesBindingSource
+        ReportDataSource2.Name = "DGenerarComprobante"
+        ReportDataSource2.Value = Me.GenerarComprobanteBindingSource
+        ReportDataSource3.Name = "DVenta"
+        ReportDataSource3.Value = Me.MostrarVentaBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
@@ -64,15 +66,6 @@ Partial Class FrmFactura
         Me.FeriaZagDataSet.DataSetName = "FeriaZagDataSet"
         Me.FeriaZagDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'GenerarComprobanteBindingSource
-        '
-        Me.GenerarComprobanteBindingSource.DataMember = "GenerarComprobante"
-        Me.GenerarComprobanteBindingSource.DataSource = Me.FeriaZagDataSet
-        '
-        'GenerarComprobanteTableAdapter
-        '
-        Me.GenerarComprobanteTableAdapter.ClearBeforeFill = True
-        '
         'ClientesBindingSource
         '
         Me.ClientesBindingSource.DataMember = "Clientes"
@@ -82,37 +75,53 @@ Partial Class FrmFactura
         '
         Me.ClientesTableAdapter.ClearBeforeFill = True
         '
-        'UsuarioBindingSource
+        'GenerarComprobanteBindingSource
         '
-        Me.UsuarioBindingSource.DataMember = "Usuario"
-        Me.UsuarioBindingSource.DataSource = Me.FeriaZagDataSet
+        Me.GenerarComprobanteBindingSource.DataMember = "GenerarComprobante"
+        Me.GenerarComprobanteBindingSource.DataSource = Me.FeriaZagDataSet
         '
-        'UsuarioTableAdapter
+        'GenerarComprobanteTableAdapter
         '
-        Me.UsuarioTableAdapter.ClearBeforeFill = True
+        Me.GenerarComprobanteTableAdapter.ClearBeforeFill = True
         '
-        'FrmVenta
+        'FeriaZagDataSet2
+        '
+        Me.FeriaZagDataSet2.DataSetName = "FeriaZagDataSet2"
+        Me.FeriaZagDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MostrarVentaBindingSource
+        '
+        Me.MostrarVentaBindingSource.DataMember = "MostrarVenta"
+        Me.MostrarVentaBindingSource.DataSource = Me.FeriaZagDataSet2
+        '
+        'MostrarVentaTableAdapter
+        '
+        Me.MostrarVentaTableAdapter.ClearBeforeFill = True
+        '
+        'FrmFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.ReportViewer1)
-        Me.Name = "FrmVenta"
-        Me.Text = "Comprobante de Venta"
+        Me.Name = "FrmFactura"
+        Me.Text = "Imprimir Comprobante"
         CType(Me.FeriaZagDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GenerarComprobanteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.UsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GenerarComprobanteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FeriaZagDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MostrarVentaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents GenerarComprobanteBindingSource As BindingSource
-    Friend WithEvents FeriaZagDataSet As FeriaZagDataSet
     Friend WithEvents ClientesBindingSource As BindingSource
-    Friend WithEvents UsuarioBindingSource As BindingSource
-    Friend WithEvents GenerarComprobanteTableAdapter As FeriaZagDataSetTableAdapters.GenerarComprobanteTableAdapter
+    Friend WithEvents FeriaZagDataSet As FeriaZagDataSet
+    Friend WithEvents GenerarComprobanteBindingSource As BindingSource
+    Friend WithEvents MostrarVentaBindingSource As BindingSource
+    Friend WithEvents FeriaZagDataSet2 As FeriaZagDataSet2
     Friend WithEvents ClientesTableAdapter As FeriaZagDataSetTableAdapters.ClientesTableAdapter
-    Friend WithEvents UsuarioTableAdapter As FeriaZagDataSetTableAdapters.UsuarioTableAdapter
+    Friend WithEvents GenerarComprobanteTableAdapter As FeriaZagDataSetTableAdapters.GenerarComprobanteTableAdapter
+    Friend WithEvents MostrarVentaTableAdapter As FeriaZagDataSet2TableAdapters.MostrarVentaTableAdapter
 End Class

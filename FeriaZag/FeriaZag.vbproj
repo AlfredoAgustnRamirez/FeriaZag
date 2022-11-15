@@ -180,16 +180,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FeriaZagDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FeriaZagDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FeriaZagDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFactura.Designer.vb">
+      <DependentUpon>FrmFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\FrmVenta.Designer.vb">
       <DependentUpon>FrmVenta.vb</DependentUpon>
     </Compile>
     <Compile Include="Reportes\FrmVenta.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\FrmFactura.Designer.vb">
-      <DependentUpon>FrmFactura.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\FrmFactura.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Gerente\InicioGerente.Designer.vb">
@@ -361,12 +366,12 @@
     <EmbeddedResource Include="Administador\ReporteAdmin.resx">
       <DependentUpon>ReporteAdmin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmFactura.resx">
+      <DependentUpon>FrmFactura.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RVentas.rdlc" />
     <EmbeddedResource Include="Reportes\FrmVenta.resx">
       <DependentUpon>FrmVenta.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\FrmFactura.resx">
-      <DependentUpon>FrmFactura.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gerente\Backup.resx">
       <DependentUpon>Backup.vb</DependentUpon>
@@ -436,6 +441,17 @@
     </None>
     <None Include="FeriaZagDataSet.xss">
       <DependentUpon>FeriaZagDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FeriaZagDataSet2.xsc">
+      <DependentUpon>FeriaZagDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FeriaZagDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FeriaZagDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FeriaZagDataSet2.xss">
+      <DependentUpon>FeriaZagDataSet2.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
