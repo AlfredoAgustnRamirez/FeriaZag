@@ -27,8 +27,6 @@ Partial Class ReporteAdmin
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.LbBackup = New System.Windows.Forms.Label()
@@ -36,47 +34,15 @@ Partial Class ReporteAdmin
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.BVBuscar = New FontAwesome.Sharp.IconButton()
         Me.BVImprimirVenta = New FontAwesome.Sharp.IconButton()
+        Me.BVBuscar = New FontAwesome.Sharp.IconButton()
+        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GBListar.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'IconButton2
-        '
-        Me.IconButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.IconButton2.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.Calendar
-        Me.IconButton2.IconColor = System.Drawing.Color.Black
-        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton2.IconSize = 25
-        Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton2.Location = New System.Drawing.Point(874, 125)
-        Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(103, 37)
-        Me.IconButton2.TabIndex = 59
-        Me.IconButton2.Text = "Hoy    "
-        Me.IconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.IconButton2.UseVisualStyleBackColor = False
-        '
-        'IconButton1
-        '
-        Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.IconButton1.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Calendar
-        Me.IconButton1.IconColor = System.Drawing.Color.Black
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.IconSize = 25
-        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton1.Location = New System.Drawing.Point(1023, 125)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(149, 37)
-        Me.IconButton1.TabIndex = 58
-        Me.IconButton1.Text = "Ultimos 7 días"
-        Me.IconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.IconButton1.UseVisualStyleBackColor = False
         '
         'GroupBox2
         '
@@ -185,6 +151,22 @@ Partial Class ReporteAdmin
         Me.DataGridView1.Size = New System.Drawing.Size(1103, 366)
         Me.DataGridView1.TabIndex = 0
         '
+        'BVImprimirVenta
+        '
+        Me.BVImprimirVenta.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BVImprimirVenta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BVImprimirVenta.IconChar = FontAwesome.Sharp.IconChar.Print
+        Me.BVImprimirVenta.IconColor = System.Drawing.Color.Black
+        Me.BVImprimirVenta.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.BVImprimirVenta.IconSize = 25
+        Me.BVImprimirVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BVImprimirVenta.Location = New System.Drawing.Point(537, 574)
+        Me.BVImprimirVenta.Name = "BVImprimirVenta"
+        Me.BVImprimirVenta.Size = New System.Drawing.Size(225, 37)
+        Me.BVImprimirVenta.TabIndex = 46
+        Me.BVImprimirVenta.Text = "Imprimir Reporte"
+        Me.BVImprimirVenta.UseVisualStyleBackColor = False
+        '
         'BVBuscar
         '
         Me.BVBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
@@ -201,21 +183,39 @@ Partial Class ReporteAdmin
         Me.BVBuscar.Text = "Buscar"
         Me.BVBuscar.UseVisualStyleBackColor = False
         '
-        'BVImprimirVenta
+        'IconButton2
         '
-        Me.BVImprimirVenta.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.BVImprimirVenta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BVImprimirVenta.IconChar = FontAwesome.Sharp.IconChar.Print
-        Me.BVImprimirVenta.IconColor = System.Drawing.Color.Black
-        Me.BVImprimirVenta.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.BVImprimirVenta.IconSize = 25
-        Me.BVImprimirVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BVImprimirVenta.Location = New System.Drawing.Point(537, 574)
-        Me.BVImprimirVenta.Name = "BVImprimirVenta"
-        Me.BVImprimirVenta.Size = New System.Drawing.Size(225, 37)
-        Me.BVImprimirVenta.TabIndex = 46
-        Me.BVImprimirVenta.Text = "Imprimir Reporte"
-        Me.BVImprimirVenta.UseVisualStyleBackColor = False
+        Me.IconButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.IconButton2.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.Calendar
+        Me.IconButton2.IconColor = System.Drawing.Color.Black
+        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton2.IconSize = 25
+        Me.IconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton2.Location = New System.Drawing.Point(914, 124)
+        Me.IconButton2.Name = "IconButton2"
+        Me.IconButton2.Size = New System.Drawing.Size(103, 37)
+        Me.IconButton2.TabIndex = 59
+        Me.IconButton2.Text = "Hoy    "
+        Me.IconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.IconButton2.UseVisualStyleBackColor = False
+        '
+        'IconButton1
+        '
+        Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.IconButton1.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Calendar
+        Me.IconButton1.IconColor = System.Drawing.Color.Black
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.IconSize = 25
+        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton1.Location = New System.Drawing.Point(1023, 125)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(149, 37)
+        Me.IconButton1.TabIndex = 58
+        Me.IconButton1.Text = "Ultimos 7 días"
+        Me.IconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.IconButton1.UseVisualStyleBackColor = False
         '
         'ReporteAdmin
         '
