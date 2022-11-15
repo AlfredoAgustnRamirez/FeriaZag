@@ -23,7 +23,7 @@ Public Class DVenta
             resp = da.ExecuteNonQuery
             Desconectar()
         Catch ex As Exception
-            MsgBox("Error al registrar producto")
+            MsgBox("Error al registrar Venta")
         End Try
         Return resp
     End Function
@@ -44,7 +44,7 @@ Public Class DVenta
             resp = da.ExecuteNonQuery
             Desconectar()
         Catch ex As Exception
-            MsgBox("Error al registrar producto")
+            MsgBox("Error al registrar VentaDetalle")
         End Try
         Return resp
     End Function
@@ -230,6 +230,15 @@ Public Class DVenta
         Dim dtable1 As DataTable = New DataTable()
         da.Fill(dtable1)
         Return dtable1
+    End Function
+#End Region
+
+#Region "Mostrar total de registros de ventas"
+    Public Function TotalRegistros() As DataTable
+        Dim da As New SqlDataAdapter("ContarRegistros", cnx)
+        Dim tbl As New DataTable
+        da.Fill(tbl)
+        Return tbl
     End Function
 #End Region
 

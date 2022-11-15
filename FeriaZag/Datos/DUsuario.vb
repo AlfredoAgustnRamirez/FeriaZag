@@ -28,7 +28,7 @@ Public Class DUsuario
             MsgBox("Registrado con exito " + nombre, MsgBoxStyle.Information)
             Desconectar()
         Catch ex As Exception
-            MsgBox("Error al registrar producto")
+            MsgBox("Error al registrar Usuario")
         End Try
         Return resp
     End Function
@@ -65,14 +65,14 @@ Public Class DUsuario
         Conectar()
         Dim resp As Integer
         Dim respuesta As MsgBoxResult
-        respuesta = MsgBox("Seguro que desea modificar el Producto?", 32 + 4, "Modificar")
+        respuesta = MsgBox("Seguro que desea modificar el Usuario?", 32 + 4, "Modificar")
         If respuesta = 6 Then
             Try
                 resp = modificar.ExecuteNonQuery
                 MsgBox("Modificado con exito " + idusuario, MsgBoxStyle.Information)
                 Desconectar()
             Catch ex As Exception
-                MsgBox("Error al modificar producto", MsgBoxStyle.Critical)
+                MsgBox("Error al modificar Usuario", MsgBoxStyle.Critical)
             End Try
         End If
         Return resp
@@ -87,14 +87,14 @@ Public Class DUsuario
         Conectar()
         Dim resp As Integer
         Dim respuesta As MsgBoxResult
-        respuesta = MsgBox("Seguro que desea eliminar el Producto?", 32 + 4, "Eliminar")
+        respuesta = MsgBox("Seguro que desea eliminar el Usuario?", 32 + 4, "Eliminar")
         If respuesta = 6 Then
             Try
                 resp = eliminar.ExecuteNonQuery
                 MsgBox("Eliminado con exito " + idusuario, MsgBoxStyle.Information)
                 Desconectar()
             Catch ex As Exception
-                MsgBox("Error al eliminar producto", MsgBoxStyle.Critical)
+                MsgBox("Error al eliminar Usuario", MsgBoxStyle.Critical)
             End Try
 
         End If

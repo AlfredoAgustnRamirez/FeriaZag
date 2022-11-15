@@ -20,7 +20,7 @@ Public Class DCategoria
             MsgBox("Registrado con exito " + Categoria, MsgBoxStyle.Information)
             Desconectar()
         Catch ex As Exception
-            MsgBox("Error al registrar producto")
+            MsgBox("Error al registrar Categoria")
         End Try
         Return resp
     End Function
@@ -34,14 +34,14 @@ Public Class DCategoria
         Conectar()
         Dim resp As Integer
         Dim respuesta As MsgBoxResult
-        respuesta = MsgBox("Seguro que desea eliminar el Producto?", 32 + 4, "Eliminar")
+        respuesta = MsgBox("Seguro que desea eliminar la Categoria?", 32 + 4, "Eliminar")
         If respuesta = 6 Then
             Try
                 resp = eliminar.ExecuteNonQuery
                 MsgBox("Eliminado con exito " + IdCategoria, MsgBoxStyle.Information)
                 Desconectar()
             Catch ex As Exception
-                MsgBox("Error al eliminar producto", MsgBoxStyle.Critical)
+                MsgBox("Error al eliminar Categoria", MsgBoxStyle.Critical)
             End Try
 
         End If
@@ -72,14 +72,14 @@ Public Class DCategoria
         Conectar()
         Dim resp As Integer
         Dim respuesta As MsgBoxResult
-        respuesta = MsgBox("Seguro que desea modificar el Producto?", 32 + 4, "Eliminar")
+        respuesta = MsgBox("Seguro que desea modificar la Categoria?", 32 + 4, "Eliminar")
         If respuesta = 6 Then
             Try
                 resp = modificar.ExecuteNonQuery
                 MsgBox("Modificado con exito " + idcategoria, MsgBoxStyle.Information)
                 Desconectar()
             Catch ex As Exception
-                MsgBox("Error al modificar producto", MsgBoxStyle.Critical)
+                MsgBox("Error al modificar Categoria", MsgBoxStyle.Critical)
             End Try
         End If
         Return resp

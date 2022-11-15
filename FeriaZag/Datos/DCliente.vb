@@ -39,7 +39,7 @@ Public Class DCliente
             MsgBox("Registrado con exito " + nombre, MsgBoxStyle.Information)
             Desconectar()
         Catch ex As Exception
-            MsgBox("Error al registrar producto")
+            MsgBox("Error al registrar Cliente")
         End Try
         Return resp
     End Function
@@ -53,14 +53,14 @@ Public Class DCliente
         Conectar()
         Dim resp As Integer
         Dim respuesta As MsgBoxResult
-        respuesta = MsgBox("Seguro que desea eliminar el Producto?", 32 + 4, "Eliminar")
+        respuesta = MsgBox("Seguro que desea eliminar el Cliente?", 32 + 4, "Eliminar")
         If respuesta = 6 Then
             Try
                 resp = eliminar.ExecuteNonQuery
                 MsgBox("Eliminado con exito " + Id_Cliente, MsgBoxStyle.Information)
                 Desconectar()
             Catch ex As Exception
-                MsgBox("Error al eliminar producto", MsgBoxStyle.Critical)
+                MsgBox("Error al eliminar Cliente", MsgBoxStyle.Critical)
             End Try
 
         End If
@@ -83,14 +83,14 @@ Public Class DCliente
         Conectar()
         Dim resp As Integer
         Dim respuesta As MsgBoxResult
-        respuesta = MsgBox("Seguro que desea modificar el Producto?", 32 + 4, "Eliminar")
+        respuesta = MsgBox("Seguro que desea modificar el Cliente?", 32 + 4, "Eliminar")
         If respuesta = 6 Then
             Try
                 resp = modificar.ExecuteNonQuery
                 MsgBox("Modificado con exito " + Id_Cliente, MsgBoxStyle.Information)
                 Desconectar()
             Catch ex As Exception
-                MsgBox("Error al modificar producto", MsgBoxStyle.Critical)
+                MsgBox("Error al modificar Cliente", MsgBoxStyle.Critical)
             End Try
         End If
         Return resp

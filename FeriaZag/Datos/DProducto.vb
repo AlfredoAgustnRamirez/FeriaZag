@@ -79,7 +79,7 @@ Public Class DProducto
     End Function
 #End Region
 
-#Region "Buscar Producto por Categoria"
+#Region "Buscar Producto por Codigo"
     Public Function BuscarProductosPorCodigo(codigo As String) As DataTable
         Dim cmd As SqlCommand = New SqlCommand("BuscarProductoPorCodigo", cnx)
         cmd.CommandType = CommandType.StoredProcedure
