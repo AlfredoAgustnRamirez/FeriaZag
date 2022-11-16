@@ -63,7 +63,7 @@
         If TBNombreProveedor.Text = "" Or TBApellidoProveedor.Text = "" Or TBTelefonoProveedor.Text = "" Or TBDirecciónProveedor.Text = "" Or TBCbuProveedor.Text = "" Or TBObservaciones.Text = "" Then
             MsgBox("Error debe Completar todos los campos", vbCritical, "Error")
         Else
-            pro.RegistrarProveedor(TBNombreProveedor.Text, TBApellidoProveedor.Text, TBTelefonoProveedor.Text, TBDirecciónProveedor.Text, TBCbuProveedor.Text, TBObservaciones.Text)
+            pro.RegistrarProveedor(TBNombreProveedor.Text, TBApellidoProveedor.Text, TBTelefonoProveedor.Text, TBDirecciónProveedor.Text, TBCbuProveedor.Text, TBObservaciones.Text, TextBox1.Text)
             pro.llenarDataGridview(DataGridView1)
         End If
         limpiar()
@@ -97,6 +97,7 @@
         TBDirecciónProveedor.Text = DataGridView1.Rows(FilaActual).Cells(4).Value
         TBCbuProveedor.Text = DataGridView1.Rows(FilaActual).Cells(5).Value
         TBObservaciones.Text = DataGridView1.Rows(FilaActual).Cells(6).Value
+        TextBox1.Text = DataGridView1.Rows(FilaActual).Cells(7).Value
         ICBAgregarProveedor.Enabled = False
         ICBModificarProveedor.Enabled = True
         ICBEliminarProveedor.Enabled = True

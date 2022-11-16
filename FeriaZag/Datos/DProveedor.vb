@@ -8,8 +8,8 @@ Public Class DProveedor
 #End Region
 
 #Region "Registrar Proveedor"
-    Public Function RegistrarProveedor(Nombre As String, Apellido As String, Telefono As Long, Direccion As String, CbuAlias As String, Observacion As String)
-        Dim da As New SqlCommand("RegistrarProveedores", cnx)
+    Public Function RegistrarProveedor(Nombre As String, Apellido As String, Telefono As Long, Direccion As String, CbuAlias As String, Observacion As String, activo As String)
+        Dim da As New SqlCommand("RegistrarProveedor", cnx)
         da.CommandType = CommandType.StoredProcedure
         da.Parameters.AddWithValue("@Nombre", Nombre)
         da.Parameters.AddWithValue("@Apellido", Apellido)
@@ -17,6 +17,7 @@ Public Class DProveedor
         da.Parameters.AddWithValue("@Direccion", Direccion)
         da.Parameters.AddWithValue("@CbuAlias", CbuAlias)
         da.Parameters.AddWithValue("@Observacion", Observacion)
+        da.Parameters.AddWithValue("@Activo", activo)
         Conectar()
         Dim resp As Integer
         Try

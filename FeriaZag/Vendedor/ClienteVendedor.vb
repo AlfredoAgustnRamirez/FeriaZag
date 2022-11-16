@@ -32,9 +32,6 @@
         TBEmail.Text = DataGridView2.Rows(FilaActual).Cells(5).Value
         TBDirecciónCvendedor.Text = DataGridView2.Rows(FilaActual).Cells(6).Value
         TBActivo.Text = DataGridView2.Rows(FilaActual).Cells(7).Value
-
-        Dim frm = New ClienteVendedor()
-        frm.TBNombreCvendedor.Text = DataGridView2.Rows(FilaActual).Cells(1).Value
         ICBAgregarCvendedor.Enabled = False
         ICBModificarCvendedor.Enabled = True
     End Sub
@@ -104,7 +101,7 @@
     End Sub
 #End Region
 
-#Region "Buscar Clientes por Dni"
+#Region "Buscar Clientes"
     Private Sub ICBBuscarCvendedor_Click(sender As Object, e As EventArgs) Handles ICBBuscarCvendedor.Click
         If ComboBox2.Text = "Todos" Then
             cli.llenarDataGridview(DataGridView2)

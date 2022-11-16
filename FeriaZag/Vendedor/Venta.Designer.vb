@@ -635,11 +635,11 @@ Partial Class Venta
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(30, 35)
+        Me.Label2.Location = New System.Drawing.Point(46, 35)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(90, 22)
+        Me.Label2.Size = New System.Drawing.Size(72, 22)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Buscar por:"
+        Me.Label2.Text = "Nombre:"
         '
         'CheckBox1
         '
