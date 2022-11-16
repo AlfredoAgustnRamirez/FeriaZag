@@ -103,18 +103,6 @@ Public Class DProducto
     End Function
 #End Region
 
-#Region "Buscar Producto por Nombre"
-    Public Function BuscarProductoPorNombre(producto As String) As DataTable
-        Dim cmd As SqlCommand = New SqlCommand("BuscarProductoPorNombre", cnx)
-        cmd.CommandType = CommandType.StoredProcedure
-        cmd.Parameters.AddWithValue("@Producto", producto)
-        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
-        Dim dtable1 As DataTable = New DataTable()
-        da.Fill(dtable1)
-        Return dtable1
-    End Function
-#End Region
-
 #Region "listarProductos"
     Public Function ListarProductos() As DataTable
         Dim da As New SqlDataAdapter("select * from Productos", cnx)

@@ -27,10 +27,10 @@
 
     Private Sub ProductoVendedorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductoVendedorToolStripMenuItem.Click
         Me.ToolStripContainer1.ContentPanel.Controls.Clear()
-        Dim frmproductovendedor As New ProductoVendedor
-        frmproductovendedor.MdiParent = Me
-        Me.ToolStripContainer1.ContentPanel.Controls.Add(frmproductovendedor)
-        frmproductovendedor.Show()
+        Dim frmreporteVendedor As New ReporteVendedor
+        frmreporteVendedor.MdiParent = Me
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(frmreporteVendedor)
+        frmreporteVendedor.Show()
     End Sub
 
     Private Sub HoraFecha_Tick(sender As Object, e As EventArgs) Handles HoraFecha.Tick
@@ -48,5 +48,13 @@
 
     Private Sub Vendedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label2.Text = VarUsuario
+    End Sub
+
+    Private Sub IconMenuItem1_Click(sender As Object, e As EventArgs) Handles IconMenuItem1.Click
+        Me.ToolStripContainer1.ContentPanel.Controls.Clear()
+        Dim frmproductovendedor As New ProductoVendedor
+        frmproductovendedor.MdiParent = Me
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(frmproductovendedor)
+        frmproductovendedor.Show()
     End Sub
 End Class

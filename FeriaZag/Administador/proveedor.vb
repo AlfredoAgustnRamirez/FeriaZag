@@ -41,13 +41,13 @@
 #End Region
 
 #Region "Solo Letras Nombre2 Proveedor"
-    Private Sub TBNombre2Proveedor_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub TBNombre2Proveedor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombre2Proveedor.KeyPress
         SoloLetras(e)
     End Sub
 #End Region
 
 #Region "Solo Numeros Codigo Proveedor"
-    Private Sub TBCodigo2Proveedor_KeyPress(sender As Object, e As KeyPressEventArgs)
+    Private Sub TBCodigo2Proveedor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBCodigo2Proveedor.KeyPress
         SoloNumeros(e)
     End Sub
 #End Region
@@ -63,7 +63,7 @@
         If TBNombreProveedor.Text = "" Or TBApellidoProveedor.Text = "" Or TBTelefonoProveedor.Text = "" Or TBDirecciónProveedor.Text = "" Or TBCbuProveedor.Text = "" Or TBObservaciones.Text = "" Then
             MsgBox("Error debe Completar todos los campos", vbCritical, "Error")
         Else
-            pro.RegistrarProveedor(TBNombreProveedor.Text, TBApellidoProveedor.Text, TBTelefonoProveedor.Text, TBDirecciónProveedor.Text, TBCbuProveedor.Text, TBObservaciones.Text, TBActivo.Text)
+            pro.RegistrarProveedor(TBNombreProveedor.Text, TBApellidoProveedor.Text, TBTelefonoProveedor.Text, TBDirecciónProveedor.Text, TBCbuProveedor.Text, TBObservaciones.Text)
             pro.llenarDataGridview(DataGridView1)
         End If
         limpiar()
@@ -78,6 +78,12 @@
         ICBModificarProveedor.Enabled = False
         limpiar()
     End Sub
+
+    Private Sub ICBEliminarProveedor_Click(sender As Object, e As EventArgs) Handles ICBEliminarProveedor.Click
+        pro.EliminarProducto(TBCodigoProveedor.Text)
+        pro.llenarDataGridview(DataGridView1)
+        limpiar()
+    End Sub
 #End Region
 
 #Region "DataGridView Contenido por fila"
@@ -89,36 +95,14 @@
         TBDirecciónProveedor.Text = DataGridView1.Item(4, e.RowIndex).Value
         TBCbuProveedor.Text = DataGridView1.Item(5, e.RowIndex).Value
         TBObservaciones.Text = DataGridView1.Item(6, e.RowIndex).Value
-        TBActivo.Text = DataGridView1.Item(7, e.RowIndex).Value
         ICBAgregarProveedor.Enabled = False
         ICBModificarProveedor.Enabled = True
         ICBEliminarProveedor.Enabled = True
     End Sub
-#End Region
 
-#Region "Modificar Proveedor"
     Private Sub ICBModificarProveedor_Click(sender As Object, e As EventArgs) Handles ICBModificarProveedor.Click
-        pro.ModificarProveedor(TBCodigoProveedor.Text, TBNombreProveedor.Text, TBApellidoProveedor.Text, TBTelefonoProveedor.Text, TBDirecciónProveedor.Text, TBCbuProveedor.Text, TBObservaciones.Text, TBActivo.Text)
+        pro.ModificarProveedor(TBCodigoProveedor.Text, TBNombreProveedor.Text, TBApellidoProveedor.Text, TBTelefonoProveedor.Text, TBDirecciónProveedor.Text, TBCbuProveedor.Text, TBObservaciones.Text)
         pro.llenarDataGridview(DataGridView1)
-    End Sub
-#End Region
-
-#Region "Buscar proveedor por nombre"
-    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
-        If ComboBox2.Text = "Nombre" Then
-            Dim dtpro1 = pro.BuscarProveedorPorNombre(TbBusqueda.Text)
-            DataGridView1.DataSource = dtpro1
-        Else
-            pro.llenarDataGridview(DataGridView1)
-        End If
-    End Sub
-#End Region
-
-#Region "Eliminar proveedor"
-    Private Sub ICBEliminarProveedor_Click(sender As Object, e As EventArgs) Handles ICBEliminarProveedor.Click
-        pro.EliminarProveedor(TBCodigoProveedor.Text)
-        pro.llenarDataGridview(DataGridView1)
-        limpiar()
     End Sub
 #End Region
 

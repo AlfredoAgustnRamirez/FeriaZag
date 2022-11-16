@@ -22,6 +22,10 @@ Public Class Producto
         ComboBox1.ValueMember = "IdCategoria"
         ComboBox1.DisplayMember = "Categoria"
 
+        ComboBox2.DataSource = obj.ListarCategoria()
+        ComboBox2.ValueMember = "IdCategoria"
+        ComboBox2.DisplayMember = "Categoria"
+
         obj.llenarDataGridview(DataGridView1)
 
     End Sub
@@ -96,20 +100,11 @@ Public Class Producto
     End Sub
 #End Region
 
-#Region "Buscar Productos"
+#Region "Buscar Productos por Categoria"
     Private Sub ICBBuscar_Click(sender As Object, e As EventArgs) Handles ICBBuscar.Click
-        If ComboBox2.Text = "Categoria" Then
-            Dim dtpro1 = obj.BuscarProductosPorCategoria(TbBusqueda.Text)
-            DataGridView1.DataSource = dtpro1
-        ElseIf ComboBox2.Text = "Codigo" Then
-            Dim dtpro1 = obj.BuscarProductosPorCodigo(TbBusqueda.Text)
-            DataGridView1.DataSource = dtpro1
-        ElseIf ComboBox2.Text = "Descripcion" Then
-            Dim dtpro1 = obj.BuscarProductoPorNombre(TbBusqueda.Text)
-            DataGridView1.DataSource = dtpro1
-        Else
-            obj.llenarDataGridview(DataGridView1)
-        End If
+        Dim dtpro1 = obj.BuscarProductosPorCategoria(ComboBox2.Text)
+        TBCodigo2.Text = dtpro1.Rows(0).Item("Codigo")
+        DataGridView1.DataSource = dtpro1
     End Sub
 #End Region
 
