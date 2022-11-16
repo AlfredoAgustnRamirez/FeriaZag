@@ -14,10 +14,6 @@
 
 #Region "Carga de Categoria"
     Private Sub Categoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CBCategoria2.DataSource = obj.ListarCategoria()
-        CBCategoria2.ValueMember = "IdCategoria"
-        CBCategoria2.DisplayMember = "Categoria"
-
         cat.llenarDataGridview(DataGridView1)
     End Sub
 #End Region
@@ -67,11 +63,19 @@
         cat.ModificarCategoria(TBCodigoCategoria.Text, TBCategoria.Text, TBActivo.Text)
         cat.llenarDataGridview(DataGridView1)
     End Sub
+#End Region
 
+#Region "Buscar Categorias"
     Private Sub ICBBuscar_Click(sender As Object, e As EventArgs) Handles ICBBuscar.Click
-        Dim dtpro1 = obj.BuscarProductosPorCategoria(CBCategoria2.Text)
-        TBNombreCategoria.Text = dtpro1.Rows(0).Item("Categoria")
-        DataGridView1.DataSource = dtpro1
+        If CBCategoria2.Text = "Todo" Then
+            cat.llenarDataGridview(DataGridView1)
+        ElseIf CBCategoria2.Text = "Categoria" Then
+            Dim dtpro1 = cat.BuscarCategoria(TbBusqueda.Text)
+            DataGridView1.DataSource = dtpro1
+        Else
+            Dim dtpro1 = cat.BuscarCategoriaPorCodigo(TbBusqueda.Text)
+            DataGridView1.DataSource = dtpro1
+        End If
     End Sub
 #End Region
 

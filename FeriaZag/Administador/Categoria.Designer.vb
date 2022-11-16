@@ -22,7 +22,7 @@ Partial Class Categoria
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GBMantenimiento = New System.Windows.Forms.GroupBox()
         Me.TBActivo = New System.Windows.Forms.TextBox()
         Me.LBActivo = New System.Windows.Forms.Label()
@@ -39,9 +39,8 @@ Partial Class Categoria
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
         Me.ICBBuscar = New FontAwesome.Sharp.IconButton()
         Me.CBCategoria2 = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TBNombreCategoria = New System.Windows.Forms.TextBox()
+        Me.TbBusqueda = New System.Windows.Forms.TextBox()
         Me.LBCategoria = New System.Windows.Forms.Label()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBListar.SuspendLayout()
@@ -197,9 +196,9 @@ Partial Class Categoria
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -215,9 +214,8 @@ Partial Class Categoria
         '
         Me.GBConsulta.Controls.Add(Me.ICBBuscar)
         Me.GBConsulta.Controls.Add(Me.CBCategoria2)
-        Me.GBConsulta.Controls.Add(Me.Label4)
         Me.GBConsulta.Controls.Add(Me.Label3)
-        Me.GBConsulta.Controls.Add(Me.TBNombreCategoria)
+        Me.GBConsulta.Controls.Add(Me.TbBusqueda)
         Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBConsulta.Location = New System.Drawing.Point(412, 75)
         Me.GBConsulta.Name = "GBConsulta"
@@ -234,7 +232,7 @@ Partial Class Categoria
         Me.ICBBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBBuscar.IconSize = 40
         Me.ICBBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBBuscar.Location = New System.Drawing.Point(647, 42)
+        Me.ICBBuscar.Location = New System.Drawing.Point(647, 36)
         Me.ICBBuscar.Name = "ICBBuscar"
         Me.ICBBuscar.Size = New System.Drawing.Size(118, 46)
         Me.ICBBuscar.TabIndex = 18
@@ -245,35 +243,27 @@ Partial Class Categoria
         'CBCategoria2
         '
         Me.CBCategoria2.FormattingEnabled = True
-        Me.CBCategoria2.Location = New System.Drawing.Point(410, 44)
+        Me.CBCategoria2.Items.AddRange(New Object() {"Todo", "Categoria", "Codigo"})
+        Me.CBCategoria2.Location = New System.Drawing.Point(112, 42)
         Me.CBCategoria2.Name = "CBCategoria2"
         Me.CBCategoria2.Size = New System.Drawing.Size(153, 30)
         Me.CBCategoria2.TabIndex = 18
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(319, 47)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 22)
-        Me.Label4.TabIndex = 18
-        Me.Label4.Text = "Categoria:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(16, 48)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 22)
+        Me.Label3.Size = New System.Drawing.Size(90, 22)
         Me.Label3.TabIndex = 18
-        Me.Label3.Text = "Nombre:"
+        Me.Label3.Text = "Buscar por:"
         '
-        'TBNombreCategoria
+        'TbBusqueda
         '
-        Me.TBNombreCategoria.Location = New System.Drawing.Point(106, 48)
-        Me.TBNombreCategoria.Name = "TBNombreCategoria"
-        Me.TBNombreCategoria.Size = New System.Drawing.Size(168, 26)
-        Me.TBNombreCategoria.TabIndex = 18
+        Me.TbBusqueda.Location = New System.Drawing.Point(284, 46)
+        Me.TbBusqueda.Name = "TbBusqueda"
+        Me.TbBusqueda.Size = New System.Drawing.Size(325, 26)
+        Me.TbBusqueda.TabIndex = 18
         '
         'LBCategoria
         '
@@ -323,9 +313,8 @@ Partial Class Categoria
     Friend WithEvents GBConsulta As GroupBox
     Friend WithEvents ICBBuscar As FontAwesome.Sharp.IconButton
     Friend WithEvents CBCategoria2 As ComboBox
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TBNombreCategoria As TextBox
+    Friend WithEvents TbBusqueda As TextBox
     Friend WithEvents LBCategoria As Label
     Friend WithEvents TBCategoria As TextBox
     Friend WithEvents TBActivo As TextBox
