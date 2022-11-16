@@ -42,13 +42,13 @@ Partial Class Proveedor
         Me.LTelefono = New System.Windows.Forms.Label()
         Me.TBTelefonoProveedor = New System.Windows.Forms.TextBox()
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
+        Me.TbBusqueda = New System.Windows.Forms.TextBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.LBCliente = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.TbBusqueda = New System.Windows.Forms.TextBox()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBConsulta.SuspendLayout()
         Me.GBListar.SuspendLayout()
@@ -275,6 +275,22 @@ Partial Class Proveedor
         Me.GBConsulta.TabStop = False
         Me.GBConsulta.Text = "Consulta"
         '
+        'TbBusqueda
+        '
+        Me.TbBusqueda.Location = New System.Drawing.Point(308, 54)
+        Me.TbBusqueda.Name = "TbBusqueda"
+        Me.TbBusqueda.Size = New System.Drawing.Size(295, 26)
+        Me.TbBusqueda.TabIndex = 24
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Todos", "Nombre", "Cbu/Alias", "Codigo"})
+        Me.ComboBox2.Location = New System.Drawing.Point(133, 51)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(169, 30)
+        Me.ComboBox2.TabIndex = 23
+        '
         'IconButton1
         '
         Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
@@ -335,22 +351,6 @@ Partial Class Proveedor
         Me.LBCliente.Size = New System.Drawing.Size(236, 46)
         Me.LBCliente.TabIndex = 25
         Me.LBCliente.Text = "Proveedores"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Todos", "Nombre", "Cbu/Alias"})
-        Me.ComboBox2.Location = New System.Drawing.Point(133, 51)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(169, 30)
-        Me.ComboBox2.TabIndex = 23
-        '
-        'TbBusqueda
-        '
-        Me.TbBusqueda.Location = New System.Drawing.Point(308, 54)
-        Me.TbBusqueda.Name = "TbBusqueda"
-        Me.TbBusqueda.Size = New System.Drawing.Size(295, 26)
-        Me.TbBusqueda.TabIndex = 24
         '
         'Proveedor
         '

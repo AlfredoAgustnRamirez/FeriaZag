@@ -108,6 +108,9 @@
         ElseIf ComboBox2.Text = "Nombre" Then
             Dim dtpro1 = pro.BuscarProveedorPorNombre(TbBusqueda.Text)
             DataGridView1.DataSource = dtpro1
+        ElseIf ComboBox2.Text = "Codigo" Then
+            Dim dtpro1 = pro.BuscarProveedorPorCodigo(TbBusqueda.Text)
+            DataGridView1.DataSource = dtpro1
         Else
             Dim dtpro1 = pro.BuscarProveedorPorAlias(TbBusqueda.Text)
             DataGridView1.DataSource = dtpro1
