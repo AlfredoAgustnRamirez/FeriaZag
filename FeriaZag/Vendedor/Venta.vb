@@ -35,6 +35,7 @@ Public Class Venta
 #Region "Consumidor final"
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         If (CheckBox1.Checked = True) Then
+            TBCodigo.Text = "C0011"
             TBNombreCventa.Enabled = False
             TBDniCventa.Enabled = False
             TBApellidoCventa.Enabled = False

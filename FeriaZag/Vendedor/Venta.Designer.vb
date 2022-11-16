@@ -220,9 +220,9 @@ Partial Class Venta
         Me.BVImprimirVenta.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.BVImprimirVenta.IconSize = 25
         Me.BVImprimirVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BVImprimirVenta.Location = New System.Drawing.Point(1001, 240)
+        Me.BVImprimirVenta.Location = New System.Drawing.Point(1018, 240)
         Me.BVImprimirVenta.Name = "BVImprimirVenta"
-        Me.BVImprimirVenta.Size = New System.Drawing.Size(225, 37)
+        Me.BVImprimirVenta.Size = New System.Drawing.Size(208, 37)
         Me.BVImprimirVenta.TabIndex = 45
         Me.BVImprimirVenta.Text = "Imprimir"
         Me.BVImprimirVenta.UseVisualStyleBackColor = False
@@ -235,9 +235,9 @@ Partial Class Venta
         Me.BVCobrarVenta.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.BVCobrarVenta.IconSize = 25
         Me.BVCobrarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BVCobrarVenta.Location = New System.Drawing.Point(1122, 178)
+        Me.BVCobrarVenta.Location = New System.Drawing.Point(1127, 178)
         Me.BVCobrarVenta.Name = "BVCobrarVenta"
-        Me.BVCobrarVenta.Size = New System.Drawing.Size(103, 37)
+        Me.BVCobrarVenta.Size = New System.Drawing.Size(99, 37)
         Me.BVCobrarVenta.TabIndex = 44
         Me.BVCobrarVenta.Text = "Cobrar  "
         Me.BVCobrarVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -251,7 +251,7 @@ Partial Class Venta
         Me.BVCancelarVenta.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.BVCancelarVenta.IconSize = 25
         Me.BVCancelarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BVCancelarVenta.Location = New System.Drawing.Point(1001, 178)
+        Me.BVCancelarVenta.Location = New System.Drawing.Point(1018, 178)
         Me.BVCancelarVenta.Name = "BVCancelarVenta"
         Me.BVCancelarVenta.Size = New System.Drawing.Size(103, 37)
         Me.BVCancelarVenta.TabIndex = 43

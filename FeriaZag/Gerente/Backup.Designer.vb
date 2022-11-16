@@ -142,11 +142,11 @@ Partial Class Backup
         Me.IconButton1.IconColor = System.Drawing.Color.Black
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton1.Location = New System.Drawing.Point(1052, 538)
+        Me.IconButton1.Location = New System.Drawing.Point(1052, 489)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(144, 62)
         Me.IconButton1.TabIndex = 24
-        Me.IconButton1.Text = "Restoraurar"
+        Me.IconButton1.Text = "Restaurar"
         Me.IconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.IconButton1.UseVisualStyleBackColor = False
         '
