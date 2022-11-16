@@ -47,7 +47,6 @@ Partial Class Producto
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
         Me.ICBBuscar = New FontAwesome.Sharp.IconButton()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.LBCategoria = New System.Windows.Forms.Label()
         Me.TBCodigo2 = New System.Windows.Forms.TextBox()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBListar.SuspendLayout()
@@ -296,7 +295,6 @@ Partial Class Producto
         '
         Me.GBConsulta.Controls.Add(Me.ICBBuscar)
         Me.GBConsulta.Controls.Add(Me.ComboBox2)
-        Me.GBConsulta.Controls.Add(Me.LBCategoria)
         Me.GBConsulta.Controls.Add(Me.Label3)
         Me.GBConsulta.Controls.Add(Me.TBCodigo2)
         Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -326,25 +324,17 @@ Partial Class Producto
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(420, 46)
+        Me.ComboBox2.Items.AddRange(New Object() {"Todos", "Categoria", "Descripcion", "Codigo"})
+        Me.ComboBox2.Location = New System.Drawing.Point(89, 47)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(216, 30)
         Me.ComboBox2.TabIndex = 20
         '
-        'LBCategoria
-        '
-        Me.LBCategoria.AutoSize = True
-        Me.LBCategoria.Location = New System.Drawing.Point(328, 50)
-        Me.LBCategoria.Name = "LBCategoria"
-        Me.LBCategoria.Size = New System.Drawing.Size(79, 22)
-        Me.LBCategoria.TabIndex = 19
-        Me.LBCategoria.Text = "Categoria"
-        '
         'TBCodigo2
         '
-        Me.TBCodigo2.Location = New System.Drawing.Point(100, 51)
+        Me.TBCodigo2.Location = New System.Drawing.Point(325, 48)
         Me.TBCodigo2.Name = "TBCodigo2"
-        Me.TBCodigo2.Size = New System.Drawing.Size(180, 26)
+        Me.TBCodigo2.Size = New System.Drawing.Size(313, 26)
         Me.TBCodigo2.TabIndex = 18
         '
         'Producto
@@ -391,7 +381,6 @@ Partial Class Producto
     Friend WithEvents Label3 As Label
     Friend WithEvents GBConsulta As GroupBox
     Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents LBCategoria As Label
     Friend WithEvents ICBBuscar As FontAwesome.Sharp.IconButton
     Friend WithEvents TBCodigo2 As TextBox
     Friend WithEvents TBActivo As TextBox
