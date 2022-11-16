@@ -190,6 +190,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FeriaZagDataSetRA.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\FReporteVendedor.Designer.vb">
+      <DependentUpon>FReporteVendedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FReporteVendedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\FrmReporteAdmin.Designer.vb">
       <DependentUpon>FrmReporteAdmin.vb</DependentUpon>
     </Compile>
@@ -298,6 +304,12 @@
     <Compile Include="Vendedor\ClienteVendedor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Vendedor\ReporteVendedor.Designer.vb">
+      <DependentUpon>ReporteVendedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\ReporteVendedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vendedor\Venta.Designer.vb">
       <DependentUpon>Venta.vb</DependentUpon>
     </Compile>
@@ -377,6 +389,9 @@
     <EmbeddedResource Include="Administador\ReporteAdmin.resx">
       <DependentUpon>ReporteAdmin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FReporteVendedor.resx">
+      <DependentUpon>FReporteVendedor.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FrmFactura.resx">
       <DependentUpon>FrmFactura.vb</DependentUpon>
     </EmbeddedResource>
@@ -387,6 +402,7 @@
       <DependentUpon>FrmReporteGerente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RGerente.rdlc" />
+    <EmbeddedResource Include="Reportes\RVendedor.rdlc" />
     <EmbeddedResource Include="Reportes\RVentas.rdlc" />
     <EmbeddedResource Include="Gerente\Backup.resx">
       <DependentUpon>Backup.vb</DependentUpon>
@@ -421,6 +437,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vendedor\ProductoVendedor.resx">
       <DependentUpon>ProductoVendedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\ReporteVendedor.resx">
+      <DependentUpon>ReporteVendedor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vendedor\Venta.resx">
       <DependentUpon>Venta.vb</DependentUpon>
