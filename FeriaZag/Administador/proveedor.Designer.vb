@@ -42,14 +42,15 @@ Partial Class Proveedor
         Me.LTelefono = New System.Windows.Forms.Label()
         Me.TBTelefonoProveedor = New System.Windows.Forms.TextBox()
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TBCodigo2Proveedor = New System.Windows.Forms.TextBox()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TBNombre2Proveedor = New System.Windows.Forms.TextBox()
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.LBCliente = New System.Windows.Forms.Label()
+        Me.TbBusqueda = New System.Windows.Forms.TextBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TBActivo = New System.Windows.Forms.TextBox()
+        Me.LBActivo = New System.Windows.Forms.Label()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBConsulta.SuspendLayout()
         Me.GBListar.SuspendLayout()
@@ -58,6 +59,8 @@ Partial Class Proveedor
         '
         'GBMantenimiento
         '
+        Me.GBMantenimiento.Controls.Add(Me.LBActivo)
+        Me.GBMantenimiento.Controls.Add(Me.TBActivo)
         Me.GBMantenimiento.Controls.Add(Me.Label4)
         Me.GBMantenimiento.Controls.Add(Me.TBCodigoProveedor)
         Me.GBMantenimiento.Controls.Add(Me.ICBEliminarProveedor)
@@ -109,7 +112,7 @@ Partial Class Proveedor
         Me.ICBEliminarProveedor.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBEliminarProveedor.IconSize = 40
         Me.ICBEliminarProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBEliminarProveedor.Location = New System.Drawing.Point(197, 462)
+        Me.ICBEliminarProveedor.Location = New System.Drawing.Point(197, 471)
         Me.ICBEliminarProveedor.Name = "ICBEliminarProveedor"
         Me.ICBEliminarProveedor.Size = New System.Drawing.Size(129, 46)
         Me.ICBEliminarProveedor.TabIndex = 26
@@ -125,7 +128,7 @@ Partial Class Proveedor
         Me.ICBModificarProveedor.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBModificarProveedor.IconSize = 40
         Me.ICBModificarProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBModificarProveedor.Location = New System.Drawing.Point(55, 462)
+        Me.ICBModificarProveedor.Location = New System.Drawing.Point(55, 471)
         Me.ICBModificarProveedor.Name = "ICBModificarProveedor"
         Me.ICBModificarProveedor.Size = New System.Drawing.Size(126, 46)
         Me.ICBModificarProveedor.TabIndex = 25
@@ -141,7 +144,7 @@ Partial Class Proveedor
         Me.ICBAgregarProveedor.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBAgregarProveedor.IconSize = 40
         Me.ICBAgregarProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBAgregarProveedor.Location = New System.Drawing.Point(197, 385)
+        Me.ICBAgregarProveedor.Location = New System.Drawing.Point(197, 404)
         Me.ICBAgregarProveedor.Name = "ICBAgregarProveedor"
         Me.ICBAgregarProveedor.Size = New System.Drawing.Size(129, 52)
         Me.ICBAgregarProveedor.TabIndex = 24
@@ -157,7 +160,7 @@ Partial Class Proveedor
         Me.ICBNuevoProveedor.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBNuevoProveedor.IconSize = 40
         Me.ICBNuevoProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBNuevoProveedor.Location = New System.Drawing.Point(55, 385)
+        Me.ICBNuevoProveedor.Location = New System.Drawing.Point(55, 404)
         Me.ICBNuevoProveedor.Name = "ICBNuevoProveedor"
         Me.ICBNuevoProveedor.Size = New System.Drawing.Size(126, 52)
         Me.ICBNuevoProveedor.TabIndex = 23
@@ -263,11 +266,10 @@ Partial Class Proveedor
         '
         'GBConsulta
         '
-        Me.GBConsulta.Controls.Add(Me.Label2)
-        Me.GBConsulta.Controls.Add(Me.TBCodigo2Proveedor)
+        Me.GBConsulta.Controls.Add(Me.TbBusqueda)
+        Me.GBConsulta.Controls.Add(Me.ComboBox2)
+        Me.GBConsulta.Controls.Add(Me.Label5)
         Me.GBConsulta.Controls.Add(Me.IconButton1)
-        Me.GBConsulta.Controls.Add(Me.Label3)
-        Me.GBConsulta.Controls.Add(Me.TBNombre2Proveedor)
         Me.GBConsulta.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBConsulta.Location = New System.Drawing.Point(433, 58)
@@ -277,22 +279,6 @@ Partial Class Proveedor
         Me.GBConsulta.TabStop = False
         Me.GBConsulta.Text = "Consulta"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(290, 50)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 22)
-        Me.Label2.TabIndex = 21
-        Me.Label2.Text = "Codigo:"
-        '
-        'TBCodigo2Proveedor
-        '
-        Me.TBCodigo2Proveedor.Location = New System.Drawing.Point(381, 46)
-        Me.TBCodigo2Proveedor.Name = "TBCodigo2Proveedor"
-        Me.TBCodigo2Proveedor.Size = New System.Drawing.Size(163, 26)
-        Me.TBCodigo2Proveedor.TabIndex = 22
-        '
         'IconButton1
         '
         Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
@@ -301,29 +287,13 @@ Partial Class Proveedor
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.IconSize = 40
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton1.Location = New System.Drawing.Point(594, 30)
+        Me.IconButton1.Location = New System.Drawing.Point(617, 30)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(118, 46)
         Me.IconButton1.TabIndex = 20
         Me.IconButton1.Text = "Buscar  "
         Me.IconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.IconButton1.UseVisualStyleBackColor = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 54)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 22)
-        Me.Label3.TabIndex = 18
-        Me.Label3.Text = "Nombre:"
-        '
-        'TBNombre2Proveedor
-        '
-        Me.TBNombre2Proveedor.Location = New System.Drawing.Point(107, 50)
-        Me.TBNombre2Proveedor.Name = "TBNombre2Proveedor"
-        Me.TBNombre2Proveedor.Size = New System.Drawing.Size(163, 26)
-        Me.TBNombre2Proveedor.TabIndex = 18
         '
         'GBListar
         '
@@ -360,6 +330,47 @@ Partial Class Proveedor
         Me.LBCliente.Size = New System.Drawing.Size(236, 46)
         Me.LBCliente.TabIndex = 25
         Me.LBCliente.Text = "Proveedores"
+        '
+        'TbBusqueda
+        '
+        Me.TbBusqueda.Location = New System.Drawing.Point(297, 42)
+        Me.TbBusqueda.Name = "TbBusqueda"
+        Me.TbBusqueda.Size = New System.Drawing.Size(314, 26)
+        Me.TbBusqueda.TabIndex = 39
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Todos", "Nombre", "Cbu/Alias"})
+        Me.ComboBox2.Location = New System.Drawing.Point(111, 39)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(168, 30)
+        Me.ComboBox2.TabIndex = 38
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(16, 42)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(89, 22)
+        Me.Label5.TabIndex = 37
+        Me.Label5.Text = "Buscar Por:"
+        '
+        'TBActivo
+        '
+        Me.TBActivo.Location = New System.Drawing.Point(173, 363)
+        Me.TBActivo.Name = "TBActivo"
+        Me.TBActivo.Size = New System.Drawing.Size(153, 26)
+        Me.TBActivo.TabIndex = 30
+        '
+        'LBActivo
+        '
+        Me.LBActivo.AutoSize = True
+        Me.LBActivo.Location = New System.Drawing.Point(41, 363)
+        Me.LBActivo.Name = "LBActivo"
+        Me.LBActivo.Size = New System.Drawing.Size(62, 22)
+        Me.LBActivo.TabIndex = 29
+        Me.LBActivo.Text = "Activo:"
         '
         'Proveedor
         '
@@ -399,8 +410,6 @@ Partial Class Proveedor
     Friend WithEvents LTelefono As Label
     Friend WithEvents TBTelefonoProveedor As TextBox
     Friend WithEvents GBConsulta As GroupBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents TBNombre2Proveedor As TextBox
     Friend WithEvents GBListar As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TBObservaciones As TextBox
@@ -411,8 +420,11 @@ Partial Class Proveedor
     Friend WithEvents ICBNuevoProveedor As FontAwesome.Sharp.IconButton
     Friend WithEvents Label4 As Label
     Friend WithEvents TBCodigoProveedor As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents TBCodigo2Proveedor As TextBox
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents LBCliente As Label
+    Friend WithEvents TbBusqueda As TextBox
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents LBActivo As Label
+    Friend WithEvents TBActivo As TextBox
 End Class

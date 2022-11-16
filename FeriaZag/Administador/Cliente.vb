@@ -42,13 +42,13 @@
 #End Region
 
 #Region "Solo Letras Nombre2 Cliente"
-    Private Sub TBNombre2Cliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombre2Cliente.KeyPress
+    Private Sub TBNombre2Cliente_KeyPress(sender As Object, e As KeyPressEventArgs)
         SoloLetras(e)
     End Sub
 #End Region
 
 #Region "Solo Numeros Dni2 Cliente"
-    Private Sub TBDni2Cliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBDni2Cliente.KeyPress
+    Private Sub TBDni2Cliente_KeyPress(sender As Object, e As KeyPressEventArgs)
         SoloNumeros(e)
     End Sub
 #End Region
@@ -114,9 +114,15 @@
 
 #Region "Buscar Clientes por Dni"
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
-        Dim dtpro1 = cli.BuscarClientePorDni(TBDni2Cliente.Text)
-        TBNombre2Cliente.Text = Convert.ToString(dtpro1.Rows(0)("Nombre"))
-        DataGridView1.DataSource = dtpro1
+        If ComboBox2.Text = "Dni" Then
+            Dim dtpro1 = cli.BuscarClientePorDni(TbBusqueda.Text)
+            DataGridView1.DataSource = dtpro1
+        ElseIf ComboBox2.Text = "Nombre" Then
+            Dim dtpro1 = cli.BuscarClientePorNombre(TbBusqueda.Text)
+            DataGridView1.DataSource = dtpro1
+        Else
+            cli.llenarDataGridview(DataGridView1)
+        End If
     End Sub
 #End Region
 

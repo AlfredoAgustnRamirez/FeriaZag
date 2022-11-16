@@ -43,12 +43,11 @@ Partial Class Producto
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.LBCliente = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.ICBBuscar = New FontAwesome.Sharp.IconButton()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.LBCategoria = New System.Windows.Forms.Label()
-        Me.TBCodigo2 = New System.Windows.Forms.TextBox()
+        Me.TbBusqueda = New System.Windows.Forms.TextBox()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBListar.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -283,29 +282,28 @@ Partial Class Producto
         Me.LBCliente.TabIndex = 25
         Me.LBCliente.Text = "Productos"
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(17, 51)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(66, 22)
-        Me.Label3.TabIndex = 18
-        Me.Label3.Text = "Codigo:"
-        '
         'GBConsulta
         '
-        Me.GBConsulta.Controls.Add(Me.ICBBuscar)
+        Me.GBConsulta.Controls.Add(Me.TbBusqueda)
         Me.GBConsulta.Controls.Add(Me.ComboBox2)
-        Me.GBConsulta.Controls.Add(Me.LBCategoria)
-        Me.GBConsulta.Controls.Add(Me.Label3)
-        Me.GBConsulta.Controls.Add(Me.TBCodigo2)
+        Me.GBConsulta.Controls.Add(Me.Label5)
+        Me.GBConsulta.Controls.Add(Me.ICBBuscar)
         Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBConsulta.Location = New System.Drawing.Point(406, 58)
         Me.GBConsulta.Name = "GBConsulta"
-        Me.GBConsulta.Size = New System.Drawing.Size(812, 115)
+        Me.GBConsulta.Size = New System.Drawing.Size(812, 129)
         Me.GBConsulta.TabIndex = 21
         Me.GBConsulta.TabStop = False
         Me.GBConsulta.Text = "Consultar Producto"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(20, 63)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(89, 22)
+        Me.Label5.TabIndex = 26
+        Me.Label5.Text = "Buscar Por:"
         '
         'ICBBuscar
         '
@@ -315,7 +313,7 @@ Partial Class Producto
         Me.ICBBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBBuscar.IconSize = 40
         Me.ICBBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBBuscar.Location = New System.Drawing.Point(669, 34)
+        Me.ICBBuscar.Location = New System.Drawing.Point(669, 51)
         Me.ICBBuscar.Name = "ICBBuscar"
         Me.ICBBuscar.Size = New System.Drawing.Size(118, 46)
         Me.ICBBuscar.TabIndex = 21
@@ -326,26 +324,18 @@ Partial Class Producto
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(420, 46)
+        Me.ComboBox2.Items.AddRange(New Object() {"Todos", "Codigo", "Descripcion", "Categoria"})
+        Me.ComboBox2.Location = New System.Drawing.Point(115, 60)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(216, 30)
-        Me.ComboBox2.TabIndex = 20
+        Me.ComboBox2.Size = New System.Drawing.Size(168, 30)
+        Me.ComboBox2.TabIndex = 33
         '
-        'LBCategoria
+        'TbBusqueda
         '
-        Me.LBCategoria.AutoSize = True
-        Me.LBCategoria.Location = New System.Drawing.Point(328, 50)
-        Me.LBCategoria.Name = "LBCategoria"
-        Me.LBCategoria.Size = New System.Drawing.Size(79, 22)
-        Me.LBCategoria.TabIndex = 19
-        Me.LBCategoria.Text = "Categoria"
-        '
-        'TBCodigo2
-        '
-        Me.TBCodigo2.Location = New System.Drawing.Point(100, 51)
-        Me.TBCodigo2.Name = "TBCodigo2"
-        Me.TBCodigo2.Size = New System.Drawing.Size(180, 26)
-        Me.TBCodigo2.TabIndex = 18
+        Me.TbBusqueda.Location = New System.Drawing.Point(301, 63)
+        Me.TbBusqueda.Name = "TbBusqueda"
+        Me.TbBusqueda.Size = New System.Drawing.Size(362, 26)
+        Me.TbBusqueda.TabIndex = 33
         '
         'Producto
         '
@@ -388,12 +378,11 @@ Partial Class Producto
     Friend WithEvents TBStock As TextBox
     Friend WithEvents ICBNuevo As FontAwesome.Sharp.IconButton
     Friend WithEvents LBCliente As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents GBConsulta As GroupBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents LBCategoria As Label
     Friend WithEvents ICBBuscar As FontAwesome.Sharp.IconButton
-    Friend WithEvents TBCodigo2 As TextBox
     Friend WithEvents TBActivo As TextBox
     Friend WithEvents LBActivo As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents TbBusqueda As TextBox
 End Class

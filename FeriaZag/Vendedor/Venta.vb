@@ -10,6 +10,7 @@ Public Class Venta
 
 #Region "Carga de Ventas"
     Private Sub Venta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TBCodigoPventa.Text = cod
         LbUsuario.Text = VarUsuario
         LbFecha.Text = Format(Date.Now, "dd/MM/yyyy")
         TBId.Text = ven.ObtenerIdVenta()
@@ -25,7 +26,7 @@ Public Class Venta
         TBCodigoPventa.Text = ""
         TBNombreCventa.Text = ""
         TBNombreProducto.Text = ""
-        CBCategoriaPventa.Text = ""
+        TbCategoria.Text = ""
         TBOPrecioPventa.Text = ""
         TBTotalVenta.Text = ""
         DataGridView2.Rows.Clear()
@@ -86,7 +87,7 @@ Public Class Venta
         If NumericUpDown1.Value = 0 Then
             MsgBox("Cantidad minima es 1", MsgBoxStyle.Critical)
         ElseIf TbStock.Text >= NumericUpDown1.Value Then
-            DataGridView2.Rows.Add(TBCodigoPventa.Text, TBNombreProducto.Text, CBCategoriaPventa.Text,
+            DataGridView2.Rows.Add(TBCodigoPventa.Text, TBNombreProducto.Text, TbCategoria.Text,
             TBOPrecioPventa.Text, NumericUpDown1.Value, (TBOPrecioPventa.Text * NumericUpDown1.Value), "Quitar")
             TBTotalVenta.Text = FormatNumber(obj.Sumar("SubTotal", DataGridView2), 2).ToString
         Else
@@ -119,11 +120,7 @@ Public Class Venta
 
 #Region "Buscar Productos por Codigo"
     Private Sub BVBuscarP_Click(sender As Object, e As EventArgs) Handles BVBuscarP.Click
-        Dim dtpro2 = obj.BuscarProductosPorCodigo(TBCodigoPventa.Text)
-        TBNombreProducto.Text = Convert.ToString(dtpro2.Rows(0)("Producto"))
-        CBCategoriaPventa.Text = Convert.ToString(dtpro2.Rows(0)("Categoria"))
-        TBOPrecioPventa.Text = Convert.ToString(dtpro2.Rows(0)("Precio"))
-        TbStock.Text = Convert.ToString(dtpro2.Rows(0)("Stock"))
+        Consulta.Show()
     End Sub
 #End Region
 

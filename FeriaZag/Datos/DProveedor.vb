@@ -8,8 +8,8 @@ Public Class DProveedor
 #End Region
 
 #Region "Registrar Proveedor"
-    Public Function RegistrarProveedor(Nombre As String, Apellido As String, Telefono As Long, Direccion As String, CbuAlias As String, Observacion As String)
-        Dim da As New SqlCommand("RegistrarProveedores", cnx)
+    Public Function RegistrarProveedor(Nombre As String, Apellido As String, Telefono As Long, Direccion As String, CbuAlias As String, Observacion As String, Activo As String)
+        Dim da As New SqlCommand("RegistrarProveedor", cnx)
         da.CommandType = CommandType.StoredProcedure
         da.Parameters.AddWithValue("@Nombre", Nombre)
         da.Parameters.AddWithValue("@Apellido", Apellido)
@@ -17,6 +17,7 @@ Public Class DProveedor
         da.Parameters.AddWithValue("@Direccion", Direccion)
         da.Parameters.AddWithValue("@CbuAlias", CbuAlias)
         da.Parameters.AddWithValue("@Observacion", Observacion)
+        da.Parameters.AddWithValue("@Activo", Activo)
         Conectar()
         Dim resp As Integer
         Try
@@ -31,18 +32,18 @@ Public Class DProveedor
 #End Region
 
 #Region "Eliminar Proveedor"
-    Public Function EliminarProducto(Cod_Proveedor As String)
-        Dim eliminar As New SqlCommand("EliminarProveedor", cnx)
+    Public Function EliminarProveedor(cod_proveedor As String)
+        Dim eliminar As New SqlCommand("BajaProveedor", cnx)
         eliminar.CommandType = CommandType.StoredProcedure
-        eliminar.Parameters.AddWithValue("@Cod_Proveedor", Cod_Proveedor)
+        eliminar.Parameters.AddWithValue("@cod_proveedor", cod_proveedor)
         Conectar()
         Dim resp As Integer
         Dim respuesta As MsgBoxResult
-        respuesta = MsgBox("Seguro que desea eliminar el Proveedor?", 32 + 4, "Eliminar")
+        respuesta = MsgBox("Seguro que desea eliminar el Producto?", 32 + 4, "Eliminar")
         If respuesta = 6 Then
             Try
                 resp = eliminar.ExecuteNonQuery
-                MsgBox("Eliminado con exito " + Cod_Proveedor, MsgBoxStyle.Information)
+                MsgBox("Eliminado con exito " + cod_proveedor, MsgBoxStyle.Information)
                 Desconectar()
             Catch ex As Exception
                 MsgBox("Error al eliminar Proveedor", MsgBoxStyle.Critical)
@@ -54,16 +55,17 @@ Public Class DProveedor
 #End Region
 
 #Region "Modificar Proveedor"
-    Public Function ModificarProveedor(Cod_Proveedor As String, Nombre As String, Apellido As String, Telefono As Long, Direccion As String, CbuAlias As String, Observacion As String)
+    Public Function ModificarProveedor(Cod_Proveedor As String, Nombre As String, Apellido As String, Telefono As Long, Direccion As String, CbuAlias As String, Observacion As String, Activo As String)
         Dim modificar As New SqlCommand("ModificarProveedor", cnx)
         modificar.CommandType = CommandType.StoredProcedure
-        modificar.Parameters.AddWithValue("@Cod_Proveedor", Cod_Proveedor)
+        modificar.Parameters.AddWithValue("@cod_proveedor", Cod_Proveedor)
         modificar.Parameters.AddWithValue("@Nombre", Nombre)
         modificar.Parameters.AddWithValue("@Apellido", Apellido)
         modificar.Parameters.AddWithValue("@Telefono", Telefono)
         modificar.Parameters.AddWithValue("@Direccion", Direccion)
         modificar.Parameters.AddWithValue("@CbuAlias", CbuAlias)
         modificar.Parameters.AddWithValue("@Observacion", Observacion)
+        modificar.Parameters.AddWithValue("@Activo", Activo)
         Conectar()
         Dim resp As Integer
         Dim respuesta As MsgBoxResult
@@ -92,6 +94,18 @@ Public Class DProveedor
             MsgBox("No se lleno el DataGridView debido a: " + ex.ToString)
         End Try
     End Sub
+#End Region
+
+#Region "Buscar Cliente por nombre"
+    Public Function BuscarProveedorPorNombre(nombre As String) As DataTable
+        Dim cmd As SqlCommand = New SqlCommand("BuscarProveedorPorNombre", cnx)
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.Parameters.AddWithValue("@Nombre", nombre)
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
+        Dim dtable1 As DataTable = New DataTable()
+        da.Fill(dtable1)
+        Return dtable1
+    End Function
 #End Region
 
 End Class
