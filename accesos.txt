@@ -1,0 +1,14 @@
+Accesos: 
+		Usuario: vendedor        Contraseña: 1234
+		Usuario: administrador   Contraseña: 1234
+		Usuario: gerente         Contraseña: 1234
+
+
+Versiones: Visual Basic 2019
+	     SQL Server Management Studio	15.0.18424.0 (2019)
+
+
+
+dase de datos en formato .bacpac mediante export data-tier 
+
+
