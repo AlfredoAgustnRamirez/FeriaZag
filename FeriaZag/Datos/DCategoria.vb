@@ -86,16 +86,4 @@ Public Class DCategoria
     End Function
 #End Region
 
-#Region "Buscar por categoria"
-    Public Function BuscarCategoria(codigo As String) As DataTable
-        Dim cmd As SqlCommand = New SqlCommand("BuscarCategoria", cnx)
-        cmd.CommandType = CommandType.StoredProcedure
-        cmd.Parameters.AddWithValue("@Categoria", codigo)
-        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
-        Dim dtable1 As DataTable = New DataTable()
-        da.Fill(dtable1)
-        Return dtable1
-    End Function
-#End Region
-
 End Class

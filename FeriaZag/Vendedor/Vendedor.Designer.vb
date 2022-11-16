@@ -34,6 +34,7 @@ Partial Class Vendedor
         Me.ProductosToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
         Me.ClientesToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
         Me.SalirToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
+        Me.IconMenuItem1 = New FontAwesome.Sharp.IconMenuItem()
         Me.ProductoVendedorToolStripMenuItem = New FontAwesome.Sharp.IconMenuItem()
         Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -89,7 +90,7 @@ Partial Class Vendedor
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.SalirToolStripMenuItem, Me.ProductoVendedorToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InicioToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.SalirToolStripMenuItem, Me.IconMenuItem1, Me.ProductoVendedorToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(6, 12, 0, 2)
@@ -153,18 +154,31 @@ Partial Class Vendedor
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(103, 34)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
+        'IconMenuItem1
+        '
+        Me.IconMenuItem1.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconMenuItem1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.IconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.ShoppingBag
+        Me.IconMenuItem1.IconColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.IconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconMenuItem1.IconSize = 30
+        Me.IconMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.IconMenuItem1.Name = "IconMenuItem1"
+        Me.IconMenuItem1.Size = New System.Drawing.Size(153, 34)
+        Me.IconMenuItem1.Text = "Productos"
+        '
         'ProductoVendedorToolStripMenuItem
         '
         Me.ProductoVendedorToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ProductoVendedorToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ProductoVendedorToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.ShoppingBag
+        Me.ProductoVendedorToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.ChartSimple
         Me.ProductoVendedorToolStripMenuItem.IconColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ProductoVendedorToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ProductoVendedorToolStripMenuItem.IconSize = 30
         Me.ProductoVendedorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ProductoVendedorToolStripMenuItem.Name = "ProductoVendedorToolStripMenuItem"
-        Me.ProductoVendedorToolStripMenuItem.Size = New System.Drawing.Size(153, 34)
-        Me.ProductoVendedorToolStripMenuItem.Text = "Productos"
+        Me.ProductoVendedorToolStripMenuItem.Size = New System.Drawing.Size(231, 34)
+        Me.ProductoVendedorToolStripMenuItem.Text = "Ventas Realizadas"
         '
         'ToolStripContainer1
         '
@@ -287,4 +301,5 @@ Partial Class Vendedor
     Friend WithEvents LblFecha As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents IconMenuItem1 As FontAwesome.Sharp.IconMenuItem
 End Class
