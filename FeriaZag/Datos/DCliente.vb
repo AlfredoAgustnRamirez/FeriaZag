@@ -97,11 +97,23 @@ Public Class DCliente
     End Function
 #End Region
 
-#Region "Buscar Cliente"
+#Region "Buscar Cliente por dni"
     Public Function BuscarClientePorDni(dni As Integer) As DataTable
         Dim cmd As SqlCommand = New SqlCommand("BuscarClientePorDni", cnx)
         cmd.CommandType = CommandType.StoredProcedure
         cmd.Parameters.AddWithValue("@Dni", dni)
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
+        Dim dtable1 As DataTable = New DataTable()
+        da.Fill(dtable1)
+        Return dtable1
+    End Function
+#End Region
+
+#Region "Buscar Cliente por nombre"
+    Public Function BuscarClientePorNombre(nombre As String) As DataTable
+        Dim cmd As SqlCommand = New SqlCommand("BuscarClientePorNombre", cnx)
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.Parameters.AddWithValue("@Nombre", nombre)
         Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
         Dim dtable1 As DataTable = New DataTable()
         da.Fill(dtable1)

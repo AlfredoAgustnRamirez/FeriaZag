@@ -23,6 +23,8 @@ Partial Class Cliente
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GBMantenimiento = New System.Windows.Forms.GroupBox()
+        Me.TBActivo = New System.Windows.Forms.TextBox()
+        Me.LBActivo = New System.Windows.Forms.Label()
         Me.TBEmail = New System.Windows.Forms.TextBox()
         Me.LBEmail = New System.Windows.Forms.Label()
         Me.LBCodigoCliente = New System.Windows.Forms.Label()
@@ -42,16 +44,13 @@ Partial Class Cliente
         Me.LTelefono = New System.Windows.Forms.Label()
         Me.TBTelefonoCliente = New System.Windows.Forms.TextBox()
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
-        Me.TBDni2Cliente = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TBNombre2Cliente = New System.Windows.Forms.TextBox()
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.LBCliente = New System.Windows.Forms.Label()
-        Me.TBActivo = New System.Windows.Forms.TextBox()
-        Me.LBActivo = New System.Windows.Forms.Label()
+        Me.TbBusqueda = New System.Windows.Forms.TextBox()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBConsulta.SuspendLayout()
         Me.GBListar.SuspendLayout()
@@ -87,6 +86,22 @@ Partial Class Cliente
         Me.GBMantenimiento.TabIndex = 21
         Me.GBMantenimiento.TabStop = False
         Me.GBMantenimiento.Text = "Mantenimiento"
+        '
+        'TBActivo
+        '
+        Me.TBActivo.Location = New System.Drawing.Point(139, 365)
+        Me.TBActivo.Name = "TBActivo"
+        Me.TBActivo.Size = New System.Drawing.Size(181, 26)
+        Me.TBActivo.TabIndex = 28
+        '
+        'LBActivo
+        '
+        Me.LBActivo.AutoSize = True
+        Me.LBActivo.Location = New System.Drawing.Point(39, 369)
+        Me.LBActivo.Name = "LBActivo"
+        Me.LBActivo.Size = New System.Drawing.Size(62, 22)
+        Me.LBActivo.TabIndex = 27
+        Me.LBActivo.Text = "Activo:"
         '
         'TBEmail
         '
@@ -267,11 +282,10 @@ Partial Class Cliente
         '
         'GBConsulta
         '
+        Me.GBConsulta.Controls.Add(Me.TbBusqueda)
+        Me.GBConsulta.Controls.Add(Me.ComboBox2)
         Me.GBConsulta.Controls.Add(Me.IconButton1)
-        Me.GBConsulta.Controls.Add(Me.TBDni2Cliente)
-        Me.GBConsulta.Controls.Add(Me.Label4)
         Me.GBConsulta.Controls.Add(Me.Label3)
-        Me.GBConsulta.Controls.Add(Me.TBNombre2Cliente)
         Me.GBConsulta.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBConsulta.Location = New System.Drawing.Point(419, 58)
@@ -281,6 +295,15 @@ Partial Class Cliente
         Me.GBConsulta.TabStop = False
         Me.GBConsulta.Text = "Consulta"
         '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Todos", "Dni", "Nombre"})
+        Me.ComboBox2.Location = New System.Drawing.Point(133, 49)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(216, 30)
+        Me.ComboBox2.TabIndex = 21
+        '
         'IconButton1
         '
         Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
@@ -289,7 +312,7 @@ Partial Class Cliente
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.IconSize = 40
         Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton1.Location = New System.Drawing.Point(623, 45)
+        Me.IconButton1.Location = New System.Drawing.Point(668, 40)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(118, 46)
         Me.IconButton1.TabIndex = 19
@@ -297,37 +320,14 @@ Partial Class Cliente
         Me.IconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.IconButton1.UseVisualStyleBackColor = False
         '
-        'TBDni2Cliente
-        '
-        Me.TBDni2Cliente.Location = New System.Drawing.Point(384, 54)
-        Me.TBDni2Cliente.Name = "TBDni2Cliente"
-        Me.TBDni2Cliente.Size = New System.Drawing.Size(153, 26)
-        Me.TBDni2Cliente.TabIndex = 19
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(322, 54)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(40, 22)
-        Me.Label4.TabIndex = 18
-        Me.Label4.Text = "DNI:"
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(16, 54)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 22)
+        Me.Label3.Size = New System.Drawing.Size(111, 22)
         Me.Label3.TabIndex = 18
-        Me.Label3.Text = "Nombre:"
-        '
-        'TBNombre2Cliente
-        '
-        Me.TBNombre2Cliente.Location = New System.Drawing.Point(107, 50)
-        Me.TBNombre2Cliente.Name = "TBNombre2Cliente"
-        Me.TBNombre2Cliente.Size = New System.Drawing.Size(153, 26)
-        Me.TBNombre2Cliente.TabIndex = 18
+        Me.Label3.Text = "Busqueda por:"
         '
         'GBListar
         '
@@ -365,21 +365,12 @@ Partial Class Cliente
         Me.LBCliente.TabIndex = 24
         Me.LBCliente.Text = "Cliente"
         '
-        'TBActivo
+        'TbBusqueda
         '
-        Me.TBActivo.Location = New System.Drawing.Point(139, 365)
-        Me.TBActivo.Name = "TBActivo"
-        Me.TBActivo.Size = New System.Drawing.Size(181, 26)
-        Me.TBActivo.TabIndex = 28
-        '
-        'LBActivo
-        '
-        Me.LBActivo.AutoSize = True
-        Me.LBActivo.Location = New System.Drawing.Point(39, 369)
-        Me.LBActivo.Name = "LBActivo"
-        Me.LBActivo.Size = New System.Drawing.Size(62, 22)
-        Me.LBActivo.TabIndex = 27
-        Me.LBActivo.Text = "Activo:"
+        Me.TbBusqueda.Location = New System.Drawing.Point(366, 49)
+        Me.TbBusqueda.Name = "TbBusqueda"
+        Me.TbBusqueda.Size = New System.Drawing.Size(287, 26)
+        Me.TbBusqueda.TabIndex = 29
         '
         'Cliente
         '
@@ -418,10 +409,7 @@ Partial Class Cliente
     Friend WithEvents LTelefono As Label
     Friend WithEvents TBTelefonoCliente As TextBox
     Friend WithEvents GBConsulta As GroupBox
-    Friend WithEvents TBDni2Cliente As TextBox
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TBNombre2Cliente As TextBox
     Friend WithEvents GBListar As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents LBCliente As Label
@@ -435,4 +423,6 @@ Partial Class Cliente
     Friend WithEvents LBEmail As Label
     Friend WithEvents TBActivo As TextBox
     Friend WithEvents LBActivo As Label
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents TbBusqueda As TextBox
 End Class
