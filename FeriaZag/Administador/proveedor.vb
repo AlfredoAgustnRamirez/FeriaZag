@@ -34,11 +34,6 @@
     End Sub
 #End Region
 
-#Region "Solo Letras Observaciones Proveedor"
-    Private Sub TBObservaciones_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBObservaciones.KeyPress
-        SoloLetras(e)
-    End Sub
-#End Region
 
 #Region "Solo Letras Nombre2 Proveedor"
     Private Sub TBNombre2Proveedor_KeyPress(sender As Object, e As KeyPressEventArgs)

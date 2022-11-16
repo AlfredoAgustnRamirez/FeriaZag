@@ -80,11 +80,6 @@ Public Class Producto
     End Sub
 #End Region
 
-#Region "TextBox Nombre Solo Letras"
-    Private Sub TBNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombre.KeyPress
-        SoloLetras(e)
-    End Sub
-#End Region
 
 #Region "TextBox Precio Solo Numeros"
     Private Sub TBPrecio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBPrecio.KeyPress
