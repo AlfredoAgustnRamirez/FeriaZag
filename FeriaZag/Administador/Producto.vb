@@ -29,12 +29,14 @@ Public Class Producto
 
 #Region "DataGridView Contenido por fila"
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        TBCodigo.Text = DataGridView1.Item(0, e.RowIndex).Value
-        ComboBox1.Text = DataGridView1.Item(1, e.RowIndex).Value
-        TBNombre.Text = DataGridView1.Item(2, e.RowIndex).Value
-        TBPrecio.Text = DataGridView1.Item(3, e.RowIndex).Value
-        TBStock.Text = DataGridView1.Item(4, e.RowIndex).Value
-        TBActivo.Text = DataGridView1.Item(5, e.RowIndex).Value
+        Dim FilaActual As Integer
+        FilaActual = DataGridView1.CurrentRow.Index
+        TBCodigo.Text = DataGridView1.Rows(FilaActual).Cells(0).Value
+        ComboBox1.Text = DataGridView1.Rows(FilaActual).Cells(1).Value
+        TBNombre.Text = DataGridView1.Rows(FilaActual).Cells(2).Value
+        TBPrecio.Text = DataGridView1.Rows(FilaActual).Cells(3).Value
+        TBStock.Text = DataGridView1.Rows(FilaActual).Cells(4).Value
+        TBActivo.Text = DataGridView1.Rows(FilaActual).Cells(5).Value
         ICBAgregar.Enabled = False
         ICBModificar.Enabled = True
         ICBEliminar.Enabled = True

@@ -88,13 +88,15 @@
 
 #Region "DataGridView Contenido por fila"
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        TBCodigoProveedor.Text = DataGridView1.Item(0, e.RowIndex).Value
-        TBNombreProveedor.Text = DataGridView1.Item(1, e.RowIndex).Value
-        TBApellidoProveedor.Text = DataGridView1.Item(2, e.RowIndex).Value
-        TBTelefonoProveedor.Text = DataGridView1.Item(3, e.RowIndex).Value
-        TBDirecciónProveedor.Text = DataGridView1.Item(4, e.RowIndex).Value
-        TBCbuProveedor.Text = DataGridView1.Item(5, e.RowIndex).Value
-        TBObservaciones.Text = DataGridView1.Item(6, e.RowIndex).Value
+        Dim FilaActual As Integer
+        FilaActual = DataGridView1.CurrentRow.Index
+        TBCodigoProveedor.Text = DataGridView1.Rows(FilaActual).Cells(0).Value
+        TBNombreProveedor.Text = DataGridView1.Rows(FilaActual).Cells(1).Value
+        TBApellidoProveedor.Text = DataGridView1.Rows(FilaActual).Cells(2).Value
+        TBTelefonoProveedor.Text = DataGridView1.Rows(FilaActual).Cells(3).Value
+        TBDirecciónProveedor.Text = DataGridView1.Rows(FilaActual).Cells(4).Value
+        TBCbuProveedor.Text = DataGridView1.Rows(FilaActual).Cells(5).Value
+        TBObservaciones.Text = DataGridView1.Rows(FilaActual).Cells(6).Value
         ICBAgregarProveedor.Enabled = False
         ICBModificarProveedor.Enabled = True
         ICBEliminarProveedor.Enabled = True

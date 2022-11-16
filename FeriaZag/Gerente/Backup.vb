@@ -17,9 +17,11 @@ Public Class Backup
 
 #Region "Realizar backup"
     Private Sub ICBBase_Click(sender As Object, e As EventArgs) Handles ICBBase.Click
+        directorio = TBDirectorio.Text
+        nombrebackup = TBNombreBackup.Text
         If TBDirectorio.Text <> String.Empty Then
             System.IO.Directory.CreateDirectory(TBDirectorio.Text)
-            Dim query As String = "Backup Database FeriaZag To disk='" + TBDirectorio.Text + "\" + TBNombreBackup.Text + ".BAK'"
+            Dim query As String = "Backup Database FeriaZag To disk='" + TBDirectorio.Text + "\" + TBNombreBackup.Text + ".bak'"
             Dim cmd As New SqlCommand(query, cnx)
             Conectar()
             Try
@@ -41,6 +43,10 @@ Public Class Backup
         If examinar = DialogResult.OK Then
             TBDirectorio.Text = FolderBrowserDialog1.SelectedPath
         End If
+    End Sub
+
+    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+        FrmRestore.Show()
     End Sub
 #End Region
 

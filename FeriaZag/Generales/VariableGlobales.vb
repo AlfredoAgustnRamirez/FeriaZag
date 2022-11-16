@@ -7,5 +7,7 @@ Module VariableGlobales
     Public idcabecera As Integer
     Public fechaDesde As DateTime
     Public fechaHasta As DateTime
+    Public nombrebackup As String
+    Public directorio As String
     Public cnx As New SqlConnection("Data Source=DESKTOP-2715FLN\SQLEXPRESS;Initial Catalog=FeriaZag;Integrated Security=True")
 End Module

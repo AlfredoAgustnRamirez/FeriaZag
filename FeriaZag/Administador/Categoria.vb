@@ -33,9 +33,11 @@
 
 #Region "DataGridView Contenido por fila"
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        TBCodigoCategoria.Text = DataGridView1.Item(0, e.RowIndex).Value
-        TBCategoria.Text = DataGridView1.Item(1, e.RowIndex).Value
-        TBActivo.Text = DataGridView1.Item(2, e.RowIndex).Value
+        Dim FilaActual As Integer
+        FilaActual = DataGridView1.CurrentRow.Index
+        TBCodigoCategoria.Text = DataGridView1.Rows(FilaActual).Cells(0).Value
+        TBCategoria.Text = DataGridView1.Rows(FilaActual).Cells(1).Value
+        TBActivo.Text = DataGridView1.Rows(FilaActual).Cells(2).Value
         ICBAgregarCategoria.Enabled = False
         ICBModificarCategoria.Enabled = True
         ICBEliminarCategoria.Enabled = True

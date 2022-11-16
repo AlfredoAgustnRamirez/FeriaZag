@@ -49,17 +49,19 @@
 
 #Region "DataGridView Contenido por fila"
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGUsuario.CellContentClick
-        TBCodigoUsuario.Text = DGUsuario.Item(0, e.RowIndex).Value
-        CBPrefilUsuario.Text = DGUsuario.Item(1, e.RowIndex).Value
-        TBNombreUsuario.Text = DGUsuario.Item(2, e.RowIndex).Value
-        TBApellidoUsuario.Text = DGUsuario.Item(3, e.RowIndex).Value
-        TBDniUsuario.Text = DGUsuario.Item(4, e.RowIndex).Value
-        TBTelefonoUsuario.Text = DGUsuario.Item(5, e.RowIndex).Value
-        TBDirecciónUsuario.Text = DGUsuario.Item(6, e.RowIndex).Value
-        TBEmail.Text = DGUsuario.Item(7, e.RowIndex).Value
-        TBUsuario.Text = DGUsuario.Item(8, e.RowIndex).Value
-        TBContraseña.Text = DGUsuario.Item(9, e.RowIndex).Value
-        TBActivo.Text = DGUsuario.Item(10, e.RowIndex).Value
+        Dim FilaActual As Integer
+        FilaActual = DGUsuario.CurrentRow.Index
+        TBCodigoUsuario.Text = DGUsuario.Rows(FilaActual).Cells(0).Value
+        CBPrefilUsuario.Text = DGUsuario.Rows(FilaActual).Cells(1).Value
+        TBNombreUsuario.Text = DGUsuario.Rows(FilaActual).Cells(2).Value
+        TBApellidoUsuario.Text = DGUsuario.Rows(FilaActual).Cells(3).Value
+        TBDniUsuario.Text = DGUsuario.Rows(FilaActual).Cells(4).Value
+        TBTelefonoUsuario.Text = DGUsuario.Rows(FilaActual).Cells(5).Value
+        TBDirecciónUsuario.Text = DGUsuario.Rows(FilaActual).Cells(6).Value
+        TBEmail.Text = DGUsuario.Rows(FilaActual).Cells(7).Value
+        TBUsuario.Text = DGUsuario.Rows(FilaActual).Cells(8).Value
+        TBContraseña.Text = DGUsuario.Rows(FilaActual).Cells(9).Value
+        TBActivo.Text = DGUsuario.Rows(FilaActual).Cells(10).Value
         ICBAgregar.Enabled = False
         ICBModificar.Enabled = True
         ICBEliminar.Enabled = True
@@ -91,11 +93,20 @@
     End Sub
 #End Region
 
-#Region "Buscar Usuario por Dni"
+#Region "Buscar Usuario"
     Private Sub ICBBuscar_Click(sender As Object, e As EventArgs) Handles ICBBuscar.Click
-        Dim dtpro1 = usu.BuscarUsuarioPorDni(TbDni.Text)
-        TBCodigo2.Text = dtpro1.Rows(0).Item("Nombre")
-        DGUsuario.DataSource = dtpro1
+        If ComboBox2.Text = "Todos" Then
+            usu.llenarDataGridview(DGUsuario)
+        ElseIf ComboBox2.Text = "Dni" Then
+            Dim dtpro1 = usu.BuscarUsuarioPorDni(TBCodigo2.Text)
+            DGUsuario.DataSource = dtpro1
+        ElseIf ComboBox2.Text = "Codigo" Then
+            Dim dtpro1 = usu.BuscarUsuarioPorCodigo(TBCodigo2.Text)
+            DGUsuario.DataSource = dtpro1
+        Else
+            Dim dtpro1 = usu.BuscarUsuario(TBCodigo2.Text)
+            DGUsuario.DataSource = dtpro1
+        End If
     End Sub
 #End Region
 

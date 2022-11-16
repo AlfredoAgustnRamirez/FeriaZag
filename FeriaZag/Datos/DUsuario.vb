@@ -114,6 +114,30 @@ Public Class DUsuario
     End Function
 #End Region
 
+#Region "Buscar por Usuario"
+    Public Function BuscarUsuario(usuario As String) As DataTable
+        Dim cmd As SqlCommand = New SqlCommand("BuscarUsuario", cnx)
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.Parameters.AddWithValue("@Usuario", usuario)
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
+        Dim dtable1 As DataTable = New DataTable()
+        da.Fill(dtable1)
+        Return dtable1
+    End Function
+#End Region
+
+#Region "Buscar Usuario codigo"
+    Public Function BuscarUsuarioPorCodigo(id_usuario As Integer) As DataTable
+        Dim cmd As SqlCommand = New SqlCommand("BuscarUsuarioPorCodigo", cnx)
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.Parameters.AddWithValue("@Id_Usuario", id_usuario)
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
+        Dim dtable1 As DataTable = New DataTable()
+        da.Fill(dtable1)
+        Return dtable1
+    End Function
+#End Region
+
 #Region "Obtener id del Usuario"
     Public Function ObtenerIdUsuario(Usuario As String)
         Dim id As Integer

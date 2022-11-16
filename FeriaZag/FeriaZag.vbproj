@@ -190,6 +190,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FeriaZagDataSetRA.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Restauracion .Designer.vb">
+      <DependentUpon>Restauracion .vb</DependentUpon>
+    </Compile>
+    <Compile Include="Restauracion .vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\FReporteVendedor.Designer.vb">
       <DependentUpon>FReporteVendedor.vb</DependentUpon>
     </Compile>
@@ -429,6 +435,9 @@
       <DependentUpon>Producto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\RVenta.rdlc" />
+    <EmbeddedResource Include="Restauracion .resx">
+      <DependentUpon>Restauracion .vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vendedor\ClienteVendedor.resx">
       <DependentUpon>ClienteVendedor.vb</DependentUpon>
     </EmbeddedResource>

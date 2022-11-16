@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Usuarios
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Usuarios
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LbBackup = New System.Windows.Forms.Label()
@@ -54,10 +54,9 @@ Partial Class Usuarios
         Me.LTelefono = New System.Windows.Forms.Label()
         Me.TBTelefonoUsuario = New System.Windows.Forms.TextBox()
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
-        Me.TbDni = New System.Windows.Forms.TextBox()
         Me.ICBBuscar = New FontAwesome.Sharp.IconButton()
-        Me.LbDni = New System.Windows.Forms.Label()
-        Me.LbNombre = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.TBCodigo2 = New System.Windows.Forms.TextBox()
         Me.GBListar.SuspendLayout()
         CType(Me.DGUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -386,11 +385,10 @@ Partial Class Usuarios
         '
         'GBConsulta
         '
-        Me.GBConsulta.Controls.Add(Me.TbDni)
-        Me.GBConsulta.Controls.Add(Me.ICBBuscar)
-        Me.GBConsulta.Controls.Add(Me.LbDni)
-        Me.GBConsulta.Controls.Add(Me.LbNombre)
+        Me.GBConsulta.Controls.Add(Me.ComboBox2)
+        Me.GBConsulta.Controls.Add(Me.Label3)
         Me.GBConsulta.Controls.Add(Me.TBCodigo2)
+        Me.GBConsulta.Controls.Add(Me.ICBBuscar)
         Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBConsulta.Location = New System.Drawing.Point(411, 65)
         Me.GBConsulta.Name = "GBConsulta"
@@ -398,13 +396,6 @@ Partial Class Usuarios
         Me.GBConsulta.TabIndex = 26
         Me.GBConsulta.TabStop = False
         Me.GBConsulta.Text = "Consultar Usuario"
-        '
-        'TbDni
-        '
-        Me.TbDni.Location = New System.Drawing.Point(386, 50)
-        Me.TbDni.Name = "TbDni"
-        Me.TbDni.Size = New System.Drawing.Size(180, 26)
-        Me.TbDni.TabIndex = 22
         '
         'ICBBuscar
         '
@@ -414,7 +405,7 @@ Partial Class Usuarios
         Me.ICBBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBBuscar.IconSize = 40
         Me.ICBBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBBuscar.Location = New System.Drawing.Point(630, 38)
+        Me.ICBBuscar.Location = New System.Drawing.Point(677, 42)
         Me.ICBBuscar.Name = "ICBBuscar"
         Me.ICBBuscar.Size = New System.Drawing.Size(118, 46)
         Me.ICBBuscar.TabIndex = 21
@@ -422,30 +413,30 @@ Partial Class Usuarios
         Me.ICBBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.ICBBuscar.UseVisualStyleBackColor = False
         '
-        'LbDni
+        'ComboBox2
         '
-        Me.LbDni.AutoSize = True
-        Me.LbDni.Location = New System.Drawing.Point(328, 50)
-        Me.LbDni.Name = "LbDni"
-        Me.LbDni.Size = New System.Drawing.Size(39, 22)
-        Me.LbDni.TabIndex = 19
-        Me.LbDni.Text = "Dni:"
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Todos", "Dni", "Usuario", "Codigo"})
+        Me.ComboBox2.Location = New System.Drawing.Point(104, 50)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(203, 30)
+        Me.ComboBox2.TabIndex = 24
         '
-        'LbNombre
+        'Label3
         '
-        Me.LbNombre.AutoSize = True
-        Me.LbNombre.Location = New System.Drawing.Point(17, 51)
-        Me.LbNombre.Name = "LbNombre"
-        Me.LbNombre.Size = New System.Drawing.Size(72, 22)
-        Me.LbNombre.TabIndex = 18
-        Me.LbNombre.Text = "Nombre:"
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(8, 54)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(90, 22)
+        Me.Label3.TabIndex = 22
+        Me.Label3.Text = "Buscar por:"
         '
         'TBCodigo2
         '
-        Me.TBCodigo2.Location = New System.Drawing.Point(100, 51)
+        Me.TBCodigo2.Location = New System.Drawing.Point(332, 54)
         Me.TBCodigo2.Name = "TBCodigo2"
-        Me.TBCodigo2.Size = New System.Drawing.Size(180, 26)
-        Me.TBCodigo2.TabIndex = 18
+        Me.TBCodigo2.Size = New System.Drawing.Size(313, 26)
+        Me.TBCodigo2.TabIndex = 23
         '
         'Usuarios
         '
@@ -503,8 +494,7 @@ Partial Class Usuarios
     Friend WithEvents LBActivo As Label
     Friend WithEvents GBConsulta As GroupBox
     Friend WithEvents ICBBuscar As FontAwesome.Sharp.IconButton
-    Friend WithEvents LbDni As Label
-    Friend WithEvents LbNombre As Label
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Label3 As Label
     Friend WithEvents TBCodigo2 As TextBox
-    Friend WithEvents TbDni As TextBox
 End Class
