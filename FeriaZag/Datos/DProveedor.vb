@@ -94,4 +94,28 @@ Public Class DProveedor
     End Sub
 #End Region
 
+#Region "Buscar proveedor por nombre"
+    Public Function BuscarProveedorPorNombre(nombre As String) As DataTable
+        Dim cmd As SqlCommand = New SqlCommand("BuscarProveedorPorNombre", cnx)
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.Parameters.AddWithValue("@Nombre", nombre)
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
+        Dim dtable1 As DataTable = New DataTable()
+        da.Fill(dtable1)
+        Return dtable1
+    End Function
+#End Region
+
+#Region "Buscar proveedor por alias"
+    Public Function BuscarProveedorPorAlias(cbu As String) As DataTable
+        Dim cmd As SqlCommand = New SqlCommand("BuscarProveedorPorAlias", cnx)
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.Parameters.AddWithValue("@CbuAlias", cbu)
+        Dim da As SqlDataAdapter = New SqlDataAdapter(cmd)
+        Dim dtable1 As DataTable = New DataTable()
+        da.Fill(dtable1)
+        Return dtable1
+    End Function
+#End Region
+
 End Class

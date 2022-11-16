@@ -41,13 +41,13 @@
 #End Region
 
 #Region "Solo Letras Nombre2 Proveedor"
-    Private Sub TBNombre2Proveedor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombre2Proveedor.KeyPress
+    Private Sub TBNombre2Proveedor_KeyPress(sender As Object, e As KeyPressEventArgs)
         SoloLetras(e)
     End Sub
 #End Region
 
 #Region "Solo Numeros Codigo Proveedor"
-    Private Sub TBCodigo2Proveedor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBCodigo2Proveedor.KeyPress
+    Private Sub TBCodigo2Proveedor_KeyPress(sender As Object, e As KeyPressEventArgs)
         SoloNumeros(e)
     End Sub
 #End Region
@@ -99,7 +99,23 @@
         ICBModificarProveedor.Enabled = True
         ICBEliminarProveedor.Enabled = True
     End Sub
+#End Region
 
+#Region "Buscar proveedores"
+    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+        If ComboBox2.Text = "Todos" Then
+            pro.llenarDataGridview(DataGridView1)
+        ElseIf ComboBox2.Text = "Nombre" Then
+            Dim dtpro1 = pro.BuscarProveedorPorNombre(TbBusqueda.Text)
+            DataGridView1.DataSource = dtpro1
+        Else
+            Dim dtpro1 = pro.BuscarProveedorPorAlias(TbBusqueda.Text)
+            DataGridView1.DataSource = dtpro1
+        End If
+    End Sub
+#End Region
+
+#Region "Modificar proveedores"
     Private Sub ICBModificarProveedor_Click(sender As Object, e As EventArgs) Handles ICBModificarProveedor.Click
         pro.ModificarProveedor(TBCodigoProveedor.Text, TBNombreProveedor.Text, TBApellidoProveedor.Text, TBTelefonoProveedor.Text, TBDirecciónProveedor.Text, TBCbuProveedor.Text, TBObservaciones.Text)
         pro.llenarDataGridview(DataGridView1)
