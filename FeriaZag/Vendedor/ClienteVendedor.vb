@@ -22,14 +22,19 @@
 
 #Region "DataGridView Contenido por fila"
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
-        TBCodigoCvendedor.Text = DataGridView2.Item(0, e.RowIndex).Value
-        TBNombreCvendedor.Text = DataGridView2.Item(1, e.RowIndex).Value
-        TBApellidoCvendedor.Text = DataGridView2.Item(2, e.RowIndex).Value
-        TBDniCvendedor.Text = DataGridView2.Item(3, e.RowIndex).Value
-        TBTelefonoCvendedor.Text = DataGridView2.Item(4, e.RowIndex).Value
-        TBEmail.Text = DataGridView2.Item(5, e.RowIndex).Value
-        TBDirecciónCvendedor.Text = DataGridView2.Item(6, e.RowIndex).Value
-        TBActivo.Text = DataGridView2.Item(7, e.RowIndex).Value
+        Dim FilaActual As Integer
+        FilaActual = DataGridView2.CurrentRow.Index
+        TBCodigoCvendedor.Text = DataGridView2.Rows(FilaActual).Cells(0).Value
+        TBNombreCvendedor.Text = DataGridView2.Rows(FilaActual).Cells(1).Value
+        TBApellidoCvendedor.Text = DataGridView2.Rows(FilaActual).Cells(2).Value
+        TBDniCvendedor.Text = DataGridView2.Rows(FilaActual).Cells(3).Value
+        TBTelefonoCvendedor.Text = DataGridView2.Rows(FilaActual).Cells(4).Value
+        TBEmail.Text = DataGridView2.Rows(FilaActual).Cells(5).Value
+        TBDirecciónCvendedor.Text = DataGridView2.Rows(FilaActual).Cells(6).Value
+        TBActivo.Text = DataGridView2.Rows(FilaActual).Cells(7).Value
+
+        Dim frm = New ClienteVendedor()
+        frm.TBNombreCvendedor.Text = DataGridView2.Rows(FilaActual).Cells(1).Value
         ICBAgregarCvendedor.Enabled = False
         ICBModificarCvendedor.Enabled = True
     End Sub

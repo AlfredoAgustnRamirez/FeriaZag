@@ -29,14 +29,10 @@ Partial Class Cliente
         Me.LBEmail = New System.Windows.Forms.Label()
         Me.LBCodigoCliente = New System.Windows.Forms.Label()
         Me.TBCodigoCliente = New System.Windows.Forms.TextBox()
-        Me.ICBEliminarCliente = New FontAwesome.Sharp.IconButton()
-        Me.ICBModificarCliente = New FontAwesome.Sharp.IconButton()
-        Me.ICBAgregarCliente = New FontAwesome.Sharp.IconButton()
         Me.TBDirecciónCliente = New System.Windows.Forms.TextBox()
         Me.TBDniCliente = New System.Windows.Forms.TextBox()
         Me.LDirección = New System.Windows.Forms.Label()
         Me.LNombre = New System.Windows.Forms.Label()
-        Me.ICBNuevoCliente = New FontAwesome.Sharp.IconButton()
         Me.TBNombreCliente = New System.Windows.Forms.TextBox()
         Me.LApellido = New System.Windows.Forms.Label()
         Me.TBApellidoCliente = New System.Windows.Forms.TextBox()
@@ -44,13 +40,17 @@ Partial Class Cliente
         Me.LTelefono = New System.Windows.Forms.Label()
         Me.TBTelefonoCliente = New System.Windows.Forms.TextBox()
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
+        Me.TbBusqueda = New System.Windows.Forms.TextBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.LBCliente = New System.Windows.Forms.Label()
-        Me.TbBusqueda = New System.Windows.Forms.TextBox()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.ICBEliminarCliente = New FontAwesome.Sharp.IconButton()
+        Me.ICBModificarCliente = New FontAwesome.Sharp.IconButton()
+        Me.ICBAgregarCliente = New FontAwesome.Sharp.IconButton()
+        Me.ICBNuevoCliente = New FontAwesome.Sharp.IconButton()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBConsulta.SuspendLayout()
         Me.GBListar.SuspendLayout()
@@ -136,54 +136,6 @@ Partial Class Cliente
         Me.TBCodigoCliente.Size = New System.Drawing.Size(181, 26)
         Me.TBCodigoCliente.TabIndex = 23
         '
-        'ICBEliminarCliente
-        '
-        Me.ICBEliminarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ICBEliminarCliente.IconChar = FontAwesome.Sharp.IconChar.TrashAlt
-        Me.ICBEliminarCliente.IconColor = System.Drawing.Color.Black
-        Me.ICBEliminarCliente.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBEliminarCliente.IconSize = 40
-        Me.ICBEliminarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBEliminarCliente.Location = New System.Drawing.Point(188, 472)
-        Me.ICBEliminarCliente.Name = "ICBEliminarCliente"
-        Me.ICBEliminarCliente.Size = New System.Drawing.Size(129, 46)
-        Me.ICBEliminarCliente.TabIndex = 22
-        Me.ICBEliminarCliente.Text = "Eliminar  "
-        Me.ICBEliminarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ICBEliminarCliente.UseVisualStyleBackColor = False
-        '
-        'ICBModificarCliente
-        '
-        Me.ICBModificarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ICBModificarCliente.IconChar = FontAwesome.Sharp.IconChar.CircleCheck
-        Me.ICBModificarCliente.IconColor = System.Drawing.Color.Black
-        Me.ICBModificarCliente.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBModificarCliente.IconSize = 40
-        Me.ICBModificarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBModificarCliente.Location = New System.Drawing.Point(46, 472)
-        Me.ICBModificarCliente.Name = "ICBModificarCliente"
-        Me.ICBModificarCliente.Size = New System.Drawing.Size(126, 46)
-        Me.ICBModificarCliente.TabIndex = 21
-        Me.ICBModificarCliente.Text = "Modificar "
-        Me.ICBModificarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ICBModificarCliente.UseVisualStyleBackColor = False
-        '
-        'ICBAgregarCliente
-        '
-        Me.ICBAgregarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ICBAgregarCliente.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk
-        Me.ICBAgregarCliente.IconColor = System.Drawing.Color.Black
-        Me.ICBAgregarCliente.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBAgregarCliente.IconSize = 40
-        Me.ICBAgregarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBAgregarCliente.Location = New System.Drawing.Point(190, 422)
-        Me.ICBAgregarCliente.Name = "ICBAgregarCliente"
-        Me.ICBAgregarCliente.Size = New System.Drawing.Size(129, 44)
-        Me.ICBAgregarCliente.TabIndex = 20
-        Me.ICBAgregarCliente.Text = "Guardar  "
-        Me.ICBAgregarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ICBAgregarCliente.UseVisualStyleBackColor = False
-        '
         'TBDirecciónCliente
         '
         Me.TBDirecciónCliente.Location = New System.Drawing.Point(138, 319)
@@ -215,22 +167,6 @@ Partial Class Cliente
         Me.LNombre.Size = New System.Drawing.Size(72, 22)
         Me.LNombre.TabIndex = 2
         Me.LNombre.Text = "Nombre:"
-        '
-        'ICBNuevoCliente
-        '
-        Me.ICBNuevoCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ICBNuevoCliente.IconChar = FontAwesome.Sharp.IconChar.ExternalLink
-        Me.ICBNuevoCliente.IconColor = System.Drawing.Color.Black
-        Me.ICBNuevoCliente.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.ICBNuevoCliente.IconSize = 40
-        Me.ICBNuevoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBNuevoCliente.Location = New System.Drawing.Point(48, 422)
-        Me.ICBNuevoCliente.Name = "ICBNuevoCliente"
-        Me.ICBNuevoCliente.Size = New System.Drawing.Size(126, 44)
-        Me.ICBNuevoCliente.TabIndex = 16
-        Me.ICBNuevoCliente.Text = "Nuevo  "
-        Me.ICBNuevoCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ICBNuevoCliente.UseVisualStyleBackColor = False
         '
         'TBNombreCliente
         '
@@ -295,6 +231,13 @@ Partial Class Cliente
         Me.GBConsulta.TabStop = False
         Me.GBConsulta.Text = "Consulta"
         '
+        'TbBusqueda
+        '
+        Me.TbBusqueda.Location = New System.Drawing.Point(366, 49)
+        Me.TbBusqueda.Name = "TbBusqueda"
+        Me.TbBusqueda.Size = New System.Drawing.Size(287, 26)
+        Me.TbBusqueda.TabIndex = 29
+        '
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
@@ -303,22 +246,6 @@ Partial Class Cliente
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(216, 30)
         Me.ComboBox2.TabIndex = 21
-        '
-        'IconButton1
-        '
-        Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Search
-        Me.IconButton1.IconColor = System.Drawing.Color.Black
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.IconSize = 40
-        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton1.Location = New System.Drawing.Point(668, 40)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(118, 46)
-        Me.IconButton1.TabIndex = 19
-        Me.IconButton1.Text = "Buscar  "
-        Me.IconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.IconButton1.UseVisualStyleBackColor = False
         '
         'Label3
         '
@@ -365,12 +292,85 @@ Partial Class Cliente
         Me.LBCliente.TabIndex = 24
         Me.LBCliente.Text = "Cliente"
         '
-        'TbBusqueda
+        'IconButton1
         '
-        Me.TbBusqueda.Location = New System.Drawing.Point(366, 49)
-        Me.TbBusqueda.Name = "TbBusqueda"
-        Me.TbBusqueda.Size = New System.Drawing.Size(287, 26)
-        Me.TbBusqueda.TabIndex = 29
+        Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Search
+        Me.IconButton1.IconColor = System.Drawing.Color.Black
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.IconSize = 40
+        Me.IconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton1.Location = New System.Drawing.Point(668, 40)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(118, 46)
+        Me.IconButton1.TabIndex = 19
+        Me.IconButton1.Text = "Buscar  "
+        Me.IconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.IconButton1.UseVisualStyleBackColor = False
+        '
+        'ICBEliminarCliente
+        '
+        Me.ICBEliminarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ICBEliminarCliente.IconChar = FontAwesome.Sharp.IconChar.TrashAlt
+        Me.ICBEliminarCliente.IconColor = System.Drawing.Color.Black
+        Me.ICBEliminarCliente.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.ICBEliminarCliente.IconSize = 40
+        Me.ICBEliminarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ICBEliminarCliente.Location = New System.Drawing.Point(188, 472)
+        Me.ICBEliminarCliente.Name = "ICBEliminarCliente"
+        Me.ICBEliminarCliente.Size = New System.Drawing.Size(129, 46)
+        Me.ICBEliminarCliente.TabIndex = 22
+        Me.ICBEliminarCliente.Text = "Eliminar  "
+        Me.ICBEliminarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ICBEliminarCliente.UseVisualStyleBackColor = False
+        '
+        'ICBModificarCliente
+        '
+        Me.ICBModificarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ICBModificarCliente.IconChar = FontAwesome.Sharp.IconChar.CircleCheck
+        Me.ICBModificarCliente.IconColor = System.Drawing.Color.Black
+        Me.ICBModificarCliente.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.ICBModificarCliente.IconSize = 40
+        Me.ICBModificarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ICBModificarCliente.Location = New System.Drawing.Point(46, 472)
+        Me.ICBModificarCliente.Name = "ICBModificarCliente"
+        Me.ICBModificarCliente.Size = New System.Drawing.Size(126, 46)
+        Me.ICBModificarCliente.TabIndex = 21
+        Me.ICBModificarCliente.Text = "Modificar "
+        Me.ICBModificarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ICBModificarCliente.UseVisualStyleBackColor = False
+        '
+        'ICBAgregarCliente
+        '
+        Me.ICBAgregarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ICBAgregarCliente.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk
+        Me.ICBAgregarCliente.IconColor = System.Drawing.Color.Black
+        Me.ICBAgregarCliente.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.ICBAgregarCliente.IconSize = 40
+        Me.ICBAgregarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ICBAgregarCliente.Location = New System.Drawing.Point(190, 422)
+        Me.ICBAgregarCliente.Name = "ICBAgregarCliente"
+        Me.ICBAgregarCliente.Size = New System.Drawing.Size(129, 44)
+        Me.ICBAgregarCliente.TabIndex = 20
+        Me.ICBAgregarCliente.Text = "Guardar  "
+        Me.ICBAgregarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ICBAgregarCliente.UseVisualStyleBackColor = False
+        '
+        'ICBNuevoCliente
+        '
+        Me.ICBNuevoCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ICBNuevoCliente.IconChar = FontAwesome.Sharp.IconChar.ExternalLink
+        Me.ICBNuevoCliente.IconColor = System.Drawing.Color.Black
+        Me.ICBNuevoCliente.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.ICBNuevoCliente.IconSize = 40
+        Me.ICBNuevoCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ICBNuevoCliente.Location = New System.Drawing.Point(48, 422)
+        Me.ICBNuevoCliente.Name = "ICBNuevoCliente"
+        Me.ICBNuevoCliente.Size = New System.Drawing.Size(126, 44)
+        Me.ICBNuevoCliente.TabIndex = 16
+        Me.ICBNuevoCliente.Text = "Nuevo  "
+        Me.ICBNuevoCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ICBNuevoCliente.UseVisualStyleBackColor = False
         '
         'Cliente
         '

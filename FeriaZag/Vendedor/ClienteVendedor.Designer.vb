@@ -45,11 +45,11 @@ Partial Class ClienteVendedor
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
-        Me.ICBBuscarCvendedor = New FontAwesome.Sharp.IconButton()
-        Me.LBCliente = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TBCodigo2 = New System.Windows.Forms.TextBox()
+        Me.ICBBuscarCvendedor = New FontAwesome.Sharp.IconButton()
+        Me.LBCliente = New System.Windows.Forms.Label()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBListar.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -302,6 +302,31 @@ Partial Class ClienteVendedor
         Me.GBConsulta.TabStop = False
         Me.GBConsulta.Text = "Consultar Cliente"
         '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Todos", "Dni", "Nombre"})
+        Me.ComboBox2.Location = New System.Drawing.Point(112, 45)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(203, 30)
+        Me.ComboBox2.TabIndex = 23
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(16, 49)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(90, 22)
+        Me.Label3.TabIndex = 21
+        Me.Label3.Text = "Buscar por:"
+        '
+        'TBCodigo2
+        '
+        Me.TBCodigo2.Location = New System.Drawing.Point(340, 45)
+        Me.TBCodigo2.Name = "TBCodigo2"
+        Me.TBCodigo2.Size = New System.Drawing.Size(313, 26)
+        Me.TBCodigo2.TabIndex = 22
+        '
         'ICBBuscarCvendedor
         '
         Me.ICBBuscarCvendedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
@@ -327,31 +352,6 @@ Partial Class ClienteVendedor
         Me.LBCliente.Size = New System.Drawing.Size(160, 46)
         Me.LBCliente.TabIndex = 20
         Me.LBCliente.Text = "Clientes"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Todos", "Dni", "Nombre"})
-        Me.ComboBox2.Location = New System.Drawing.Point(112, 45)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(203, 30)
-        Me.ComboBox2.TabIndex = 23
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 49)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(90, 22)
-        Me.Label3.TabIndex = 21
-        Me.Label3.Text = "Buscar por:"
-        '
-        'TBCodigo2
-        '
-        Me.TBCodigo2.Location = New System.Drawing.Point(340, 45)
-        Me.TBCodigo2.Name = "TBCodigo2"
-        Me.TBCodigo2.Size = New System.Drawing.Size(313, 26)
-        Me.TBCodigo2.TabIndex = 22
         '
         'ClienteVendedor
         '

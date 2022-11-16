@@ -122,4 +122,13 @@ Public Class DCliente
 
 #End Region
 
+#Region "listar Clientes"
+    Public Function ListarClientes() As DataTable
+        Dim da As New SqlDataAdapter("SelectClientes", cnx)
+        Dim tbl As New DataTable
+        da.Fill(tbl)
+        Return tbl
+    End Function
+#End Region
+
 End Class
