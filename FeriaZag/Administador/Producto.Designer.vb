@@ -22,7 +22,7 @@ Partial Class Producto
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LCategoria = New System.Windows.Forms.Label()
@@ -257,9 +257,9 @@ Partial Class Producto
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -287,9 +287,9 @@ Partial Class Producto
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(17, 51)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(66, 22)
+        Me.Label3.Size = New System.Drawing.Size(90, 22)
         Me.Label3.TabIndex = 18
-        Me.Label3.Text = "Codigo:"
+        Me.Label3.Text = "Buscar por:"
         '
         'GBConsulta
         '
@@ -313,7 +313,7 @@ Partial Class Producto
         Me.ICBBuscar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.ICBBuscar.IconSize = 40
         Me.ICBBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ICBBuscar.Location = New System.Drawing.Point(669, 34)
+        Me.ICBBuscar.Location = New System.Drawing.Point(669, 39)
         Me.ICBBuscar.Name = "ICBBuscar"
         Me.ICBBuscar.Size = New System.Drawing.Size(118, 46)
         Me.ICBBuscar.TabIndex = 21
@@ -325,14 +325,14 @@ Partial Class Producto
         '
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"Todos", "Categoria", "Descripcion", "Codigo"})
-        Me.ComboBox2.Location = New System.Drawing.Point(89, 47)
+        Me.ComboBox2.Location = New System.Drawing.Point(113, 47)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(216, 30)
+        Me.ComboBox2.Size = New System.Drawing.Size(203, 30)
         Me.ComboBox2.TabIndex = 20
         '
         'TBCodigo2
         '
-        Me.TBCodigo2.Location = New System.Drawing.Point(325, 48)
+        Me.TBCodigo2.Location = New System.Drawing.Point(341, 51)
         Me.TBCodigo2.Name = "TBCodigo2"
         Me.TBCodigo2.Size = New System.Drawing.Size(313, 26)
         Me.TBCodigo2.TabIndex = 18

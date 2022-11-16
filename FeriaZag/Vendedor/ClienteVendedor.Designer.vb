@@ -45,12 +45,11 @@ Partial Class ClienteVendedor
         Me.GBListar = New System.Windows.Forms.GroupBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.GBConsulta = New System.Windows.Forms.GroupBox()
-        Me.TBDni2Cvendedor = New System.Windows.Forms.TextBox()
         Me.ICBBuscarCvendedor = New FontAwesome.Sharp.IconButton()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TBNombre2Cvendedor = New System.Windows.Forms.TextBox()
         Me.LBCliente = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TBCodigo2 = New System.Windows.Forms.TextBox()
         Me.GBMantenimiento.SuspendLayout()
         Me.GBListar.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -290,11 +289,10 @@ Partial Class ClienteVendedor
         '
         'GBConsulta
         '
-        Me.GBConsulta.Controls.Add(Me.TBDni2Cvendedor)
-        Me.GBConsulta.Controls.Add(Me.ICBBuscarCvendedor)
-        Me.GBConsulta.Controls.Add(Me.Label4)
+        Me.GBConsulta.Controls.Add(Me.ComboBox2)
         Me.GBConsulta.Controls.Add(Me.Label3)
-        Me.GBConsulta.Controls.Add(Me.TBNombre2Cvendedor)
+        Me.GBConsulta.Controls.Add(Me.TBCodigo2)
+        Me.GBConsulta.Controls.Add(Me.ICBBuscarCvendedor)
         Me.GBConsulta.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.GBConsulta.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBConsulta.Location = New System.Drawing.Point(399, 48)
@@ -303,13 +301,6 @@ Partial Class ClienteVendedor
         Me.GBConsulta.TabIndex = 25
         Me.GBConsulta.TabStop = False
         Me.GBConsulta.Text = "Consultar Cliente"
-        '
-        'TBDni2Cvendedor
-        '
-        Me.TBDni2Cvendedor.Location = New System.Drawing.Point(384, 54)
-        Me.TBDni2Cvendedor.Name = "TBDni2Cvendedor"
-        Me.TBDni2Cvendedor.Size = New System.Drawing.Size(153, 26)
-        Me.TBDni2Cvendedor.TabIndex = 19
         '
         'ICBBuscarCvendedor
         '
@@ -326,31 +317,6 @@ Partial Class ClienteVendedor
         Me.ICBBuscarCvendedor.Text = "       Buscar"
         Me.ICBBuscarCvendedor.UseVisualStyleBackColor = False
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(322, 54)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(40, 22)
-        Me.Label4.TabIndex = 18
-        Me.Label4.Text = "DNI:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 54)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 22)
-        Me.Label3.TabIndex = 18
-        Me.Label3.Text = "Nombre:"
-        '
-        'TBNombre2Cvendedor
-        '
-        Me.TBNombre2Cvendedor.Location = New System.Drawing.Point(107, 50)
-        Me.TBNombre2Cvendedor.Name = "TBNombre2Cvendedor"
-        Me.TBNombre2Cvendedor.Size = New System.Drawing.Size(153, 26)
-        Me.TBNombre2Cvendedor.TabIndex = 18
-        '
         'LBCliente
         '
         Me.LBCliente.AutoSize = True
@@ -361,6 +327,31 @@ Partial Class ClienteVendedor
         Me.LBCliente.Size = New System.Drawing.Size(160, 46)
         Me.LBCliente.TabIndex = 20
         Me.LBCliente.Text = "Clientes"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Todos", "Dni", "Nombre"})
+        Me.ComboBox2.Location = New System.Drawing.Point(112, 45)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(203, 30)
+        Me.ComboBox2.TabIndex = 23
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(16, 49)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(90, 22)
+        Me.Label3.TabIndex = 21
+        Me.Label3.Text = "Buscar por:"
+        '
+        'TBCodigo2
+        '
+        Me.TBCodigo2.Location = New System.Drawing.Point(340, 45)
+        Me.TBCodigo2.Name = "TBCodigo2"
+        Me.TBCodigo2.Size = New System.Drawing.Size(313, 26)
+        Me.TBCodigo2.TabIndex = 22
         '
         'ClienteVendedor
         '
@@ -403,11 +394,7 @@ Partial Class ClienteVendedor
     Friend WithEvents GBListar As GroupBox
     Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents GBConsulta As GroupBox
-    Friend WithEvents TBDni2Cvendedor As TextBox
     Friend WithEvents ICBBuscarCvendedor As FontAwesome.Sharp.IconButton
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents TBNombre2Cvendedor As TextBox
     Friend WithEvents LBCliente As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents TBCodigoCvendedor As TextBox
@@ -415,4 +402,7 @@ Partial Class ClienteVendedor
     Friend WithEvents LBEmail As Label
     Friend WithEvents TBActivo As TextBox
     Friend WithEvents LBActivo As Label
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TBCodigo2 As TextBox
 End Class

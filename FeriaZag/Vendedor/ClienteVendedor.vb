@@ -60,13 +60,13 @@
 #End Region
 
 #Region "Solo letras Nombre2 Cliente Vendedor"
-    Private Sub TBNombre2Cvendedor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombre2Cvendedor.KeyPress
+    Private Sub TBNombre2Cvendedor_KeyPress(sender As Object, e As KeyPressEventArgs)
         SoloLetras(e)
     End Sub
 #End Region
 
 #Region "Solo letras Dni2 Cliente Vendedor"
-    Private Sub TBDni2Cvendedor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBDni2Cvendedor.KeyPress
+    Private Sub TBDni2Cvendedor_KeyPress(sender As Object, e As KeyPressEventArgs)
         SoloNumeros(e)
     End Sub
 #End Region
@@ -101,9 +101,15 @@
 
 #Region "Buscar Clientes por Dni"
     Private Sub ICBBuscarCvendedor_Click(sender As Object, e As EventArgs) Handles ICBBuscarCvendedor.Click
-        Dim dtpro1 = cli.BuscarClientePorDni(TBDni2Cvendedor.Text)
-        TBNombre2Cvendedor.Text = Convert.ToString(dtpro1.Rows(0)("Nombre"))
-        DataGridView2.DataSource = dtpro1
+        If ComboBox2.Text = "Todos" Then
+            cli.llenarDataGridview(DataGridView2)
+        ElseIf ComboBox2.Text = "Dni" Then
+            Dim dtpro1 = cli.BuscarClientePorDni(TBCodigo2.Text)
+            DataGridView2.DataSource = dtpro1
+        Else
+            Dim dtpro1 = cli.BuscarClientePorNombre(TBCodigo2.Text)
+            DataGridView2.DataSource = dtpro1
+        End If
     End Sub
 #End Region
 

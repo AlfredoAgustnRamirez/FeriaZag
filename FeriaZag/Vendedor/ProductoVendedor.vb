@@ -1,13 +1,8 @@
 ﻿Public Class ProductoVendedor
-
-#Region "Cargar Producto Vendedor"
     Dim obj As New DProducto
 
+#Region "Cargar Producto Vendedor"
     Private Sub ProductoVendedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CBCategoria2Pvendedor.DataSource = obj.ListarCategoria()
-        CBCategoria2Pvendedor.ValueMember = "IdCategoria"
-        CBCategoria2Pvendedor.DisplayMember = "Categoria"
-
         obj.llenarDataGridview(DataGridView1)
     End Sub
 #End Region
@@ -42,15 +37,25 @@
 #End Region
 
 #Region "Solo letras Nombre2 Producto Vendedor"
-    Private Sub TBNombre2Pvendedor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBNombre2Pvendedor.KeyPress
+    Private Sub TBNombre2Pvendedor_KeyPress(sender As Object, e As KeyPressEventArgs)
         SoloLetras(e)
     End Sub
 #End Region
 
 #Region "Buscar Producto por nombre"
     Private Sub ICBBuscar_Click(sender As Object, e As EventArgs) Handles ICBBuscar.Click
-        Dim dtpro = obj.BuscarProductosPorCategoria(CBCategoria2Pvendedor.Text)
-        DataGridView1.DataSource = dtpro
+        If ComboBox2.Text = "Todos" Then
+            obj.llenarDataGridview(DataGridView1)
+        ElseIf ComboBox2.Text = "Categoria" Then
+            Dim dtpro1 = obj.BuscarProductosPorCategoria(TBCodigo2.Text)
+            DataGridView1.DataSource = dtpro1
+        ElseIf ComboBox2.Text = "Codigo" Then
+            Dim dtpro1 = obj.BuscarProductosPorCodigo(TBCodigo2.Text)
+            DataGridView1.DataSource = dtpro1
+        Else
+            Dim dtpro1 = obj.BuscarProductosPorNombre(TBCodigo2.Text)
+            DataGridView1.DataSource = dtpro1
+        End If
     End Sub
 #End Region
 
